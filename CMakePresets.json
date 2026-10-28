@@ -1,11 +1,91 @@
 {
- "version": 6,
- "configurePresets": [
-  {"name":"dev","generator":"Ninja","binaryDir":"${sourceDir}/build/dev","cacheVariables":{"CMAKE_BUILD_TYPE":"Debug","BUILD_TESTING":"ON"}},
-  {"name":"core","inherits":"dev","binaryDir":"${sourceDir}/build/core","cacheVariables":{"CDA_BUILD_UI":"OFF","CDA_BUILD_BACKEND":"OFF"}},
-  {"name":"sanitize","inherits":"core","binaryDir":"${sourceDir}/build/sanitize","cacheVariables":{"CDA_SANITIZE":"ON"}},
-  {"name":"coverage","inherits":"core","binaryDir":"${sourceDir}/build/coverage","cacheVariables":{"CDA_COVERAGE":"ON"}}
- ],
- "buildPresets":[{"name":"dev","configurePreset":"dev","jobs":2},{"name":"core","configurePreset":"core","jobs":2},{"name":"sanitize","configurePreset":"sanitize","jobs":2},{"name":"coverage","configurePreset":"coverage","jobs":2}],
- "testPresets":[{"name":"dev","configurePreset":"dev","output":{"outputOnFailure":true}},{"name":"core","configurePreset":"core","output":{"outputOnFailure":true}},{"name":"sanitize","configurePreset":"sanitize","output":{"outputOnFailure":true}},{"name":"coverage","configurePreset":"coverage","output":{"outputOnFailure":true}}]
+  "version": 5,
+  "configurePresets": [
+    {
+      "name": "dev",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/dev",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "BUILD_TESTING": "ON"
+      }
+    },
+    {
+      "name": "core",
+      "inherits": "dev",
+      "binaryDir": "${sourceDir}/build/core",
+      "cacheVariables": {
+        "CDA_BUILD_UI": "OFF",
+        "CDA_BUILD_BACKEND": "OFF"
+      }
+    },
+    {
+      "name": "sanitize",
+      "inherits": "core",
+      "binaryDir": "${sourceDir}/build/sanitize",
+      "cacheVariables": {
+        "CDA_SANITIZE": "ON"
+      }
+    },
+    {
+      "name": "coverage",
+      "inherits": "core",
+      "binaryDir": "${sourceDir}/build/coverage",
+      "cacheVariables": {
+        "CDA_COVERAGE": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "dev",
+      "configurePreset": "dev",
+      "jobs": 2
+    },
+    {
+      "name": "core",
+      "configurePreset": "core",
+      "jobs": 2
+    },
+    {
+      "name": "sanitize",
+      "configurePreset": "sanitize",
+      "jobs": 2
+    },
+    {
+      "name": "coverage",
+      "configurePreset": "coverage",
+      "jobs": 2
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "dev",
+      "configurePreset": "dev",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "core",
+      "configurePreset": "core",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "sanitize",
+      "configurePreset": "sanitize",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "coverage",
+      "configurePreset": "coverage",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
 }
