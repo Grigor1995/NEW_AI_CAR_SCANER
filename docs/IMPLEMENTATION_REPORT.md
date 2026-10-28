@@ -24,6 +24,10 @@ Source-tar SHA-256: 469a7f98d95d7766c5e9d30b4b81385a1c29d2d6aaea8488dda129f32b8e
 Archives are outside the active checkout; the Git archive branch is the portable
 history recovery point. Old binaries are not presented as V3 builds.
 
+The complete changed/created/removed path inventory is
+[testing/changed-files.json](testing/changed-files.json); the new runtime source
+is in apps/shared, core, services, backend and ui.
+
 ## Implemented source and behavior
 
 - New CMake/C++20 structure; separate cda_core, cda_services, car_diagnostic and

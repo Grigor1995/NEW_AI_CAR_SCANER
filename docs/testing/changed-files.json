@@ -1,0 +1,4930 @@
+{
+  "base": "ac8d9469279a52bdb53b7cf7405bda67f7e6fdc6",
+  "note": "V3 intentionally removes the old application; all prior files remain in Git history and archive branch.",
+  "changes": [
+    {
+      "status": "A",
+      "path": ".clang-format"
+    },
+    {
+      "status": "D",
+      "path": ".gitattributes"
+    },
+    {
+      "status": "M",
+      "path": ".gitignore"
+    },
+    {
+      "status": "A",
+      "path": "CMakeLists.txt"
+    },
+    {
+      "status": "A",
+      "path": "CMakePresets.json"
+    },
+    {
+      "status": "M",
+      "path": "README.md"
+    },
+    {
+      "status": "D",
+      "path": "RELEASE_NOTES.md"
+    },
+    {
+      "status": "A",
+      "path": "apps/android/AndroidManifest.xml"
+    },
+    {
+      "status": "A",
+      "path": "apps/android/README.md"
+    },
+    {
+      "status": "A",
+      "path": "apps/android/res/drawable/ic_launcher_foreground.xml"
+    },
+    {
+      "status": "A",
+      "path": "apps/android/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+      "status": "A",
+      "path": "apps/android/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+      "status": "A",
+      "path": "apps/android/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+      "status": "A",
+      "path": "apps/android/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+      "status": "A",
+      "path": "apps/android/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+      "status": "A",
+      "path": "apps/android/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+      "status": "A",
+      "path": "apps/android/res/values/colors.xml"
+    },
+    {
+      "status": "A",
+      "path": "apps/ios/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png"
+    },
+    {
+      "status": "A",
+      "path": "apps/ios/Assets.xcassets/AppIcon.appiconset/Contents.json"
+    },
+    {
+      "status": "A",
+      "path": "apps/ios/README.md"
+    },
+    {
+      "status": "A",
+      "path": "apps/shared/app_model.cpp"
+    },
+    {
+      "status": "A",
+      "path": "apps/shared/app_model.hpp"
+    },
+    {
+      "status": "A",
+      "path": "apps/shared/main.cpp"
+    },
+    {
+      "status": "A",
+      "path": "apps/windows/README.md"
+    },
+    {
+      "status": "A",
+      "path": "apps/windows/app.rc.in"
+    },
+    {
+      "status": "A",
+      "path": "assets/app_icon/canonical.svg"
+    },
+    {
+      "status": "A",
+      "path": "assets/app_icon/previews/icon-1024.png"
+    },
+    {
+      "status": "A",
+      "path": "assets/app_icon/previews/icon-128.png"
+    },
+    {
+      "status": "A",
+      "path": "assets/app_icon/previews/icon-16.png"
+    },
+    {
+      "status": "A",
+      "path": "assets/app_icon/previews/icon-192.png"
+    },
+    {
+      "status": "A",
+      "path": "assets/app_icon/previews/icon-256.png"
+    },
+    {
+      "status": "A",
+      "path": "assets/app_icon/previews/icon-32.png"
+    },
+    {
+      "status": "A",
+      "path": "assets/app_icon/previews/icon-48.png"
+    },
+    {
+      "status": "A",
+      "path": "assets/app_icon/previews/icon-512.png"
+    },
+    {
+      "status": "A",
+      "path": "assets/app_icon/previews/icon-64.png"
+    },
+    {
+      "status": "A",
+      "path": "assets/app_icon/windows.ico"
+    },
+    {
+      "status": "A",
+      "path": "assets/fonts/README.md"
+    },
+    {
+      "status": "A",
+      "path": "assets/illustrations/README.md"
+    },
+    {
+      "status": "A",
+      "path": "assets/vehicles/README.md"
+    },
+    {
+      "status": "A",
+      "path": "backend/api/main.cpp"
+    },
+    {
+      "status": "A",
+      "path": "backend/database/README.md"
+    },
+    {
+      "status": "A",
+      "path": "backend/events/README.md"
+    },
+    {
+      "status": "A",
+      "path": "backend/security/README.md"
+    },
+    {
+      "status": "D",
+      "path": "build.py"
+    },
+    {
+      "status": "D",
+      "path": "clean.py"
+    },
+    {
+      "status": "A",
+      "path": "config/README.md"
+    },
+    {
+      "status": "A",
+      "path": "core/ai/evidence.hpp"
+    },
+    {
+      "status": "A",
+      "path": "core/diagnostic/README.md"
+    },
+    {
+      "status": "A",
+      "path": "core/interfaces/contracts.hpp"
+    },
+    {
+      "status": "A",
+      "path": "core/obd/README.md"
+    },
+    {
+      "status": "A",
+      "path": "core/protocols/elm.cpp"
+    },
+    {
+      "status": "A",
+      "path": "core/protocols/elm.hpp"
+    },
+    {
+      "status": "A",
+      "path": "core/rules/README.md"
+    },
+    {
+      "status": "A",
+      "path": "core/security/crypto.cpp"
+    },
+    {
+      "status": "A",
+      "path": "core/security/crypto.hpp"
+    },
+    {
+      "status": "A",
+      "path": "core/security/write_policy.cpp"
+    },
+    {
+      "status": "A",
+      "path": "core/security/write_policy.hpp"
+    },
+    {
+      "status": "A",
+      "path": "core/telemetry/units.hpp"
+    },
+    {
+      "status": "A",
+      "path": "core/transport/qt_elm.cpp"
+    },
+    {
+      "status": "A",
+      "path": "core/transport/qt_elm.hpp"
+    },
+    {
+      "status": "A",
+      "path": "core/vehicles/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/ADMIN_MODE.md"
+    },
+    {
+      "status": "D",
+      "path": "docs/AI_DIAGNOSIS.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/AI_DIAGNOSTICS.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/API_SPECIFICATION.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/APPLICATION_ICON_SPECIFICATION.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/APPLICATION_SETTINGS.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/ARCHITECTURE_DECISIONS.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/AUTO_MONITORING.md"
+    },
+    {
+      "status": "D",
+      "path": "docs/BASELINE_QA_REPORT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/BUILD_AND_RUN.md"
+    },
+    {
+      "status": "D",
+      "path": "docs/CLOUD_DEVELOPMENT.md"
+    },
+    {
+      "status": "D",
+      "path": "docs/CURRENT_SYSTEM_AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/CUSTOMER_MODE.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/DATABASE_DESIGN.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/DEPLOYMENT_GUIDE.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/DEVELOPMENT_PLAN.md"
+    },
+    {
+      "status": "D",
+      "path": "docs/DIAGNOSTIC_ENGINE.md"
+    },
+    {
+      "status": "D",
+      "path": "docs/FEATURE_MATRIX.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/FUNCTIONAL_REQUIREMENTS.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/FUTURE_PAYMENT_ARCHITECTURE.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/HARDWARE_TEST_PLAN.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/IMPLEMENTATION_REPORT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/LOCALIZATION.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/MACROSERVICES_ARCHITECTURE.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/MARKETPLACE.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/NON_FUNCTIONAL_REQUIREMENTS.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/NOTIFICATION_SYSTEM.md"
+    },
+    {
+      "status": "D",
+      "path": "docs/OBD_CONNECTIVITY.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/OBD_PROTOCOLS.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/OBD_READ_OPERATIONS.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/OBD_SAFETY_MODEL.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/OBD_WRITE_OPERATIONS.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/ONLINE_UPDATE_SYSTEM.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/PERFORMANCE_TESTING.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/PRODUCT_REQUIREMENTS.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/REPAIR_PROCEDURES.md"
+    },
+    {
+      "status": "D",
+      "path": "docs/REUSE_AND_MIGRATION_PLAN.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/RISK_REGISTER.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/ROLES_AND_PERMISSIONS.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/SECURITY_AND_PRIVACY.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/SOLID_CODING_STANDARDS.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/SYSTEM_ARCHITECTURE.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/TECH_STACK.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/TEST_CASE_MATRIX.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/TEST_METHODOLOGY.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/UI_UX_DESIGN_SYSTEM.md"
+    },
+    {
+      "status": "D",
+      "path": "docs/UI_UX_PARITY.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/UNIT_CONVERSION.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/USER_MODE.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/VEHICLE_COMPATIBILITY.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/WIRING_DIAGRAMS.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/api/openapi.json"
+    },
+    {
+      "status": "M",
+      "path": "docs/architecture/README.md"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/admin-and-permission-management.mmd"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/ai-diagnostic-decision-flow.mmd"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/architecture-data.js"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/architecture.css"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/architecture.js"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/architecture.mmd"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/automated-obd-monitoring.mmd"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/cross-platform-integration.mmd"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/customer-diagnostic-flow.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/architecture/dashboard.css"
+    },
+    {
+      "status": "A",
+      "path": "docs/architecture/dashboard.js"
+    },
+    {
+      "status": "A",
+      "path": "docs/architecture/data.js"
+    },
+    {
+      "status": "A",
+      "path": "docs/architecture/data.json"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/ecosystem-openapi.json"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/high-level-architecture.mmd"
+    },
+    {
+      "status": "M",
+      "path": "docs/architecture/interactive_architecture.html"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/marketplace.mmd"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/notifications.mmd"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/offline-online-synchronization.mmd"
+    },
+    {
+      "status": "D",
+      "path": "docs/architecture/user-diagnostic-flow.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/admin.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/android.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/core.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/customer.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/deployment.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/entities.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/identity.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/ios.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/macroservices.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/market.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/monitoring.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/notifications.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/observability.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/overview.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/payments.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/protocols.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/read-sequence.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/roadmap.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/rules.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/safety.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/security.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/storage.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/telemetry.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/testing.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/updates.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/user.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/windows.mmd"
+    },
+    {
+      "status": "A",
+      "path": "docs/diagrams/write-state.mmd"
+    },
+    {
+      "status": "D",
+      "path": "docs/evidence/architecture-browser-checks.json"
+    },
+    {
+      "status": "D",
+      "path": "docs/evidence/baseline.json"
+    },
+    {
+      "status": "D",
+      "path": "docs/evidence/changed-files.json"
+    },
+    {
+      "status": "D",
+      "path": "docs/evidence/cloud-python-dependencies.txt"
+    },
+    {
+      "status": "D",
+      "path": "docs/evidence/final-qa.json"
+    },
+    {
+      "status": "D",
+      "path": "docs/evidence/foundation-coverage.json"
+    },
+    {
+      "status": "D",
+      "path": "docs/evidence/foundation-http-smoke.json"
+    },
+    {
+      "status": "D",
+      "path": "docs/evidence/foundation-postgresql.sql"
+    },
+    {
+      "status": "D",
+      "path": "docs/evidence/imported-foundation-implementation-report.md"
+    },
+    {
+      "status": "D",
+      "path": "docs/evidence/interactive-architecture.png"
+    },
+    {
+      "status": "D",
+      "path": "docs/evidence/new-repository-validation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/testing/architecture-browser.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/testing/architecture-dashboard.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/testing/core-coverage.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/testing/ctest.xml"
+    },
+    {
+      "status": "A",
+      "path": "docs/testing/current-results.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/testing/desktop-foundation.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/testing/http-smoke.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/testing/protocol-performance.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/testing/qt-integration.xml"
+    },
+    {
+      "status": "A",
+      "path": "docs/testing/sanitizers.xml"
+    },
+    {
+      "status": "A",
+      "path": "docs/testing/source-contracts.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/.env.example"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/.gitignore"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/PLATFORM_FEATURE_PARITY.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/README.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/README_PHASE35.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/START_HERE_WINDOWS.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/VERSION"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/README.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/README_STANDALONE.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/api_client.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/backend_recovery.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/backend_worker.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/build_windows.ps1"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/channel_labels.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/client_workspace.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/dashboard_translations.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/debug_runtime_hook.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/demo_ui.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/edge_resize.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/main.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/measurement_units.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/prepare_windows_icon.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/qt_early_runtime_hook.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/qt_freeze_probe.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/requirements-dev.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/requirements.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/specs/AICarScanner.spec"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/specs/backend_service.spec"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/stage_windows_icons.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/storage.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/test_smoke.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/README_UI_POM.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_api_client.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_backend_worker_coverage.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_frozen_hook_contract.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_full_flow.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_gauge_bands.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_http_mock_integration.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_main_coverage_edges.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_main_helpers.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_main_lifecycle.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_negative_api_contract.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_negative_storage.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_prepare_windows_icon_coverage.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_qt_freeze_probe_coverage.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_real_backend_diagnostic_e2e.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_stage_windows_icons.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_storage.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_ui_pom.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_ui_widgets.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_vehicle_artwork.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/tests/test_verify_icons_negative.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/ui.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/vehicle_artwork.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/desktop/verify_icons.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/ANDROID_CODE_AUDIT.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/README.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/build.gradle.kts"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/androidTest/java/com/aicarscaner/mobile/presentation/AnalysisDiagramInstrumentedTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/androidTest/java/com/aicarscaner/mobile/presentation/AnalysisWorkspaceInstrumentedTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/androidTest/java/com/aicarscaner/mobile/presentation/DesktopLauncherTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/androidTest/java/com/aicarscaner/mobile/presentation/DiagnosticScreenInstrumentedTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/androidTest/java/com/aicarscaner/mobile/presentation/LauncherReorderTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/androidTest/java/com/aicarscaner/mobile/presentation/SessionPrivacyInstrumentedTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/androidTest/java/com/aicarscaner/mobile/presentation/SharedVehicleCatalogSnapshotTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/androidTest/java/com/aicarscaner/mobile/presentation/VehicleUiRegressionTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/debug/AndroidManifest.xml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/debug/java/com/aicarscaner/mobile/presentation/TestHostActivity.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/AndroidManifest.xml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_catalog.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/audi_a4_b8.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/audi_a6_c6.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/audi_q5_8r.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/bmw_3-series_e90.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/bmw_3-series_f30.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/bmw_5-series_e60.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/bmw_5-series_f10.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/bmw_x5_e70.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/bmw_x5_f15.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/chevrolet_cruze_j300.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/chevrolet_malibu_eighth-generation.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/ford_fiesta_b299.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/ford_focus_mk3.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/ford_mondeo_mk4.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/honda_accord_cp.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/honda_accord_cu.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/honda_civic_fb.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/honda_civic_fc-fk.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/honda_civic_fd.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/honda_cr-v_re.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/honda_cr-v_rw-rt.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/hyundai_elantra_ad.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/hyundai_elantra_hd.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/hyundai_elantra_md.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/hyundai_sonata_yf.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/hyundai_tucson_lm.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/hyundai_tucson_tl.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/kia_forte_td.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/kia_forte_yd.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/kia_sportage_ql.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/kia_sportage_sl.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/lada_granta_2190.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/lada_vesta_2180.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/lexus_es_xv60.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/lexus_rx_al10.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/mazda_cx-5_ke.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/mazda_mazda3_bl.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/mazda_mazda6_gj.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/mercedes-benz_c-class_w204.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/mercedes-benz_c-class_w205.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/mercedes-benz_e-class_w211.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/mercedes-benz_e-class_w212.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/mercedes-benz_ml-class_w164.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/mitsubishi_lancer_cy.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/nissan_altima_l32.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/nissan_qashqai_j10.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/nissan_rogue_t32.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/nissan_sentra_b17.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/nissan_x-trail_t31.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/opel_astra_j.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/peugeot_308_t7.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/renault_duster_hs.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/renault_megane_iii.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/skoda_octavia_1z.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/subaru_forester_sh.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/subaru_outback_br.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/toyota_camry_xv40.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/toyota_camry_xv70.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/toyota_corolla_e140-e150.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/toyota_corolla_e210.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/toyota_land-cruiser-prado_j150.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/toyota_land-cruiser_j200.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/toyota_prius_xw30.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/toyota_prius_xw50.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/toyota_rav4_xa30.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/toyota_rav4_xa50.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/toyota_yaris_xp90.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/volkswagen_golf_mk6.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/volkswagen_golf_mk7.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/volkswagen_jetta_a6.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/volkswagen_passat_b7.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/assets/vehicle_models/volkswagen_tiguan_5n.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/MainActivity.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/data/SharedVehicleCatalog.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/data/api/ApiClient.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/data/api/DiagnosticApi.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/data/api/ReportExport.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/data/obd/BleObdClient.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/data/obd/BluetoothObdClient.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/data/obd/DiscoveryReader.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/data/obd/LiveDataReader.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/data/obd/LivePollingSession.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/data/obd/UsbObdClient.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/data/obd/WifiObdClient.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/data/repository/DiagnosticRepository.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/presentation/AnalysisDiagram.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/presentation/AnalysisWorkspace.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/presentation/BackendTools.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/presentation/DashboardNavigation.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/presentation/DemoPanels.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/presentation/DiagnosticScreen.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/presentation/DiagnosticViewModel.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/presentation/DiagnosticViewModelFactory.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/presentation/VehicleCatalog.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/settings/AppSettings.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/settings/DashboardStrings.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/settings/LauncherOrderStore.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/java/com/aicarscaner/mobile/settings/Strings.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/drawable-nodpi/ic_launcher_foreground.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/drawable-nodpi/launcher_background.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/drawable-nodpi/launcher_car.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/drawable-nodpi/launcher_icons.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/drawable/ic_launcher_safezone.xml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/drawable/ic_obd_connector.xml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/mipmap/ic_launcher.webp"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/values/icon_colors.xml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/values/styles.xml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/main/res/xml/report_paths.xml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/data/DiagnosticRepositoryTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/data/api/BackendParityContractTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/data/api/DiagnosticApiContractTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/data/api/ReportExportTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/data/obd/BluetoothObdClientConnectTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/data/obd/DiscoveryReaderTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/data/obd/LiveDataReaderTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/data/obd/LivePollingSessionTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/data/obd/ObdClientsDisconnectedTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/data/obd/ObdPlanFixture.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/data/obd/UsbObdClientConnectTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/data/obd/WifiObdClientTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/presentation/AnalysisDiagramTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/presentation/CatalogFuelTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/presentation/DashboardProgressTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/presentation/DiagnosticViewModelTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/presentation/LiveChannelParityTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/presentation/SharedVehicleCatalogTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/presentation/VehicleCatalogTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/settings/AppSettingsStoreTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/settings/DashboardStringsTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/settings/LauncherOrderStoreTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/app/src/test/java/com/aicarscaner/mobile/settings/StringsTest.kt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/build.gradle.kts"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/gradle.properties"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/gradle/wrapper/gradle-wrapper.jar"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/gradle/wrapper/gradle-wrapper.properties"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/gradlew"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/gradlew.bat"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/run.mac"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-android/settings.gradle.kts"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/AICarScannerApp.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/Assets.xcassets/AppIcon.appiconset/Contents.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/Assets.xcassets/AppIcon.appiconset/ai-car-scanner-icon.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/Assets.xcassets/Contents.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/AutomotiveTheme.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/BackendWorkspace.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/DiagnosticAPI.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/DiagnosticModels.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/DiagnosticScreen.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/DiagnosticViewModel.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/Info.plist"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/Launcher/launcher_background.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/Launcher/launcher_car.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/Launcher/launcher_icons.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/LauncherOrder.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/LiveDashboard.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/NativeObdWifiBridge.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/OBDService.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/SharedVehicleCatalog.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleCatalog/vehicle_catalog.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModelArtwork.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/audi_a4_b8.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/audi_a6_c6.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/audi_q5_8r.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/bmw_3-series_e90.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/bmw_3-series_f30.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/bmw_5-series_e60.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/bmw_5-series_f10.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/bmw_x5_e70.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/bmw_x5_f15.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/chevrolet_cruze_j300.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/chevrolet_malibu_eighth-generation.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/ford_fiesta_b299.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/ford_focus_mk3.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/ford_mondeo_mk4.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/honda_accord_cp.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/honda_accord_cu.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/honda_civic_fb.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/honda_civic_fc-fk.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/honda_civic_fd.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/honda_cr-v_re.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/honda_cr-v_rw-rt.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/hyundai_elantra_ad.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/hyundai_elantra_hd.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/hyundai_elantra_md.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/hyundai_sonata_yf.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/hyundai_tucson_lm.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/hyundai_tucson_tl.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/kia_forte_td.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/kia_forte_yd.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/kia_sportage_ql.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/kia_sportage_sl.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/lada_granta_2190.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/lada_vesta_2180.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/lexus_es_xv60.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/lexus_rx_al10.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/mazda_cx-5_ke.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/mazda_mazda3_bl.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/mazda_mazda6_gj.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/mercedes-benz_c-class_w204.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/mercedes-benz_c-class_w205.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/mercedes-benz_e-class_w211.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/mercedes-benz_e-class_w212.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/mercedes-benz_ml-class_w164.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/mitsubishi_lancer_cy.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/nissan_altima_l32.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/nissan_qashqai_j10.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/nissan_rogue_t32.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/nissan_sentra_b17.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/nissan_x-trail_t31.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/opel_astra_j.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/peugeot_308_t7.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/renault_duster_hs.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/renault_megane_iii.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/skoda_octavia_1z.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/subaru_forester_sh.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/subaru_outback_br.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/toyota_camry_xv40.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/toyota_camry_xv70.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/toyota_corolla_e140-e150.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/toyota_corolla_e210.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/toyota_land-cruiser-prado_j150.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/toyota_land-cruiser_j200.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/toyota_prius_xw30.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/toyota_prius_xw50.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/toyota_rav4_xa30.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/toyota_rav4_xa50.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/toyota_yaris_xp90.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/volkswagen_golf_mk6.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/volkswagen_golf_mk7.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/volkswagen_jetta_a6.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/volkswagen_passat_b7.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/AICarScanner/VehicleModels/volkswagen_tiguan_5n.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/README.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/TEST_REPORT.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/Tests/AICarScannerTests.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/Tests/DiagnosticAPIErrorPathTests.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/Tests/LauncherOrderTests.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/Tests/NativeParityTests.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/Tests/ObdBridgeAPITests.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/Tests/SharedVehicleCatalogTests.swift"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/apps/mobile-ios/project.yml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/AI-Car-Scanner-master.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/AI-Car-Scanner-mobile.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/AI-Car-Scanner.ico"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/AI-Car-Scanner.webp"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/ai-car-scanner-icon.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/0.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/1.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/10.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/11.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/2.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/3.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/4.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/5.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/6.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/7.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/8.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/9.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/README.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/background.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/brand-car.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/icons-3d.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/launcher/mobile-app-icon.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/audi_a4_b8.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/audi_a6_c6.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/audi_q5_8r.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/bmw_3-series_e90.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/bmw_3-series_e90.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/bmw_3-series_f30.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/bmw_3-series_f30.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/bmw_5-series_e60.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/bmw_5-series_e60.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/bmw_5-series_f10.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/bmw_x5_e70.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/bmw_x5_f15.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/chevrolet_cruze_j300.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/chevrolet_malibu_eighth-generation.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/ford_fiesta_b299.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/ford_focus_mk3.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/ford_focus_mk3.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/ford_mondeo_mk4.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/ford_mondeo_mk4.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/honda_accord_cp.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/honda_accord_cu.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/honda_accord_cu.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/honda_civic_fb.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/honda_civic_fc-fk.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/honda_civic_fd.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/honda_civic_fd.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/honda_cr-v_re.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/honda_cr-v_rw-rt.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/hyundai_elantra_ad.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/hyundai_elantra_ad.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/hyundai_elantra_hd.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/hyundai_elantra_md.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/hyundai_elantra_md.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/hyundai_sonata_yf.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/hyundai_tucson_lm.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/hyundai_tucson_tl.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/hyundai_tucson_tl.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/kia_forte_td.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/kia_forte_td.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/kia_forte_yd.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/kia_forte_yd.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/kia_sportage_ql.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/kia_sportage_sl.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/kia_sportage_sl.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/lada_granta_2190.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/lada_vesta_2180.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/lexus_es_xv60.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/lexus_rx_al10.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/mazda_cx-5_ke.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/mazda_mazda3_bl.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/mazda_mazda6_gj.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/mercedes-benz_c-class_w204.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/mercedes-benz_c-class_w204.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/mercedes-benz_c-class_w205.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/mercedes-benz_e-class_w211.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/mercedes-benz_e-class_w211.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/mercedes-benz_e-class_w212.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/mercedes-benz_e-class_w212.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/mercedes-benz_ml-class_w164.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/mitsubishi_lancer_cy.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/neon-manifest.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/nissan_altima_l32.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/nissan_qashqai_j10.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/nissan_rogue_t32.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/nissan_sentra_b17.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/nissan_x-trail_t31.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/opel_astra_j.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/peugeot_308_t7.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/renault_duster_hs.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/renault_megane_iii.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/skoda_octavia_1z.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/subaru_forester_sh.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/subaru_outback_br.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_camry_xv40.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_camry_xv40.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_camry_xv70.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_corolla_e140-e150.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_corolla_e140-e150.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_corolla_e210.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_land-cruiser-prado_j150.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_land-cruiser_j200.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_prius_xw30.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_prius_xw50.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_rav4_xa30.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_rav4_xa30.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_rav4_xa50.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/toyota_yaris_xp90.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/volkswagen_golf_mk6.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/volkswagen_golf_mk6.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/volkswagen_golf_mk7.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/volkswagen_golf_mk7.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/volkswagen_jetta_a6.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/volkswagen_passat_b7.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/volkswagen_passat_b7.svg"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/assets/vehicle_models/volkswagen_tiguan_5n.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/acquisition/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/acquisition/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/acquisition/service.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/embeddings/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/embeddings/providers.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/evaluation/golden.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/evaluation/grounding.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/ingestion/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/ingestion/chunker.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/ingestion/dataset.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/ingestion/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/ingestion/parsers.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/ingestion/pipeline.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/interfaces.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/live_analysis.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/llm/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/llm/factory.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/llm/interfaces_guard.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/llm/llama_cpp.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/llm/llama_server.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/llm/ollama.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/llm/openai_compatible.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/llm/orchestrator.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/ml/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/ml/anomaly.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/rag/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/rag/evaluation.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/rag/evaluator.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/rag/hybrid.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/rag/pgvector_hybrid.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/rag/quality.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/rag/reranker.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/rag/retrieval.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/rag/store.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/rag/vector_store.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/reasoning/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/reasoning/engine.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/reasoning/evidence_extractor.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ai/reasoning/pipeline.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/alembic.ini"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/acquisition_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/active_discovery_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/advanced_obd_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/ai_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/client_features_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/decision_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/device_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/global_data_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/intelligence_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/knowledge_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/main.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/multi_bus_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/multi_ecu_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/network_discovery_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/obd_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/platform_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/rag_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/state.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/telemetry_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/vehicle_catalog_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/vehicle_diagnostic_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/vehicle_reference_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/catalog_sources/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/catalog_sources/wikimedia.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/device/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/device/manager.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/diagnostic/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/diagnostic/database.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/diagnostic/db_models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/diagnostic/decision.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/diagnostic/intelligence.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/diagnostic/local_database.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/diagnostic/localization.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/diagnostic/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/diagnostic/rules.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/diagnostic/session_persistence.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ecosystem/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ecosystem/api.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ecosystem/errors.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ecosystem/migration_policy.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ecosystem/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ecosystem/schemas.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ecosystem/security.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/ecosystem/service.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/global_data.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/migrations/env.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/migrations/versions/0001_ecosystem_foundation.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/multi_ecu/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/multi_ecu/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/multi_ecu/multibus_runtime.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/multi_ecu/service.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/network_discovery/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/network_discovery/active_service.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/network_discovery/service.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/network_discovery/state.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/obd/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/obd/catalog.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/obd/decoding.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/obd/j1587.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/obd/j1939.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/obd/protocols.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/observability/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/observability/metrics.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/observability/tracing.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/professional_platform/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/professional_platform/analytics.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/professional_platform/audit.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/professional_platform/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/professional_platform/rbac.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/professional_platform/reporting.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/professional_platform/service.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/requirements-ai.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/requirements-dev.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/requirements.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/resources/fonts/DejaVuSans.ttf"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/resources/fonts/LICENSE.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/scripts/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/scripts/seed_vehicle_catalog.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/security/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/security/audit_security.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/security/auth.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/security/rate_limit.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/security/rbac.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/simulator/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/simulator/vehicle.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/telemetry/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/telemetry/analysis.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/telemetry/channels.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/telemetry/definitions.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/telemetry/evidence.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/telemetry/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/telemetry/service.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/tools/import_check.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/adapters/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/adapters/can_simulator.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/adapters/uds_simulator.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/can/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/can/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/interfaces.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/isotp/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/isotp/stack.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/network/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/network/active_discovery.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/network/discovery.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/network/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/network/multibus.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/obd/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/obd/client.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/obd/service.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/protocol/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/protocol/trace.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/uds/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/uds/client.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle/uds/diagnostics.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle_diagnostic/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle_diagnostic/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/backend/vehicle_diagnostic/service.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/config/client_contract.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/config/environment.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/data/.gitkeep"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/data/generated_vehicle_portraits.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/data/global/diagnostic_cases.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/data/global/manifest.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/data/global/vehicles.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/data/vehicle_catalog.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/data/vehicle_fitment_catalog.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/data/vehicle_fitments.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/data/vehicle_reference.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/datasets/golden-cases/LPG_MISFIRE_001.yaml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/datasets/index.yaml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/datasets/rag-eval/phase12_golden_cases.jsonl"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/datasets/vehicle-scenarios/uds-basic.yaml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/device/android-diagnostic-device/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/device/android-diagnostic-device/core/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/device/android-diagnostic-device/core/device.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/device/android-diagnostic-device/health/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/device/android-diagnostic-device/health/monitor.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/device/android-diagnostic-device/ota/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/device/android-diagnostic-device/ota/manifest.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/device/android-diagnostic-device/storage/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/device/android-diagnostic-device/storage/local_store.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/device/android-diagnostic-device/sync/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/device/android-diagnostic-device/sync/queue.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/device/android-diagnostic-device/transport/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/device/android-diagnostic-device/transport/custom_vci.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docker-compose.yml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/README.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/ai/OFFLINE_AI.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/architecture/AI_CAR_SCANNER_architecture_map.html"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/architecture/AI_CAR_SCANNER_architecture_summary.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/architecture/OBD_GLOBAL_VEHICLE_PROTOCOL_AUDIT_2026-10-22.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/architecture/component-hierarchy.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/architecture/current-state-analysis.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/architecture/dependency-map.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/architecture/domain-and-flow.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/architecture/system-overview.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/architecture/visualization.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/building/BUILD_ALL.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/building/ENVIRONMENT_CONFIG.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/building/LOCAL_RUNNER.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/building/WINDOWS_INSTALLER.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/.gitignore"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/AI-Car-Scanner-Demo-Report-2026-10-22.pptx"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/AI-Car-Scanner-UI-Demo-2026-10-26.pdf"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/AI-Car-Scanner-UI-Demo-All-Platforms-2026-10-26.pdf"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/README.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/build_demo_report.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/build_mobile_ui_demo_pdf.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/capture_desktop_demo.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/demo-data.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/evidence-summary.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/evidence/android-build-lint.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/evidence/android-native-build.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/evidence/backend-startup.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/evidence/desktop-tests.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/evidence/performance.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/evidence/python-tests.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/requirements.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/android-adapter-refined.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/android-analysis-recalculated.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/android-diagram-hy-dark.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/android-diagram-ru-light.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/android-dtc-hy.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/android-home-hy.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/android-home-ru-light.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/android-progress-hy.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/android-reports-private.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/android-tests-hy.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/backend-evidence.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/cover-car.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/desktop-analysis.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/desktop-dashboard-light.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/desktop-dashboard.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/desktop-reports.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/desktop-tests.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/source-privacy.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/screenshots/test-evidence.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/slide-overview.png"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/demo/slides-manifest.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/design/NATIVE_UI.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/design/NEON_UI_CROSS_PLATFORM.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/design/VEHICLE_IMAGES_AND_API_RECOVERY.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/maintenance/ICON_PARITY_2026-10-26.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/maintenance/branch-integration-audit-2026-10-26.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/maintenance/cleanup-2026-10-27.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/maintenance/cleanup-build-fixes-2026-10-22.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/maintenance/full-repository-audit-2026-10-22.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/maintenance/obd-development-audit-2026-10-26.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/maintenance/repository-inventory-2026-10-22.csv"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/maintenance/ui-issues-18-23-audit-2026-10-26.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/obd/EXPANDED_CATALOG_AND_PROTOCOLS.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/obd/REAL_OBD_AUDIT.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/obd/SETUP_AND_API.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/obd/SUPPORTED_PID_POLLING.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/reviews/android-desktop-parity-2026-10-23.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/reviews/desktop-save-analyze-fix-2026-10-27.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/reviews/native-functional-parity-2026-10-27.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/reviews/native-parity-implementation-2026-10-27.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/testing/AI_RUNTIME_AND_ACQUISITION_STATUS.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/testing/BACKEND_LOCAL_STARTUP.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/testing/DESKTOP_FULL_QA.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/testing/FASTAPI_RECOVERY_RELEASE_BLOCKER.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/testing/FASTAPI_STARTUP_LOCAL.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/testing/README_REAL_UI_V1.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/testing/branch-merge-review-2026-10-22.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/testing/coverage-audit.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/testing/full-flow-coverage.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/testing/full-qa-audit-2026-10-21.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/testing/pre-build-cleanup-2026-10-16.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/testing/qt-runtime-hook-crash-2026-10-16.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/testing/repository-audit-2026-10-16.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/docs/ui/EDITABLE_MAIN_MENU.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/infrastructure/docker/backend.Dockerfile"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/infrastructure/monitoring/prometheus.yml"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/infrastructure/postgres/schema.sql"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/installer/windows/AI-Car-Scanner.iss"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/installer/windows/bootstrap.ps1"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/installer/windows/windows_installer.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/installer/windows/wizard-icon.bmp"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/installer/windows/wizard-side.bmp"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/models/README.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/pytest.ini"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/requirements.txt"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/benchmark_desktop.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/bootstrap_desktop.ps1"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/bootstrap_desktop.sh"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/build_all.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/build_desktop_git_bash.sh"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/build_windows_icon_preview.ps1"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/build_windows_installer.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/build_windows_standalone.ps1"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/check_architecture_browser.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/check_ecosystem_smoke.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/check_llama_server.ps1"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/check_local_ai.ps1"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/check_local_backend.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/check_offline_ai.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/clean_repository.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/cleanup_merged_branches_git_bash.sh"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/debug_desktop_git_bash.sh"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/desktop_v1_readiness.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/diagnose_frozen_qt.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/export_architecture_mermaid.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/export_ecosystem_openapi.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/import_wikimedia_vehicles.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/install_local_ai.ps1"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/local_runner.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/probe_qt_crypto_git_bash.sh"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/real_ui_acceptance.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/regenerate_native_icons.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/run_debug_desktop_git_bash.sh"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/run_desktop.ps1"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/run_desktop_tests.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/run_full_desktop_qa_git_bash.sh"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/run_real_ui_v1_git_bash.sh"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/seed_vehicle_catalog.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/smoke_test_desktop_exe.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/start_all.ps1"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/start_backend.ps1"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/start_llama_server.ps1"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/sync_offline_selector.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/sync_vehicle_portraits.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/test_fastapi_recovery_integration.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/test_fastapi_startup.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/test_llama_server.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/test_local_ai.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/vehicle_portraits.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/scripts/windows_test_runner.sh"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/shared/environment.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/shared/reporting.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/shared/vehicle_catalog.json"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_llm_factory.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_low_coverage_document_parsers.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_low_coverage_embedding_providers.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_low_coverage_ingestion_pipeline.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_low_coverage_live_analysis.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_low_coverage_llama_server.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_low_coverage_openai_compatible.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_low_coverage_orchestrator.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_low_coverage_pgvector_hybrid.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_low_coverage_rag_retrieval.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_low_coverage_reasoning_pipeline.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_low_coverage_reranker.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_openai_runtime_availability.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_phase10_ingestion.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_phase11_retrieval.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_phase12_providers.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_phase12_quality.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_phase13_decision.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_phase23_dynamic_reasoning.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_phase28_live_ai.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_phase30_local_llm.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_phase31_llama_server.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_phase33_context.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_phase35_context_budget.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_phase8_intelligence.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_phase9_rag_llm.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_test_result_scores.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ai/test_zero_coverage_llm_vector_store.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_api.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_api_lifespan.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_completed_test_reanalysis.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_decision_routes_low_coverage.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_diagnostic_session_api.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_full_diagnostic_lifecycle.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_guided_tests_and_signal_names.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_active_discovery.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_ai_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_device_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_intelligence_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_knowledge_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_main_endpoints.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_multi_bus_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_multi_ecu_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_network_discovery_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_rag_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_simple_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_telemetry_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_vehicle_catalog_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_low_coverage_vehicle_diagnostic_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_native_client_features.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_phase15_acquisition_api.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_phase16_vehicle_diagnostic.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_phase17_multi_ecu.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_phase18_multibus_api.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_phase19_network_discovery.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_phase20_active_discovery.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_phase26_devices.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_phase27_session_integration.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_session_persistence.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_state_registry_low_coverage.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/api/test_vehicle_registry_routes.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/conftest.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/desktop/test_backend_autostart.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/desktop/test_backend_recovery.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/desktop/test_check_backend_cleanup.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/desktop/test_fastapi_startup_cleanup.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/desktop/test_offline_ai_setup.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/desktop/test_performance_tool.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/desktop/test_phase25_standalone.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/desktop/test_phase31_llm_autostart.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/desktop/test_phase32_ports_and_timeout.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/desktop/test_zero_coverage_helpers.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/device/test_phase5.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/diagnostic/test_desktop_local_database.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/diagnostic/test_low_coverage_localization.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/diagnostic/test_low_coverage_session_persistence.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/ecosystem/test_foundation.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/harness/README.md"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/harness/test_engine_contracts.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/harness/test_global_data.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/harness/test_golden_cases.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/harness/test_performance.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/integration/test_simulator.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/obd/test_advanced_protocols.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/obd/test_native_tcp.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/obd/test_protocols_and_bridge.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/obd/test_shared_selector_snapshot.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/obd/test_supported_polling.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/obd/test_vehicle_reference.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/observability/test_observability.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/platform/test_platform.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/professional_platform/test_low_coverage_rbac.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/regression/test_golden_case.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/security/test_security.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/telemetry/test_phase14_telemetry.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_build_all.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_clean_repository.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_coverage_zero_modules.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_environment_config.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_ios_vehicle_selection_parity.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_issue_18_23_ui_contracts.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_local_runner.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_low_coverage_acquisition_api_service.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_low_coverage_seed_vehicle_catalog.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_low_coverage_small_modules.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_mobile_dashboard_parity.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_mobile_navigation_parity.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_mobile_vehicle_catalog_parity.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_mobile_vehicle_picker_regressions.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_native_app_icon_parity.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_vehicle_catalog_seed.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/test_windows_installer.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/unit/test_reasoning.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/acquisition/test_live_disconnect_recovery.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/acquisition/test_phase15_acquisition.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/acquisition/test_phase15_sources.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/can/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/can/test_can_models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/devices/test_low_coverage_connection_manager.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/devices/test_optin_vci_backend.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/devices/test_phase26_vci.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/devices/test_registry.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/isotp/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/isotp/test_isotp.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/isotp/test_low_coverage_stack.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/j2534/test_j2534.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/network/test_phase17_network.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/network/test_phase18_multibus.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/protocol/test_elm327_probe.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/protocol/test_registry_catalog.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/protocol/test_trace.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/test_canonical_vehicle_core.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/test_diagnostic_discovery.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/test_elm327.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/test_global_catalog_registry.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/test_low_coverage_acquisition_manager.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/test_low_coverage_acquisition_sources.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/test_low_coverage_multibus_runtime.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/test_low_coverage_multiplexer.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/test_low_coverage_obd_transports.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/test_low_coverage_uds_simulator.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/test_low_coverage_vehicle_diagnostic_service.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/test_obd_client.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/test_vehicle_external_registry.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/uds/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/uds/test_phase16_diagnostics.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle/uds/test_uds.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle_network/test_phase19_discovery.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/tests/vehicle_network/test_phase20_active_engine.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/acquisition/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/acquisition/factory.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/acquisition/manager.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/acquisition/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/acquisition/offline_queue.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/acquisition/sources.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/adapters/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/adapters/base.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/adapters/can_simulator.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/adapters/j2534.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/adapters/simulator.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/adapters/uds_simulator.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/adapters/vendor.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/can/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/can/bus.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/can/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/catalog_registry.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/devices/connection.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/devices/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/devices/registry.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/diagnostic_discovery.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/doip/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/doip/client.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/external_registry.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/interfaces.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/isotp/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/isotp/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/isotp/stack.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/j2534/constants.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/j2534/interface.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/j2534/windows.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/network/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/network/active_discovery.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/network/discovery.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/network/models.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/network/multibus.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/network/multiplexer.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/network/runtime.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/obd/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/obd/adapters/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/obd/adapters/ble.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/obd/adapters/native_tcp.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/obd/adapters/simulator.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/obd/adapters/tcp_wifi.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/obd/adapters/usb_serial.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/obd/client.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/obd/pid_catalog.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/obd/protocols/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/obd/protocols/elm327.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/obd/transport.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/protocol/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/protocol/elm327_probe.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/protocol/registry.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/protocol/trace.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/uds/__init__.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/uds/client.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/uds/decoder.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/uds/diagnostics.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/vehicle/uds/read_only.py"
+    },
+    {
+      "status": "D",
+      "path": "finalbuild/windows_test_runner.sh"
+    },
+    {
+      "status": "A",
+      "path": "future_modules/payments/ARCHITECTURE.md"
+    },
+    {
+      "status": "D",
+      "path": "installer.py"
+    },
+    {
+      "status": "A",
+      "path": "integrations/ai_providers/README.md"
+    },
+    {
+      "status": "A",
+      "path": "integrations/automotive_data/README.md"
+    },
+    {
+      "status": "A",
+      "path": "integrations/email/README.md"
+    },
+    {
+      "status": "A",
+      "path": "integrations/maps/README.md"
+    },
+    {
+      "status": "A",
+      "path": "integrations/sms/README.md"
+    },
+    {
+      "status": "D",
+      "path": "native/obd/CMakeLists.txt"
+    },
+    {
+      "status": "D",
+      "path": "native/obd/README.md"
+    },
+    {
+      "status": "D",
+      "path": "native/obd/cloud_setup.sh"
+    },
+    {
+      "status": "D",
+      "path": "native/obd/requirements-build.txt"
+    },
+    {
+      "status": "D",
+      "path": "native/obd/tcp.cpp"
+    },
+    {
+      "status": "D",
+      "path": "pytest.ini"
+    },
+    {
+      "status": "D",
+      "path": "report.md"
+    },
+    {
+      "status": "D",
+      "path": "runner.py"
+    },
+    {
+      "status": "A",
+      "path": "scripts/build/cloud_bootstrap.py"
+    },
+    {
+      "status": "A",
+      "path": "scripts/build/cloud_setup.sh"
+    },
+    {
+      "status": "A",
+      "path": "scripts/build/local.sh"
+    },
+    {
+      "status": "A",
+      "path": "scripts/build/windows-git-bash.sh"
+    },
+    {
+      "status": "A",
+      "path": "scripts/package/icons.py"
+    },
+    {
+      "status": "A",
+      "path": "scripts/test/architecture_browser.py"
+    },
+    {
+      "status": "A",
+      "path": "scripts/test/coverage.py"
+    },
+    {
+      "status": "A",
+      "path": "scripts/test/http_smoke.py"
+    },
+    {
+      "status": "A",
+      "path": "scripts/test/local.sh"
+    },
+    {
+      "status": "A",
+      "path": "scripts/test/requirements.txt"
+    },
+    {
+      "status": "A",
+      "path": "scripts/test/source_contracts.py"
+    },
+    {
+      "status": "A",
+      "path": "services/administration/README.md"
+    },
+    {
+      "status": "A",
+      "path": "services/ai_analysis/README.md"
+    },
+    {
+      "status": "A",
+      "path": "services/customer/README.md"
+    },
+    {
+      "status": "A",
+      "path": "services/diagnostics/controller.cpp"
+    },
+    {
+      "status": "A",
+      "path": "services/diagnostics/controller.hpp"
+    },
+    {
+      "status": "A",
+      "path": "services/identity/store.cpp"
+    },
+    {
+      "status": "A",
+      "path": "services/identity/store.hpp"
+    },
+    {
+      "status": "A",
+      "path": "services/marketplace/README.md"
+    },
+    {
+      "status": "A",
+      "path": "services/monitoring/eligibility.hpp"
+    },
+    {
+      "status": "A",
+      "path": "services/notifications/README.md"
+    },
+    {
+      "status": "A",
+      "path": "services/updates/manifest.hpp"
+    },
+    {
+      "status": "A",
+      "path": "services/vehicle/README.md"
+    },
+    {
+      "status": "A",
+      "path": "tests/integration/service_tests.cpp"
+    },
+    {
+      "status": "A",
+      "path": "tests/performance/protocol_benchmark.cpp"
+    },
+    {
+      "status": "A",
+      "path": "tests/unit/core_tests.cpp"
+    },
+    {
+      "status": "A",
+      "path": "ui/Main.qml"
+    },
+    {
+      "status": "A",
+      "path": "ui/charts/TelemetryTrace.qml"
+    },
+    {
+      "status": "A",
+      "path": "ui/components/MetricCard.qml"
+    },
+    {
+      "status": "A",
+      "path": "ui/icons/admin.svg"
+    },
+    {
+      "status": "A",
+      "path": "ui/icons/analysis.svg"
+    },
+    {
+      "status": "A",
+      "path": "ui/icons/diagnostics.svg"
+    },
+    {
+      "status": "A",
+      "path": "ui/icons/market.svg"
+    },
+    {
+      "status": "A",
+      "path": "ui/icons/monitoring.svg"
+    },
+    {
+      "status": "A",
+      "path": "ui/icons/repair.svg"
+    },
+    {
+      "status": "A",
+      "path": "ui/icons/reports.svg"
+    },
+    {
+      "status": "A",
+      "path": "ui/icons/settings.svg"
+    },
+    {
+      "status": "A",
+      "path": "ui/icons/telemetry.svg"
+    },
+    {
+      "status": "A",
+      "path": "ui/icons/updates.svg"
+    },
+    {
+      "status": "A",
+      "path": "ui/icons/vehicle.svg"
+    },
+    {
+      "status": "A",
+      "path": "ui/icons/workshop.svg"
+    },
+    {
+      "status": "A",
+      "path": "ui/pages/README.md"
+    },
+    {
+      "status": "A",
+      "path": "ui/settings/README.md"
+    },
+    {
+      "status": "A",
+      "path": "ui/themes/Neo.qml"
+    },
+    {
+      "status": "A",
+      "path": "ui/translations/cda_en.ts"
+    },
+    {
+      "status": "A",
+      "path": "ui/translations/cda_fr.ts"
+    },
+    {
+      "status": "A",
+      "path": "ui/translations/cda_hy.ts"
+    },
+    {
+      "status": "A",
+      "path": "ui/translations/cda_ru.ts"
+    }
+  ]
+}
