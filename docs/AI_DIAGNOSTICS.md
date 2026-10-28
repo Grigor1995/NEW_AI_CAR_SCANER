@@ -1,0 +1,5 @@
+# Evidence-based diagnostic analysis
+
+core/ai/evidence.hpp implements an offline deterministic P0302/misfire slice with USER_REPORTED and ECU_REPORTED evidence, hypothesis support IDs, recommended test IDs and retained/updated PASS/FAIL/UNKNOWN results. A petrol-normal/LPG-misfire report prioritizes LPG delivery/calibration checks without declaring a part defective or inventing probability. Failed fuel-mode isolation broadens ignition/mechanical checks; completed tests are removed from suggestions. The W211 E350 M272 fixture is tested with synthetic evidence.
+
+The UI consumes connected DTCs and entered symptom text; its safe generic guidance does not claim free-text LLM understanding. Remote/local LLM, ML and RAG providers are NOT CONFIGURED / NOT IMPLEMENTED. No LLM output can execute ECU commands. Future structured provider results must cite evidence IDs, pass schema validation and leave measured facts authoritative. Full multilingual provider responses and repair plans remain future integration work.

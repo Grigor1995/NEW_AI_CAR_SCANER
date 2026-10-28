@@ -1,42 +1,37 @@
-# Development plan
+# V3 phased development plan
 
-Phase 0 audit and first Phase 1 milestone are the scope of this branch. Effort
-ranges below are planning estimates for a small experienced team, not deadlines.
+Estimates are engineering effort ranges for an experienced small team, not dates
+or completion claims. Every milestone must leave a locally buildable/testable
+repository. No CI/CD or payment processing is in scope.
 
-| Phase / milestone | Scope and source | Dependencies / migration | Acceptance / tests | Risk / effort |
+| Phase | Scope / deliverable and source boundary | Dependencies and API/schema work | Acceptance and validation | Status / effort |
 |---|---|---|---|---|
-| 0 audit + baseline | inventory, current UI/API/schema review, local interactive architecture | existing tests/toolchains | real baseline, measured p95, honest platform gaps | incomplete hardware evidence; 2–4 days |
-| 1A foundation | ecosystem account/session/RBAC, owned profiles, workshop invitation/consent APIs | additive Alembic; reuse Vehicle, staff Role | owner isolation, revoked access, token expiry, migration preservation, >=90% suitable new logic | legacy bypass; 4–8 days |
-| 1B authenticated diagnostics | scoped session/device/report adapters, operator role provisioning, offline identity mapping | 1A; explicit legacy ownership mapping | cross-tenant denial on every route; default local compatibility | broad existing API surface; 1–2 weeks |
-| 1C native workspaces | current Desktop/Android/iOS login + allowed-mode selector + consent screens, localization | 1A/B API contract | EN/HY/RU and visual parity; token secure storage | Xcode/OS secrets storage; 1–2 weeks |
-| 2A USER monitoring | schedule/timezone/quiet-hours + eligible gateway jobs, deferred scans | identity + device availability; schedule/run/outbox migrations | no OFF-ignition fake success, idempotent runs, DST tests | OS/battery limits; 1–2 weeks |
-| 2B delivery/service discovery | provider interfaces, verified email/mobile, retry/dedupe, location consent | configured providers and contracts; delivery tables | fake provider tests separate from sandbox delivery; cooldown/privacy tests | paid services/geolocation; 1–2 weeks |
-| 3 CUSTOMER | work orders, safe test methodology, licensed diagrams/repair docs | tenant/consent foundation + licensed data | approved-data-only access, real provenance, repair verification | OEM licensing; 2–4 weeks |
-| 4 MARKET | merchant approval, products, compatibility, stock/discounts, offers | staff/admin controls; market migrations | unknown compatibility explicit, eligibility server-side, sponsored separation | catalog quality; 2–4 weeks |
-| 5 ADMIN | protected role/configuration, real aggregates and audit, privileged MFA | auth/market/activity events | no fabricated stats, least-privilege admin, audited sensitive access | security posture; 1–3 weeks |
-| 6 platform/performance | authenticated parity, eligible offline sync, measured hot-path tuning | native environments, hardware, conflict policy | real ELM evidence separate from simulations; C++ only if measured | platform gaps; 2–4 weeks |
-| 7 production release | rate-limit store, backup/restore, retention/export/delete, pentest, signed release | all external/hardware gates satisfied | regression + permission + restoration + release acceptance | integration risk; 2–4 weeks |
+| 0 safe reset | Verify NEW_AI_CAR_SCANER, archive original, preserve .git/history, remove legacy source/workflows, new CMake structure | verified archive/bundle and recoverable Git ref | original retrievable; no finalbuild/native/Python application runtime | IMPLEMENTED; hours |
+| 1 architecture/UI | C++ contracts, domain/service separation, Qt/QML NEO theme, canonical native icons, 24-view dashboard, docs | Qt6.8/OpenSSL/CMake; no new remote services | actual Linux build, translated UI pages, responsive render, browser interactions, source boundary tests | IMPLEMENTED foundation; full product UI remains phased; 1–2 weeks total |
+| 2 identity/storage | Durable local accounts, roles, scoped vehicles/settings; then verified contact, workshop sharing, PostgreSQL/remote sync | schema1 implemented; consent/organization/PostgreSQL migrations and scoped versioned APIs proposed | credentials/expiry/revocation/isolation/restart tests now; grant expiry/races/live PG before completion | PARTIAL; 2–4 weeks |
+| 3 diagnostic core | TCP/desktop serial, strict ELM/CAN/ISO-TP read slice, write safety policy; then broader read/UDS and bound executor | actual adapters, verified profiles, bench ECUs, mobile drivers; remote diagnostic APIs not yet exposed | malformed/timeout/bitmap/negative safety tests now; hardware/protocol matrix and one-use audited write executor required | PARTIAL; 3–6 weeks + hardware |
+| 4 USER | Current owner profiles/live reads/rules/JSON reports; then schedules, contact alerts, services/repair/history | phases2/3, verified providers; scan-run/outbox/history schema and APIs proposed | no unavailable scan success, consented delivery, DST/quiet-hours/idempotency and owner E2Es | PARTIAL; 2–4 weeks |
+| 5 CUSTOMER | Workshop/staff, invitations/vehicle grants, work orders, licensed diagrams, test plans and PDFs | phase2 explicit owner scopes, licensed repair sources; org/consent/work-order migrations proposed | grant approval/revoke/race denial; professional E2Es; licensed applicability | PLANNED; 3–5 weeks |
+| 6 MARKET | Merchant approval, listings, inventory, verified fitment, discounts, quotes; no payments | protected provisioning, verified catalogs; merchant/product/fitment/offer APIs/schema proposed | eligibility and stock concurrency, unknown fitment explicit, no paid diagnostic ranking | PLANNED; 2–4 weeks |
+| 7 ADMIN | Account/business moderation, controlled configuration, real metrics, audit and release management | granular auth/MFA + real activity; privileged APIs/schema proposed | no self-grant, no implicit private vehicle bypass, real aggregates/audit | PLANNED; 2–4 weeks |
+| 8 settings | Current four locales/units/themes/persistence; then all notification/AI/device/privacy/update preferences and sync | native lifecycle + identity/provider domains; conflict/version metadata proposed | current catalog/runtime/round-trip tests; full locale layout, secure sync/conflict E2Es | PARTIAL; 1–3 weeks |
+| 9 updates | Version/signature primitives now; pinned signed feeds, package verification/staging, platform delivery/history later | signing authority, stores/installer/SDKs; release manifests and version APIs proposed | corrupted/signature/rollback/incompatible/interrupted-install/storage tests; signed native artifacts | PARTIAL; 2–4 weeks |
+| 10 AI | Current deterministic evidence/test-result slice; then structured providers, RAG/ML/reference retrieval | licensed evidence/data + configured models; hypothesis/test-result persistence/API proposed | schema/provenance checks, no invented values, held-out diagnostics and recalculation, offline fallback | PARTIAL; 3–6 weeks |
+| 11 native validation | Separate Windows/Android/iOS builds, permissions/lifecycle, offline sync, accessibility and performance | Qt/OpenSSL native kits, Xcode/signing/Android SDK, actual devices | real native packages, hardware evidence, latency/memory/battery and UI parity; Linux alone is insufficient | BLOCKED native SDK/hardware; 2–5 weeks |
+| 12 final QA/release | Full workflow/security/load/regression/hardware/restore acceptance, complete current docs | all preceding acceptance and external prerequisites | production security review, verified backups, signed release and rollback, no unknown critical failures | PLANNED; 2–4 weeks |
 
-Each milestone needs buildable code, meaningful tests, migration notes, current
-UI/icon reuse and an updated implementation report. No automatic deployment or
-CI/CD is introduced. A phase's UI screens/migrations are not complete until its
-own acceptance gates pass. Keep incomplete functionality feature-gated.
+## Immediate next executable milestones
 
+1. Split remaining owner-profile persistence into a small vehicle repository
+   contract; add explicit workshop organization/owner-consent grants and tests
+   before exposing any shared data. Introduce reviewed PostgreSQL migrations.
+2. Extend the new protocol core with request-bound VIN/readiness/freeze-frame
+   APIs and recorded-capability checks; add serialized adapter recovery and
+   hardware capture validation. Do not enable write execution on unverified ECUs.
+3. Implement a one-use prepare/confirm/execute/verify/audit coordinator using
+   trusted operation profiles and authorized bench fixtures, then certify an
+   exact adapter/vehicle workflow before actual writes.
+4. Implement notification/scheduler and update delivery domains only after their
+   external trust/configuration requirements are available. Keep payment code absent.
 
-## Proposed phase-specific deliverables (not implemented claims)
-
-| Phase | Proposed API / migration boundary | Native UI / artifacts |
-|---|---|---|
-| 1A | implemented `/api/v2/ecosystem` accounts, sessions, owned profiles, centers/invites/consents; revision 0001 | API contracts, additive schema and negative access tests; native UI unchanged |
-| 1B | owner-scoped adapters to current sessions, devices, telemetry, tests and reports; explicit legacy ownership/import mapping | no duplicate engine; endpoint permission audit and replay tests |
-| 1C | consume stable identity contracts; staff/admin provisioning policy | current-themed login, profile, mode selector, account/consent screens on all three clients |
-| 2 | proposed schedules/runs/alert preferences/delivery APIs; schedule/run/outbox/destination-verification tables | Auto Monitoring, Notifications, Service Centers; DST and provider-failure test artifacts |
-| 3 | proposed work-orders/repair-references/diagram-provider APIs; work-order/notes/licensed-reference records | Connected Users, customer vehicle workspace, testing methodology, wiring and final PDF checklist |
-| 4 | proposed merchants/products/fitment/offers/discount eligibility APIs; merchant, compatibility, stock and offer tables | seller portal, inventory/discount forms and eligible workshop offers; no paid fault-ranking changes |
-| 5 | proposed admin account/merchant approval/feature/audit aggregate APIs; privileged-action and moderation records | real-data platform dashboard, account management, merchant approval and security audit tools |
-| 6 | versioned sync/conflict and capability APIs only after a concrete device topology is selected | parity builds, offline queue state/merge UX, transport bindings or measured C++ artifact if justified |
-| 7 | retention/export/delete/operational interfaces; tested backup and job cleanup policies | signed release artifacts, restore/pentest/load reports and hardware acceptance matrix |
-
-Phase 2–7 API names remain design proposals until their milestones provide typed
-contracts, migrations, UI, tests and deployment evidence. Providers, licenses and
-real devices are dependencies, not implementation placeholders presented as PASS.
+Current phase evidence and remaining gates are in IMPLEMENTATION_REPORT.md.

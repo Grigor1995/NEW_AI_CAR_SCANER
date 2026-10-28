@@ -1,0 +1,7 @@
+flowchart LR
+  device["Vehicle / ECU hardware - BLOCKED"]
+  notifications["Email / SMS / push - PLANNED"]
+  storage["SQLite / PostgreSQL - PARTIAL"]
+  backend["C++ HTTP host - PARTIAL"]
+  observability["Runtime observations - PARTIAL"]
+  observability -->|"actual health when same-origin available"| backend

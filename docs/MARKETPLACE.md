@@ -1,16 +1,5 @@
-# Marketplace — planned
+# MARKET merchant portal
 
-MARKET is a merchant role/portal, not a fourth primary diagnostic mode. The
-foundation defines this distinction; product listings, staff seller permissions,
-merchant approval, stock, discounts, coupons and purchasing are not implemented.
+MARKET is a separately assigned account role, never a fourth primary diagnostic mode. The navigation page explicitly says listings/quotations are planned and payments disabled. Product/catalog/inventory/discount/stock/fitment/merchant workflows are NOT IMPLEMENTED. No seller contact or price is fabricated.
 
-Reuse the shared vehicle/catalog identifiers and verified OEM references.
-Compatibility must be supported by explicit make/model/year/engine/fuel or OEM
-fitment evidence; title similarity is never sufficient. Show UNKNOWN when a
-variant is unverified. Validate prices, quantities, eligibility, offer expiry
-and currency on the backend using exact decimal arithmetic.
-
-Paid placements must be labeled and cannot change fault hypothesis rankings.
-The future marketplace provider interface is separate from deterministic and
-AI diagnostic decisions. Merchant/provider integrations require their own
-migrations, authorization tests and verified data sources.
+Future listings require verified compatibility with make/model/year/engine and OEM references, server-side discount eligibility and labeled sponsored placement. Advertising must not change technical fault rankings. Payments remain documentation-only; no checkout, SDK, payment processing or card collection exists.

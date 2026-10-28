@@ -1,0 +1,7 @@
+flowchart LR
+  identity["Identity & access - PARTIAL"]
+  safety["Read/write safety - PARTIAL"]
+  storage["SQLite / PostgreSQL - PARTIAL"]
+  backend["C++ HTTP host - PARTIAL"]
+  identity -->|"credential hashes and current token checks"| storage
+  backend -->|"versioned credential API"| identity

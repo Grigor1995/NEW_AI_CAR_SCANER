@@ -1,0 +1,27 @@
+erDiagram
+ accounts ||--o{ roles : assigned
+ accounts ||--o{ tokens : authenticates
+ accounts ||--o{ vehicles : owns
+ accounts ||--o| settings : stores
+ accounts {
+  string id PK
+  string email UK
+  bytes salt
+  bytes password
+  bool active
+ }
+ roles { string account FK
+ string role }
+ tokens { string hash PK
+ string account FK
+ int expires }
+ vehicles { string id PK
+ string owner FK
+ json payload }
+ settings { string account PK,FK
+ json payload }
+ audit { int id PK
+ string actor
+ string action
+ string subject
+ int at }

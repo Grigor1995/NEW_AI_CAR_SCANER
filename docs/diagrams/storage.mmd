@@ -1,0 +1,7 @@
+flowchart LR
+  identity["Identity & access - PARTIAL"]
+  vehicle["Vehicle management - PARTIAL"]
+  storage["SQLite / PostgreSQL - PARTIAL"]
+  settings["Persistent settings - PARTIAL"]
+  identity -->|"credential hashes and current token checks"| storage
+  settings -->|"explicit account save"| storage

@@ -1,4 +1,0 @@
-python-pptx>=1.0,<2
-Pillow>=13,<14
-pypdf>=5,<7
-reportlab>=4.2,<5

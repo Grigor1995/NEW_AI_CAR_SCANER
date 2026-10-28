@@ -1,0 +1,14 @@
+stateDiagram-v2
+ [*] --> ReadOnly
+ ReadOnly --> PolicyValidation: future explicit professional operation
+ PolicyValidation --> Denied: any missing prerequisite
+ PolicyValidation --> Prepared: all checks pass on trusted observations
+ Prepared --> Confirmed: future short-lived operation-specific confirmation
+ Confirmed --> ExecuteLocked: current implementation has no write executor
+ ExecuteLocked --> Denied
+ Denied --> ReadOnly
+ note right of ExecuteLocked
+ Future executor requires verified profile,
+ audit, response verification and bench acceptance.
+ No ECU write occurs now.
+ end note

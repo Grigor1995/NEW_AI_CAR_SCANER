@@ -1,100 +1,145 @@
-# NEW_AI_CAR_SCANER implementation status
+# V3 implementation report — new C++/Qt foundation
 
-Date: 2026-10-28. This is the source-preserving foundation and native TCP
-milestone, not completion of the production ecosystem.
+Date: 2026-10-28. Repository: Grigor1995/NEW_AI_CAR_SCANER.
+This is a tested development milestone, not completion of the production product.
 
-## Source and reuse
+## Safe reset and preservation
 
-Imported `Grigor1995/AI-CAR-SCANER` main at
-`a71c547b4b58f88f9c09f7f25d86931b79131bd2`, followed by its existing ecosystem
-foundation branch at `540e00f07b8f60c2788c8d12dea1200817669afb`. Git history is
-preserved. The original source repository is unchanged. The new repository's
-origin remains `Grigor1995/NEW_AI_CAR_SCANER`.
+V3 explicitly replaces the preceding reuse requirement. Confirmed the Git root
+and origin, verified a clean starting tree at ac8d9469279a52bdb53b7cf7405bda67f7e6fdc6,
+created archive/pre-v3-ac8d946, verified a complete Git bundle, made a source tar
+archive and retained the entire previous working tree under /workspace/backups.
+.git and history remain intact. Old application code, assets, dependencies and
+workflows were removed from the active tree. New C++/QML source and artwork were
+written independently; previous application modules were not reused.
 
-Reused PySide6 desktop, Kotlin Android, Swift iOS, original UI/icons/backgrounds,
-FastAPI, shared vehicle catalog, DiagnosticSession, protocol parsing, rules,
-AI/RAG, simulators, reports and existing test suites. Also reused the source's
-opt-in account/ownership/workshop consent foundation, additive Alembic revision,
-role contracts, technical documentation and interactive architecture. Historical
-source results are retained separately in
-[evidence/imported-foundation-implementation-report.md](evidence/imported-foundation-implementation-report.md).
-The current execution results below supersede assumptions based on those results.
+Verified local recovery files:
 
-## New C++ implementation
+- /workspace/backups/NEW_AI_CAR_SCANER-pre-v3.bundle (git bundle verify passed)
+- /workspace/backups/NEW_AI_CAR_SCANER-pre-v3.tar
+- /workspace/backups/pre-v3-checkout (all previous checkout files, including local tools)
 
-- Added `native/obd`: C++20/pybind11 TCP connection, nonblocking socket I/O,
-  bounded 64 KiB prompt-delimited buffering, partial writes, deadlines, RAII
-  socket cleanup and narrow read-only command validation.
-- Added async `NativeObdWifiTransport` behind the existing DiagnosticTransport.
-  Native calls release the GIL and run off the UI/event-loop thread; cancellation
-  drains the bounded worker before closing its socket.
-- Acquisition and device connection factories select it only with boolean
-  `native_tcp: true`. Existing Python transports remain the default. Missing
-  native builds fail explicitly when selected.
-- Added loopback integration/negative tests through the real GenericObdClient,
-  including initialization, measured response decoding and DTC retrieval.
-- Updated architecture data and regenerated Mermaid views. Preserved the existing
-  UI files and icon family; no new dashboard template or duplicate engine.
+Bundle SHA-256: 08050cdce85cb83b59ee14b6ea8d1e800bda11d8ebd4fa9c68ff52d279827d3f.
+Source-tar SHA-256: 469a7f98d95d7766c5e9d30b4b81385a1c29d2d6aaea8488dda129f32b8e68bc.
+Archives are outside the active checkout; the Git archive branch is the portable
+history recovery point. Old binaries are not presented as V3 builds.
 
-This implementation validates Linux TCP/IPv4 only. POSIX macOS compilation is
-untested; Windows/mobile bindings, native BLE/USB, UDS addressing and native
-protocol decoding are not implemented by this extension. Existing transports
-remain available. No physical-device or acceleration claim is made.
+## Implemented source and behavior
 
-## Current machine validation
+- New CMake/C++20 structure; separate cda_core, cda_services, car_diagnostic and
+  cda_backend targets. Domain algorithms have no Qt UI/database dependencies.
+- Original NEO AUTOMOTIVE Qt/QML foundation with top navigation, responsive cards,
+  account dialogs, private vehicle entry, actual adapter reads, metric cards,
+  bounded measured-sample traces, conservative rule guidance, JSON export and
+  persistent settings. Unimplemented sections explicitly say so.
+- One canonical car/circuit/waveform SVG; Qt-rendered PNG previews, Windows ICO,
+  Android adaptive/legacy icons and iOS icon assets derived from that artwork.
+- Local SQLite accounts with salted OpenSSL scrypt, secure random one-hour
+  bearer credentials stored as hashes, active-account/expiry/logout checks,
+  private vehicle scope, whitelisted preferences and initial audit records.
+- Exactly USER/CUSTOMER/ADMIN primary role values, MARKET separately assigned;
+  USER-only public registration and explicit local-operator role provisioning.
+  CUSTOMER/ADMIN/MARKET business workflows remain unimplemented.
+- Real asynchronous C++ Qt TCP and desktop serial source; initialization,
+  supported-PID bitmap, only eligible RPM/speed/coolant polling and stored DTCs.
+  Strict ELM/header/CAN/ISO-TP parsing, invalid/unavailable/unsupported/stale states,
+  native units, UTC timestamps and provenance. No generated live sensor data.
+- Transport read allowlist, independent central write-policy validation with
+  negative checks for every prerequisite. No ECU write executor is exposed.
+- Deterministic P0302 evidence and test-result recalculation slice, including a
+  synthetic W211 E350 M272 petrol-normal/LPG-misfire regression fixture.
+- Pure unit conversions and real Ed25519 signature/version primitives.
+  These are not a complete online updater or provider-backed AI engine.
+- Four Qt translation catalogs (EN/HY/RU/FR), runtime language changes, locale
+  numeric formatting, dark/light/system themes and metric/imperial presentation.
+- New bundled interactive architecture with 24 sections/30 components, inspector,
+  relationship details, filtering, search, collapse, mouse pan/wheel zoom, theme,
+  responsive layout and actual same-origin health observations. Unknown process,
+  hardware/provider/production metrics stay UNKNOWN/UNAVAILABLE.
+- Required technical documents, phased roadmap, OpenAPI and maintainable Mermaid
+  architecture/flow/sequence/entity/safety/deployment sources. No CI/CD or active
+  payment code exists.
 
-| Check | Result |
+## Local validation and scope
+
+The machine-readable current results are in [testing/current-results.json](testing/current-results.json).
+
+| Check | Observed outcome |
 |---|---|
-| Focused imported foundation/OBD/golden/unit regression | 189 passed |
-| Shared regression after first native integration | 1,017 passed, 2 skipped; 0 failures/errors |
-| Final OBD + acquisition + device integration after last changes | 187 passed, including 19 native loopback cases |
-| Desktop logic / diagnostic E2E / negative / UI-POM / widgets | 216 / 6 / 68 / 142 / 25 passed; 1 platform skip |
-| Desktop all-source / production-core coverage | 90.43% / 90.84% |
-| Local ecosystem HTTP smoke | 10 checks passed: migration, approval, scoped read, legacy bypass denial, revocation and restart persistence |
-| Persistent local development server | health, read-only OBD plan and nonempty shared vehicle catalog passed |
-| Interactive architecture in Chromium | 10 views / 22 nodes; search, layers, collapse, details, relationships, zoom, pointer pan, wheel and theme passed |
-| C++20 Release build | passed with GCC 14.2, pybind11 3.1.0, CMake 4.4.4 |
-| Repeated saved setup script | passed |
-| Python static checks / Git whitespace | passed for new adapter/tests and changed files |
+| Linux GCC14.2 / Qt6.8.2 build | Core, Qt services, QML client and C++ HTTP host compile |
+| C++ domain contracts | 19 named cases passed, 0 failed |
+| Qt integration | 4 functional cases plus init/cleanup passed (6 Qt Test entries), 0 failed |
+| CTest | 2 test executables passed; do not mistake this for two assertions |
+| HTTP smoke | 12 checks passed against actual compiled host and temporary SQLite |
+| UI self-test | 13 pages, 4 runtime locales, 3 themes, 2 unit systems and narrow rendering passed |
+| Source/catalog contracts | matching completed catalogs, no domain UI dependency/legacy/CI/payment code passed |
+| Architecture Chromium | 13 interaction/observation checks passed; direct file:// navigation BLOCKED by managed browser policy |
+| ASan + UBSan | domain contracts passed with leak detection enabled |
+| Pure domain line coverage | 95.07% (289/304 executable lines) |
+| Pure domain GCC branches | 500/722 taken (69.25%, includes exception branches) |
+| Qt service/UI/HTTP coverage | NOT MEASURED; do not apply domain coverage to these modules |
+| Formatting/compiler/whitespace | current sources checked locally; details in evidence |
+| Physical OBD/bench ECU | NOT RUN; loopback is not hardware certification |
+| Windows / Android / iOS native releases | NOT RUN / BLOCKED on native SDK/signing/hardware validation |
+| PostgreSQL, external providers, signed installers | NOT RUN / NOT CONFIGURED |
 
-Selections overlap; do not sum these as unique tests. The final targeted run
-includes changes added after the full shared regression. Native C++ and new
-adapter coverage are not measured; desktop coverage is not a substitute.
-[Machine-readable current results](evidence/new-repository-validation.json).
-[Installed Python versions](evidence/cloud-python-dependencies.txt).
+Protocol benchmark: 10,000 fixed framed-RPM decodes in the Linux Debug build,
+p50 7.582 us, p95 8.823 us, p99 59.918 us in the recorded run. It excludes hardware,
+network, LLM and UI work; it is not an acceleration comparison or a vehicle SLA.
+See testing/protocol-performance.json for the current measured run.
 
-The existing deterministic fixture benchmark measured p50 0.50 ms, p95 0.67 ms,
-min 0.45 ms, max 1.13 ms. This excludes OBD polling, socket latency and LLM
-inference. It does not measure C++ acceleration or establish vehicle latency.
-Startup/navigation/memory and physical adapter performance remain unmeasured.
+The dashboard's local HTTP interactions and real backend health checks passed.
+This managed Chromium rejects file:// with ERR_BLOCKED_BY_ADMINISTRATOR. That
+policy was not bypassed and direct file loading is not reported as PASS. Assets
+are bundled locally; no CDN is used.
 
-## API and database changes
+## API / schema
 
-No additional HTTP API or schema changes were introduced by the C++ milestone.
-The reused foundation exposes `/api/v2/ecosystem` and additive revision
-`0001_ecosystem`; see API_SPECIFICATION.md and DATABASE_DESIGN.md. Keep its
-feature flag off for the current unauthenticated native clients. Legacy local
-APIs are not suitable for public multi-tenant exposure.
+The new local C++ API is /api/v1 with registration, login/logout, current account,
+owner-scoped vehicles, preferences, health and implementation capabilities.
+See api/openapi.json. It replaces, rather than preserves compatibility with, old
+Python API contracts; old clients are not used by V3. Local schema version 1
+covers accounts/roles/tokens/vehicles/settings/audit and rejects unknown newer
+schema versions. No PostgreSQL migration or backend-client synchronization exists.
 
-## Reproducible development
+The GUI currently uses its own local account database. The standalone host uses
+an explicitly selected separate SQLite file. These are not a synchronized remote
+identity system. Local operator CLI role provisioning requires filesystem trust.
 
-[Native build and activation](../native/obd/README.md).
-[Cloud startup and checks](CLOUD_DEVELOPMENT.md).
-The tested installation and startup instructions are saved in environment draft
-fields `install_script` and `start_skill`. Review/save them in environment
-settings, then publish the environment. Draft persistence is not publication or
-fresh-task restoration evidence. Dependencies persist; live processes must restart.
+## Security findings and remaining gates
 
-## Outstanding product and release work
+The backend is loopback-only with a coarse local auth throttle and bounded JSON
+validation; public TLS, MFA/recovery, distributed rate limiting, full lifecycle
+privacy/export/delete, sharing consent, detailed privileged audit, load and
+penetration testing remain required. Desktop token expiry is rechecked on
+commands and periodically; tokens are not persisted in plaintext settings.
 
-The full staged roadmap remains in DEVELOPMENT_PLAN.md. Authenticated diagnostic
-adapters and native login/workspace/consent screens precede enabling ecosystem
-mode. Verified contacts, unattended scheduling, notification providers, licensed
-wiring/repair data, work orders, merchant commerce and admin management/analytics
-remain later milestones. No production statistics or repair data are fabricated.
+Actual writes remain LOCKED: operation-specific verified vehicle/ECU/adapter
+profiles, trusted live prerequisites, one-use confirmation, durable staged
+execution/audit and authorized bench verification do not exist. The safety
+predicate alone must never be used as a hardware trust source. No arbitrary UDS,
+security bypass, coding/flashing or scheduled write is implemented.
 
-Real OBD hardware, live PostgreSQL concurrency/backup, external providers,
-Windows packaging, Android build and iOS/Xcode validation were not executed in
-this machine. Original source reports of platform runs are historical evidence,
-not current certification. Production hardening and complete cross-platform
-release acceptance remain outstanding.
+## Phase status and outstanding work
+
+Phase 0 and the architecture/UI foundation are implemented within the scope
+above. Identity/storage, OBD reads, settings, rules and update primitives are
+partial slices of later phases. This does NOT complete all three business modes
+or the requested ecosystem.
+
+Next work: workshop organizations and explicit owner consent; PostgreSQL and
+remote sync; broader capability-bound read operations and hardware recovery;
+qualified bench write executor; real scheduler/notifications; licensed diagrams
+and repair references; merchant listing/fitment/discount domains; admin workflows;
+full LLM/RAG; signed update distribution; native platform builds; production QA.
+Payment processing stays strictly deferred. See DEVELOPMENT_PLAN.md for explicit
+phase dependencies, APIs/migrations, deliverables and acceptance criteria.
+
+## Reproducible cloud configuration
+
+The saved environment draft now contains the new install_script and start_skill;
+old Python/finalbuild startup paths were replaced. scripts/build/cloud_setup.sh
+contains the complete setup commands. Dependencies/build output persist; live
+processes must restart. Review/save the draft in environment settings and publish
+the environment to activate its snapshot. A saved draft is not publication or
+proof of restoration in a new task.

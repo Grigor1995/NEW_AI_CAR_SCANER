@@ -1,19 +1,14 @@
-# Test case matrix
+# Test matrix
 
-| Scenario | Required evidence / status |
-|---|---|
-| Existing W211 LPG/P0302 golden and recalculation | Baseline PASS; regression required after changes |
-| Legacy local clients with feature off | Existing Python/Desktop/Android checks; preserve behavior |
-| Register USER, reject requested ADMIN, bad password, duplicate email | Foundation API suite |
-| Login expiry/logout/inactive account | Foundation negative suite; DB current state |
-| USER/CUSTOMER/ADMIN selection; reject MARKET mode | Foundation RBAC suite |
-| Foreign owned-profile read/write | Foundation 404/deny; never accept account ID from client |
-| Invitation before accept, wrong recipient/vehicle, expired invite | Foundation deny suite |
-| Explicit read consent, revoke, expired grant, inactive/foreign staff | Foundation integration suite |
-| Existing SQL row preservation / FK checks / downgrade | SQLite Alembic suite; PostgreSQL execution separate |
-| Daily job when disconnected/ignition OFF, duplicate runs | PLANNED Phase 2, not implemented |
-| Real email/SMS and licensed diagram access | BLOCKED until providers/licenses configured |
-| MARKET fitment/discount/coupon abuse | PLANNED Phase 4 |
-| Physical Bluetooth/BLE/Wi-Fi/USB OBD | NOT EXECUTED; simulator coverage distinct |
-| Interactive architecture zoom/pan/search/layers/theme | Local browser validation, not just file presence |
-| iOS runtime and Windows installer runtime | BLOCKED on Linux |
+| Area | Local coverage | External / remaining |
+|---|---|---|
+| Protocols | valid/wrong PID, truncation, hex errors, multi-ECU DTC, ISO-TP sequence/size, bitmap | real firmware, raw CAN, full protocol matrix |
+| Safety | every missing role/confirmation/ID/capability/state/voltage/freshness/audit prerequisite denied | trusted profiles, one-use executor, bench verification |
+| Identity | salts/hash, credentials, owner scope, token/logout, persisted restart, role escalation denial | MFA/recovery, distributed abuse and sharing consent |
+| Settings | field whitelist, invalid locale, persistence, source-catalog parity, runtime switch | conflict sync, all advanced preferences |
+| UI | pages instantiated, locale/theme/units, narrow render and actual screenshot | native touch/accessibility and all task E2Es |
+| Updates | version ordering, real signature and tamper rejection | signed feed/package/install/recovery |
+| Monitoring | unavailable/ignition/OS eligibility => deferred | actual scheduler/background jobs |
+| Commerce/providers | no active payment or fabricated service claims | all real merchant/notification/licensed-provider workflows |
+
+Exact outcomes and limitations are in IMPLEMENTATION_REPORT.md and testing/current-results.json.

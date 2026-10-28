@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 256 256">
+<defs><linearGradient id="electric" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#29DFFF"/><stop offset="1" stop-color="#126EFF"/></linearGradient></defs>
+<rect width="256" height="256" rx="56" fill="#070D18"/>
+<rect x="12" y="12" width="232" height="232" rx="46" fill="none" stroke="#126EFF" stroke-width="2"/>
+<g fill="none" stroke="url(#electric)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M45 145V119L59 101 76 68Q128 49 180 68L197 101 211 119V145M59 101Q128 90 197 101M78 70 67 101M178 70 189 101M45 126 77 132M211 126 179 132M77 149H179M52 145V162H75V150M204 145V162H181V150"/>
+<path d="M91 185H111L119 174 129 199 140 182H165M101 210H155L163 223H93Z"/>
+<path d="M107 222V232M118 222V232M129 222V232M140 222V232M151 222V232M44 180H26V151M212 180H230V151"/>
+</g><g fill="#29DFFF"><circle cx="26" cy="145" r="4"/><circle cx="230" cy="145" r="4"/></g>
+</svg>

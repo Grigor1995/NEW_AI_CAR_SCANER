@@ -1,0 +1,5 @@
+# Online updates — verification primitives implemented, delivery PLANNED
+
+The C++ core verifies real Ed25519 signatures using OpenSSL and parses strictly numeric semantic version triples. Tests verify a real generated signature, payload tampering and invalid versions. There is no configured release feed, signing key, downloader, installer, update history or automatic installation. UI states this explicitly. Cryptographic primitives alone do not constitute an online updater.
+
+Future Windows flow: fetch bounded signed metadata over verified TLS, validate pinned release key/signature, compatibility/channel/anti-rollback, package size/hash and platform signature; confirm install; stage atomically, preserve data and verify installed version with operation-specific rollback. Never execute unsigned bytes. Android must use supported signed/store mechanisms; iOS must use App Store links/notifications, not self-modification. Manual backend deployments require compatible migrations and health checks. No CI/CD exists.

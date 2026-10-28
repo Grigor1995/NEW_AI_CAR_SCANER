@@ -1,17 +1,5 @@
-# Performance testing
+# Performance methodology
 
-Baseline deterministic golden fixture: 10 warm-up + 100 timed runs, p50 0.57 ms,
-p95 0.85 ms, min 0.43 ms and max 1.16 ms. Includes model copying and local
-analysis; excludes physical OBD, network, LLM, UI startup and platform packaging.
-This supports retaining the current Python engine, not a universal field SLA.
+Separate domain parsing/rules latency from physical polling, network wait, AI inference, GUI startup and memory/battery use. The protocol benchmark uses repeated fixed RPM reply decoding and records p50/p95/p99 in microseconds on the current compiler/host. It is not an OBD polling or production SLA. Initial domain target is p95 <90 ms where feasible.
 
-Measure startup, UI navigation, per-PID wire latency, decoding, incremental
-analysis, DB query latency, auth hashing, memory and background CPU separately.
-Do not include password hashing in the diagnostic 90 ms budget. Load tests need
-concurrent clients, realistic ownership/grant sizes and PostgreSQL, not just a
-single SQLite fixture. No new background polling is started by foundation.
-
-For future C++ work, capture flamegraphs and resource pressure first, isolate a
-hot path behind current interfaces, benchmark parity and regression golden
-outputs, and document JNI/Objective-C++/Python bindings. No C++ performance or
-coverage is claimed now.
+CTest timeout/fragmentation integration checks show the event loop can service loopback signals while adapters wait. Password work is off the GUI thread; local HTTP password hashing is synchronous and needs concurrency/load hardening before remote deployment. ASan/UBSan and GCC line/branch coverage are separate builds. Native battery, full UI interaction latency, multi-client API load and real device timing are NOT RUN.

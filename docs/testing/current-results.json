@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-28",
+  "repository": "Grigor1995/NEW_AI_CAR_SCANER",
+  "version": "0.1.0",
+  "phase_scope": "New C++/Qt foundation; partial identity, OBD, settings, rules and update primitives. Not the complete ecosystem.",
+  "platforms": {
+    "Linux": "BUILD_AND_LOCAL_TESTS_PASS",
+    "Windows": "NOT_RUN",
+    "Android": "NOT_RUN",
+    "iOS": "NOT_RUN"
+  },
+  "core_contracts": {
+    "passed": 19,
+    "failed": 0,
+    "skipped": 0
+  },
+  "qt_integration": {
+    "functional_cases": 4,
+    "runner_entries_including_init_cleanup": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "http": {
+    "status": "PASS",
+    "checks": [
+      "unauthenticated_vehicle_access_denied",
+      "register",
+      "self_granted_admin_denied",
+      "owned_vehicle",
+      "cross_account_isolation",
+      "settings_field_whitelist",
+      "invalid_locale_rejected",
+      "token_and_vehicle_survive_restart",
+      "preferences_survive_restart",
+      "logout",
+      "revoked_token_denied",
+      "no_fake_hardware_or_payment_claims"
+    ]
+  },
+  "ui": {
+    "status": "PASS",
+    "description": "UI self-test: PASS; 13 pages, 4 runtime locales, 3 themes, 2 units, narrow rendering",
+    "scope": "Instantiation/navigation property, actual narrow render, runtime locales/themes/units; not complete role-based UI E2Es"
+  },
+  "architecture": {
+    "status": "PASS_WITH_BLOCKED",
+    "checks": {
+      "30_actual_nodes": true,
+      "24_sections": true,
+      "search": true,
+      "collapse_expand": true,
+      "component_inspector": true,
+      "edge_details": true,
+      "offline_filter": true,
+      "zoom_buttons": true,
+      "theme": true,
+      "real_pointer_pan": true,
+      "real_wheel_zoom": true,
+      "real_backend_observations": true,
+      "responsive_layout": true,
+      "offline_file_dashboard": {
+        "status": "BLOCKED",
+        "reason": "Managed Chromium policy blocks file:// navigation; policy was not bypassed. Local HTTP bundled dashboard passed."
+      }
+    }
+  },
+  "source_contracts": {
+    "status": "PASS",
+    "checks": 485,
+    "translation_messages": 117
+  },
+  "coverage": {
+    "pure_domain_line_percent": 95.07,
+    "covered": 289,
+    "lines": 304,
+    "branches_taken": 500,
+    "branches": 722,
+    "branch_percent": 69.25,
+    "Qt_service_UI_HTTP": "NOT_MEASURED"
+  },
+  "sanitizers": "ASan + UBSan + leak detection: core contracts passed",
+  "performance": {
+    "workload": "10000 fixed framed RPM decodes; no hardware/network/AI",
+    "unit": "microseconds",
+    "p50": 7.582,
+    "p95": 8.823,
+    "p99": 59.918
+  },
+  "repeat_setup": "Saved scripts/build/cloud_setup.sh executed successfully; latest targeted build/tests also passed",
+  "formatting": "clang-format19 dry-run, compiler warnings and git whitespace checked; no final warnings/errors",
+  "hardware": "NOT_RUN; loopback is not physical hardware validation",
+  "writes": "LOCKED: safety predicate tested, real ECU executor not implemented",
+  "external_providers": "NOT_CONFIGURED",
+  "payments": "DISABLED / NOT_IMPLEMENTED",
+  "old_version": "archive/pre-v3-ac8d946 pushed; verified Git bundle and complete previous tree retained outside checkout",
+  "configuration": "New install_script/start_skill saved to draft; publication not performed; no fresh-task restoration claim",
+  "note": "Checks overlap. Do not sum source assertions, test cases, CTest binaries and HTTP/browser observations as independent feature coverage."
+}

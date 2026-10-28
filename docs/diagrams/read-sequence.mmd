@@ -1,0 +1,20 @@
+sequenceDiagram
+ participant UI as Qt/QML
+ participant C as DiagnosticController
+ participant T as QtElm
+ participant A as Authorized adapter
+ participant P as C++ protocol core
+ UI->>C: Explicit connection
+ C->>T: Async connect + allowlisted initialization
+ T->>A: AT setup and 0100
+ A-->>T: Supported PID bitmap
+ T-->>C: Bounded complete prompt reply
+ C->>P: Validate requested service / bitmap
+ loop Only supported displayed PIDs
+ C->>T: One read command with deadline
+ T->>A: PID request
+ A-->>T: Observed response
+ T-->>C: Complete reply or explicit error
+ C->>P: Strict decode
+ P-->>UI: Value + unit + quality + provenance + timestamp
+ end

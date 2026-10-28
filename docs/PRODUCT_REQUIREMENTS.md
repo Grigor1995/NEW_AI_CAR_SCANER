@@ -1,301 +1,826 @@
-# Product requirements — source and status
+# CAR DIAGNOSTIC ANALYSIS SYSTEM
+## MASTER DEVELOPMENT PROMPT — VERSION 3.0
+### Production-Grade Cross-Platform Automotive Diagnostic Ecosystem
 
-The following is the requested target, not a completion claim. This branch starts
-Phase 0 and the first Phase 1 milestone. See FEATURE_MATRIX.md and
-IMPLEMENTATION_REPORT.md for actual implementation status. Existing diagnostics,
-native UI, vehicle assets and deterministic fallback remain authoritative.
+# 1. YOUR ROLE AND PRIMARY OBJECTIVE
 
----
+Act as a multidisciplinary team of:
 
-# MASTER DEVELOPMENT PROMPT — AI CAR SCANNER
+- Principal Software Architect
+- Senior C++20/23 Engineer
+- Qt 6 / QML Cross-Platform Engineer
+- Microservices and Macroservices Architect
+- Automotive ECU / OBD / UDS Protocol Engineer
+- AI/ML and RAG Architect
+- Backend and Database Architect
+- UI/UX Designer
+- Application Security Engineer
+- QA Automation Architect
+- Technical Documentation Engineer
 
-## Mission
+Build a complete, high-performance **CAR DIAGNOSTIC ANALYSIS SYSTEM** from zero.
 
-Act as a Principal Software Architect, Senior C++ Engineer, Automotive Diagnostic Engineer, AI/ML Architect, Mobile Engineer, Backend Engineer, UI/UX Engineer, Security Engineer and Senior QA Automation Architect.
-
-Upgrade the EXISTING AI CAR SCANNER application into a production-ready, multi-platform automotive diagnostics, vehicle monitoring, repair assistance, customer service and automotive marketplace ecosystem.
-
-**IMPORTANT: DO NOT REBUILD THE PROJECT FROM SCRATCH.**
-
-Reuse the current application, existing UI design, icons, navigation, diagnostic modules, AI functionality, vehicle catalog, backend, APIs, existing databases and automated tests wherever they are technically sound.
-
-The system must support:
+Target platforms:
 
 - Windows Desktop
 - Android
 - iOS
-- Real ELM327 and custom automotive diagnostic hardware
-- Bluetooth, BLE, Wi-Fi and USB where supported
-- Online and offline diagnostics
-- English, Armenian and Russian
 
-The system must have exactly THREE primary application modes:
+Use one shared C++ diagnostic core and a unified Qt/QML visual design system.
 
-1. USER — vehicle owner/driver
-2. CUSTOMER — automotive service center, mechanic or diagnostic professional
-3. ADMIN — platform administrator
+The application must provide:
 
-Additionally implement a MARKET merchant role and seller portal integrated into the ecosystem. MARKET is not a fourth primary diagnostic mode.
+- Real automotive diagnostics
+- OBD Read/Write capabilities
+- ECU communication
+- Live vehicle telemetry
+- AI-based fault analysis
+- Automated vehicle monitoring
+- Email/SMS notifications
+- Service-center management
+- Professional repair documentation
+- Wiring diagrams
+- Automotive marketplace
+- Platform administration
+- Online software updates
+- Multilingual and configurable units
+- Future-ready payment architecture
 
-Users with multiple authorized roles may switch between their permitted workspaces.
+## CRITICAL PROJECT RULES
 
----
+1. Do not reuse previous source code.
+2. Delete the old application implementation from the confirmed repository.
+3. Preserve `.git` and Git history.
+4. Do not delete unrelated files or external resources.
+5. Create a completely new system architecture.
+6. Do not implement CI/CD pipelines.
+7. Build and test locally.
+8. Use modern C++ as the primary programming language.
+9. Use SOLID and Clean Architecture.
+10. Implement domain-oriented Macroservices with clear boundaries.
+11. Prepare services for future Microservice extraction.
+12. Use the exact visual design defined below.
+13. Create the canonical application icon.
+14. Implement all three primary application modes.
+15. Integrate MARKET as a separate merchant portal.
+16. Prepare payment architecture, but DO NOT implement payment processing now.
+17. Implement real OBD Read/Write with explicit authorization and safety controls.
+18. Support online application updates.
+19. Create an interactive system architecture dashboard.
+20. Produce comprehensive project and API documentation.
 
-# 1. Mandatory Existing Repository Audit
-
-Before changing code:
-
-1. Inspect the entire active repository and identify its actual root, project structure, branches and build commands.
-2. Identify all existing Windows, Android, iOS and backend components.
-3. Audit existing UI screens, designs, icon assets, themes and navigation.
-4. Identify existing DiagnosticSession, OBD, AI, RAG, ML, rules engine and vehicle catalog modules.
-5. Inspect current SQL schema, migrations, APIs and authentication.
-6. Identify reusable functionality, incomplete features, bugs and duplication.
-7. Run available tests and collect baseline coverage and performance.
-8. Find platform-specific behavior and inconsistencies.
-9. Identify available documentation and missing architecture decisions.
-
-Possible existing technologies include PySide6/Qt, Kotlin, Swift, FastAPI, PostgreSQL and C++.
-
-Verify the actual codebase before relying on them.
-
-Do not delete, rename, rewrite or replace existing functional modules merely to simplify implementation.
-
-Do not perform destructive Git operations.
-
-Create:
-
-- docs/CURRENT_SYSTEM_AUDIT.md
-- docs/REUSE_AND_MIGRATION_PLAN.md
-- docs/BASELINE_QA_REPORT.md
-
-Classify every important component as REUSE, REFACTOR, EXTEND or REPLACE, with an explanation.
-
----
-
-# 2. Architecture and Programming Languages
-
-Priorities:
-
-1. Low latency and efficient memory usage
-2. Cross-platform compatibility
-3. Reuse of existing implementation
-4. Security and automotive safety
-5. Offline-first functionality
-6. Maintainability and testability
-7. Fast development and reliable releases
-
-## Recommended Architecture
-
-Use modern C++20/23 where appropriate for high-performance shared functionality:
-
-- OBD communication and protocol handling
-- ELM327 and custom device abstraction
-- CAN/ISO-TP/UDS data processing
-- Diagnostic session state processing
-- Diagnostic rules engine
-- High-frequency telemetry processing
-- Vehicle data decoding
-- Data caching
-- Computationally intensive prediction routines
-
-Use SOLID principles and interface-based architecture.
-
-Example interfaces:
-
-- IDeviceConnector
-- IOBDTransport
-- IOBDProtocol
-- IDiagnosticSession
-- IVehicleDataProvider
-- IRuleEngine
-- IAIProvider
-- INotificationProvider
-- IScheduler
-- IMarketplaceProvider
-
-Platform-specific implementation:
-
-**Windows Desktop:** Retain the current working UI technology, including PySide6/Qt where already implemented. Integrate shared C++ components through appropriate bindings if justified.
-
-**Android:** Kotlin UI, existing UI assets, C++ integration through JNI where necessary.
-
-**iOS:** Swift UI, existing design parity, C++ integration through Objective-C++ or another well-supported interoperability boundary.
-
-**Backend:** Retain existing FastAPI/Python services if they are appropriate. Optimize bottlenecks based on measurements, and move only justified hot paths to C++.
-
-**Database:** Reuse PostgreSQL and current migrations; introduce new tables through safe migrations.
-
-**AI:** Reuse existing LLM, RAG, ML and deterministic diagnostic modules.
-
-Never migrate the whole system to another programming language without measured technical justification.
-
-Create architecture decision records explaining each important technology choice.
-
-## Performance Goals
-
-- Keep UI interactions responsive.
-- Optimize critical local diagnostic processing toward a p95 target of 90 ms where feasible, excluding physical OBD polling, network delays and LLM inference.
-- Measure startup, navigation, diagnostic processing, protocol latency, memory and resource consumption separately.
-- Support asynchronous I/O, caching and incremental updates.
-- Prevent AI processing from blocking the UI.
-- Avoid unnecessary background CPU and vehicle battery consumption.
+Do not use mock functionality as a substitute for production implementation without clearly identifying it.
 
 ---
 
-# 3. USER MODE — Vehicle Owner
+# 2. SOFTWARE ENGINEERING — SOLID STANDARDS
 
-Implement a complete vehicle-owner workspace.
+ALL CODE MUST FOLLOW SOLID PRINCIPLES.
 
-## 3.1 User Profile
+## S — Single Responsibility Principle
 
-User can register and manage:
+Each class, interface and module must have a clearly defined responsibility.
 
-- Full name
-- Email address
-- Mobile number with international prefix
-- Preferred language
-- Time zone
-- Notification preferences
-- Connected vehicles
-- Vehicle make, model, year, engine and fuel type
-- Diagnostic hardware
-- Service history
+For example:
+
+- OBDConnectionManager
+- OBDProtocolDetector
+- VehicleTelemetryService
+- DiagnosticSessionManager
+- FaultAnalysisService
+- NotificationScheduler
+- UserAuthorizationService
+- VehicleRepository
+- MarketplaceCatalogService
+
+Avoid classes that simultaneously handle UI, database, network and business logic.
+
+## O — Open/Closed Principle
+
+Design components that can be extended through interfaces without modifying their stable core.
+
+Examples:
+
+- Add new OBD protocols without rewriting connection management.
+- Add new AI providers without rewriting diagnostic workflows.
+- Add new notification providers without changing alert rules.
+- Add new payment providers later without redesigning marketplace domain models.
+
+## L — Liskov Substitution Principle
+
+Every implementation must respect the contracts of its interfaces.
+
+Different OBD adapters, AI providers and notification providers must expose predictable behavior and consistent failure semantics.
+
+## I — Interface Segregation Principle
+
+Use small, focused interfaces.
+
+Examples:
+
+- IOBDReader
+- IOBDWriter
+- IDeviceConnection
+- IProtocolDecoder
+- ILiveDataProvider
+- IDiagnosticAnalyzer
+- INotificationSender
+- IVehicleRepository
+- IUpdateProvider
+
+Do not force implementations to depend on unsupported capabilities.
+
+## D — Dependency Inversion Principle
+
+High-level domain logic must not depend on database drivers, Qt widgets, HTTP clients or hardware-specific libraries.
+
+Use constructor-based dependency injection and interface contracts.
+
+Avoid global mutable state and tightly coupled singleton architectures.
+
+## Additional Coding Standards
+
+- Clean Architecture
+- Domain-Driven Design where appropriate
+- DRY
+- KISS
+- Strong typing
+- RAII
+- Smart pointers and clear ownership rules
+- Const correctness
+- Explicit error handling
+- Structured logging
+- Thread safety
+- Asynchronous operations
+- Reusable components
+- Unit-testable classes
+- No hardcoded secrets
+- No duplicated business logic
+- No unnecessary platform-specific forks
+
+Use static analysis, sanitizers and formatting tools locally.
+
+---
+
+# 3. MACROSERVICES / SERVICE-ORIENTED ARCHITECTURE
+
+Implement a modular, domain-oriented Macroservice Architecture.
+
+A Macroservice is a coarse-grained service responsible for a meaningful business domain.
+
+Avoid creating dozens of tiny services prematurely.
+
+Service boundaries must be documented and enforceable.
+
+## Core Services
+
+### 1. Identity & Access Service
+
+Responsibilities:
+
+- Authentication
+- Authorization
+- Roles
+- Permissions
+- User identity
+- Organization membership
+- Access tokens
+- Consent
+
+### 2. Vehicle Management Service
+
+Responsibilities:
+
+- Vehicle catalog
+- Vehicle registration
+- VIN information
+- Engine and model mapping
+- Vehicle ownership
+- Compatibility references
+
+### 3. Diagnostic Service
+
+Responsibilities:
+
+- Diagnostic sessions
+- OBD communication orchestration
+- DTCs
+- Live data
 - Diagnostic history
+- Vehicle health
+- Read/Write operation authorization
 
-Support verified email and mobile number ownership.
+### 4. AI Analysis Service
 
-Allow adding multiple vehicles.
+Responsibilities:
 
-Support vehicle identification through the shared catalog and optional VIN decoding.
+- Symptom analysis
+- Rule engine
+- ML models
+- RAG knowledge retrieval
+- Diagnostic hypotheses
+- Test recommendations
+- Confidence updates
 
-Do not assume vehicle-specific specifications without verification.
+### 5. Monitoring & Notification Service
 
-## 3.2 Real-Time Vehicle Monitoring
+Responsibilities:
 
-Reuse existing Live Data modules.
+- Diagnostic schedules
+- Scheduled scan orchestration
+- Email
+- SMS
+- Push notifications
+- Alert thresholds
+- Delivery tracking
 
-Display available parameters such as:
+### 6. Customer / Workshop Service
 
-- RPM
-- Vehicle speed
-- Engine coolant temperature
-- Battery voltage
-- Engine load
-- Fuel trims
-- O2/lambda sensor values
-- Intake air temperature
-- MAF/MAP values
-- Available transmission data
-- DTCs and freeze-frame data
+Responsibilities:
 
-Display only measurements actually supported and provided by the connected vehicle/device.
+- Service-center accounts
+- Workshop staff
+- Connected vehicle owners
+- Professional diagnostics
+- Work orders
+- Repair history
 
-Support dynamic live charts, metric cards, unit conversion, timestamps and measurement provenance.
+### 7. Marketplace Service
 
-Clearly distinguish unavailable, unsupported, stale and invalid measurements.
+Responsibilities:
 
-## 3.3 Automatic Diagnostic Scheduling
+- Merchant accounts
+- Products
+- Stock
+- Vehicle compatibility
+- Pricing
+- Discounts
+- Promotions
 
-User must be able to enable scheduled diagnostic checks.
+### 8. Administration Service
 
-Default schedule: EVERY DAY.
+Responsibilities:
 
-Allow configuration:
+- Platform management
+- System statistics
+- Account moderation
+- Service monitoring
+- Audit records
+- Feature administration
 
-- Daily
-- Weekly
-- Custom time and time zone
-- Manual only
-- Diagnostic parameters
-- Alert severity threshold
-- Email enabled/disabled
-- SMS enabled/disabled
+### 9. Update Management Service
+
+Responsibilities:
+
+- Application version tracking
+- Update metadata
+- Compatibility checks
+- Release manifests
+- Windows update delivery
+- Android/iOS store update coordination
+- Update integrity validation
+
+### 10. Future Billing & Payment Service
+
+Status: PLANNED — NOT IMPLEMENTED.
+
+Reserve architectural boundaries for future:
+
+- Payment providers
+- Orders
+- Invoices
+- Transaction status
+- Subscription billing
+- Refunds
+- Payment audit events
+
+DO NOT integrate payment gateways, collect card information, or create active payment flows now.
+
+## Service Communication
+
+Support appropriate combinations of:
+
+- REST APIs
+- WebSocket
+- Internal service interfaces
+- Asynchronous domain events
+- Message queues where justified
+
+Use versioned API contracts, correlation IDs, idempotent operations and explicit failure handling.
+
+Avoid tight synchronous dependency chains.
+
+A service may initially be deployed as part of a modular backend process.
+
+Independent deployment must be introduced only when needed.
+
+---
+
+# 4. TECHNOLOGY STACK
+
+Primary language: C++20/23.
+
+Recommended technologies:
+
+- Qt 6
+- Qt Quick / QML
+- CMake
+- Drogon C++ Web Framework
+- PostgreSQL
+- SQLite for offline storage
+- GoogleTest
+- Qt Test
+- OpenAPI
+- REST and WebSocket
+- llama.cpp-compatible AI integration
+- Structured logging
+- Modern cryptographic libraries
+
+Support:
+
+- Windows Desktop
+- Android
+- iOS
+
+Use appropriate platform abstraction layers for hardware, storage, permissions and updates.
+
+Do not claim a single binary will run unchanged on all platforms. Build separate platform artifacts from shared source code.
+
+## Performance Priorities
+
+- Fast application startup
+- Responsive UI
+- Low-latency telemetry processing
+- Efficient ECU polling
+- Low memory usage
+- Non-blocking AI operations
+- Background-task lifecycle management
+- Battery-efficient monitoring
+- Efficient database access
+
+Set measurable performance targets and report p50, p95 and p99 where appropriate.
+
+---
+
+# 5. UI DESIGN — EXACT DESIGN SYSTEM
+
+Design name:
+
+**NEO AUTOMOTIVE DIAGNOSTIC**
+
+The application must look like premium, professional, futuristic automotive diagnostic software.
+
+## Colors
+
+| UI Token | Color |
+|---|---|
+| Primary background | #070D18 |
+| Secondary background | #0D1726 |
+| Card background | #122136 |
+| Elevated surface | #192B43 |
+| Neon blue | #00BFFF |
+| Cyan highlight | #29DFFF |
+| Secondary blue | #126EFF |
+| Main text | #EDF7FF |
+| Secondary text | #9CB5CC |
+| Border | #25415C |
+| Success | #20D79A |
+| Warning | #FFB547 |
+| Error | #FF596D |
+
+## UI Components
+
+- Premium dark dashboard
+- Clean automotive telemetry cards
+- Interactive gauges
+- Real-time diagnostic charts
+- Professional data tables
+- Subtle blue borders
+- 12–16 px rounded cards
+- Responsive 8 px spacing system
+- Smooth, restrained animations
+- Accessible buttons and controls
+- Clear error and warning indicators
+
+## Navigation
+
+Windows Desktop:
+
+- Top navigation
+- Role-based pages
+- Responsive card dashboard
+- No permanently expanded sidebar
+- No duplicated navigation
+
+Android/iOS:
+
+- Adaptive navigation
+- Same visual identity
+- Touch-friendly controls
+- Responsive cards
+- Platform-appropriate interactions
+
+## Canonical Application Icon
+
+Create a unique icon featuring:
+
+- Front silhouette of a futuristic car
+- Electric-blue line art
+- Dark rounded-square background
+- Integrated circuit/OBD connector motif
+- Small diagnostic waveform
+- Symmetrical vector geometry
+- No text
+- No manufacturer logos
+
+Colors:
+
+- #070D18
+- #00BFFF
+- #29DFFF
+- #126EFF
+
+Generate:
+
+- Editable SVG
+- Windows ICO
+- Android adaptive icons
+- iOS icon assets
+- High-resolution PNG previews
+
+Use one canonical artwork for all platforms.
+
+Create matching navigation icons for all application sections.
+
+---
+
+# 6. USER MODE — VEHICLE OWNER
+
+USER represents a vehicle owner or driver.
+
+## Features
+
+- Registration and profile
+- Email/mobile number
+- Vehicle management
+- OBD connection
+- Live data
+- Manual diagnostics
+- Automatic diagnostic scheduling
+- AI symptom analysis
+- Diagnostic history
+- Alerts and notifications
+- Nearby service centers
+- Repair instructions
+- Replacement part references
+- Application settings
+
+## Automatic Vehicle Monitoring
+
+Default schedule: DAILY.
+
+USER can configure:
+
+- Daily/weekly/custom
+- Scheduled time
+- Time zone
+- Email alerts
+- SMS alerts
+- Push notifications
+- Severity thresholds
 - Quiet hours
-- Alert throttling and cooldown period
+- Manual-only mode
 
-Automatic diagnostic workflow:
+Workflow:
 
-1. Verify active authorization and user consent.
-2. Check supported hardware and vehicle availability.
-3. Establish secure OBD connection.
-4. Collect eligible diagnostic measurements.
-5. Check fault codes.
-6. Compare with previous measurements.
-7. Execute deterministic diagnostic rules.
-8. Run supported AI/ML analysis.
-9. Calculate diagnostic severity and confidence.
-10. Save the report.
-11. Notify the user if configured conditions are met.
+1. Verify permission.
+2. Check vehicle/device availability.
+3. Connect to the adapter.
+4. Read supported ECU data.
+5. Analyze DTCs and measurements.
+6. Compare historical data.
+7. Run diagnostic rules and AI.
+8. Save results.
+9. Send configured alerts.
+
+Do not claim unattended background scanning unless the operating system, hardware and vehicle state support it.
+
+Support compatible vehicle-side gateways for continuous monitoring.
+
+## AI Symptom Analysis
+
+USER can describe symptoms in natural language.
+
+AI must combine:
+
+- Symptoms
+- Live data
+- DTCs
+- Freeze frames
+- Vehicle information
+- Historical measurements
+- Diagnostic tests
+
+Generate:
+
+- Root-cause hypotheses
+- Evidence
+- Missing information
+- Recommended tests
+- Repair recommendations
+- Safety warnings
+- Nearby professional services
+
+Do not invent ECU measurements or unsupported vehicle facts.
+
+---
+
+# 7. CUSTOMER MODE — PROFESSIONAL AUTOMOTIVE SERVICE
+
+CUSTOMER represents a mechanic, diagnostic specialist or service center.
+
+CUSTOMER includes all eligible USER diagnostic functionality.
+
+Additional capabilities:
+
+- Workshop registration
+- Business address
+- Email/mobile number
+- Working hours
+- Staff accounts
+- Connected USER accounts
+- Real-time authorized vehicle data
+- Professional diagnostic dashboards
+- Wiring diagrams
+- AI diagnostic methodology
+- Component test procedures
+- Repair references
+- Work orders
+- Professional reports
+- MARKET discounts
+
+## USER Connection
+
+CUSTOMER can invite USER through:
+
+- Email
+- Phone
+- Secure link
+- QR code
+
+USER must authorize vehicle-data sharing.
+
+CUSTOMER access must be limited to the explicitly granted vehicles, data categories and duration.
+
+Support real-time viewing where vehicle data is actually available.
+
+Allow revocation and maintain access audit logs.
+
+## Professional Testing Methodology
+
+Each AI-recommended test must provide:
+
+- Hypothesis
+- Required tools
+- Preconditions
+- Test procedure
+- Expected result
+- Actual result
+- PASS / FAIL / UNKNOWN
+- Evidence
+- Updated confidence
+- Next recommended test
+
+Completed tests must be retained in DiagnosticSession.
+
+Avoid unnecessarily repeating tests.
+
+## Wiring and Repair
+
+Support legally sourced, verified:
+
+- Wiring diagrams
+- Connector references
+- Pinouts
+- Component locations
+- Repair instructions
+- Torque specifications
+- Replacement guides
+- Post-repair verification
+
+Do not fabricate manufacturer wiring diagrams or technical specifications.
+
+---
+
+# 8. ADMIN MODE
+
+ADMIN manages the complete platform.
+
+Features:
+
+- User management
+- CUSTOMER management
+- MARKET management
+- Account verification
+- Connected USER statistics
+- Vehicle make/model analytics
+- Diagnostic session analytics
+- Device usage statistics
+- Notification status
+- Platform health
+- AI service monitoring
+- Service configuration
+- Security auditing
+- Update release management
+
+Use real database statistics.
+
+Admin access to personal data must remain permission-controlled and auditable.
+
+---
+
+# 9. MARKET MERCHANT PORTAL
+
+MARKET is an automotive seller workspace, not a primary diagnostic mode.
+
+Features:
+
+- Merchant registration
+- Shop details and contact information
+- Product catalog
+- Spare-part references
+- Vehicle compatibility
+- Product images
+- Pricing
+- Stock
+- Special CUSTOMER discounts
+- Coupons
+- Limited-time offers
+- Merchant analytics
+
+Product recommendations must be based on verified compatibility.
+
+Do not let advertisements influence diagnostic fault ranking.
+
+---
+
+# 10. REAL OBD PROTOCOLS — READ AND WRITE
+
+Implement REAL automotive diagnostic protocols, not only simulated interfaces.
+
+Create a modular C++ OBD/ECU communication architecture.
+
+## Supported Physical Interfaces
+
+Design for:
+
+- ELM327-compatible adapters
+- Compatible advanced adapters
+- Custom diagnostic hardware
+- Bluetooth Classic
+- Bluetooth LE
+- Wi-Fi
+- USB/Serial
+- CAN-capable hardware interfaces
+
+Support must be based on real adapter capabilities and operating-system compatibility.
+
+## Required Protocol Support
+
+Implement applicable:
+
+### Standard OBD / EOBD
+
+- SAE J1979 / applicable modern OBD services
+- ISO 15765-4 CAN
+- ISO 9141-2
+- ISO 14230 KWP2000
+- SAE J1850 PWM
+- SAE J1850 VPW
+
+### Advanced Diagnostics
+
+- ISO 15765-2 ISO-TP
+- ISO 14229 UDS
+- Supported manufacturer-specific diagnostics through authorized adapters and verified specifications
+
+Do not claim universal OEM coverage.
+
+## 10.1 READ Operations
+
+Implement capability-checked READ functionality:
+
+- Supported PID discovery
+- Current vehicle data
+- Stored DTCs
+- Pending DTCs
+- Permanent DTCs where available
+- Freeze-frame data
+- VIN where supported
+- ECU information
+- Supported readiness monitors
+- Diagnostic status
+- Supported UDS Data Identifiers
+- Supported ECU metadata
+
+Support multi-ECU diagnostics when permitted by protocol/hardware.
+
+## 10.2 WRITE Operations
+
+Architecture must support authorized, verified ECU write and control functionality.
+
+Examples include:
+
+- Clearing DTCs
+- Supported diagnostic session changes
+- Authorized UDS WriteDataByIdentifier
+- Supported RoutineControl operations
+- Approved configuration/adaptation operations
+- Authorized service functions
+- Programming or flashing workflows only through separately validated, OEM-authorized implementations
 
 IMPORTANT:
 
-Do not assume a vehicle can be scanned while ignition is OFF or the diagnostic device is disconnected.
+WRITE support does not mean every vehicle supports every write command.
 
-Respect iOS and Android background-execution restrictions.
+Do not send arbitrary or unverified payloads to an ECU.
 
-Where the mobile operating system or OBD hardware cannot perform unattended daily diagnostics, use a supported backend/device gateway or queue the next eligible scan.
+Do not implement security-access bypasses, seed-key attacks, immobilizer bypasses or unsupported coding.
 
-Expose scheduled, running, completed, missed, failed and deferred states.
+Operations affecting braking, steering, airbags, powertrain safety or emissions compliance require additional safeguards and qualified professional authorization.
 
-Never mark an unperformed scan as successful.
+## 10.3 WRITE SAFETY FRAMEWORK
 
-Avoid battery drain from unnecessary ECU wake-ups.
+All WRITE operations must pass through a central safety and authorization layer.
 
-## 3.4 Email and SMS
+Required checks:
 
-Use pluggable notification providers.
+1. User role
+2. Explicit user confirmation
+3. Vehicle identification
+4. ECU identification
+5. Protocol capabilities
+6. Adapter capabilities
+7. Operation whitelist
+8. Vehicle operating state
+9. Required voltage/power conditions
+10. Preconditions
+11. Request validation
+12. Audit logging
+13. Response verification
 
-Send alerts for:
+Read-only access must be the default.
 
-- New fault code
-- Critical vehicle warnings
-- Important diagnostic changes
-- Repeated abnormal parameters
-- Scheduled diagnostic summary
-- Maintenance reminders
+Professional write capabilities should be restricted to authorized CUSTOMER users and explicitly approved workflows.
 
-User must have complete control over notification preferences.
+Use staged execution:
 
-Implement:
+- Prepare
+- Validate
+- Confirm
+- Execute
+- Verify
+- Record
 
-- Consent management
-- Verified delivery destinations
-- Retry mechanisms
-- Deduplication
-- Rate limiting
-- Delivery status
-- Audit logs
-- Secure credential management
+For programming operations, apply an operation-specific recovery strategy. Do not assume that all ECU writes can be rolled back.
 
-Do not expose personal contact details unnecessarily.
+Never perform destructive write operations automatically as part of scheduled monitoring.
 
-## 3.5 AI Symptom-Based Diagnosis
+## 10.4 Real Hardware Testing
 
-Allow users to write symptoms in Armenian, Russian or English.
+Provide:
 
-Example:
+- OBD simulator
+- Protocol unit tests
+- Adapter compatibility tests
+- ECU response validation
+- Transport error tests
+- Read operation tests
+- Authorized write-operation tests on suitable test hardware
+- Safe failure handling
+- Reconnection tests
 
-"My vehicle shakes during acceleration below 2000 RPM."
+Clearly separate simulator validation from actual vehicle testing.
 
-AI must:
+---
 
-1. Analyze symptoms.
-2. Retrieve active DiagnosticSession data.
-3. Review live measurements.
-4. Review available DTCs and freeze-frame data.
-5. Identify possible root causes.
-6. Rank hypotheses using verified evidence.
-7. Recommend safe diagnostic tests.
-8. Accept new test results.
-9. Recalculate probabilities/confidence.
-10. Update the diagnostic report.
+# 11. AI DIAGNOSTIC ENGINE
 
-Reuse existing AI and diagnostic modules.
+Build a hybrid engine with:
 
-Do not create a disconnected second diagnostic engine.
+- Deterministic rules
+- Live telemetry analysis
+- Historical case retrieval
+- Diagnostic knowledge base
+- RAG
+- Optional ML predictors
+- Local LLM
+- Remote AI provider integration
+- Evidence verification
+- Test recommendation
+- Hypothesis ranking
 
-Every important diagnostic conclusion must have evidence provenance:
+All diagnostic findings must record provenance:
 
 - USER_REPORTED
 - ECU_REPORTED
@@ -305,1037 +830,958 @@ Every important diagnostic conclusion must have evidence provenance:
 - LLM
 - HISTORICAL_CASE
 
-The LLM must not invent measurements or claim a component is defective without evidence.
+LLM conclusions cannot override measured data.
 
-The deterministic engine and verified results must remain authoritative for factual measurements.
-
-## 3.6 Nearby Service Recommendations
-
-Recommend automotive specialists based on:
-
-- User-approved location or manually entered city
-- Vehicle brand/model
-- Relevant service specialization
-- Fault category
-- Available service center information
-- Verified location and contact information
-
-Show:
-
-- Service center name
-- Address
-- Phone number
-- Location/map
-- Supported services
-- Available contact or appointment link
-- Rating only when supported by reliable data
-
-Require explicit permission for device location access.
-
-## 3.7 Parts Replacement Guidance
-
-Provide vehicle-specific repair and replacement guidance where verified information exists.
-
-Each repair guide should contain:
-
-- Suspected defective component
-- Exact part identification when verified
-- OEM/OE cross references
-- Required tools
-- Safety precautions
-- Replacement procedure
-- Diagrams/images where licensed
-- Torque specifications where reliably sourced
-- Post-replacement testing
-- Expected measurements
-- Common installation mistakes
-- Parts available through MARKET
-
-Do not fabricate part numbers, torque values, pinouts or repair instructions.
-
-For high-risk operations, clearly require qualified professional service.
+Support structured test-result ingestion and dynamic diagnostic recalculation.
 
 ---
 
-# 4. CUSTOMER MODE — Automotive Service Center
+# 12. SETTINGS — COMPLETE FUNCTIONALITY
 
-CUSTOMER represents a workshop, mechanic, diagnostic center or professional automotive service.
+Implement a unified Settings module with real persistence.
 
-CUSTOMER inherits the eligible USER diagnostic capabilities, plus professional functionality.
+Settings must be consistent across Windows, Android and iOS.
 
-## 4.1 Service Center Profile
+## 12.1 Language Settings
 
-Store:
+Support EXACTLY these initial application languages:
 
-- Business name
-- Business address
-- Phone number
-- Email address
-- Contact person
-- Working hours
-- Supported services
-- Specializations
-- Supported vehicle makes
-- Optional location
-- Workshop staff accounts
+1. Armenian — Հայերեն (hy)
+2. Russian — Русский (ru)
+3. French — Français (fr)
+4. English (en)
 
-Support multi-employee workshops with controlled permissions.
+English is the default fallback language.
 
-## 4.2 Customer-to-User Relationship
+Provide complete translations for:
 
-A workshop can invite vehicle owners to connect their accounts.
+- Navigation
+- Buttons
+- Settings
+- Diagnostic messages
+- AI responses
+- Alerts
+- Reports
+- Notifications
+- Vehicle information labels
+- Error messages
+- Test results
+- Repair guidance
+
+Changing the language must update the interface without requiring a full restart wherever technically possible.
+
+Use Qt internationalization facilities.
+
+Support locale-aware date, time and number formatting.
+
+## 12.2 Measurement Unit Settings
+
+USER must be able to configure units.
+
+Support both Metric and Imperial systems.
+
+### Speed
+
+- km/h
+- mph
+
+### Distance
+
+- km
+- miles
+
+### Temperature
+
+- °C
+- °F
+
+### Pressure
+
+- kPa
+- bar
+- psi
+
+### Fuel Consumption
+
+- L/100 km
+- km/L
+- mpg (US)
+- mpg (UK)
+
+### Torque
+
+- Nm
+- lb-ft
+
+### Power
+
+- kW
+- hp
+
+### Volume
+
+- Liters
+- US gallons
+
+### Other Automotive Units
+
+Support appropriate conversions for:
+
+- Engine displacement
+- Airflow
+- Fuel pressure
+- Distance traveled
+- Battery/electrical measurements where conversion is relevant
+
+Retain native engineering values internally.
+
+Perform conversions only at presentation/reporting boundaries where appropriate.
+
+Avoid cumulative rounding errors.
+
+Never change the meaning of raw ECU measurements.
+
+For OBD values, ensure units follow the actual PID specification.
+
+## 12.3 Theme Settings
 
 Support:
 
-- Email invitation
-- Phone invitation
-- Invitation link or QR code
-- Explicit user approval
-- Per-vehicle access permissions
-- Read-only diagnostic access by default
-- Time-limited access
-- Permission revocation
-- Sharing audit history
+- Dark
+- Light
+- System
 
-A USER can connect with more than one CUSTOMER.
+Default: Dark NEO AUTOMOTIVE DIAGNOSTIC theme.
 
-A CUSTOMER can manage many authorized USER accounts.
+Keep color semantics consistent.
 
-CUSTOMER can view approved:
+## 12.4 Notification Settings
 
-- Vehicle profile
-- Live data when available
-- Diagnostic reports
-- Fault history
-- AI recommendations
-- Relevant maintenance history
+- Email enable/disable
+- SMS enable/disable
+- Push notifications
+- Alert severity
+- Quiet hours
+- Notification language
+- Scheduled scan summary
+- Failed scan notifications
 
-Do not share private data until the vehicle owner explicitly grants permission.
+## 12.5 Diagnostic Settings
 
-## 4.3 Professional Diagnostic Workspace
+- Default connected device
+- Adapter selection
+- Connection timeout
+- Retry policy
+- Automatic reconnect
+- Default diagnostic mode
+- Live data refresh rate
+- Logging level
+- Read-only safety default
+- Advanced operation permissions
 
-Include:
+## 12.6 AI Settings
 
-- Full OBD diagnostic tools
-- Live measurement graphs
-- DTC descriptions
-- Vehicle-specific diagnostic trees
-- Wiring diagrams
-- Component references
-- Known failure patterns
-- AI diagnosis
-- Advanced test methodology
-- Diagnostic report generation
-- Work orders
-- Repair notes
-- Repair history
-- Customer vehicle management
+- Local AI
+- Remote AI
+- Automatic provider selection
+- Language
+- Diagnostic explanation detail
+- Privacy/data-sharing preferences
+- Model availability status
 
-Support comparison of current measurements with supported reference ranges and historical values.
+## 12.7 Update Settings
 
-## 4.4 Wiring Diagrams
+- Current application version
+- Check for updates
+- Automatic update checking
+- Update channel
+- Update notifications
+- Release notes
+- Update history
+- Last check
+- Installed version status
 
-Support authorized, legally sourced automotive wiring diagrams.
+## 12.8 Account and Privacy Settings
 
-Features:
+- Profile
+- Email
+- Phone
+- Password/security
+- Connected service centers
+- Shared data permissions
+- Consent management
+- Diagnostic history retention
+- Data export
+- Data deletion
 
-- Vehicle/model/engine selection
-- Circuit search
-- Component search
-- Connector descriptions
-- Pin reference
-- Signal reference
-- Zoom and pan
-- Highlighted circuit paths
-- Related repair procedures
+Store account-level settings securely on the backend and cache permitted settings locally.
 
-Use licensed OEM or authorized third-party diagram providers where necessary.
+Handle offline setting changes and synchronization conflicts.
 
-Never generate fabricated wiring diagrams and present them as official manufacturer diagrams.
+---
 
-## 4.5 Professional Testing Methodology
+# 13. ONLINE APPLICATION UPDATES
 
-AI must generate a structured and actionable troubleshooting plan:
+Implement a real online update architecture.
 
-- Hypothesis
-- Evidence
-- Recommended test
-- Tools needed
-- Preconditions
-- Safety requirements
-- Expected results
-- Actual results
-- PASS / FAIL / UNKNOWN
-- Confidence impact
-- Next recommended test
+Create a dedicated Update Management Service.
 
-After every test result:
+## 13.1 Windows Desktop
 
-- Update DiagnosticSession.
-- Mark completed tests.
-- Avoid unnecessarily repeating completed tests.
-- Recalculate remaining diagnostic hypotheses.
-- Suggest the next most informative safe test.
+Support:
 
-Use information gain when selecting the next test, provided uncertainty can be meaningfully estimated.
+- Check for available updates
+- Compare installed and released versions
+- Download signed update packages
+- Verify integrity and signatures
+- Show release notes
+- Confirm installation
+- Safely close/restart application
+- Preserve user data
+- Detect failures
+- Recover or roll back where supported
 
-## 4.6 Professional Repair Documentation
+Do not execute unsigned or unverified binaries.
 
-Provide:
+## 13.2 Android
 
-- Replacement guidelines
-- Verified service references
-- Known failure patterns
-- Test result history
-- Repair verification checklist
-- Final diagnostic summary
-- Exportable report
+Use supported Android application distribution/update mechanisms.
 
-PDF export is preferred for professional reports.
+For Play Store distributions, integrate the official in-app update flow where applicable.
 
-## 4.7 MARKET Integration
+Respect Android package installation and application signing rules.
 
-CUSTOMER should receive relevant automotive parts and tool offers.
+## 13.3 iOS
+
+Follow Apple distribution and App Store policies.
+
+Support:
+
+- Version checks
+- Update availability notifications
+- App Store update links
+- Release notes
+
+Do not attempt unsupported self-modification of iOS application binaries.
+
+## 13.4 Backend Updates
+
+Support manual, versioned backend deployments.
+
+Implement:
+
+- Database migration compatibility
+- API version compatibility
+- Health checks
+- Schema evolution
+- Rollback planning
+- Update logs
+
+NO CI/CD pipelines.
+
+## 13.5 Update Dashboard
 
 Display:
 
-- Compatible products
-- Sellers
-- Price
-- Stock availability
-- Customer-specific discount
-- Validity dates
-- Verified compatibility
-- Warranty where provided
-- Seller contact information
+- Installed version
+- Available version
+- Release channel
+- Compatibility
+- Update size
+- Download state
+- Integrity verification
+- Release notes
+- Last update result
 
-Clearly label sponsored or paid placement.
-
-Separate paid recommendations from the technical fault-ranking process.
+Never claim an update was installed unless installation is verified.
 
 ---
 
-# 5. MARKET — Seller Portal
+# 14. FUTURE PAYMENT ARCHITECTURE — NOT IMPLEMENTED NOW
 
-Create a dedicated merchant role and portal.
+The system will support payments in a future release.
 
-MARKET integrates with the three primary modes without becoming an independent diagnostic mode.
+Possible future capabilities:
 
-## 5.1 Seller Registration
+- Marketplace purchases
+- Workshop subscriptions
+- Premium diagnostic plans
+- Invoice payments
+- Service reservations
+- Customer billing
 
-Support:
+## Current Requirements
 
-- Shop name
-- Address
-- Email
-- Mobile number
-- Business information
-- Shop location
-- Verification status
-- Merchant administrator
-- Staff access
+Only prepare architectural extensibility.
 
-Admin must approve merchants when required by platform policy.
+Define future conceptual interfaces such as:
 
-## 5.2 Product Management
+- IPaymentProvider
+- IBillingService
+- IInvoiceRepository
+- ISubscriptionManager
 
-Seller can:
+Document possible payment-domain boundaries and data relationships.
 
-- Add products
-- Update products
-- Upload product images
-- Manage part numbers
-- Specify supported vehicle compatibility
-- Configure pricing
-- Manage stock
-- Add manufacturer and product references
-- Set warranty information
-- Publish and unpublish listings
+Do not build an active payment gateway.
 
-## 5.3 Discounts and Special Offers
+Do not request or store card information.
 
-Support:
+Do not integrate payment SDKs.
 
-- General discounts
-- CUSTOMER-only discounts
-- Discounts for specific service centers
-- Product-category promotions
-- Time-limited offers
-- Coupon codes
-- Quantity-based discounts
+Do not expose active payment buttons or checkout screens.
 
-Backend must validate all pricing and discount eligibility.
+Do not implement transaction processing.
 
-## 5.4 Parts Matching
+The current marketplace must operate through product listings, seller contacts, quotations and offline transaction arrangements where applicable.
 
-Match parts against:
+Payment functionality status:
 
-- Vehicle make/model/year
-- Engine designation
-- Fuel type where relevant
-- Verified OEM part references
-- Confirmed catalog compatibility
-- Diagnostic recommendations
+**FUTURE / DISABLED / NOT IMPLEMENTED**
 
-Never claim compatibility from product-title similarity alone.
-
-Explicitly show unknown or unverified compatibility.
+Use feature flags or future-version documentation rather than partially functional checkout logic.
 
 ---
 
-# 6. ADMIN MODE
+# 15. INTERACTIVE SYSTEM ARCHITECTURE DASHBOARD
 
-ADMIN manages the entire platform.
+Create a COMPLETE INTERACTIVE ARCHITECTURE DASHBOARD.
 
-## 6.1 Dashboard
-
-Provide real-time or appropriately refreshed analytics for:
-
-- Total registered users
-- Active users
-- Registered CUSTOMERS
-- Registered MARKET sellers
-- Connected vehicles
-- Vehicle makes and models
-- Active diagnostic sessions
-- Completed diagnostic sessions
-- Automatic scan success/failure
-- Most frequent fault categories
-- Service center usage
-- Marketplace activity
-- Notification delivery status
-- Platform health
-- AI processing health
-- Device connection statistics
-
-All displayed analytics must be calculated from real data.
-
-Never use fabricated production statistics.
-
-## 6.2 Account Management
-
-Admin can manage:
-
-- USER accounts
-- CUSTOMER accounts
-- MARKET accounts
-- Role assignment
-- Account status
-- Business verification
-- Marketplace moderation
-- Abuse reports
-- Access permissions
-- Subscription and service tiers if introduced
-
-## 6.3 Customer Analytics
-
-Display for each service center:
-
-- Number of connected users
-- Authorized vehicle count
-- Vehicle makes/models
-- Diagnostic activity
-- Completed and pending work orders
-- Service specialization
-- Workshop staff
-
-Respect user consent and data access policies.
-
-## 6.4 Platform Management
-
-Implement:
-
-- Feature flags
-- Role and permission configuration
-- Vehicle catalog administration
-- AI model configuration
-- Notification provider monitoring
-- Service integrations
-- System audit logs
-- Diagnostic error monitoring
-- Marketplace administration
-- Access reviews
-- Operational reports
-
-Use least-privilege administration, strong authentication, detailed auditing and protected access to sensitive user records.
-
----
-
-# 7. Shared Diagnostic and AI Architecture
-
-All three primary modes must use the SAME diagnostic infrastructure.
-
-Centralize:
-
-- Vehicle catalog
-- DiagnosticSession
-- Evidence collection
-- DTC decoding
-- OBD connectivity
-- Diagnostic rules
-- AI orchestration
-- Test recommendations
-- Prediction updates
-- Measurement history
-- Notifications
-- Repair documentation
-- Marketplace compatibility matching
-
-Do not duplicate diagnostic business logic across Windows, Android and iOS.
-
-Preserve:
-
-- Manual diagnostic mode
-- Deterministic fallback
-- Offline diagnostic functionality
-- Multilingual recommendations
-- Historical test results
-- Diagnostic confidence and provenance
-
-Support AI provider abstraction:
-
-- Local LLM
-- Remote LLM
-- Deterministic fallback
-- Optional ML predictor
-
-Implement structured AI outputs validated against defined schemas.
-
-Never allow an LLM to directly execute unrestricted vehicle ECU write commands.
-
----
-
-# 8. OBD and Hardware Connectivity
-
-Audit and extend the existing connectivity layer.
-
-Support compatible combinations of:
-
-- ELM327
-- Custom diagnostic hardware
-- Bluetooth Classic
-- Bluetooth LE
-- Wi-Fi
-- USB/serial
-
-Include platform-specific compatibility constraints.
-
-Protocol support must be capability-driven, not claimed universally.
-
-Evaluate and implement relevant supported standards:
-
-- OBD-II / SAE J1979
-- ISO 15765-4 CAN
-- ISO 9141-2
-- ISO 14230 KWP2000
-- SAE J1850 PWM/VPW
-- ISO-TP
-- UDS / ISO 14229 where supported and authorized
-
-Include:
-
-- Device discovery
-- Connection status
-- Timeouts
-- Retries
-- Protocol detection
-- Adapter capability detection
-- ECU capability detection
-- Session recovery
-- Disconnect handling
-- Simulation mode
-- Connection diagnostics
-
-Read-only operations must be the default.
-
-Require explicit user approval, supported hardware and appropriate safety checks before any potentially modifying vehicle operation.
-
----
-
-# 9. Database Design
-
-Extend the current database with a consistent relational model.
-
-Evaluate entities such as:
-
-- accounts
-- roles
-- permissions
-- user_profiles
-- service_centers
-- service_center_staff
-- service_center_user_links
-- access_consents
-- vehicles
-- diagnostic_devices
-- diagnostic_sessions
-- diagnostic_measurements
-- trouble_codes
-- diagnostic_hypotheses
-- recommended_tests
-- diagnostic_test_results
-- maintenance_records
-- diagnostic_schedules
-- diagnostic_scan_runs
-- alert_rules
-- notifications
-- notification_deliveries
-- repair_guides
-- repair_references
-- merchants
-- products
-- product_vehicle_compatibility
-- offers
-- discount_eligibility
-- audit_logs
-
-Use proper keys, foreign keys, indexes, constraints and migrations.
-
-Include account isolation and explicit workshop-user authorization.
-
-Do not let client requests bypass server-side ownership checks.
-
-Plan data retention, backup, export and deletion mechanisms.
-
----
-
-# 10. UI/UX — Preserve Current Visual Design
-
-CRITICAL REQUIREMENT:
-
-**USE THE CURRENT UI AND CURRENT ICONS.**
-
-Do not replace the existing design with a new dashboard template.
-
-Preserve existing:
-
-- Color palette
-- Icon family
-- Desktop appearance
-- Mobile appearance
-- Vehicle dashboard concept
-- Navigation style
-- Existing diagnostic views
-- Existing component styling
-- Light/dark themes where available
-
-Extend the interface while remaining visually consistent.
-
-## Mode-Based UI
-
-USER:
-
-- My Vehicles
-- Dashboard
-- Live Data
-- AI Diagnosis
-- Auto Monitoring
-- Notifications
-- Service Centers
-- Repair Guidance
-- Account Settings
-
-CUSTOMER:
-
-- Professional Dashboard
-- Connected Users
-- Customer Vehicles
-- Live Diagnostics
-- AI Diagnostic Assistant
-- Test Methodology
-- Wiring Diagrams
-- Repair Guides
-- Work Orders
-- Marketplace Offers
-
-ADMIN:
-
-- Platform Dashboard
-- User Management
-- Service Centers
-- Vehicle Fleet Analytics
-- Marketplace
-- Device and Diagnostic Analytics
-- Monitoring
-- System Configuration
-- Security and Audit
-
-MARKET Portal:
-
-- Merchant Dashboard
-- Products
-- Inventory
-- Vehicle Compatibility
-- Discounts
-- Offers
-- Seller Profile
-
-Reuse existing UI components wherever possible.
-
-Ensure platform-specific native behavior without unnecessary design differences.
-
-Maintain visual and functional parity between Windows, Android and iOS.
-
-Avoid adding duplicate navigation menus or inconsistent icon sets.
-
-Support Armenian, Russian and English across all new screens and diagnostic messages.
-
----
-
-# 11. Security, Privacy and Reliability
-
-Implement:
-
-- Secure authentication
-- Role-based access control
-- Server-side authorization
-- Multi-tenant isolation
-- Encryption in transit
-- Secure credential storage
-- Token lifecycle management
-- Optional MFA for privileged accounts
-- Consent-based diagnostic data sharing
-- Access revocation
-- Audit logging
-- API rate limiting
-- Input validation
-- Sensitive data redaction
-- Data retention and deletion
-- Backup/recovery
-- Abuse prevention
-
-Apply secure-by-default configurations.
-
-Do not expose private live vehicle data, precise location or personal contact details without appropriate authorization.
-
-Integrate external SMS/email/map services through provider abstractions and environment-based configuration.
-
-Do not hardcode secrets.
-
----
-
-# 12. INTERACTIVE ARCHITECTURE DIAGRAM
-
-Create a real interactive architecture visualization, NOT a static screenshot.
-
-Output:
-
-docs/architecture/interactive_architecture.html
-
-The diagram must support:
-
-- Zoom in/out
-- Mouse-wheel zoom
-- Mouse drag/pan
-- Clickable components
-- Expand/collapse logical groups
-- Search
-- Layer filtering
-- Interactive descriptions
-- Relationship details
-- Communication direction
-- Offline/online paths
-- Dark/light appearance
-- Responsive layout
-
-Include the following layers:
-
-1. Windows / Android / iOS UI
-2. Authentication and RBAC
-3. USER / CUSTOMER / ADMIN / MARKET
-4. Local C++ Diagnostic Core
-5. Device and OBD Transport
-6. DiagnosticSession
-7. AI/ML/RAG/Rules
-8. FastAPI Backend
-9. PostgreSQL and storage
-10. Scheduler
-11. Email/SMS Notifications
-12. Repair Data Providers
-13. Marketplace
-14. External Service and Location Providers
-15. Logging/Observability
-
-When clicking a module, show:
-
-- Responsibility
-- Technology
-- Input/output
-- Dependencies
-- Relevant API
-- Data flow
-- Security boundary
-- Failure handling
-- Related documentation
-
-Provide separate selectable views for:
-
-- High-Level Architecture
-- USER Diagnostic Flow
-- CUSTOMER Diagnostic Flow
-- Automated OBD Monitoring
-- AI Diagnostic Decision Flow
-- Notifications
-- Marketplace
-- Admin and Permission Management
-- Offline/Online Synchronization
-- Cross-Platform Integration
-
-The HTML should be locally runnable with any required JavaScript assets bundled locally.
-
-Also generate Mermaid source diagrams as maintainable documentation.
-
----
-
-# 13. COMPLETE PROJECT DOCUMENTATION
-
-Generate professional technical documentation:
-
-docs/PRODUCT_REQUIREMENTS.md
-docs/FEATURE_MATRIX.md
-docs/ROLES_AND_PERMISSIONS.md
-docs/SYSTEM_ARCHITECTURE.md
-docs/ARCHITECTURE_DECISIONS.md
-docs/DATABASE_DESIGN.md
-docs/API_SPECIFICATION.md
-docs/OBD_CONNECTIVITY.md
-docs/DIAGNOSTIC_ENGINE.md
-docs/AI_DIAGNOSIS.md
-docs/AUTO_MONITORING.md
-docs/NOTIFICATION_SYSTEM.md
-docs/MARKETPLACE.md
-docs/SECURITY_AND_PRIVACY.md
-docs/UI_UX_PARITY.md
-docs/TEST_METHODOLOGY.md
-docs/TEST_CASE_MATRIX.md
-docs/PERFORMANCE_TESTING.md
-docs/DEVELOPMENT_PLAN.md
-docs/DEPLOYMENT_GUIDE.md
-docs/RISK_REGISTER.md
-docs/IMPLEMENTATION_REPORT.md
-
-Documents must describe the actual repository and implemented design, not hypothetical components presented as completed.
-
-Where necessary, document proposed functionality separately from implemented functionality.
-
----
-
-# 14. TEST METHODOLOGY
-
-Design and implement a comprehensive automated testing strategy.
-
-## Unit Tests
-
-Cover:
-
-- Diagnostic rules
-- Vehicle data validation
-- Role permissions
-- Schedule calculations
-- Alert thresholds
-- Discount calculations
-- Part compatibility
-- AI output validation
-- Measurement provenance
-- Data transformation
-
-## Integration Tests
-
-Cover:
-
-- Authentication + RBAC
-- USER + CUSTOMER permissions
-- Customer invitation + consent
-- Backend + Database
-- Scheduler + OBD availability
-- Diagnostic engine + AI
-- Email/SMS provider interfaces
-- Market + Customer discount
-- Admin + Analytics
-- Offline-to-online synchronization
-
-## End-to-End Tests
-
-USER scenarios:
-
-- Register and verify account
-- Add vehicle
-- Connect ELM327
-- Display real live data
-- Run manual scan
-- Enable daily automatic scan
-- Simulate abnormal measurement
-- Receive configured notification
-- Enter symptom
-- Complete suggested tests
-- Obtain diagnostic report
-- Connect a service center
-- Revoke service center access
-
-CUSTOMER scenarios:
-
-- Register business
-- Invite USER
-- Obtain explicit access consent
-- View authorized vehicle data
-- Review AI diagnostic result
-- Execute guided test workflow
-- Open licensed wiring diagram
-- Generate repair report
-- View eligible parts discounts
-
-ADMIN scenarios:
-
-- Manage accounts and roles
-- Approve merchant
-- Verify access restrictions
-- Review connected-user statistics
-- Monitor alerts
-- View system status
-- Review audit logs
-
-MARKET scenarios:
-
-- Create merchant account
-- Add compatible part
-- Add price and stock
-- Configure CUSTOMER discount
-- Verify correct eligibility
-- Publish/unpublish product
-- Prevent incorrect vehicle matching
-
-## Negative Tests
-
-Include:
-
-- No OBD connection
-- Ignition OFF
-- Invalid/unsupported PID
-- Corrupted CAN response
-- Partial ISO-TP frame
-- Timeout
-- Duplicate DTC
-- Unsupported vehicle
-- Missing VIN data
-- Incorrect engine variant
-- Invalid phone/email
-- Failed SMS
-- Failed email
-- Duplicate scheduled scan
-- Offline backend
-- Unauthorized live data access
-- Revoked consent
-- Cross-tenant data request
-- Expired token
-- Incorrect marketplace discount
-- AI response without evidence
-- UI language mismatch
-- Device disconnected during test
-
-## Hardware and Protocol Tests
-
-Use simulators and real hardware when available.
-
-Explicitly separate:
-
-- Simulator PASS
-- Real hardware PASS
-- Not Executed
-- Blocked
-- Unsupported
-
-Never claim real-device coverage from simulator-only tests.
-
-## Regression Test
-
-Preserve the existing golden diagnostic scenario:
-
-Mercedes-Benz W211 E350 M272, LPG-related misfire/shaking during acceleration, DTC P0302, petrol operation normal.
-
-Validate evidence processing, hypothesis ranking, recommended testing, test result updates and recalculation.
-
-## Coverage and Quality Gates
-
-Target at least 90% automated coverage for suitable production core logic, while prioritizing meaningful assertions and critical branch coverage.
-
-Measure separately:
-
-- C++ core coverage
-- Backend coverage
-- Android test coverage
-- iOS test coverage
-- Desktop UI tests
-- API tests
-- Contract tests
-- Integration tests
-- E2E tests
-- Performance tests
-- Security tests
-
-Collect genuine execution results.
-
-Do not report PASS for unexecuted tests.
-
----
-
-# 15. DEVELOPMENT PLAN
-
-Create a realistic phase-based development roadmap.
-
-For every phase include:
-
-- Objective
-- Scope
-- Dependencies
-- Architecture changes
-- Source modules
-- API changes
-- Database migrations
-- UI screens
-- Automated tests
-- Acceptance criteria
-- Risks
-- Estimated engineering effort
-- Deliverables
-
-Recommended order:
-
-## PHASE 0 — Audit and Baseline
-
-Audit current application, code, UI, test coverage and architecture.
-
-## PHASE 1 — Foundation
-
-Shared RBAC, account model, user/customer relationships, consent, database migrations and architectural interfaces.
-
-## PHASE 2 — USER
-
-Vehicle management, live data reuse, automatic monitoring, scheduler, SMS/email, AI symptom integration and service recommendations.
-
-## PHASE 3 — CUSTOMER
-
-Workshop account, connected users, professional diagnostics, wiring diagrams, test methodology, work orders and repair guides.
-
-## PHASE 4 — MARKET
-
-Merchant portal, product catalog, compatibility, inventory, customer discounts and marketplace integrations.
-
-## PHASE 5 — ADMIN
-
-Platform management, analytics, merchant approval, activity dashboards, audit and operational monitoring.
-
-## PHASE 6 — Cross-Platform and Performance
-
-Windows/Android/iOS parity, native integrations, C++ optimization where justified, offline handling and compatibility.
-
-## PHASE 7 — Security and Production Readiness
-
-Full regression, permission tests, notification reliability, backup/recovery, performance benchmarks, release builds and deployment validation.
-
-Phases should be divided into small deliverable milestones.
-
-Each milestone must leave the repository in a buildable, testable condition.
-
----
-
-# 16. Mandatory Implementation Rules
-
-1. Do not start with a large rewrite.
-2. Complete the repository audit first.
-3. Reuse existing functionality whenever appropriate.
-4. Keep the current UI design and existing icons.
-5. Maintain one shared vehicle catalog and diagnostic model.
-6. Use safe database migrations.
-7. Introduce feature flags for incomplete features.
-8. Never fabricate sensor values, hardware support or AI confidence.
-9. Do not promise unsupported background OBD scans.
-10. Do not expose personal vehicle data without authorization.
-11. Do not introduce undocumented breaking API changes.
-12. Write automated tests for important changes.
-13. Execute available tests and report actual outcomes.
-14. Ensure Windows, Android and iOS architecture remains compatible.
-15. Keep Armenian/Russian/English localization consistent.
-16. Clearly separate completed and proposed functionality.
-17. Do not claim integration with external providers unless actually configured and tested.
-18. Do not replace proven working UI components merely to change their appearance.
-19. Preserve existing golden diagnostic regression scenarios.
-20. Optimize based on measurements, not assumptions.
-
----
-
-# 17. Expected Final Delivery
+This is more than a static diagram.
 
 Deliver:
 
-A. Complete current-codebase audit
+docs/architecture/interactive_architecture.html
 
-B. Production architecture specification
+The dashboard must open locally in a browser and support fully interactive navigation.
 
-C. Interactive HTML architecture diagram
+## 15.1 Architecture Diagram Features
 
-D. Complete role/feature/permission matrix
+- Zoom
+- Mouse pan
+- Drag
+- Node selection
+- Search
+- Expand/collapse
+- Layer filters
+- Relationship highlighting
+- Data flow visualization
+- Service dependency visualization
+- Offline/online data paths
+- Security boundaries
+- Technology labels
+- Color-coded service groups
 
-E. Database model and migration strategy
+## 15.2 Dashboard Sections
 
-F. API contracts
+Create interactive sections for:
 
-G. UI extension plan based on EXISTING UI and ICONS
+1. System Overview
+2. C++ Shared Core
+3. Windows Architecture
+4. Android Architecture
+5. iOS Architecture
+6. Macroservice Architecture
+7. Authentication & RBAC
+8. USER Mode
+9. CUSTOMER Mode
+10. ADMIN Mode
+11. MARKET Portal
+12. OBD Protocol Architecture
+13. OBD Read/Write Safety
+14. AI Diagnostic Workflow
+15. Live Telemetry
+16. Scheduled Monitoring
+17. Notifications
+18. Online Updates
+19. Database Architecture
+20. Security Architecture
+21. Future Payment Architecture
+22. Testing Architecture
+23. Development Roadmap
 
-H. Comprehensive test methodology
+## 15.3 Interactive Component Inspector
 
-I. Automated test suites and execution reports
+Clicking any service or component must show:
 
-J. Performance and security findings
+- Component name
+- Description
+- Responsibility
+- Technology
+- Interfaces
+- APIs
+- Dependencies
+- Input data
+- Output data
+- Database interaction
+- Security requirements
+- Failure scenarios
+- Related source modules
+- Related documentation
 
-K. Step-by-step development roadmap
+## 15.4 Dashboard Metrics
 
-L. Actual implementation for the approved phases
+Include a distinct observability view showing:
 
-M. Updated project documentation
+- Service availability
+- Backend status
+- Database connectivity
+- OBD device state
+- AI provider availability
+- Notification health
+- API latency
+- Error rates
+- Memory utilization
+- CPU utilization
+- Version information
 
-N. Final implementation status report
+Use real metrics when a running backend is available.
 
-The report must contain:
+When runtime metrics are unavailable, show UNKNOWN or UNAVAILABLE.
+
+Do not fabricate service health or production metrics.
+
+## 15.5 Architecture Documentation Integration
+
+Every architecture node should link to its relevant documentation.
+
+Maintain matching:
+
+- Interactive diagrams
+- Mermaid source diagrams
+- API contracts
+- Source module references
+- Architecture Decision Records
+
+Use the NEO AUTOMOTIVE DIAGNOSTIC design system.
+
+Bundle required visualization libraries locally.
+
+The documentation dashboard must work without a CDN.
+
+---
+
+# 16. COMPLETE PROJECT DOCUMENTATION
+
+Create professional and comprehensive documentation.
+
+Required structure:
+
+docs/
+- README.md
+- PRODUCT_REQUIREMENTS.md
+- FUNCTIONAL_REQUIREMENTS.md
+- NON_FUNCTIONAL_REQUIREMENTS.md
+- SYSTEM_ARCHITECTURE.md
+- MACROSERVICES_ARCHITECTURE.md
+- SOLID_CODING_STANDARDS.md
+- ARCHITECTURE_DECISIONS.md
+- TECH_STACK.md
+- UI_UX_DESIGN_SYSTEM.md
+- APPLICATION_ICON_SPECIFICATION.md
+- ROLES_AND_PERMISSIONS.md
+- DATABASE_DESIGN.md
+- API_SPECIFICATION.md
+- OBD_PROTOCOLS.md
+- OBD_READ_OPERATIONS.md
+- OBD_WRITE_OPERATIONS.md
+- OBD_SAFETY_MODEL.md
+- VEHICLE_COMPATIBILITY.md
+- AI_DIAGNOSTICS.md
+- USER_MODE.md
+- CUSTOMER_MODE.md
+- ADMIN_MODE.md
+- MARKETPLACE.md
+- WIRING_DIAGRAMS.md
+- REPAIR_PROCEDURES.md
+- AUTO_MONITORING.md
+- NOTIFICATION_SYSTEM.md
+- APPLICATION_SETTINGS.md
+- LOCALIZATION.md
+- UNIT_CONVERSION.md
+- ONLINE_UPDATE_SYSTEM.md
+- FUTURE_PAYMENT_ARCHITECTURE.md
+- SECURITY_AND_PRIVACY.md
+- TEST_METHODOLOGY.md
+- TEST_CASE_MATRIX.md
+- HARDWARE_TEST_PLAN.md
+- PERFORMANCE_TESTING.md
+- DEVELOPMENT_PLAN.md
+- DEPLOYMENT_GUIDE.md
+- BUILD_AND_RUN.md
+- RISK_REGISTER.md
+- IMPLEMENTATION_REPORT.md
+
+Create and maintain:
+
+- Interactive architecture dashboard
+- Mermaid architecture diagrams
+- Component diagrams
+- Data-flow diagrams
+- Sequence diagrams
+- Entity relationship diagrams
+- OBD Read/Write state diagrams
+- Deployment diagrams
+- Test coverage matrices
+
+All documentation must reflect the actual codebase.
+
+Clearly distinguish IMPLEMENTED, PLANNED, BLOCKED and UNSUPPORTED features.
+
+---
+
+# 17. TEST METHODOLOGY AND QA AUTOMATION
+
+Create automated testing infrastructure without CI/CD.
+
+## Testing Levels
+
+### Unit Tests
+
+- C++ classes
+- SOLID interface contracts
+- Protocol decoding
+- OBD data validation
+- Unit conversions
+- Language selection
+- Role authorization
+- Scheduler calculations
+- AI schema validation
+- Discount calculations
+
+### Integration Tests
+
+- Macroservice boundaries
+- Backend + PostgreSQL
+- Application + Backend
+- OBD adapter + Protocol
+- AI + Diagnostic engine
+- CUSTOMER + USER permissions
+- Notification providers
+- Update service + Version metadata
+- Settings synchronization
+
+### End-to-End Tests
+
+Validate complete USER, CUSTOMER, ADMIN and MARKET workflows.
+
+### OBD Read Tests
+
+- Real PID responses
+- DTC retrieval
+- Freeze-frame validation
+- Multiple ECU handling
+- Protocol detection
+- Invalid responses
+- Connection recovery
+
+### OBD Write Tests
+
+- Permission checks
+- Preconditions
+- Unsupported commands
+- Safety-state validation
+- User confirmation
+- Response verification
+- Auditing
+- Failure recovery
+
+Use safe simulators, benches and authorized test ECUs.
+
+Do not execute dangerous write tests on ordinary vehicles.
+
+### Localization Tests
+
+Validate all four languages:
+
+- Armenian
+- Russian
+- French
+- English
+
+Test missing translations, layout overflow and locale formatting.
+
+### Unit Conversion Tests
+
+Verify correct conversion and rounding for:
+
+- km/h ↔ mph
+- km ↔ miles
+- °C ↔ °F
+- kPa ↔ bar ↔ psi
+- L/100km ↔ mpg
+- Nm ↔ lb-ft
+- kW ↔ hp
+
+### Update Tests
+
+- No update available
+- Valid update
+- Invalid signature
+- Corrupted package
+- Network interruption
+- Insufficient storage
+- Version incompatibility
+- Interrupted update
+- Recovery
+- Platform policy restrictions
+
+### Architecture Tests
+
+Validate:
+
+- SOLID contract expectations
+- Dependency direction
+- Service boundaries
+- API contracts
+- No unauthorized cross-domain database coupling
+- No direct UI dependency inside core business logic
+
+### Performance Tests
+
+- Startup
+- UI navigation
+- OBD polling
+- Protocol processing
+- API latency
+- AI processing
+- Memory usage
+- CPU usage
+- Offline operation
+- Battery impact
+
+Target at least 90% meaningful coverage for critical core business logic.
+
+Record real execution status:
+
+PASS / FAIL / SKIPPED / BLOCKED / NOT RUN
+
+Do not claim simulator results prove full real-vehicle compatibility.
+
+---
+
+# 18. DEVELOPMENT PLAN
+
+Implement in phases.
+
+## Phase 0 — Repository Reset
+
+- Confirm repository root.
+- Preserve Git history.
+- Remove previous application source code.
+- Remove existing CI/CD workflows.
+- Create a new C++/Qt repository structure.
+- Configure CMake.
+- Configure local build and test scripts.
+
+## Phase 1 — Architecture and UI Foundation
+
+- SOLID architecture
+- Macroservice boundaries
+- C++ interfaces
+- Qt/QML foundation
+- NEO AUTOMOTIVE theme
+- Canonical icon
+- Application navigation
+- Interactive architecture dashboard
+
+## Phase 2 — Authentication and Database
+
+- Identity service
+- RBAC
+- User roles
+- Organizations
+- PostgreSQL
+- SQLite
+- Secure synchronization
+- API contracts
+
+## Phase 3 — OBD Diagnostic Core
+
+- Hardware abstraction
+- Real protocols
+- Read operations
+- Controlled write framework
+- ECU communication
+- Live telemetry
+- DTCs
+- Protocol simulator
+- Hardware tests
+
+## Phase 4 — USER Mode
+
+- Account and vehicle management
+- Diagnostics
+- Live data
+- Scheduled scans
+- Email/SMS
+- AI symptom analysis
+- Nearby service centers
+- Repair guidance
+
+## Phase 5 — CUSTOMER Mode
+
+- Workshop profiles
+- USER connections
+- Permission sharing
+- Professional diagnostics
+- Wiring diagrams
+- AI test methodology
+- Repair reports
+
+## Phase 6 — MARKET Portal
+
+- Merchant accounts
+- Products
+- Compatibility
+- Inventory
+- Discounts
+- Professional offers
+
+No payment gateway implementation.
+
+## Phase 7 — ADMIN Mode
+
+- Platform administration
+- Account management
+- Workshop monitoring
+- Vehicle analytics
+- Marketplace oversight
+- Security and operational monitoring
+
+## Phase 8 — Application Settings
+
+- Armenian
+- Russian
+- French
+- English
+- Metric/Imperial units
+- Themes
+- Notifications
+- Diagnostic preferences
+- AI settings
+- Privacy settings
+
+## Phase 9 — Online Updates
+
+- Update service
+- Windows signed updates
+- Android supported update integration
+- iOS update coordination
+- Version management
+- Update diagnostics and recovery
+
+## Phase 10 — AI Improvements
+
+- Hybrid AI
+- RAG
+- Deterministic rules
+- Evidence management
+- Test recommendation
+- Fault hypothesis ranking
+- Repair guidance
+
+## Phase 11 — Cross-Platform Validation
+
+- Windows build
+- Android build
+- iOS build
+- UI consistency
+- Device compatibility
+- Performance optimization
+- Accessibility
+- Security
+
+## Phase 12 — Final QA and Documentation
+
+- Full regression
+- Local test execution
+- Real hardware validation where available
+- Performance benchmarking
+- Security review
+- Documentation completion
+- Architecture dashboard verification
+- Final report
+
+Each phase must include explicit deliverables, dependencies, acceptance criteria and a local verification report.
+
+---
+
+# 19. FINAL PROJECT STRUCTURE
+
+Create a clean modular repository.
+
+```text
+CAR_DIAGNOSTIC_ANALYSIS/
+│
+├── CMakeLists.txt
+├── CMakePresets.json
+│
+├── apps/
+│   ├── windows/
+│   ├── android/
+│   └── ios/
+│
+├── ui/
+│   ├── components/
+│   ├── pages/
+│   ├── themes/
+│   ├── icons/
+│   ├── charts/
+│   ├── settings/
+│   └── translations/
+│
+├── core/
+│   ├── interfaces/
+│   ├── obd/
+│   ├── protocols/
+│   ├── transport/
+│   ├── telemetry/
+│   ├── diagnostic/
+│   ├── ai/
+│   ├── rules/
+│   ├── vehicles/
+│   └── security/
+│
+├── services/
+│   ├── identity/
+│   ├── vehicle/
+│   ├── diagnostics/
+│   ├── ai_analysis/
+│   ├── monitoring/
+│   ├── notifications/
+│   ├── customer/
+│   ├── marketplace/
+│   ├── administration/
+│   └── updates/
+│
+├── future_modules/
+│   └── payments/
+│       └── ARCHITECTURE.md
+│
+├── backend/
+│   ├── api/
+│   ├── database/
+│   ├── events/
+│   └── security/
+│
+├── integrations/
+│   ├── email/
+│   ├── sms/
+│   ├── maps/
+│   ├── automotive_data/
+│   └── ai_providers/
+│
+├── assets/
+│   ├── app_icon/
+│   ├── vehicles/
+│   ├── fonts/
+│   └── illustrations/
+│
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   ├── api/
+│   ├── ui/
+│   ├── e2e/
+│   ├── obd/
+│   ├── security/
+│   ├── performance/
+│   └── simulators/
+│
+├── docs/
+│   ├── architecture/
+│   │   └── interactive_architecture.html
+│   ├── diagrams/
+│   ├── api/
+│   └── testing/
+│
+├── scripts/
+│   ├── build/
+│   ├── test/
+│   └── package/
+│
+└── config/
+```
+
+No CI/CD workflow configuration.
+
+Do not add active payment code.
+
+---
+
+# 20. DEFINITION OF DONE
+
+A feature is considered completed only when:
+
+1. Source code is implemented.
+2. SOLID architecture is respected.
+3. Service boundaries are correct.
+4. Application compiles on its claimed supported platforms.
+5. Required database integration works.
+6. Backend API works.
+7. Authentication and authorization are enforced.
+8. UI follows the exact design system.
+9. Relevant functionality is tested.
+10. Failures are handled safely.
+11. Documentation is updated.
+12. Interactive architecture dashboard reflects the implementation.
+13. Actual test results are reported.
+14. No known critical regression remains.
+
+## Required Implementation Report
+
+After each phase report:
 
 - Implemented features
-- Reused components
-- Modified files
-- New files
+- Modified and created files
+- New interfaces
+- Service changes
 - Database migrations
-- API changes
-- Tests executed
-- PASS / FAIL / SKIPPED / BLOCKED counts
+- Build status by platform
+- Test results
 - Code coverage
-- Known limitations
 - Performance results
-- Platform compatibility status
-- Remaining tasks
+- Security findings
+- Known limitations
+- Next tasks
 
-## Definition of Done
+Never mark unfinished modules as production-ready.
 
-A feature is complete only when:
+---
 
-- Functionality is implemented.
-- Required authorization works.
-- Existing UI conventions are respected.
-- Relevant API/database integration works.
-- Tests exist and have been executed.
-- Error handling is implemented.
-- Documentation is updated.
-- No known critical regression remains.
+# FINAL EXECUTION INSTRUCTION
 
-## Execution Instructions
+Start by verifying the active repository, preparing a safe reset of the old application files, and establishing the new C++/Qt project.
 
-Start with a real audit of the active repository.
+Implement the NEO AUTOMOTIVE UI, canonical icon, SOLID interfaces and Macroservice architecture.
 
-Produce the full architecture, interactive diagram, documentation, test methodology and prioritized development plan.
+Create the fully interactive architecture dashboard and complete technical documentation.
 
-Then begin implementation from the foundational milestone, using small, verifiable changes.
+Then develop the real diagnostic functionality, supported OBD Read/Write framework, USER/CUSTOMER/ADMIN modes, MARKET portal, Settings, AI, notifications and online updates phase by phase.
 
-Do not stop at generic advice or pseudocode.
+Keep payment processing strictly deferred for a future release.
 
-Implement actual application code where execution access permits, maintain compatibility, and provide evidence of completed work.
+Use local automated builds and tests without CI/CD.
 
-If a required dependency, hardware device, licensed data source, external provider or build environment is unavailable, identify the blocker clearly and provide a testable interface or simulator without claiming production functionality.
+Do not stop after producing diagrams or pseudocode. Implement actual source code wherever execution access permits.
 
-**FINAL OBJECTIVE: Transform the existing AI CAR SCANNER application into a high-performance, secure, AI-powered, multi-platform automotive diagnostics and professional service ecosystem while preserving its existing user interface, icons and working modules.**
+## FINAL GOAL
+
+A production-oriented, secure, fast and extensible automotive diagnostic ecosystem featuring:
+
+**C++20/23 + Qt/QML + SOLID + Macroservices + Real OBD Read/Write + AI Diagnostics + Online Updates + Interactive Architecture Dashboard + Four Languages + Configurable Units + Complete Documentation.**
+
+**THREE PRIMARY MODES.**
+
+**ONE INTEGRATED MARKETPLACE.**
+
+**ONE SHARED DIAGNOSTIC CORE.**
+
+**ONE UNIFIED UI DESIGN.**
+
+**NO LEGACY CODE.**
+
+**NO CI/CD.**
+
+**PAYMENTS RESERVED FOR THE FUTURE.**

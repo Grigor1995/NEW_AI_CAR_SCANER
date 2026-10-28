@@ -1,0 +1,57 @@
+{
+  "scope": "pure C++ domain only; excludes Qt services/UI/HTTP",
+  "files": {
+    "core/ai/evidence.hpp": {
+      "lines": 29,
+      "covered": 29,
+      "line_percent": 100.0,
+      "branches": 80,
+      "branches_taken": 42
+    },
+    "services/updates/manifest.hpp": {
+      "lines": 19,
+      "covered": 19,
+      "line_percent": 100.0,
+      "branches": 38,
+      "branches_taken": 28
+    },
+    "services/monitoring/eligibility.hpp": {
+      "lines": 4,
+      "covered": 4,
+      "line_percent": 100.0,
+      "branches": 8,
+      "branches_taken": 6
+    },
+    "core/telemetry/units.hpp": {
+      "lines": 28,
+      "covered": 27,
+      "line_percent": 96.43,
+      "branches": 46,
+      "branches_taken": 40
+    },
+    "core/protocols/elm.cpp": {
+      "lines": 168,
+      "covered": 161,
+      "line_percent": 95.83,
+      "branches": 412,
+      "branches_taken": 293
+    },
+    "core/security/crypto.cpp": {
+      "lines": 36,
+      "covered": 30,
+      "line_percent": 83.33,
+      "branches": 72,
+      "branches_taken": 40
+    },
+    "core/security/write_policy.cpp": {
+      "lines": 20,
+      "covered": 19,
+      "line_percent": 95.0,
+      "branches": 66,
+      "branches_taken": 51
+    }
+  },
+  "lines": 304,
+  "covered": 289,
+  "line_percent": 95.07
+}

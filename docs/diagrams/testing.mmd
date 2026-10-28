@@ -1,0 +1,7 @@
+flowchart LR
+  ui["Shared Qt/QML client - IMPLEMENTED"]
+  core["Shared C++ domain - IMPLEMENTED"]
+  transport["TCP / desktop serial - PARTIAL"]
+  backend["C++ HTTP host - PARTIAL"]
+  testing["Local QA & contracts - IMPLEMENTED"]
+  testing -->|"runtime and negative contracts"| core

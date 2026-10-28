@@ -1,0 +1,9 @@
+flowchart LR
+  core["Shared C++ domain - IMPLEMENTED"]
+  protocols["ELM / CAN / ISO-TP - PARTIAL"]
+  safety["Read/write safety - PARTIAL"]
+  session["Diagnostic evidence - PARTIAL"]
+  rules["AI / deterministic rules - PARTIAL"]
+  telemetry["Telemetry & units - PARTIAL"]
+  protocols -->|"validated engineering measurement"| telemetry
+  session -->|"evidence-ranked hypotheses"| rules

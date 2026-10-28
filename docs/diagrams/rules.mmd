@@ -1,0 +1,7 @@
+flowchart LR
+  session["Diagnostic evidence - PARTIAL"]
+  rules["AI / deterministic rules - PARTIAL"]
+  telemetry["Telemetry & units - PARTIAL"]
+  repair["Licensed repair / wiring - BLOCKED"]
+  session -->|"evidence-ranked hypotheses"| rules
+  rules -->|"future licensed reference retrieval"| repair

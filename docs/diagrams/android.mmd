@@ -1,0 +1,8 @@
+flowchart LR
+  ui["Shared Qt/QML client - IMPLEMENTED"]
+  android["Android client - BLOCKED"]
+  core["Shared C++ domain - IMPLEMENTED"]
+  transport["TCP / desktop serial - PARTIAL"]
+  settings["Persistent settings - PARTIAL"]
+  ui -->|"local preference changes"| settings
+  android -->|"shared source; native SDK required"| ui

@@ -1,0 +1,7 @@
+flowchart LR
+  ui["Shared Qt/QML client - IMPLEMENTED"]
+  ios["iOS client - BLOCKED"]
+  core["Shared C++ domain - IMPLEMENTED"]
+  settings["Persistent settings - PARTIAL"]
+  ui -->|"local preference changes"| settings
+  ios -->|"shared source; Xcode required"| ui

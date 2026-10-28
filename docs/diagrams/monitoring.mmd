@@ -1,0 +1,7 @@
+flowchart LR
+  diagnostics["Diagnostic orchestration - PARTIAL"]
+  device["Vehicle / ECU hardware - BLOCKED"]
+  monitoring["Scheduled monitoring - PLANNED"]
+  notifications["Email / SMS / push - PLANNED"]
+  monitoring -->|"future eligible scan; no scheduled execution"| diagnostics
+  monitoring -->|"future delivery after actual completion"| notifications

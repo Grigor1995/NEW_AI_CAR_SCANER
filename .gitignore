@@ -1,31 +1,7 @@
-/.idea/
-/finalbuild/build-debug/
-/finalbuild/dist-debug/
-
-# Unified native build cache and generated distributions
-/.build-tools/
+/build/
 /artifacts/
-/finalbuild/apps/mobile-ios/AICarScanner.xcodeproj/
-/finalbuild/apps/mobile-ios/AICarScanner.xcworkspace/
-
-# Python tools invoked from the repository root
+/local/
+/.cache/
+*.user
+*.sqlite*
 __pycache__/
-*.py[cod]
-.pytest_cache/
-.coverage
-.coverage.*
-htmlcov/
-.venv/
-
-# Local static-analysis caches
-.ruff_cache/
-
-# Local setup runner configuration (machine-specific paths)
-/.runner-state.json
-/.runner-state.tmp
-
-# Machine-specific global environment overrides
-/finalbuild/config/environment.local.json
-
-# Local foundation smoke-test database
-/ecosystem.sqlite*

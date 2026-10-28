@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checks": [
+    "unauthenticated_vehicle_access_denied",
+    "register",
+    "self_granted_admin_denied",
+    "owned_vehicle",
+    "cross_account_isolation",
+    "settings_field_whitelist",
+    "invalid_locale_rejected",
+    "token_and_vehicle_survive_restart",
+    "preferences_survive_restart",
+    "logout",
+    "revoked_token_denied",
+    "no_fake_hardware_or_payment_claims"
+  ]
+}

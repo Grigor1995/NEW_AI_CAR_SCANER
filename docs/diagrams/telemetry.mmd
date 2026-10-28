@@ -1,0 +1,7 @@
+flowchart LR
+  ui["Shared Qt/QML client - IMPLEMENTED"]
+  device["Vehicle / ECU hardware - BLOCKED"]
+  protocols["ELM / CAN / ISO-TP - PARTIAL"]
+  telemetry["Telemetry & units - PARTIAL"]
+  device -->|"observed ECU response"| protocols
+  protocols -->|"validated engineering measurement"| telemetry

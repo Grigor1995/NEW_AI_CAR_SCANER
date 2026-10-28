@@ -1,28 +1,7 @@
 # Security and privacy
 
-Baseline API routers were unauthenticated despite isolated role/token helpers.
-Foundation must be opt-in, database-backed and fail closed: no legacy anonymous
-route may bypass the new ownership boundary once ecosystem mode is enabled.
-Default local operation remains compatible and must not be advertised as a
-production public multi-tenant API.
+Local identity uses OpenSSL scrypt (N=16384,r=8,p=1,16-byte salt,32-byte derived key) with bounded UTF-8 password length, secure random opaque session credentials and persisted SHA-256 token hashes. SQLite checks current active accounts and session expiry for each authenticated request. New users receive USER only; local operator provisioning is explicit. Profile queries are owner-scoped and use bound SQL parameters. JSON inputs/settings are bounded/whitelisted and errors omit credential values.
 
-New login design uses scrypt hashes and random opaque bearer sessions stored as
-hashes, expiring/revocable server-side. Resolve roles, active account and staff
-membership from the database on each request. Public registration cannot grant
-ADMIN or MARKET. Explicit owner consent is read-scoped, vehicle-scoped,
-time-limited and revocable; platform ADMIN does not imply private vehicle access.
+Current host is loopback-only with a coarse in-process auth throttle, not an internet-hardened identity provider. Password recovery, verified contacts, MFA, distributed rate limiting, TLS termination, full audit coverage, account deletion/retention/export, keychain storage, CSRF/origin deployment review and denial-of-service hardening remain required. The UI's local auth store is not remote SSO or tenant sharing. Plain local adapter TCP has no encryption/authentication; only authorized trusted adapters should be used. Reports may contain private diagnostics and are written owner-only; contact/location data must not be leaked.
 
-Audit IDs/actions without passwords, bearer tokens or contact payloads. Use
-HTTPS on shared deployments, trusted proxy configuration and least-privilege DB
-credentials. In-process auth throttles are single-instance protection, not a
-distributed production rate limiter. MFA, verification/recovery, TLS deployment,
-retention/export/deletion, backup restore and security review remain gates.
-SQLite integration is not a substitute for PostgreSQL concurrency isolation
-and field security testing.
-
-Foundation now uses a loopback runner bind by default. Scrypt's stored profile
-is N=32768, r=8, p=3 with 16-byte random salt and a 32-byte digest; verification
-rejects unsupported stored cost profiles. Password hashing is deliberately
-separate from the diagnostic latency target. Login failures are audited without
-recording the submitted email/password or raw token. Invitation acceptance uses
-an atomic unaccepted-state update plus unique owner/center/profile constraints.
+Writes are transport-locked. No security access bypass, unsafe OEM payload, unrestricted LLM action or automatic write is exposed. No physical safety certification or penetration test is claimed.

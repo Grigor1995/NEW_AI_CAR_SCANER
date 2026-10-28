@@ -1,4 +1,0 @@
-PASS: real launcher ready in 2.16s
-PASS: catalog contains 369 rows with valid fuel lists
-PASS: session, symptoms, DTC and diagnostic analysis
-PASS: session/analysis retained after restart; catalog unchanged

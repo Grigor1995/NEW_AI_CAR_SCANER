@@ -1,0 +1,7 @@
+flowchart LR
+  ui["Shared Qt/QML client - IMPLEMENTED"]
+  user["USER mode - PARTIAL"]
+  vehicle["Vehicle management - PARTIAL"]
+  diagnostics["Diagnostic orchestration - PARTIAL"]
+  rules["AI / deterministic rules - PARTIAL"]
+  ui -->|"explicit authorized connection/read"| diagnostics

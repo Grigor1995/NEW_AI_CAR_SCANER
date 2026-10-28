@@ -1,6 +1,0 @@
-# Minimal SAE J2534-1 constants needed by the transport seam.
-PASS_THRU_PROTOCOL_CAN = 5
-ISO15765 = 6
-CAN_29BIT_ID = 0x10000000
-STATUS_NOERROR = 0
-STATUS_ERR_TIMEOUT = 0x0A

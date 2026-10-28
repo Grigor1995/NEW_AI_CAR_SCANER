@@ -1,0 +1,55 @@
+flowchart LR
+  ui["Shared Qt/QML client - IMPLEMENTED"]
+  windows["Windows desktop - BLOCKED"]
+  android["Android client - BLOCKED"]
+  ios["iOS client - BLOCKED"]
+  core["Shared C++ domain - IMPLEMENTED"]
+  identity["Identity & access - PARTIAL"]
+  user["USER mode - PARTIAL"]
+  customer["CUSTOMER mode - PLANNED"]
+  admin["ADMIN mode - PLANNED"]
+  market["MARKET portal - PLANNED"]
+  vehicle["Vehicle management - PARTIAL"]
+  diagnostics["Diagnostic orchestration - PARTIAL"]
+  transport["TCP / desktop serial - PARTIAL"]
+  device["Vehicle / ECU hardware - BLOCKED"]
+  protocols["ELM / CAN / ISO-TP - PARTIAL"]
+  safety["Read/write safety - PARTIAL"]
+  session["Diagnostic evidence - PARTIAL"]
+  rules["AI / deterministic rules - PARTIAL"]
+  telemetry["Telemetry & units - PARTIAL"]
+  monitoring["Scheduled monitoring - PLANNED"]
+  notifications["Email / SMS / push - PLANNED"]
+  updates["Online update service - PARTIAL"]
+  storage["SQLite / PostgreSQL - PARTIAL"]
+  settings["Persistent settings - PARTIAL"]
+  repair["Licensed repair / wiring - BLOCKED"]
+  backend["C++ HTTP host - PARTIAL"]
+  payments["Future payments - DISABLED"]
+  testing["Local QA & contracts - IMPLEMENTED"]
+  roadmap["Development roadmap - IMPLEMENTED"]
+  observability["Runtime observations - PARTIAL"]
+  ui -->|"local sign-in and role checks"| identity
+  identity -->|"credential hashes and current token checks"| storage
+  ui -->|"explicit authorized connection/read"| diagnostics
+  diagnostics -->|"bounded command exchange"| transport
+  transport -->|"actual adapter bytes; hardware NOT RUN"| device
+  device -->|"observed ECU response"| protocols
+  protocols -->|"validated engineering measurement"| telemetry
+  diagnostics -->|"observed DTC/evidence"| session
+  session -->|"evidence-ranked hypotheses"| rules
+  ui -->|"local preference changes"| settings
+  settings -->|"explicit account save"| storage
+  diagnostics -->|"future write prepare; executor currently locked"| safety
+  monitoring -->|"future eligible scan; no scheduled execution"| diagnostics
+  windows -->|"shared source; native build blocked"| ui
+  android -->|"shared source; native SDK required"| ui
+  ios -->|"shared source; Xcode required"| ui
+  testing -->|"runtime and negative contracts"| core
+  backend -->|"versioned credential API"| identity
+  backend -->|"owner-scoped profile API"| vehicle
+  backend -->|"account settings API"| settings
+  monitoring -->|"future delivery after actual completion"| notifications
+  rules -->|"future licensed reference retrieval"| repair
+  market -->|"future verified fitment"| vehicle
+  observability -->|"actual health when same-origin available"| backend

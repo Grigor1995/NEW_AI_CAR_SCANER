@@ -1,0 +1,1 @@
+{"workload":"10000 fixed framed RPM decodes; no hardware/network/AI","unit":"microseconds","p50":7.582,"p95":8.823,"p99":59.918}

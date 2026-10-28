@@ -1,3 +1,0 @@
-PERF deterministic_analysis_ms p50=0.68 p95=2.32 min=0.37 max=20.63
-.
-1 passed in 0.26s

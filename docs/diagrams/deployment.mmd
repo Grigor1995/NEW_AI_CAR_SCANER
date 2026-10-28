@@ -1,0 +1,10 @@
+flowchart LR
+ Desktop["Linux-tested shared Qt/QML client"] --> Local["App-local SQLite"]
+ Host["Loopback C++ HTTP host"] --> BackendDB["Separate backend SQLite"]
+ Browser["Offline architecture dashboard"] -. "optional same-origin health" .-> Host
+ Desktop --> Adapter["Trusted TCP / desktop serial adapter; hardware NOT RUN"]
+ Windows["Windows native artifact BLOCKED"] -.-> Desktop
+ Android["Android native artifact BLOCKED"] -.-> Desktop
+ iOS["iOS native artifact BLOCKED"] -.-> Desktop
+ PG["PostgreSQL + remote sync PLANNED"]
+ Host -. "future reviewed migration" .-> PG

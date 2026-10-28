@@ -1,0 +1,8 @@
+flowchart LR
+  identity["Identity & access - PARTIAL"]
+  user["USER mode - PARTIAL"]
+  customer["CUSTOMER mode - PLANNED"]
+  admin["ADMIN mode - PLANNED"]
+  market["MARKET portal - PLANNED"]
+  storage["SQLite / PostgreSQL - PARTIAL"]
+  identity -->|"credential hashes and current token checks"| storage

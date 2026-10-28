@@ -1,6 +1,0 @@
-# Python 3.14-compatible core runtime
--r backend/requirements.txt
--r apps/desktop/requirements.txt
-
-# Phase 31: local llama.cpp runs as a separate llama-server.exe process.
-# No Python llama.cpp binding or Ollama runtime is required.

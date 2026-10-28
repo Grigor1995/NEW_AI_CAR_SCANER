@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="2"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="1"
+	timestamp="2026-10-28T13:05:39"
+	>
+	<testcase name="core_contracts" classname="core_contracts" time="0.205037" status="run">
+		<properties/>
+		<system-out>PASS headerless RPM and engineering values
+PASS 11 and 29 bit framed PID responses
+PASS malformed and wrong-PID responses are never valid measurements
+PASS availability is separate from unsupported
+PASS multi ECU DTCs deduplicate
+PASS wrong service and truncated DTC rejected
+PASS ISO-TP reassembly with sequence validation
+PASS empty adapter errors and limits
+PASS bitmap PID boundaries
+PASS read allowlist excludes injection and ECU modification
+PASS unit conversion dimensions and round trips
+PASS invalid conversions rejected
+PASS safe clear policy requires every prerequisite
+PASS scrypt salts, wrong password and bounded input
+PASS real Ed25519 signature verification and tamper denial
+PASS strict version ordering
+PASS scheduled scans are never fabricated
+PASS golden LPG P0302 evidence and recalculation
+PASS bounded malformed protocol stress
+RESULT 19 passed, 0 failed
+</system-out>
+	</testcase>
+	<testcase name="service_contracts" classname="service_contracts" time="1.60439" status="run">
+		<properties/>
+		<system-out>********* Start testing of ServiceTests *********
+Config: Using QtTest library 6.8.2, Qt 6.8.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 14.2.0), debian 13
+PASS   : ServiceTests::initTestCase()
+PASS   : ServiceTests::ownershipAndRevocation()
+PASS   : ServiceTests::expiryAndAccountDeactivation()
+PASS   : ServiceTests::transportReadOnlyAndFragmentation()
+PASS   : ServiceTests::controllerUsesCapabilityBitmap()
+PASS   : ServiceTests::cleanupTestCase()
+Totals: 6 passed, 0 failed, 0 skipped, 0 blacklisted, 1584ms
+********* Finished testing of ServiceTests *********
+</system-out>
+	</testcase>
+</testsuite>

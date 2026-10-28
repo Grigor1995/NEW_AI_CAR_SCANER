@@ -1,0 +1,7 @@
+flowchart LR
+  ui["Shared Qt/QML client - IMPLEMENTED"]
+  windows["Windows desktop - BLOCKED"]
+  core["Shared C++ domain - IMPLEMENTED"]
+  transport["TCP / desktop serial - PARTIAL"]
+  storage["SQLite / PostgreSQL - PARTIAL"]
+  windows -->|"shared source; native build blocked"| ui

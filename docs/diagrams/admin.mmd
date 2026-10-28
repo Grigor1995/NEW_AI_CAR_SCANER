@@ -1,0 +1,8 @@
+flowchart LR
+  identity["Identity & access - PARTIAL"]
+  admin["ADMIN mode - PLANNED"]
+  updates["Online update service - PARTIAL"]
+  backend["C++ HTTP host - PARTIAL"]
+  observability["Runtime observations - PARTIAL"]
+  backend -->|"versioned credential API"| identity
+  observability -->|"actual health when same-origin available"| backend

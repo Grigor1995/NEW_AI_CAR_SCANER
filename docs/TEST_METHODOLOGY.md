@@ -1,22 +1,7 @@
-# Test methodology
+# Local test methodology
 
-Run unit, API/integration, consent/tenant-negative, migration-preservation,
-golden diagnostic, native contract and performance tests separately. Use real
-execution evidence; do not add counts from overlapping selections. Target >=90%
-coverage on suitable production core logic and critical authorization branches.
+CTest runs a named C++ domain contract harness and Qt Test integration cases. Domain cases cover malformed/partial ISO-TP, service/PID validation, DTC deduplication, supported bitmap boundaries, unit reference values/round trips, all missing write prerequisites, scrypt, real signature tampering, strict versions, scan eligibility and evidence/test-result recalculation. Qt integration uses temporary SQLite and actual loopback sockets. HTTP smoke launches the compiled backend with temporary storage and checks owner isolation, settings, token revocation and restart persistence. UI self-test uses the compiled QML application with offscreen rendering and live locale/theme/unit changes.
 
-Use isolated SQLite + FastAPI TestClient for foundation; do not depend on a
-developer's PostgreSQL. Verify additive migration with a pre-existing profile,
-rollback preservation, server role checks, token lifecycle and no legacy bypass.
-Mock external destinations only at provider boundaries and label them as fakes.
+source_contracts.py supplements runtime checks with domain dependency direction, no legacy/CI, catalog completeness, canonical icons and payment-disabled assertions. Build sanitize and coverage presets separately. Report measured core lines/branches separately from UI/service coverage. One CTest test binary may contain many cases; retain exact case counts rather than presenting binary counts as feature counts.
 
-Desktop uses existing offscreen Qt suites; Android JVM/lint/build uses existing
-Gradle project. Device instrumentation, real ELM sessions, iOS and Windows
-release execution have independent gates. Baseline 966 Python passes and high
-line coverage do not prove forthcoming email, marketplace or hardware behavior.
-No CI/CD or external messaging/deployment is run.
-
-Reproducible local helpers: `scripts/check_ecosystem_smoke.py` creates only a
-temporary database and real Uvicorn process; `scripts/check_architecture_browser.py`
-uses local Chromium and bundled assets over loopback. Smoke tests do not send
-email/SMS, connect hardware or access an operator database.
+Physical adapters and authorized bench ECU tests are NOT RUN. Mobile/Windows packages, live PostgreSQL, external delivery/AI/update providers and production load tests remain separate gates. No simulator result is real-hardware PASS.

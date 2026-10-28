@@ -1,24 +1,12 @@
 # Roles and permissions
 
-Exactly three primary modes: USER, CUSTOMER, ADMIN. MARKET is a merchant portal
-role, never a fourth mode. Registration grants USER only. Caller-provided role
-lists/admin flags are rejected. Public creation of a service center grants its
-creator CUSTOMER and owner membership; it does not verify the business or grant
-platform ADMIN. Platform ADMIN/MARKET provisioning is an operator-controlled
-future/admin milestone; there is no public self-elevation endpoint.
-
-| Action | USER | CUSTOMER | ADMIN | MARKET |
+| Capability | USER | CUSTOMER | ADMIN | MARKET |
 |---|---|---|---|---|
-| Own account/profile/vehicles | yes | eligible USER | eligible USER | eligible USER |
-| Manage a service center | no | staff owner/admin in that center | no implicit bypass | no |
-| Invite an owner | no | owner/admin in that center | no implicit bypass | no |
-| Accept/revoke vehicle consent | vehicle owner only | same if owner | same if owner | same if owner |
-| Read another owner's approved vehicle | no | current staff + unexpired scoped consent | not by role alone | no |
-| Select primary workspace | authorized roles only | CUSTOMER role required | ADMIN role required | not a primary mode |
-| Merchant products/offers | planned | read eligible offers later | moderation later | portal later |
+| Own local profile, vehicles, preferences | yes | yes | yes | inherits primary role |
+| Select primary mode | assigned only | assigned only | assigned only | never a primary mode |
+| Modify role assignments over HTTP | no | no | no endpoint yet | no |
+| Inspect another owner vehicle | no | requires future explicit consent | no universal bypass | no |
+| ECU write | locked | locked pending verified executor | locked | no |
+| Merchant/workshop/admin business operations | planned | planned | planned | planned |
 
-Reuse professional_platform.models.Role for staff roles: owner/admin/technician/
-viewer. These are scoped staff permissions, not global roles. Consent scopes in
-the first milestone are read-only; live/report scope plumbing is reserved for
-later authenticated diagnostic endpoints. A role claim in an old JWT cannot
-substitute for a current database-backed account session.
+New registrations receive USER only. Customer/admin/merchant assignments are made by an explicit local operator CLI against a controlled database, never trusted from registration JSON. Every authenticated HTTP call rechecks active account, role state and token expiry in storage. Token logout immediately revokes that token. No password/contact verification or remote provisioning workflow is fabricated.

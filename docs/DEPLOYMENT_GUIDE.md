@@ -1,55 +1,5 @@
-# Deployment and rollout
+# Deployment and operations
 
-Keep existing `runner.py`, `build.py`, `installer.py` and native build guides.
-Local native builds remain independent of ecosystem foundation. Do not enable
-the incomplete account boundary for existing native clients until their login
-adapters have migrated.
+Current supported execution evidence is a Linux development build. Backend is loopback-only; run build/dev/cda_backend --database local/backend.sqlite --port 8081. The UI uses a separate local app-data SQLite file and does not automatically connect to this backend. Never expose this local identity host publicly without TLS, operational limits, security review and remote authentication design. No CI/CD, deployment automation or store upload exists.
 
-Foundation rollout target: back up configured DATABASE_URL, run Alembic upgrade
-explicitly, run authenticated API smoke tests against the actual database, then
-set AI_CAR_ECOSYSTEM_ENABLED=1 and restart behind HTTPS. With the flag off,
-existing local APIs behave as before. With the flag on, legacy API paths are
-denied and new endpoints require ownership-aware access. This is intentional,
-not a silent backward-compatible remote deployment.
-
-SQLite verifies portable behavior locally; production PostgreSQL migration,
-backup restore, signing, iOS build, real hardware and notification providers
-require their actual environments. Rolling back the feature flag preserves
-schema/data. Downgrade only after an explicit data-retention decision.
-Credentials go in process ENV or ignored local JSON overrides. No deployment,
-release publishing, CI/CD, SMS or email is performed by this branch.
-
-## Exact local foundation smoke-test commands
-
-From the repository root (use the prepared venv Python):
-
-```bash
-python -m pip install -r finalbuild/backend/requirements.txt
-export DATABASE_URL='sqlite:///ecosystem.sqlite'
-python -m alembic -c finalbuild/backend/alembic.ini upgrade head
-export AI_CAR_ECOSYSTEM_ENABLED=1
-python finalbuild/apps/desktop/backend_worker.py
-```
-
-Keep the repository-root working directory for both commands so the relative
-SQLite URL points to the same database during migration and server startup.
-This starts only the API; it does not add native login UI. Test the v2 OpenAPI
-contracts at `/docs`. The feature blocks legacy API paths intentionally. Leave
-the flag unset/0 for normal current Desktop/mobile diagnosis. The runner now
-binds loopback by default, preserving emulator routing; physical LAN access
-requires an explicit trusted-network host override. Use a migrated PostgreSQL
-URL with the installed driver (`postgresql+psycopg://...`) for deployment checks.
-
-The architecture opens as a local file on ordinary browsers. If file URLs are
-blocked by browser policy, serve bundled assets locally without a CDN:
-
-```bash
-python -m http.server 8765 --bind 127.0.0.1 --directory docs
-```
-
-Open `http://127.0.0.1:8765/architecture/interactive_architecture.html`.
-
-The migration CLI reuses the bounded database-engine factory and explicitly
-disposes its engine. Alembic >=1.16 is required for Windows-safe path parsing.
-Autogeneration excludes unrelated legacy tables; PostgreSQL offline SQL is
-provided as review evidence, not a claim of a live PostgreSQL test.
+Back up SQLite with supported live-backup tooling and verify restore offline before migration. Version 1 rejects newer schemas; do not assume arbitrary database rollback. Signed platform release packaging, PostgreSQL, cross-device sync, trusted signing keys, update endpoints and real-hardware acceptance are pending. Build/SDK instructions are in BUILD_AND_RUN.md and apps/*/README.md.

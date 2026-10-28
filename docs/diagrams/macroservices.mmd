@@ -1,0 +1,13 @@
+flowchart LR
+  identity["Identity & access - PARTIAL"]
+  market["MARKET portal - PLANNED"]
+  vehicle["Vehicle management - PARTIAL"]
+  diagnostics["Diagnostic orchestration - PARTIAL"]
+  rules["AI / deterministic rules - PARTIAL"]
+  monitoring["Scheduled monitoring - PLANNED"]
+  updates["Online update service - PARTIAL"]
+  backend["C++ HTTP host - PARTIAL"]
+  monitoring -->|"future eligible scan; no scheduled execution"| diagnostics
+  backend -->|"versioned credential API"| identity
+  backend -->|"owner-scoped profile API"| vehicle
+  market -->|"future verified fitment"| vehicle

@@ -1,0 +1,9 @@
+flowchart LR
+  identity["Identity & access - PARTIAL"]
+  diagnostics["Diagnostic orchestration - PARTIAL"]
+  transport["TCP / desktop serial - PARTIAL"]
+  device["Vehicle / ECU hardware - BLOCKED"]
+  safety["Read/write safety - PARTIAL"]
+  diagnostics -->|"bounded command exchange"| transport
+  transport -->|"actual adapter bytes; hardware NOT RUN"| device
+  diagnostics -->|"future write prepare; executor currently locked"| safety

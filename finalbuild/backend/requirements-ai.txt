@@ -1,3 +1,0 @@
-# Optional local AI dependencies for Phase 12. Kept separate from the base API requirements.
-sentence-transformers>=3.0,<6
-fastembed>=0.7,<1
