@@ -1,4 +1,4 @@
-# AI-CAR-SCANER
+# NEW_AI_CAR_SCANER
 
 Evidence-driven automotive diagnostic platform with a shared FastAPI backend, deterministic diagnostic rules, evidence-based hypotheses, optional AI/RAG assistance, vehicle simulation, and native client applications.
 
@@ -6,7 +6,7 @@ Evidence-driven automotive diagnostic platform with a shared FastAPI backend, de
 
 ## Ecosystem foundation (development)
 
-The `feature/ecosystem-foundation-20261028` branch starts the requested ecosystem
+This repository retains the source ecosystem foundation work and starts the requested ecosystem
 without replacing the native UI or shared diagnostic engine. Audit, baseline,
 interactive architecture, API/migration/security design and a phased roadmap
 are in [docs](docs/CURRENT_SYSTEM_AUDIT.md). The first backend account/ownership/
@@ -17,6 +17,14 @@ providers, marketplace and admin tools remain later milestones.
 [Implementation status](docs/IMPLEMENTATION_REPORT.md) ·
 [Interactive architecture](docs/architecture/interactive_architecture.html) ·
 [Rollout / local smoke test](docs/DEPLOYMENT_GUIDE.md).
+
+## C++ OBD connection milestone
+
+Optional C++20 TCP socket transport is integrated behind the existing Wi-Fi
+interface, with bounded reads, deadlines and read-only command validation.
+See [build, activation and platform limits](native/obd/README.md).
+The original native UI and icons are retained. This is a staged development
+repository, not a completed production ecosystem.
 
 ## Supported clients
 

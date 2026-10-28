@@ -18,3 +18,11 @@
 Opaque sessions complement the existing `security` package; they do not change
 legacy token behavior silently. Production MFA, recovery, distributed throttles,
 retention jobs, transport TLS and security review remain explicit release gates.
+
+## ADR: Optional native TCP boundary
+
+User requires C++ for OBD connections. Add an explicit opt-in transport behind
+DiagnosticTransport; retain shared Python protocol/diagnostic logic and default
+transport. C++20/pybind11 is used for the current desktop/backend bridge. Linux
+loopback is validated; POSIX-only code must not be presented as Windows/mobile
+compatibility. No acceleration claim is made without comparison measurements.

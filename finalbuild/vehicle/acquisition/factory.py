@@ -13,6 +13,9 @@ def build_obd_transport(adapter: str, config: dict[str, Any]) -> DiagnosticTrans
     if adapter == 'ble':
         return ObdBleTransport(config['address'], config['tx_uuid'], config['rx_uuid'])
     if adapter == 'wifi':
+        if config.get('native_tcp') is True:
+            from vehicle.obd.adapters.native_tcp import NativeObdWifiTransport
+            return NativeObdWifiTransport(config['host'], int(config.get('port', 35000)))
         return ObdWifiTransport(config['host'], int(config.get('port', 35000)))
     if adapter == 'usb':
         return ObdUsbSerialTransport(config['port'], int(config.get('baudrate', 115200)))

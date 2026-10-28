@@ -3,7 +3,7 @@ window.ARCHITECTURE_DATA = {
     "Native UI",
     "Identity",
     "Workspaces",
-    "C++ proposal",
+    "C++ native transport",
     "Device transport",
     "DiagnosticSession",
     "AI / rules",
@@ -154,17 +154,19 @@ window.ARCHITECTURE_DATA = {
     },
     {
       "id": "cpp",
-      "layer": "C++ proposal",
-      "title": "Measured native core",
-      "technology": "C++20/23 (not implemented)",
-      "responsibility": "Possible future hot-path extraction only",
-      "io": "Existing interface -> profiled optimized implementation",
-      "api": "No C++ API exists",
-      "security": "No unrestricted ECU writes",
-      "failure": "Retain Python until evidence justifies migration",
-      "status": "PLANNED",
-      "dependencies": [],
-      "docs": "../SYSTEM_ARCHITECTURE.md"
+      "layer": "C++ native transport",
+      "title": "Opt-in C++ TCP transport",
+      "technology": "C++20 / pybind11; Linux loopback tested",
+      "responsibility": "Bounded TCP connect, write, prompt framing and deadlines; existing Python diagnostic logic retained",
+      "io": "Existing GenericObdClient -> trusted IPv4 ELM TCP adapter",
+      "api": "NativeObdWifiTransport; native_tcp=true in Wi-Fi connection config",
+      "security": "Read-only command allowlist; no TLS; authorized trusted local adapter only",
+      "failure": "Explicit errors, timeout/disconnect cleanup; cancellation drains worker before close",
+      "status": "IMPLEMENTED",
+      "dependencies": [
+        "transport"
+      ],
+      "docs": "../../native/obd/README.md"
     },
     {
       "id": "transport",
@@ -563,9 +565,9 @@ window.ARCHITECTURE_DATA = {
     },
     {
       "id": "27",
-      "source": "reasoning",
+      "source": "transport",
       "target": "cpp",
-      "label": "profiled extraction only (proposal)",
+      "label": "optional native_tcp socket backend",
       "path": "offline"
     },
     {

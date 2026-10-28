@@ -64,3 +64,14 @@ Additional audit finding: the legacy session-creation route manually constructs
 Vehicle from an untyped dict; malformed nested input can raise an unhandled
 Pydantic error. Its typed v2 profile endpoint rejects malformed inputs with
 localized 422 responses. Legacy normalization/hardening remains milestone 1B.
+
+## NEW_AI_CAR_SCANER transfer audit
+
+The source repository was fetched from Grigor1995/AI-CAR-SCANER. Source main
+was a71c547b4b58f88f9c09f7f25d86931b79131bd2; its existing foundation branch
+was 540e00f07b8f60c2788c8d12dea1200817669afb. Both histories are retained in
+the new repository. The earlier empty-target audit was preserved outside the
+checkout in `/workspace/setup-evidence/empty-repository-audit`. The source
+checkout remains unchanged. Counts and findings above describe the imported
+baseline, not newly certified behavior. The new C++ transport is an additive
+milestone; desktop/mobile UI, icons and diagnostic decisions are not replaced.

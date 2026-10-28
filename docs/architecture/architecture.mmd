@@ -7,7 +7,7 @@ flowchart LR
   customer["CUSTOMER — FOUNDATION"]
   admin["ADMIN — PLANNED"]
   marketrole["MARKET portal — PLANNED"]
-  cpp["Measured native core — PLANNED"]
+  cpp["Opt-in C++ TCP transport — IMPLEMENTED"]
   transport["Native / local transports — EXISTING"]
   obd["OBD / ISO-TP / UDS — EXISTING"]
   session["DiagnosticSession — EXISTING"]
@@ -48,8 +48,8 @@ flowchart LR
   marketrole -->|"merchant management (future)"| market
   market -->|"verified fitment / price (future)"| storage
   user -->|"opted-in discovery (future)"| location
-  reasoning -->|"profiled extraction only (proposal)"| cpp
+  transport -->|"optional native_tcp socket backend"| cpp
   backend -->|"real request events / timing"| observability
   identity -->|"token hash / role lookup"| storage
   classDef planned stroke-dasharray: 5 5;
-  class admin,marketrole,cpp,scheduler,notifications,repair,market,location planned;
+  class admin,marketrole,scheduler,notifications,repair,market,location planned;

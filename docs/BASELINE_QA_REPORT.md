@@ -1,3 +1,6 @@
+> Historical imported baseline. For this new repository and C++ milestone, see
+> [current implementation report](IMPLEMENTATION_REPORT.md).
+
 # Baseline QA report
 
 Baseline commit `a71c547`, executed 2026-10-28 before foundation implementation.

@@ -33,8 +33,8 @@ login screens or authenticate the full legacy diagnostic workflow.
 Scheduler/outbox delivery, verified email/mobile, service recommendations,
 licensed repair diagrams, work orders, merchant products/offers, role-management
 UI, multi-device sync and platform-wide analytics are later milestones. C++
-core extraction is proposed only after measured hot-path evidence; no C++ core
-is claimed. Do not use the architecture's proposed nodes as deployment claims.
+diagnostic-core extraction remains proposed pending profiling. The optional
+C++20 TCP transport is implemented separately; see `native/obd/README.md`. Do not use the architecture's proposed nodes as deployment claims.
 
 The interactive visualization is [local HTML](architecture/interactive_architecture.html).
 Its data and assets are local; Mermaid source is maintained alongside it.

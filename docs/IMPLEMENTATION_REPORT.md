@@ -1,127 +1,100 @@
-# Implementation report — first ecosystem foundation milestone
+# NEW_AI_CAR_SCANER implementation status
 
-Branch: `feature/ecosystem-foundation-20261028`. Base: `a71c547`.
-Date: 2026-10-28. `main` is not modified by this development branch.
+Date: 2026-10-28. This is the source-preserving foundation and native TCP
+milestone, not completion of the production ecosystem.
 
-## Completed scope
+## Source and reuse
 
-Phase 0 audit/baseline and the first Phase 1 backend slice are implemented.
-This is not a claim that the entire ecosystem is production-ready.
+Imported `Grigor1995/AI-CAR-SCANER` main at
+`a71c547b4b58f88f9c09f7f25d86931b79131bd2`, followed by its existing ecosystem
+foundation branch at `540e00f07b8f60c2788c8d12dea1200817669afb`. Git history is
+preserved. The original source repository is unchanged. The new repository's
+origin remains `Grigor1995/NEW_AI_CAR_SCANER`.
 
-- Existing native UI, icons, vehicle catalog, DiagnosticSession, OBD/telemetry,
-  deterministic engine, local AI/RAG and test-result recalculation are retained.
-- Added durable accounts with validated EN/HY/RU preferences, international phone
-  format and IANA timezone. Contacts remain explicitly unverified; no provider
-  delivery or ownership verification is fabricated.
-- Added bounded-cost scrypt password hashes, random opaque bearer credentials
-  stored only as SHA-256 hashes, expiry/logout and current-account checks.
-- Defined exactly USER/CUSTOMER/ADMIN primary modes and separate MARKET portal
-  role; validated mode selection from current DB assignments. No public ADMIN
-  or MARKET self-grant endpoint exists. Self-service workshop registration is
-  unverified and grants only CUSTOMER plus that center's owner membership.
-- Added owned profiles reusing the existing vehicle_profiles payload and shared
-  Vehicle model. Anonymous legacy rows are never assigned to a new account.
-- Added current staff/CUSTOMER role checks, addressed invitations, explicit owner
-  approval of per-vehicle read scopes/expiry, atomic invitation claiming and
-  immediate checks for revoked/expired grants or inactive accounts/staff/centers.
-  Owners see the business name and verification state before approval/revocation.
-- Added scoped audit events, password-safe EN/HY/RU error envelopes and bounded
-  in-process auth attempt throttles. This is not a distributed production limiter.
-- Default feature flag is off. Enabled ecosystem mode denies legacy anonymous
-  API bypasses and skips anonymous global-session cache load/persistence. Existing
-  local clients retain API behavior with the flag off. Runner now binds loopback
-  by default; physical-LAN development needs an explicit trusted-network override.
-- Added explicit Alembic configuration and additive revision `0001_ecosystem`,
-  with legacy-row retention, safe downgrade and namespace-limited autogeneration.
-- Added locally bundled interactive architecture, ten selectable flows and
-  matching Mermaid sources, typed API contracts and staged documentation.
+Reused PySide6 desktop, Kotlin Android, Swift iOS, original UI/icons/backgrounds,
+FastAPI, shared vehicle catalog, DiagnosticSession, protocol parsing, rules,
+AI/RAG, simulators, reports and existing test suites. Also reused the source's
+opt-in account/ownership/workshop consent foundation, additive Alembic revision,
+role contracts, technical documentation and interactive architecture. Historical
+source results are retained separately in
+[evidence/imported-foundation-implementation-report.md](evidence/imported-foundation-implementation-report.md).
+The current execution results below supersede assumptions based on those results.
 
-## Schema and APIs
+## New C++ implementation
 
-Nine new ecosystem tables: accounts, account_roles, auth_sessions,
-service_centers, staff, vehicle_ownership, invitations, access_consents and
- audit_events. `vehicle_profiles` is referenced/reused and created with its old
-schema only if absent. No old account, catalog or session data is rewritten.
-Database engines use existing bounded connection behavior and are disposed by
-the migration CLI. PostgreSQL offline DDL is review evidence only.
+- Added `native/obd`: C++20/pybind11 TCP connection, nonblocking socket I/O,
+  bounded 64 KiB prompt-delimited buffering, partial writes, deadlines, RAII
+  socket cleanup and narrow read-only command validation.
+- Added async `NativeObdWifiTransport` behind the existing DiagnosticTransport.
+  Native calls release the GIL and run off the UI/event-loop thread; cancellation
+  drains the bounded worker before closing its socket.
+- Acquisition and device connection factories select it only with boolean
+  `native_tcp: true`. Existing Python transports remain the default. Missing
+  native builds fail explicitly when selected.
+- Added loopback integration/negative tests through the real GenericObdClient,
+  including initialization, measured response decoding and DTC retrieval.
+- Updated architecture data and regenerated Mermaid views. Preserved the existing
+  UI files and icon family; no new dashboard template or duplicate engine.
 
-Implemented prefix `/api/v2/ecosystem`, 13 paths / 16 operations: register;
-login/logout; get/update current profile; validate workspace; list/create owned
-vehicles; list/create staff service centers; create/list/accept invitations;
-list/revoke own grants; and consent-authorized shared vehicle read. Response
-models exclude secrets; shared vehicle output also removes arbitrary metadata
-and the owner's private nickname/contact information. Generated contract:
-[ecosystem-openapi.json](architecture/ecosystem-openapi.json).
+This implementation validates Linux TCP/IPv4 only. POSIX macOS compilation is
+untested; Windows/mobile bindings, native BLE/USB, UDS addressing and native
+protocol decoding are not implemented by this extension. Existing transports
+remain available. No physical-device or acceleration claim is made.
 
-## Executed verification
+## Current machine validation
 
-| Check | Actual outcome |
+| Check | Result |
 |---|---|
-| Common Python regression | 1001 passed, 2 skipped, 0 failed / errors; 50.07 s |
-| Backend line coverage | 97.10% (5729/5900 statements) |
-| Foundation suite | 34 passed, 0 failed; 24.29 s |
-| Foundation line / branch / combined coverage | 99.62% / 94.44% / 99.00%; gate >=90% |
+| Focused imported foundation/OBD/golden/unit regression | 189 passed |
+| Shared regression after first native integration | 1,017 passed, 2 skipped; 0 failures/errors |
+| Final OBD + acquisition + device integration after last changes | 187 passed, including 19 native loopback cases |
 | Desktop logic / diagnostic E2E / negative / UI-POM / widgets | 216 / 6 / 68 / 142 / 25 passed; 1 platform skip |
-| Desktop aggregate / production core | 90.43% / 90.84% |
-| Android baseline | build/JVM/lint successful, 113 JVM cases; cached Gradle work explicitly present |
-| SQLite Alembic | fresh + existing-row upgrade, repeat upgrade, downgrade preservation and safe autogeneration PASS |
-| Real local HTTP/Uvicorn smoke | 10 checks PASS, including approval/revocation and restart persistence |
-| Architecture browser | actual Chromium PASS: 10 views, 22 nodes, search/filter/collapse, component/edge details, zoom, real pointer pan/wheel, theme and narrow layout |
-| PostgreSQL offline SQL | generated successfully; no live PostgreSQL migration or race test claimed |
-| Static checks | Ruff F401/F811/F821/F841, JS syntax and Git whitespace checks passed |
-| Physical OBD / external providers | NOT EXECUTED / NOT CONFIGURED |
-| iOS / Windows packaging execution | BLOCKED on this Linux host |
-| C++ tests/coverage | NOT APPLICABLE; no C++ implementation |
+| Desktop all-source / production-core coverage | 90.43% / 90.84% |
+| Local ecosystem HTTP smoke | 10 checks passed: migration, approval, scoped read, legacy bypass denial, revocation and restart persistence |
+| Persistent local development server | health, read-only OBD plan and nonempty shared vehicle catalog passed |
+| Interactive architecture in Chromium | 10 views / 22 nodes; search, layers, collapse, details, relationships, zoom, pointer pan, wheel and theme passed |
+| C++20 Release build | passed with GCC 14.2, pybind11 3.1.0, CMake 4.4.4 |
+| Repeated saved setup script | passed |
+| Python static checks / Git whitespace | passed for new adapter/tests and changed files |
 
-Do not sum overlapping test selections as unique cases. The full executable
-report is [final-qa.json](evidence/final-qa.json); coverage and raw statement/
-branch locations are in [foundation-coverage.json](evidence/foundation-coverage.json).
-The original audit baseline remains separate in [BASELINE_QA_REPORT.md](BASELINE_QA_REPORT.md).
+Selections overlap; do not sum these as unique tests. The final targeted run
+includes changes added after the full shared regression. Native C++ and new
+adapter coverage are not measured; desktop coverage is not a substitute.
+[Machine-readable current results](evidence/new-repository-validation.json).
+[Installed Python versions](evidence/cloud-python-dependencies.txt).
 
-### Deterministic performance (isolated fixture)
+The existing deterministic fixture benchmark measured p50 0.50 ms, p95 0.67 ms,
+min 0.45 ms, max 1.13 ms. This excludes OBD polling, socket latency and LLM
+inference. It does not measure C++ acceleration or establish vehicle latency.
+Startup/navigation/memory and physical adapter performance remain unmeasured.
 
-```text
-PERF deterministic_analysis_ms p50=0.52 p95=1.11 min=0.44 max=2.72
-.....
-5 passed in 0.19s
-```
+## API and database changes
 
-This measures local fixture copy + deterministic reasoning, excluding physical
-OBD polling, network and LLM inference. UI startup/navigation, memory pressure
-and actual protocol latency were not measured. It does not justify a C++ rewrite
-or imply a vehicle/hardware SLA.
+No additional HTTP API or schema changes were introduced by the C++ milestone.
+The reused foundation exposes `/api/v2/ecosystem` and additive revision
+`0001_ecosystem`; see API_SPECIFICATION.md and DATABASE_DESIGN.md. Keep its
+feature flag off for the current unauthenticated native clients. Legacy local
+APIs are not suitable for public multi-tenant exposure.
 
-## Changed files and reusable artifacts
+## Reproducible development
 
-New source: `backend/ecosystem` models/security/schemas/service/API/error/migration
-policy modules; Alembic env/revision/config; foundation API/migration tests;
-local HTTP/browser QA and OpenAPI/Mermaid exporters. Modified integration points:
-`backend/api/main.py`, dependency files, global JSON defaults, runner bind default
-and its test/guide. Native UI/icon/transport/diagnostic-engine files are unchanged.
+[Native build and activation](../native/obd/README.md).
+[Cloud startup and checks](CLOUD_DEVELOPMENT.md).
+The tested installation and startup instructions are saved in environment draft
+fields `install_script` and `start_skill`. Review/save them in environment
+settings, then publish the environment. Draft persistence is not publication or
+fresh-task restoration evidence. Dependencies persist; live processes must restart.
 
-All new/modified paths relative to base are recorded in
-[changed-files.json](evidence/changed-files.json). The required 25 root technical
-Markdown documents, architecture assets and evidence live under `docs/`.
+## Outstanding product and release work
 
-## Remaining work and release gates
+The full staged roadmap remains in DEVELOPMENT_PLAN.md. Authenticated diagnostic
+adapters and native login/workspace/consent screens precede enabling ecosystem
+mode. Verified contacts, unattended scheduling, notification providers, licensed
+wiring/repair data, work orders, merchant commerce and admin management/analytics
+remain later milestones. No production statistics or repair data are fabricated.
 
-1. Milestone 1B: authenticated scoped adapters to existing diagnostic sessions,
-   hardware/devices, telemetry, tests, knowledge and reports; explicit legacy
-   ownership import and controlled operator/staff/admin provisioning. Existing
-   malformed legacy vehicle-body validation is an audited hardening task.
-2. Milestone 1C: current-themed native login/workspace/profile and consent UI,
-   secure token storage and full EN/HY/RU client parity. Do not enable ecosystem
-   mode for existing unauthenticated native clients before this migration.
-3. Phases 2–5: verified contacts, scheduler/availability/deferred scans,
-   consented provider delivery, service discovery, licensed repair/wiring,
-   work orders, merchant products/fitment/discounts and real admin analytics.
-4. Phases 6–7: real PostgreSQL concurrency/backup tests, hardware validation,
-   native releases, measured sync/optimization, MFA/recovery, distributed abuse
-   controls, retention/export/deletion, operational hardening and security review.
-
-Business verification is not implemented; invitation creation alone grants no
-access. Future administrative suspension must deactivate the relevant account,
-center/staff membership or grant; CUSTOMER is also a self-service workspace role.
-No paid placement influences diagnostic ranking. No SMS/email is sent, ECU
-write executed, CI/CD introduced, deployment performed or production readiness
-claimed by this milestone.
+Real OBD hardware, live PostgreSQL concurrency/backup, external providers,
+Windows packaging, Android build and iOS/Xcode validation were not executed in
+this machine. Original source reports of platform runs are historical evidence,
+not current certification. Production hardening and complete cross-platform
+release acceptance remain outstanding.

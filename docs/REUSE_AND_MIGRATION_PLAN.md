@@ -49,3 +49,10 @@ reasoning engine. Phase 2 introduces scheduler/notification interfaces and a
 deferred scan state; phase 3 licensed repair-provider/work-order interfaces;
 phase 4 compatibility/price eligibility services, isolated from fault ranking.
 See DEVELOPMENT_PLAN.md for dependencies and acceptance gates.
+
+## New repository native milestone
+
+The source and its existing foundation history were retained in NEW_AI_CAR_SCANER.
+The user explicitly requested C++ for OBD connections; an opt-in TCP transport
+now exists behind the shared interface. See native/obd/README.md and the current
+implementation report. Diagnostic-core migration still requires profiling.

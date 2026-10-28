@@ -167,6 +167,9 @@ class VCIConnectionManager:
         if kind == "WIFI":
             host = str(config.get("host") or descriptor.metadata.get("host") or "")
             port = int(config.get("port") or descriptor.metadata.get("port") or 35000)
+            if config.get("native_tcp") is True:
+                from vehicle.obd.adapters.native_tcp import NativeObdWifiTransport
+                return NativeObdWifiTransport(host, port)
             return ObdWifiTransport(host, port)
         if kind == "BLE":
             address = str(config.get("address") or descriptor.metadata.get("address") or "")

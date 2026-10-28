@@ -24,8 +24,8 @@ python finalbuild/scripts/export_architecture_mermaid.py
 ```
 
 `architecture.mmd` is the high-level alias; each other `.mmd` is a selectable
-view's source. The production proposal for C++ is explicitly not an implemented
-core. MARKET is a portal role, not a fourth primary mode.
+view's source. The C++ node is an optional TCP transport; a native diagnostic
+engine remains proposed. MARKET is a portal role, not a fourth primary mode.
 
 `ecosystem-openapi.json` contains generated implemented request/response schemas,
 including the opaque bearer scheme and localized error envelope. Regenerate:
@@ -39,3 +39,8 @@ Actual browser QA is reproducible with
 It uses a temporary browser profile and local HTTP server, not external sites.
 Execution evidence is under `../evidence/architecture-browser-checks.json`;
 the PNG is supporting evidence, not a replacement for the interactive diagram.
+
+## Native transport update
+
+The C++ node now represents the implemented opt-in POSIX TCP transport, not a
+completed native diagnostic engine. See `native/obd/README.md` for tested scope.
