@@ -5,4 +5,5 @@ if [[ -f /workspace/toolchains/env.sh ]]; then source /workspace/toolchains/env.
 ctest --preset dev
 python3 scripts/test/http_smoke.py
 QT_QPA_PLATFORM=offscreen QT_QUICK_BACKEND=software ./build/dev/car_diagnostic --self-test
+QT_QPA_PLATFORM=offscreen QT_QUICK_BACKEND=software ./build/dev/car_diagnostic --ui-regression artifacts/ui
 python3 scripts/test/source_contracts.py

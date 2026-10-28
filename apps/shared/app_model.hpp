@@ -7,6 +7,7 @@
 #include <QVariantList>
 class AppModel final : public QObject {
     Q_OBJECT
+    Q_PROPERTY(QStringList launcherOrder READ launcherOrder NOTIFY launcherOrderChanged)
     Q_PROPERTY(QString language READ language WRITE setLanguage NOTIFY settingsChanged)
     Q_PROPERTY(QString units READ units WRITE setUnits NOTIFY settingsChanged)
     Q_PROPERTY(QString theme READ theme WRITE setTheme NOTIFY settingsChanged)
@@ -31,6 +32,8 @@ class AppModel final : public QObject {
 
   public:
     explicit AppModel(const QString &database, QObject *p = nullptr);
+    QStringList launcherOrder() const;
+    Q_INVOKABLE void moveLauncherTile(int from, int to);
     QString language() const;
     QString units() const;
     QString theme() const;
@@ -75,4 +78,5 @@ class AppModel final : public QObject {
   signals:
     void changed();
     void settingsChanged();
+    void launcherOrderChanged();
 };

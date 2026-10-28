@@ -9,12 +9,18 @@
 #include <QPainter>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QQuickStyle>
 #include <QQuickWindow>
 #include <QStandardPaths>
 #include <QSvgRenderer>
 #include <QTimer>
 #include <iostream>
+#ifdef CDA_UI_CHECKS
+#include "tests/ui/reference_launcher.hpp"
+#endif
 int main(int argc, char **argv) {
+    QCoreApplication::setAttribute(Qt::AA_DontUseNativeMenuBar);
+    QQuickStyle::setStyle("Basic");
     QGuiApplication app(argc, argv);
     QCoreApplication::setApplicationName("Car Diagnostic Analysis");
     QCoreApplication::setOrganizationName("NeoAutomotive");
@@ -54,6 +60,15 @@ int main(int argc, char **argv) {
     auto *window = qobject_cast<QQuickWindow *>(engine.rootObjects().first());
     if (!window)
         return 1;
+#ifdef CDA_UI_CHECKS
+    if (arguments.contains("--ui-regression")) {
+        const auto index = arguments.indexOf("--ui-regression");
+        const QString output = index + 1 < arguments.size() ? arguments[index + 1] : "artifacts/ui";
+        QTimer::singleShot(200, &app, [&, output] {
+            app.exit(runReferenceUiChecks(model, window, output) ? 0 : 2);
+        });
+    }
+#endif
     if (arguments.contains("--smoke"))
         QTimer::singleShot(600, &app, &QCoreApplication::quit);
     if (arguments.contains("--screenshot")) {

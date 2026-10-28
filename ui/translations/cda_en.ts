@@ -3,83 +3,83 @@
   <context>
     <name>AppModel</name>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="73" />
+      <location filename="../../apps/shared/app_model.cpp" line="85" />
       <source>Authentication failed; check credentials and account availability</source>
       <translation>Authentication failed; check credentials and account availability</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="78" />
+      <location filename="../../apps/shared/app_model.cpp" line="90" />
       <source>Signed in; contact is not verified</source>
       <translation>Signed in; contact is not verified</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="88" />
+      <location filename="../../apps/shared/app_model.cpp" line="100" />
       <source>Saved preferences unavailable</source>
       <translation>Saved preferences unavailable</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="120" />
+      <location filename="../../apps/shared/app_model.cpp" line="132" />
       <source>Signed out</source>
       <translation>Signed out</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="137" />
+      <location filename="../../apps/shared/app_model.cpp" line="149" />
       <source>Vehicle saved; identity remains unverified</source>
       <translation>Vehicle saved; identity remains unverified</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="140" />
+      <location filename="../../apps/shared/app_model.cpp" line="152" />
       <source>Vehicle could not be saved; check fields and sign-in</source>
       <translation>Vehicle could not be saved; check fields and sign-in</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="149" />
-      <location filename="../../apps/shared/app_model.cpp" line="158" />
+      <location filename="../../apps/shared/app_model.cpp" line="161" />
+      <location filename="../../apps/shared/app_model.cpp" line="170" />
       <source>Sign in before connecting an adapter</source>
       <translation>Sign in before connecting an adapter</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="181" />
+      <location filename="../../apps/shared/app_model.cpp" line="193" />
       <source>Unavailable</source>
       <translation>Unavailable</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="194" />
+      <location filename="../../apps/shared/app_model.cpp" line="206" />
       <source>Insufficient verified evidence. Connect an adapter and obtain DTCs; no component failure has been established.</source>
       <translation>Insufficient verified evidence. Connect an adapter and obtain DTCs; no component failure has been established.</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="196" />
+      <location filename="../../apps/shared/app_model.cpp" line="208" />
       <source>Cylinder 2 misfire reported. Cause is unconfirmed. A qualified professional should compare operating conditions and test ignition, fuel delivery and compression. Source: ECU_REPORTED + RULE.</source>
       <translation>Cylinder 2 misfire reported. Cause is unconfirmed. A qualified professional should compare operating conditions and test ignition, fuel delivery and compression. Source: ECU_REPORTED + RULE.</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="205" />
+      <location filename="../../apps/shared/app_model.cpp" line="217" />
       <source>Preferences saved to this account</source>
       <translation>Preferences saved to this account</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="208" />
+      <location filename="../../apps/shared/app_model.cpp" line="220" />
       <source>Sign in to save account preferences; device preferences are retained locally</source>
       <translation>Sign in to save account preferences; device preferences are retained locally</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="213" />
+      <location filename="../../apps/shared/app_model.cpp" line="225" />
       <source>Choose an export filename</source>
       <translation>Choose an export filename</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="225" />
+      <location filename="../../apps/shared/app_model.cpp" line="237" />
       <source>Report could not be opened</source>
       <translation>Report could not be opened</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="230" />
+      <location filename="../../apps/shared/app_model.cpp" line="242" />
       <source>Report could not be saved</source>
       <translation>Report could not be saved</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="234" />
+      <location filename="../../apps/shared/app_model.cpp" line="246" />
       <source>Diagnostic JSON report saved</source>
       <translation>Diagnostic JSON report saved</translation>
     </message>
@@ -97,39 +97,117 @@
       <translation>Detecting supported PIDs</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="34" />
+      <location filename="../../services/diagnostics/controller.cpp" line="35" />
       <source>Adapter disconnected</source>
       <translation>Adapter disconnected</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="51" />
+      <location filename="../../services/diagnostics/controller.cpp" line="53" />
       <source>Invalid port</source>
       <translation>Invalid port</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="95" />
+      <location filename="../../services/diagnostics/controller.cpp" line="97" />
       <source>Connected; displayed PIDs unsupported</source>
       <translation>Connected; displayed PIDs unsupported</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="96" />
+      <location filename="../../services/diagnostics/controller.cpp" line="98" />
       <source>Connected — read only</source>
       <translation>Connected — read only</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="102" />
+      <location filename="../../services/diagnostics/controller.cpp" line="104" />
       <source>Stored DTC response received</source>
       <translation>Stored DTC response received</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="123" />
+      <location filename="../../services/diagnostics/controller.cpp" line="132" />
       <source>Adapter response invalid or unsupported</source>
       <translation>Adapter response invalid or unsupported</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="134" />
+      <location filename="../../services/diagnostics/controller.cpp" line="143" />
       <source>Connect an eligible adapter first</source>
       <translation>Connect an eligible adapter first</translation>
+    </message>
+  </context>
+  <context>
+    <name>LauncherPage</name>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="23" />
+      <source>Main menu</source>
+      <translation>Main menu</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="24" />
+      <source>Drag tiles to reorder</source>
+      <translation>Drag tiles to reorder</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="24" />
+      <source>Swipe to browse</source>
+      <translation>Swipe to browse</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Vehicles</source>
+      <translation>Vehicles</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Diagnostics</source>
+      <translation>Diagnostics</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>VCI / Devices</source>
+      <translation>VCI / Devices</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Symptoms</source>
+      <translation>Symptoms</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Live Data</source>
+      <translation>Live Data</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Guided Tests</source>
+      <translation>Guided Tests</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>AI Analysis</source>
+      <translation>AI Analysis</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>DTC</source>
+      <translation>DTC</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Reports</source>
+      <translation>Reports</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Teach AI</source>
+      <translation>Teach AI</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Dashboard</source>
+      <translation>Dashboard</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>ECU Network</source>
+      <translation>ECU Network</translation>
     </message>
   </context>
   <context>
@@ -141,146 +219,124 @@
     </message>
     <message>
       <location filename="../Main.qml" line="41" />
-      <location filename="../Main.qml" line="45" />
+      <location filename="../Main.qml" line="65" />
       <location filename="../Main.qml" line="183" />
       <source>Sign in</source>
       <translation>Sign in</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="43" />
+      <location filename="../Main.qml" line="67" />
       <source>Authorized workspace</source>
       <translation>Authorized workspace</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="45" />
+      <location filename="../Main.qml" line="41" />
       <location filename="../Main.qml" line="175" />
       <source>Account</source>
       <translation>Account</translation>
     </message>
     <message>
+      <location filename="../Main.qml" line="39" />
+      <source>Application</source>
+      <translation>Application</translation>
+    </message>
+    <message>
       <location filename="../Main.qml" line="50" />
+      <source>Exit</source>
+      <translation>Exit</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="54" />
+      <source>Help</source>
+      <translation>Help</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="56" />
+      <location filename="../Main.qml" line="192" />
+      <source>About</source>
+      <translation>About</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="78" />
       <source>Read-only by default. No hardware connected means no live measurements.</source>
       <translation>Read-only by default. No hardware connected means no live measurements.</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="59" />
+      <location filename="../Main.qml" line="89" />
       <source>Your diagnostic workspace</source>
       <translation>Your diagnostic workspace</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="63" />
+      <location filename="../Main.qml" line="93" />
       <source>Main menu</source>
       <translation>Main menu</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="72" />
-      <location filename="../Main.qml" line="192" />
-      <source>My vehicles</source>
-      <translation>My vehicles</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="73" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="197" />
       <source>Diagnostics</source>
       <translation>Diagnostics</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="74" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="197" />
       <source>Live data</source>
       <translation>Live data</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="75" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="197" />
       <source>AI analysis</source>
       <translation>AI analysis</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="75" />
-      <source>Deterministic rules</source>
-      <translation>Deterministic rules</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="76" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="197" />
       <source>Reports</source>
       <translation>Reports</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="77" />
-      <location filename="../Main.qml" line="192" />
-      <location filename="../../apps/shared/main.cpp" line="83" />
+      <location filename="../Main.qml" line="42" />
+      <location filename="../Main.qml" line="197" />
+      <location filename="../../apps/shared/main.cpp" line="98" />
       <source>Settings</source>
       <translation>Settings</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="78" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="44" />
+      <location filename="../Main.qml" line="197" />
       <source>Auto monitoring</source>
       <translation>Auto monitoring</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="78" />
-      <location filename="../Main.qml" line="79" />
-      <location filename="../Main.qml" line="81" />
-      <source>Planned</source>
-      <translation>Planned</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="79" />
-      <source>Work orders</source>
-      <translation>Work orders</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="79" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="45" />
+      <location filename="../Main.qml" line="197" />
       <source>Service centers</source>
       <translation>Service centers</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="80" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="194" />
+      <source>AI Car Scanner · C++ / Qt. Read-only diagnostics; unimplemented workflows are labeled in their pages.</source>
+      <translation>AI Car Scanner · C++ / Qt. Read-only diagnostics; unimplemented workflows are labeled in their pages.</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
       <source>Repair guidance</source>
       <translation>Repair guidance</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="80" />
-      <source>Licensed provider required</source>
-      <translation>Licensed provider required</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="81" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="47" />
+      <location filename="../Main.qml" line="197" />
       <source>Administration</source>
       <translation>Administration</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="81" />
-      <source>ADMIN permission required</source>
-      <translation>ADMIN permission required</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="82" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="46" />
+      <location filename="../Main.qml" line="197" />
       <source>MARKET portal</source>
       <translation>MARKET portal</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="82" />
-      <source>Planned — no payments</source>
-      <translation>Planned — no payments</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="83" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="48" />
+      <location filename="../Main.qml" line="197" />
       <source>Online updates</source>
       <translation>Online updates</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="83" />
-      <source>Distribution not configured</source>
-      <translation>Distribution not configured</translation>
     </message>
     <message>
       <location filename="../Main.qml" line="104" />
@@ -512,6 +568,46 @@
       <source>Sign out</source>
       <translation>Sign out</translation>
     </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>Vehicles</source>
+      <translation>Vehicles</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>VCI / Devices</source>
+      <translation>VCI / Devices</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>Symptoms</source>
+      <translation>Symptoms</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>Guided Tests</source>
+      <translation>Guided Tests</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>DTC</source>
+      <translation>DTC</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>Teach AI</source>
+      <translation>Teach AI</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>Dashboard</source>
+      <translation>Dashboard</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>ECU Network</source>
+      <translation>ECU Network</translation>
+    </message>
   </context>
   <context>
     <name>MetricCard</name>
@@ -550,67 +646,67 @@
       <translation>Device operation timed out</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="37" />
+      <location filename="../../core/transport/qt_elm.cpp" line="39" />
       <source>Device response exceeds limit</source>
       <translation>Device response exceeds limit</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="42" />
+      <location filename="../../core/transport/qt_elm.cpp" line="44" />
       <source>Unexpected device data</source>
       <translation>Unexpected device data</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="53" />
+      <location filename="../../core/transport/qt_elm.cpp" line="55" />
       <source>Unsolicited trailing device response</source>
       <translation>Unsolicited trailing device response</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="64" />
+      <location filename="../../core/transport/qt_elm.cpp" line="66" />
       <source>Numeric adapter IP and valid port required</source>
       <translation>Numeric adapter IP and valid port required</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="76" />
+      <location filename="../../core/transport/qt_elm.cpp" line="78" />
       <source>TCP adapter connection failed</source>
       <translation>TCP adapter connection failed</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="77" />
+      <location filename="../../core/transport/qt_elm.cpp" line="79" />
       <source>Adapter disconnected</source>
       <translation>Adapter disconnected</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="85" />
+      <location filename="../../core/transport/qt_elm.cpp" line="87" />
       <source>USB / serial transport unavailable on this platform</source>
       <translation>USB / serial transport unavailable on this platform</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="90" />
+      <location filename="../../core/transport/qt_elm.cpp" line="92" />
       <source>Invalid serial port settings</source>
       <translation>Invalid serial port settings</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="99" />
+      <location filename="../../core/transport/qt_elm.cpp" line="101" />
       <source>Serial adapter could not be opened</source>
       <translation>Serial adapter could not be opened</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="105" />
+      <location filename="../../core/transport/qt_elm.cpp" line="107" />
       <source>Serial adapter failed</source>
       <translation>Serial adapter failed</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="112" />
+      <location filename="../../core/transport/qt_elm.cpp" line="114" />
       <source>Device unavailable or command in progress</source>
       <translation>Device unavailable or command in progress</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="116" />
+      <location filename="../../core/transport/qt_elm.cpp" line="118" />
       <source>Command outside read-only allowlist</source>
       <translation>Command outside read-only allowlist</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="123" />
+      <location filename="../../core/transport/qt_elm.cpp" line="125" />
       <source>Device command write failed</source>
       <translation>Device command write failed</translation>
     </message>

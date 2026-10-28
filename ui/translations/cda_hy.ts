@@ -3,83 +3,83 @@
   <context>
     <name>AppModel</name>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="73" />
+      <location filename="../../apps/shared/app_model.cpp" line="85" />
       <source>Authentication failed; check credentials and account availability</source>
       <translation>Մուտքը ձախողվեց․ ստուգեք հաշվի տվյալները</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="78" />
+      <location filename="../../apps/shared/app_model.cpp" line="90" />
       <source>Signed in; contact is not verified</source>
       <translation>Մուտք է գործված․ կոնտակտը հաստատված չէ</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="88" />
+      <location filename="../../apps/shared/app_model.cpp" line="100" />
       <source>Saved preferences unavailable</source>
       <translation>Պահպանված նախընտրություններն անհասանելի են</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="120" />
+      <location filename="../../apps/shared/app_model.cpp" line="132" />
       <source>Signed out</source>
       <translation>Դուրս է եկել</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="137" />
+      <location filename="../../apps/shared/app_model.cpp" line="149" />
       <source>Vehicle saved; identity remains unverified</source>
       <translation>Մեքենան պահպանված է․ ինքնությունը հաստատված չէ</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="140" />
+      <location filename="../../apps/shared/app_model.cpp" line="152" />
       <source>Vehicle could not be saved; check fields and sign-in</source>
       <translation>Մեքենան չի պահպանվել․ ստուգեք դաշտերը և մուտքը</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="149" />
-      <location filename="../../apps/shared/app_model.cpp" line="158" />
+      <location filename="../../apps/shared/app_model.cpp" line="161" />
+      <location filename="../../apps/shared/app_model.cpp" line="170" />
       <source>Sign in before connecting an adapter</source>
       <translation>Ադապտերը միացնելուց առաջ մուտք գործեք</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="181" />
+      <location filename="../../apps/shared/app_model.cpp" line="193" />
       <source>Unavailable</source>
       <translation>Անհասանելի</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="194" />
+      <location filename="../../apps/shared/app_model.cpp" line="206" />
       <source>Insufficient verified evidence. Connect an adapter and obtain DTCs; no component failure has been established.</source>
       <translation>Հաստատված տվյալները բավարար չեն։ Միացրեք ադապտեր և ստացեք DTC-երը․ մասի անսարքություն հաստատված չէ։</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="196" />
+      <location filename="../../apps/shared/app_model.cpp" line="208" />
       <source>Cylinder 2 misfire reported. Cause is unconfirmed. A qualified professional should compare operating conditions and test ignition, fuel delivery and compression. Source: ECU_REPORTED + RULE.</source>
       <translation>Գրանցվել է 2-րդ գլանի այրման բացթողում։ Պատճառը հաստատված չէ։ Մասնագետը պետք է համեմատի պայմանները և ստուգի բռնկումը, վառելիքի մատակարարումն ու կոմպրեսիան։ Աղբյուր՝ ECU_REPORTED + RULE։</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="205" />
+      <location filename="../../apps/shared/app_model.cpp" line="217" />
       <source>Preferences saved to this account</source>
       <translation>Նախընտրությունները պահպանվել են հաշվում</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="208" />
+      <location filename="../../apps/shared/app_model.cpp" line="220" />
       <source>Sign in to save account preferences; device preferences are retained locally</source>
       <translation>Հաշվի նախընտրությունները պահպանելու համար մուտք գործեք․ սարքի կարգավորումները պահպանվում են տեղում</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="213" />
+      <location filename="../../apps/shared/app_model.cpp" line="225" />
       <source>Choose an export filename</source>
       <translation>Ընտրեք արտահանվող ֆայլի անունը</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="225" />
+      <location filename="../../apps/shared/app_model.cpp" line="237" />
       <source>Report could not be opened</source>
       <translation>Հաշվետվությունը չի բացվել</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="230" />
+      <location filename="../../apps/shared/app_model.cpp" line="242" />
       <source>Report could not be saved</source>
       <translation>Հաշվետվությունը չի պահպանվել</translation>
     </message>
     <message>
-      <location filename="../../apps/shared/app_model.cpp" line="234" />
+      <location filename="../../apps/shared/app_model.cpp" line="246" />
       <source>Diagnostic JSON report saved</source>
       <translation>Ախտորոշման JSON հաշվետվությունը պահպանված է</translation>
     </message>
@@ -97,39 +97,117 @@
       <translation>Որոշվում են աջակցվող PID-երը</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="34" />
+      <location filename="../../services/diagnostics/controller.cpp" line="35" />
       <source>Adapter disconnected</source>
       <translation>Ադապտերն անջատված է</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="51" />
+      <location filename="../../services/diagnostics/controller.cpp" line="53" />
       <source>Invalid port</source>
       <translation>Սխալ պորտ</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="95" />
+      <location filename="../../services/diagnostics/controller.cpp" line="97" />
       <source>Connected; displayed PIDs unsupported</source>
       <translation>Միացված է․ ցուցադրվող PID-երը չեն աջակցվում</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="96" />
+      <location filename="../../services/diagnostics/controller.cpp" line="98" />
       <source>Connected — read only</source>
       <translation>Միացված է՝ միայն ընթերցում</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="102" />
+      <location filename="../../services/diagnostics/controller.cpp" line="104" />
       <source>Stored DTC response received</source>
       <translation>Պահպանված DTC պատասխանը ստացվել է</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="123" />
+      <location filename="../../services/diagnostics/controller.cpp" line="132" />
       <source>Adapter response invalid or unsupported</source>
       <translation>Ադապտերի պատասխանը անվավեր է կամ չի աջակցվում</translation>
     </message>
     <message>
-      <location filename="../../services/diagnostics/controller.cpp" line="134" />
+      <location filename="../../services/diagnostics/controller.cpp" line="143" />
       <source>Connect an eligible adapter first</source>
       <translation>Նախ միացրեք համատեղելի ադապտեր</translation>
+    </message>
+  </context>
+  <context>
+    <name>LauncherPage</name>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="23" />
+      <source>Main menu</source>
+      <translation>Գլխավոր ընտրացանկ</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="24" />
+      <source>Drag tiles to reorder</source>
+      <translation>Քաշեք սալիկները՝ հերթականությունը փոխելու համար</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="24" />
+      <source>Swipe to browse</source>
+      <translation>Էջը դիտելու համար սահեցրեք</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Vehicles</source>
+      <translation>Մեքենաներ</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Diagnostics</source>
+      <translation>Ախտորոշում</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>VCI / Devices</source>
+      <translation>VCI / Սարքեր</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Symptoms</source>
+      <translation>Ախտանիշներ</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Live Data</source>
+      <translation>Ընթացիկ տվյալներ</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Guided Tests</source>
+      <translation>Ուղղորդվող ստուգումներ</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>AI Analysis</source>
+      <translation>AI վերլուծություն</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>DTC</source>
+      <translation>DTC</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Reports</source>
+      <translation>Հաշվետվություններ</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Teach AI</source>
+      <translation>Ուսուցանել AI-ին</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>Dashboard</source>
+      <translation>Գործիքների վահանակ</translation>
+    </message>
+    <message>
+      <location filename="../pages/LauncherPage.qml" line="116" />
+      <source>ECU Network</source>
+      <translation>ECU ցանց</translation>
     </message>
   </context>
   <context>
@@ -141,146 +219,124 @@
     </message>
     <message>
       <location filename="../Main.qml" line="41" />
-      <location filename="../Main.qml" line="45" />
+      <location filename="../Main.qml" line="65" />
       <location filename="../Main.qml" line="183" />
       <source>Sign in</source>
       <translation>Մուտք</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="43" />
+      <location filename="../Main.qml" line="67" />
       <source>Authorized workspace</source>
       <translation>Թույլատրված աշխատանքային միջավայր</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="45" />
+      <location filename="../Main.qml" line="41" />
       <location filename="../Main.qml" line="175" />
       <source>Account</source>
       <translation>Հաշիվ</translation>
     </message>
     <message>
+      <location filename="../Main.qml" line="39" />
+      <source>Application</source>
+      <translation>Հավելված</translation>
+    </message>
+    <message>
       <location filename="../Main.qml" line="50" />
+      <source>Exit</source>
+      <translation>Ելք</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="54" />
+      <source>Help</source>
+      <translation>Օգնություն</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="56" />
+      <location filename="../Main.qml" line="192" />
+      <source>About</source>
+      <translation>Ծրագրի մասին</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="78" />
       <source>Read-only by default. No hardware connected means no live measurements.</source>
       <translation>Լռելյայն՝ միայն ընթերցում։ Առանց սարքի իրական չափումներ չկան։</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="59" />
+      <location filename="../Main.qml" line="89" />
       <source>Your diagnostic workspace</source>
       <translation>Ձեր ախտորոշման միջավայրը</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="63" />
+      <location filename="../Main.qml" line="93" />
       <source>Main menu</source>
       <translation>Գլխավոր ընտրացանկ</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="72" />
-      <location filename="../Main.qml" line="192" />
-      <source>My vehicles</source>
-      <translation>Իմ մեքենաները</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="73" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="197" />
       <source>Diagnostics</source>
       <translation>Ախտորոշում</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="74" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="197" />
       <source>Live data</source>
       <translation>Ընթացիկ տվյալներ</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="75" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="197" />
       <source>AI analysis</source>
       <translation>AI վերլուծություն</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="75" />
-      <source>Deterministic rules</source>
-      <translation>Դետերմինիստական կանոններ</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="76" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="197" />
       <source>Reports</source>
       <translation>Հաշվետվություններ</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="77" />
-      <location filename="../Main.qml" line="192" />
-      <location filename="../../apps/shared/main.cpp" line="83" />
+      <location filename="../Main.qml" line="42" />
+      <location filename="../Main.qml" line="197" />
+      <location filename="../../apps/shared/main.cpp" line="98" />
       <source>Settings</source>
       <translation>Կարգավորումներ</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="78" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="44" />
+      <location filename="../Main.qml" line="197" />
       <source>Auto monitoring</source>
       <translation>Ավտոմատ հսկում</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="78" />
-      <location filename="../Main.qml" line="79" />
-      <location filename="../Main.qml" line="81" />
-      <source>Planned</source>
-      <translation>Նախատեսված է</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="79" />
-      <source>Work orders</source>
-      <translation>Աշխատանքային պատվերներ</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="79" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="45" />
+      <location filename="../Main.qml" line="197" />
       <source>Service centers</source>
       <translation>Սպասարկման կենտրոններ</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="80" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="194" />
+      <source>AI Car Scanner · C++ / Qt. Read-only diagnostics; unimplemented workflows are labeled in their pages.</source>
+      <translation>AI Car Scanner · C++ / Qt։ Ախտորոշումը միայն ընթերցման համար է․ չիրականացված գործառույթները նշված են իրենց էջերում։</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
       <source>Repair guidance</source>
       <translation>Վերանորոգման ուղեցույց</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="80" />
-      <source>Licensed provider required</source>
-      <translation>Պահանջվում է արտոնագրված մատակարար</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="81" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="47" />
+      <location filename="../Main.qml" line="197" />
       <source>Administration</source>
       <translation>Ադմինիստրացիա</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="81" />
-      <source>ADMIN permission required</source>
-      <translation>Պահանջվում է ADMIN թույլտվություն</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="82" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="46" />
+      <location filename="../Main.qml" line="197" />
       <source>MARKET portal</source>
       <translation>MARKET վաճառողի հարթակ</translation>
     </message>
     <message>
-      <location filename="../Main.qml" line="82" />
-      <source>Planned — no payments</source>
-      <translation>Նախատեսված է՝ առանց վճարումների</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="83" />
-      <location filename="../Main.qml" line="192" />
+      <location filename="../Main.qml" line="48" />
+      <location filename="../Main.qml" line="197" />
       <source>Online updates</source>
       <translation>Առցանց թարմացումներ</translation>
-    </message>
-    <message>
-      <location filename="../Main.qml" line="83" />
-      <source>Distribution not configured</source>
-      <translation>Տարածումը կարգավորված չէ</translation>
     </message>
     <message>
       <location filename="../Main.qml" line="104" />
@@ -512,6 +568,46 @@
       <source>Sign out</source>
       <translation>Դուրս գալ</translation>
     </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>Vehicles</source>
+      <translation>Մեքենաներ</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>VCI / Devices</source>
+      <translation>VCI / Սարքեր</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>Symptoms</source>
+      <translation>Ախտանիշներ</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>Guided Tests</source>
+      <translation>Ուղղորդվող ստուգումներ</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>DTC</source>
+      <translation>DTC</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>Teach AI</source>
+      <translation>Ուսուցանել AI-ին</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>Dashboard</source>
+      <translation>Գործիքների վահանակ</translation>
+    </message>
+    <message>
+      <location filename="../Main.qml" line="197" />
+      <source>ECU Network</source>
+      <translation>ECU ցանց</translation>
+    </message>
   </context>
   <context>
     <name>MetricCard</name>
@@ -550,67 +646,67 @@
       <translation>Սարքի գործողության ժամանակը սպառվեց</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="37" />
+      <location filename="../../core/transport/qt_elm.cpp" line="39" />
       <source>Device response exceeds limit</source>
       <translation>Սարքի պատասխանը գերազանցում է սահմանը</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="42" />
+      <location filename="../../core/transport/qt_elm.cpp" line="44" />
       <source>Unexpected device data</source>
       <translation>Սարքից անսպասելի տվյալներ</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="53" />
+      <location filename="../../core/transport/qt_elm.cpp" line="55" />
       <source>Unsolicited trailing device response</source>
       <translation>Սարքի չպահանջված լրացուցիչ պատասխան</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="64" />
+      <location filename="../../core/transport/qt_elm.cpp" line="66" />
       <source>Numeric adapter IP and valid port required</source>
       <translation>Պահանջվում են թվային IP հասցե և ճիշտ պորտ</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="76" />
+      <location filename="../../core/transport/qt_elm.cpp" line="78" />
       <source>TCP adapter connection failed</source>
       <translation>TCP ադապտերի կապը ձախողվեց</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="77" />
+      <location filename="../../core/transport/qt_elm.cpp" line="79" />
       <source>Adapter disconnected</source>
       <translation>Ադապտերն անջատված է</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="85" />
+      <location filename="../../core/transport/qt_elm.cpp" line="87" />
       <source>USB / serial transport unavailable on this platform</source>
       <translation>Այս հարթակում USB / սերիական կապն անհասանելի է</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="90" />
+      <location filename="../../core/transport/qt_elm.cpp" line="92" />
       <source>Invalid serial port settings</source>
       <translation>Սերիական պորտի սխալ կարգավորումներ</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="99" />
+      <location filename="../../core/transport/qt_elm.cpp" line="101" />
       <source>Serial adapter could not be opened</source>
       <translation>Սերիական ադապտերը չի բացվել</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="105" />
+      <location filename="../../core/transport/qt_elm.cpp" line="107" />
       <source>Serial adapter failed</source>
       <translation>Սերիական ադապտերի սխալ</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="112" />
+      <location filename="../../core/transport/qt_elm.cpp" line="114" />
       <source>Device unavailable or command in progress</source>
       <translation>Սարքն անհասանելի է կամ հրամանն ընթացքի մեջ է</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="116" />
+      <location filename="../../core/transport/qt_elm.cpp" line="118" />
       <source>Command outside read-only allowlist</source>
       <translation>Հրամանը միայն ընթերցման թույլատրված ցանկում չէ</translation>
     </message>
     <message>
-      <location filename="../../core/transport/qt_elm.cpp" line="123" />
+      <location filename="../../core/transport/qt_elm.cpp" line="125" />
       <source>Device command write failed</source>
       <translation>Սարքին հրամանի ուղարկումը ձախողվեց</translation>
     </message>

@@ -11,6 +11,13 @@ safety policy and an interactive architecture dashboard are implemented in the
 scopes documented below. ECU writes remain locked. Hardware and native
 Windows/Android/iOS release validation have not run. Payments are not implemented.
 
+## Launcher UI correction
+
+The home screen now follows the supplied original background, 3D icons and
+12-tile layout. Open **Application → Settings** for preferences. Explicitly themed
+controls fix the light-text/white-background problem shown on Windows.
+[Current screenshots and validation](docs/testing/UI_REFERENCE_CORRECTION.md).
+
 ## Build and run
 
 Requires CMake >=3.24, Ninja, C++20, OpenSSL 3 and Qt 6.8+ modules listed in

@@ -256,3 +256,24 @@ void AppModel::scan() {
         logout();
     }
 }
+
+QStringList AppModel::launcherOrder() const {
+    const QStringList defaults{"vehicles", "diagnostics", "devices",   "symptoms",
+                               "live",     "guided",      "ai",        "dtc",
+                               "reports",  "teach",       "dashboard", "network"};
+    const auto stored = settings_.value("launcherOrder", defaults).toStringList();
+    if (stored.size() != defaults.size())
+        return defaults;
+    auto sorted = stored, expected = defaults;
+    sorted.sort();
+    expected.sort();
+    return sorted == expected ? stored : defaults;
+}
+void AppModel::moveLauncherTile(int from, int to) {
+    auto order = launcherOrder();
+    if (from < 0 || to < 0 || from >= order.size() || to >= order.size() || from == to)
+        return;
+    order.move(from, to);
+    settings_.setValue("launcherOrder", order);
+    emit launcherOrderChanged();
+}

@@ -10,8 +10,9 @@ and origin, verified a clean starting tree at ac8d9469279a52bdb53b7cf7405bda67f7
 created archive/pre-v3-ac8d946, verified a complete Git bundle, made a source tar
 archive and retained the entire previous working tree under /workspace/backups.
 .git and history remain intact. Old application code, assets, dependencies and
-workflows were removed from the active tree. New C++/QML source and artwork were
-written independently; previous application modules were not reused.
+workflows were removed from the active tree. New C++/QML source and the canonical app icon were written independently;
+previous application modules were not reused. A subsequent explicit UI-reference
+request restores three launcher artwork files only, as documented below.
 
 Verified local recovery files:
 
@@ -147,3 +148,17 @@ contains the complete setup commands. Dependencies/build output persist; live
 processes must restart. Review/save the draft in environment settings and publish
 the environment to activate its snapshot. A saved draft is not publication or
 proof of restoration in a new task.
+
+## Subsequent UI-reference correction
+
+The supplied launcher reference supersedes the generic V3 tile presentation.
+Restored its original background and 3D imagery (artwork only), default 4x3
+workflow order, Application/Help menu and AI CAR SCANNER title/tagline. Added
+persistent drag reordering and touch-scroll layout. Settings/account access
+remain reachable through Application; no new diagnostic feature is implied.
+
+Fixed the Windows white-surface/light-text mismatch with deterministic Basic
+controls and explicit text/surface/popup styling. See
+[UI_REFERENCE_CORRECTION.md](testing/UI_REFERENCE_CORRECTION.md) for actual
+interaction checks, contrast assertions, screenshots and platform limitations.
+Historical core coverage/benchmark evidence above does not measure new UI code.

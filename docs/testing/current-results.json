@@ -95,5 +95,43 @@
   "payments": "DISABLED / NOT_IMPLEMENTED",
   "old_version": "archive/pre-v3-ac8d946 pushed; verified Git bundle and complete previous tree retained outside checkout",
   "configuration": "New install_script/start_skill saved to draft; publication not performed; no fresh-task restoration claim",
-  "note": "Checks overlap. Do not sum source assertions, test cases, CTest binaries and HTTP/browser observations as independent feature coverage."
+  "note": "Checks overlap. Do not sum source assertions, test cases, CTest binaries and HTTP/browser observations as independent feature coverage.",
+  "ui_reference_correction": {
+    "status": "PASS",
+    "ui_checks": {
+      "passed": 18,
+      "failed": 0
+    },
+    "base": "cc8d07ffa2a2c65710ab8434ad6aeb8b559ece5f",
+    "platform": "Linux Qt 6.8.2 offscreen/software rendering; no new Windows or Android native execution claim",
+    "environment_override": "QT_QUICK_CONTROLS_STYLE=Fusion; application explicitly selects Basic",
+    "scope": [
+      "4x3 reference launcher and twelve expected routes",
+      "reference artwork loads",
+      "real pointer drag reorders tiles",
+      "VCI card click navigation",
+      "Application menu to Settings click navigation",
+      "Settings control and safety-label text contrast >=4.5:1 in dark/light",
+      "keyboard dropdown selection",
+      "editable readable text field",
+      "two-column narrow launcher",
+      "actual app screenshots"
+    ],
+    "ctest": "2 existing core/integration executables passed",
+    "catalog": {
+      "status": "PASS",
+      "checks": 565,
+      "translation_messages": 137
+    },
+    "assets_sha256": {
+      "background.png": "7e2b3be47bb70dd68cce429279770f8fa07071000916b6d7e3d71d276aea5b1c",
+      "icons-3d.png": "544162b8bc7311bdb8d0f6775ceafc7344dc466bbfadce0e9cbf159b3d65c928",
+      "brand-car.png": "f0d2d7c463d17491b065ad81f1c62ceb0009d16faadbe071232136c694ca3107"
+    },
+    "limits": [
+      "Visual assets restored at explicit user request; no legacy runtime source reused",
+      "Unimplemented workflows remain labeled in destination pages",
+      "Qt service/UI line coverage not measured; historical pure-domain coverage is not UI coverage"
+    ]
+  }
 }

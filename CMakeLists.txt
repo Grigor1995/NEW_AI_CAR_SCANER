@@ -58,11 +58,17 @@ if(CDA_BUILD_UI)
   set_target_properties(car_diagnostic PROPERTIES QT_ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/apps/android")
  endif()
  target_link_libraries(car_diagnostic PRIVATE cda_services Qt6::Quick Qt6::QuickControls2 Qt6::Svg)
+ if(BUILD_TESTING)
+  target_compile_definitions(car_diagnostic PRIVATE CDA_UI_CHECKS)
+  target_link_libraries(car_diagnostic PRIVATE Qt6::Test)
+ endif()
  set_source_files_properties(ui/themes/Neo.qml PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
  file(GLOB NAV_ICONS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/*.svg")
  qt_add_qml_module(car_diagnostic URI CarDiagnostic VERSION 1.0
   QML_FILES ui/Main.qml ui/components/MetricCard.qml ui/themes/Neo.qml ui/charts/TelemetryTrace.qml
-  RESOURCES assets/app_icon/canonical.svg ${NAV_ICONS})
+   ui/pages/LauncherPage.qml ui/components/NeoButton.qml ui/components/NeoComboBox.qml
+   ui/components/NeoTextField.qml ui/components/NeoTextArea.qml ui/components/NeoSpinBox.qml ui/components/NeoDialog.qml
+  RESOURCES assets/app_icon/canonical.svg assets/launcher/background.png assets/launcher/icons-3d.png assets/launcher/brand-car.png ${NAV_ICONS})
  set_target_properties(car_diagnostic PROPERTIES WIN32_EXECUTABLE TRUE MACOSX_BUNDLE TRUE
   MACOSX_BUNDLE_BUNDLE_NAME "Car Diagnostic Analysis"
   MACOSX_BUNDLE_GUI_IDENTIFIER "org.cardiagnostic.analysis")

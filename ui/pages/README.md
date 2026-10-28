@@ -1,5 +1,6 @@
-# ui/pages
+# UI pages
 
-Current small milestone pages are in ui/Main.qml. Extract focused page components as the real workflows grow; no second template is included.
-
-See docs/IMPLEMENTATION_REPORT.md for current executed validation and limitations.
+LauncherPage.qml implements the reference home grid, local artwork, navigation
+and persistent mouse drag ordering. Existing small workflow pages remain in
+ui/Main.qml. Separate focused workflow components as their real functionality
+grows. Unimplemented features remain explicitly labeled on destination pages.
