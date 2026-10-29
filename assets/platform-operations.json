@@ -1,0 +1,952 @@
+[
+  {
+    "label": "GET /api/v1/migration/runtime",
+    "method": "GET",
+    "path": "/api/v1/migration/runtime"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/acquisition/sessions/{session_id}/records",
+    "handler": "acquisition_records",
+    "source": "backend/api/acquisition_routes.py",
+    "label": "GET /api/v1/acquisition/sessions/{session_id}/records"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/acquisition/sessions/{session_id}/simulator/parameters",
+    "handler": "simulator_parameters",
+    "source": "backend/api/acquisition_routes.py",
+    "label": "PUT /api/v1/acquisition/sessions/{session_id}/simulator/parameters"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/acquisition/sessions/{session_id}/start",
+    "handler": "start_acquisition",
+    "source": "backend/api/acquisition_routes.py",
+    "label": "POST /api/v1/acquisition/sessions/{session_id}/start"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/acquisition/sessions/{session_id}/status",
+    "handler": "acquisition_status",
+    "source": "backend/api/acquisition_routes.py",
+    "label": "GET /api/v1/acquisition/sessions/{session_id}/status"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/acquisition/sessions/{session_id}/stop",
+    "handler": "stop_acquisition",
+    "source": "backend/api/acquisition_routes.py",
+    "label": "POST /api/v1/acquisition/sessions/{session_id}/stop"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/ai/knowledge",
+    "handler": "add_knowledge",
+    "source": "backend/api/ai_routes.py",
+    "label": "POST /api/v1/ai/knowledge"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/ai/knowledge/search",
+    "handler": "search_knowledge",
+    "source": "backend/api/ai_routes.py",
+    "label": "POST /api/v1/ai/knowledge/search"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/ai/provider",
+    "handler": "provider_info",
+    "source": "backend/api/ai_routes.py",
+    "label": "GET /api/v1/ai/provider"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/ai/sessions/{session_id}/context",
+    "handler": "build_ai_context",
+    "source": "backend/api/ai_routes.py",
+    "label": "POST /api/v1/ai/sessions/{session_id}/context"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/analysis/{session_id}",
+    "handler": "analyze_compat",
+    "source": "backend/api/main.py",
+    "label": "POST /api/v1/analysis/{session_id}"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/decision/sessions/{session_id}/plan",
+    "handler": "decision_plan",
+    "source": "backend/api/decision_routes.py",
+    "label": "GET /api/v1/decision/sessions/{session_id}/plan"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/decision/sessions/{session_id}/refresh",
+    "handler": "refresh_decision_plan",
+    "source": "backend/api/decision_routes.py",
+    "label": "POST /api/v1/decision/sessions/{session_id}/refresh"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/decision/sessions/{session_id}/select",
+    "handler": "select_test",
+    "source": "backend/api/decision_routes.py",
+    "label": "POST /api/v1/decision/sessions/{session_id}/select"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/devices",
+    "handler": "list_devices",
+    "source": "backend/api/device_routes.py",
+    "label": "GET /api/v1/devices"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/devices/scan/{transport}",
+    "handler": "scan_devices",
+    "source": "backend/api/device_routes.py",
+    "label": "POST /api/v1/devices/scan/{transport}"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/devices/simulator",
+    "handler": "add_simulator",
+    "source": "backend/api/device_routes.py",
+    "label": "POST /api/v1/devices/simulator"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/devices/wifi/probe",
+    "handler": "wifi_probe",
+    "source": "backend/api/device_routes.py",
+    "label": "POST /api/v1/devices/wifi/probe"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/devices/{device_id:path}/connect",
+    "handler": "connect_device",
+    "source": "backend/api/device_routes.py",
+    "label": "POST /api/v1/devices/{device_id:path}/connect"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/devices/{device_id:path}/diagnostic-discovery",
+    "handler": "diagnostic_discovery",
+    "source": "backend/api/device_routes.py",
+    "label": "POST /api/v1/devices/{device_id:path}/diagnostic-discovery"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/devices/{device_id:path}/disconnect",
+    "handler": "disconnect_device",
+    "source": "backend/api/device_routes.py",
+    "label": "POST /api/v1/devices/{device_id:path}/disconnect"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/devices/{device_id:path}/obd/dtcs",
+    "handler": "read_dtcs",
+    "source": "backend/api/device_routes.py",
+    "label": "GET /api/v1/devices/{device_id:path}/obd/dtcs"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/devices/{device_id:path}/obd/live-data",
+    "handler": "read_live_data",
+    "source": "backend/api/device_routes.py",
+    "label": "GET /api/v1/devices/{device_id:path}/obd/live-data"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/devices/{device_id:path}/obd/protocol",
+    "handler": "read_device_obd_protocol",
+    "source": "backend/api/device_routes.py",
+    "label": "GET /api/v1/devices/{device_id:path}/obd/protocol"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/devices/{device_id:path}/obd/vin",
+    "handler": "read_vin",
+    "source": "backend/api/device_routes.py",
+    "label": "GET /api/v1/devices/{device_id:path}/obd/vin"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/devices/{device_id:path}/reconnect",
+    "handler": "reconnect_device",
+    "source": "backend/api/device_routes.py",
+    "label": "POST /api/v1/devices/{device_id:path}/reconnect"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/devices/{device_id:path}/status",
+    "handler": "device_status",
+    "source": "backend/api/device_routes.py",
+    "label": "GET /api/v1/devices/{device_id:path}/status"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/global-data",
+    "handler": "get_global_data",
+    "source": "backend/api/global_data_routes.py",
+    "label": "GET /api/v1/global-data"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/global-data/cases/{case_id}",
+    "handler": "get_global_case",
+    "source": "backend/api/global_data_routes.py",
+    "label": "GET /api/v1/global-data/cases/{case_id}"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/intelligence/sessions/{session_id}/analyze",
+    "handler": "analyze",
+    "source": "backend/api/intelligence_routes.py",
+    "label": "POST /api/v1/intelligence/sessions/{session_id}/analyze"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/intelligence/sessions/{session_id}/evidence/text",
+    "handler": "ingest_text",
+    "source": "backend/api/intelligence_routes.py",
+    "label": "POST /api/v1/intelligence/sessions/{session_id}/evidence/text"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/intelligence/sessions/{session_id}/test-results",
+    "handler": "add_test_result",
+    "source": "backend/api/intelligence_routes.py",
+    "label": "POST /api/v1/intelligence/sessions/{session_id}/test-results"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/knowledge/ingest/file",
+    "handler": "ingest_file",
+    "source": "backend/api/knowledge_routes.py",
+    "label": "POST /api/v1/knowledge/ingest/file"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/knowledge/ingest/text",
+    "handler": "ingest_text",
+    "source": "backend/api/knowledge_routes.py",
+    "label": "POST /api/v1/knowledge/ingest/text"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/multi-bus/sessions/{session_id}/connect",
+    "handler": "connect",
+    "source": "backend/api/multi_bus_routes.py",
+    "label": "POST /api/v1/multi-bus/sessions/{session_id}/connect"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/multi-bus/sessions/{session_id}/dtcs/read-all",
+    "handler": "read_dtcs",
+    "source": "backend/api/multi_bus_routes.py",
+    "label": "POST /api/v1/multi-bus/sessions/{session_id}/dtcs/read-all"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/multi-bus/sessions/{session_id}/identify-all",
+    "handler": "identify_all",
+    "source": "backend/api/multi_bus_routes.py",
+    "label": "POST /api/v1/multi-bus/sessions/{session_id}/identify-all"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/multi-bus/sessions/{session_id}/topology",
+    "handler": "topology",
+    "source": "backend/api/multi_bus_routes.py",
+    "label": "GET /api/v1/multi-bus/sessions/{session_id}/topology"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/multi-ecu/sessions/{session_id}/connect",
+    "handler": "connect",
+    "source": "backend/api/multi_ecu_routes.py",
+    "label": "POST /api/v1/multi-ecu/sessions/{session_id}/connect"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/multi-ecu/sessions/{session_id}/disconnect",
+    "handler": "disconnect",
+    "source": "backend/api/multi_ecu_routes.py",
+    "label": "POST /api/v1/multi-ecu/sessions/{session_id}/disconnect"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/multi-ecu/sessions/{session_id}/dtcs/read-all",
+    "handler": "read_all_dtcs",
+    "source": "backend/api/multi_ecu_routes.py",
+    "label": "POST /api/v1/multi-ecu/sessions/{session_id}/dtcs/read-all"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/multi-ecu/sessions/{session_id}/identify-all",
+    "handler": "identify_all",
+    "source": "backend/api/multi_ecu_routes.py",
+    "label": "POST /api/v1/multi-ecu/sessions/{session_id}/identify-all"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/multi-ecu/sessions/{session_id}/topology",
+    "handler": "topology",
+    "source": "backend/api/multi_ecu_routes.py",
+    "label": "GET /api/v1/multi-ecu/sessions/{session_id}/topology"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/multi-ecu/sessions/{session_id}/trace",
+    "handler": "trace",
+    "source": "backend/api/multi_ecu_routes.py",
+    "label": "GET /api/v1/multi-ecu/sessions/{session_id}/trace"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/network-discovery/sessions/{session_id}/active-map",
+    "handler": "active_map",
+    "source": "backend/api/active_discovery_routes.py",
+    "label": "GET /api/v1/network-discovery/sessions/{session_id}/active-map"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/network-discovery/sessions/{session_id}/active-probe",
+    "handler": "active_probe",
+    "source": "backend/api/active_discovery_routes.py",
+    "label": "POST /api/v1/network-discovery/sessions/{session_id}/active-probe"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/v1/network-discovery/sessions/{session_id}/frames",
+    "handler": "reset_discovery",
+    "source": "backend/api/network_discovery_routes.py",
+    "label": "DELETE /api/v1/network-discovery/sessions/{session_id}/frames"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/network-discovery/sessions/{session_id}/frames",
+    "handler": "ingest_frames",
+    "source": "backend/api/network_discovery_routes.py",
+    "label": "POST /api/v1/network-discovery/sessions/{session_id}/frames"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/network-discovery/sessions/{session_id}/map",
+    "handler": "discover_map",
+    "source": "backend/api/network_discovery_routes.py",
+    "label": "GET /api/v1/network-discovery/sessions/{session_id}/map"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/obd/decode",
+    "handler": "decode",
+    "source": "backend/api/obd_routes.py",
+    "label": "POST /api/v1/obd/decode"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/obd/detected-protocol",
+    "handler": "detected",
+    "source": "backend/api/obd_routes.py",
+    "label": "GET /api/v1/obd/detected-protocol"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/obd/discovery/decode",
+    "handler": "discovery_decode",
+    "source": "backend/api/obd_routes.py",
+    "label": "POST /api/v1/obd/discovery/decode"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/obd/discovery/plan",
+    "handler": "discovery_plan",
+    "source": "backend/api/obd_routes.py",
+    "label": "GET /api/v1/obd/discovery/plan"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/obd/j1708/decode",
+    "handler": "decode_j1708",
+    "source": "backend/api/advanced_obd_routes.py",
+    "label": "POST /api/v1/obd/j1708/decode"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/obd/j1939/decode",
+    "handler": "decode_j1939",
+    "source": "backend/api/advanced_obd_routes.py",
+    "label": "POST /api/v1/obd/j1939/decode"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/obd/j1939/decode-bam",
+    "handler": "decode_j1939_bam",
+    "source": "backend/api/advanced_obd_routes.py",
+    "label": "POST /api/v1/obd/j1939/decode-bam"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/obd/plan",
+    "handler": "plan",
+    "source": "backend/api/obd_routes.py",
+    "label": "GET /api/v1/obd/plan"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/obd/plan",
+    "handler": "observed_plan",
+    "source": "backend/api/obd_routes.py",
+    "label": "POST /api/v1/obd/plan"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/obd/protocols",
+    "handler": "protocols",
+    "source": "backend/api/obd_routes.py",
+    "label": "GET /api/v1/obd/protocols"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/obd/uds/doip/read",
+    "handler": "read_doip",
+    "source": "backend/api/advanced_obd_routes.py",
+    "label": "POST /api/v1/obd/uds/doip/read"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/obd/uds/elm/read",
+    "handler": "read_elm_uds",
+    "source": "backend/api/advanced_obd_routes.py",
+    "label": "POST /api/v1/obd/uds/elm/read"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/platform/organizations/{organization_id}/audit",
+    "handler": "audit",
+    "source": "backend/api/platform_routes.py",
+    "label": "GET /api/v1/platform/organizations/{organization_id}/audit"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/platform/roles",
+    "handler": "roles",
+    "source": "backend/api/platform_routes.py",
+    "label": "GET /api/v1/platform/roles"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/rag/config",
+    "handler": "rag_config",
+    "source": "backend/api/rag_routes.py",
+    "label": "GET /api/v1/rag/config"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/rag/search",
+    "handler": "rag_search",
+    "source": "backend/api/rag_routes.py",
+    "label": "POST /api/v1/rag/search"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/sessions",
+    "handler": "list_sessions",
+    "source": "backend/api/main.py",
+    "label": "GET /api/v1/sessions"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/sessions",
+    "handler": "create_session",
+    "source": "backend/api/main.py",
+    "label": "POST /api/v1/sessions"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/sessions/{session_id}",
+    "handler": "read_session",
+    "source": "backend/api/main.py",
+    "label": "GET /api/v1/sessions/{session_id}"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/sessions/{session_id}/analyze",
+    "handler": "analyze",
+    "source": "backend/api/main.py",
+    "label": "POST /api/v1/sessions/{session_id}/analyze"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/sessions/{session_id}/dtcs",
+    "handler": "add_dtc",
+    "source": "backend/api/main.py",
+    "label": "POST /api/v1/sessions/{session_id}/dtcs"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/v1/sessions/{session_id}/dtcs/{dtc_id}",
+    "handler": "delete_dtc",
+    "source": "backend/api/main.py",
+    "label": "DELETE /api/v1/sessions/{session_id}/dtcs/{dtc_id}"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/sessions/{session_id}/dtcs/{dtc_id}",
+    "handler": "update_dtc",
+    "source": "backend/api/main.py",
+    "label": "PUT /api/v1/sessions/{session_id}/dtcs/{dtc_id}"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/sessions/{session_id}/report",
+    "handler": "report",
+    "source": "backend/api/client_features_routes.py",
+    "label": "GET /api/v1/sessions/{session_id}/report"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/sessions/{session_id}/symptoms",
+    "handler": "add_symptom",
+    "source": "backend/api/main.py",
+    "label": "POST /api/v1/sessions/{session_id}/symptoms"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/v1/sessions/{session_id}/symptoms/{symptom_id}",
+    "handler": "delete_symptom",
+    "source": "backend/api/main.py",
+    "label": "DELETE /api/v1/sessions/{session_id}/symptoms/{symptom_id}"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/sessions/{session_id}/symptoms/{symptom_id}",
+    "handler": "update_symptom",
+    "source": "backend/api/main.py",
+    "label": "PUT /api/v1/sessions/{session_id}/symptoms/{symptom_id}"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/sessions/{session_id}/vehicle",
+    "handler": "update_vehicle",
+    "source": "backend/api/main.py",
+    "label": "PUT /api/v1/sessions/{session_id}/vehicle"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/telemetry/sessions/{session_id}/ai-analyze-live",
+    "handler": "ai_analyze_live",
+    "source": "backend/api/telemetry_routes.py",
+    "label": "POST /api/v1/telemetry/sessions/{session_id}/ai-analyze-live"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/telemetry/sessions/{session_id}/analyze",
+    "handler": "analyze_telemetry",
+    "source": "backend/api/telemetry_routes.py",
+    "label": "POST /api/v1/telemetry/sessions/{session_id}/analyze"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/telemetry/sessions/{session_id}/samples",
+    "handler": "append_samples",
+    "source": "backend/api/telemetry_routes.py",
+    "label": "POST /api/v1/telemetry/sessions/{session_id}/samples"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/telemetry/sessions/{session_id}/summary",
+    "handler": "telemetry_summary",
+    "source": "backend/api/telemetry_routes.py",
+    "label": "GET /api/v1/telemetry/sessions/{session_id}/summary"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-catalog/chassis",
+    "handler": "list_chassis",
+    "source": "backend/api/vehicle_catalog_routes.py",
+    "label": "GET /api/v1/vehicle-catalog/chassis"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-catalog/ecus",
+    "handler": "list_ecus",
+    "source": "backend/api/vehicle_catalog_routes.py",
+    "label": "GET /api/v1/vehicle-catalog/ecus"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-catalog/engines",
+    "handler": "list_engines",
+    "source": "backend/api/vehicle_catalog_routes.py",
+    "label": "GET /api/v1/vehicle-catalog/engines"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-catalog/entries",
+    "handler": "list_entries",
+    "source": "backend/api/vehicle_catalog_routes.py",
+    "label": "GET /api/v1/vehicle-catalog/entries"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-catalog/makes",
+    "handler": "list_makes",
+    "source": "backend/api/vehicle_catalog_routes.py",
+    "label": "GET /api/v1/vehicle-catalog/makes"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-catalog/models",
+    "handler": "list_models",
+    "source": "backend/api/vehicle_catalog_routes.py",
+    "label": "GET /api/v1/vehicle-catalog/models"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-catalog/resolve",
+    "handler": "resolve_variant",
+    "source": "backend/api/vehicle_catalog_routes.py",
+    "label": "GET /api/v1/vehicle-catalog/resolve"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-catalog/years",
+    "handler": "list_years",
+    "source": "backend/api/vehicle_catalog_routes.py",
+    "label": "GET /api/v1/vehicle-catalog/years"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/connect",
+    "handler": "connect",
+    "source": "backend/api/vehicle_diagnostic_routes.py",
+    "label": "POST /api/v1/vehicle-diagnostic/sessions/{session_id}/connect"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/device",
+    "handler": "device_binding",
+    "source": "backend/api/vehicle_diagnostic_routes.py",
+    "label": "GET /api/v1/vehicle-diagnostic/sessions/{session_id}/device"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/device/bind",
+    "handler": "bind_device",
+    "source": "backend/api/vehicle_diagnostic_routes.py",
+    "label": "POST /api/v1/vehicle-diagnostic/sessions/{session_id}/device/bind"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/disconnect",
+    "handler": "disconnect",
+    "source": "backend/api/vehicle_diagnostic_routes.py",
+    "label": "POST /api/v1/vehicle-diagnostic/sessions/{session_id}/disconnect"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/dtcs/read",
+    "handler": "read_dtcs",
+    "source": "backend/api/vehicle_diagnostic_routes.py",
+    "label": "POST /api/v1/vehicle-diagnostic/sessions/{session_id}/dtcs/read"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/ecu",
+    "handler": "identify_ecu",
+    "source": "backend/api/vehicle_diagnostic_routes.py",
+    "label": "GET /api/v1/vehicle-diagnostic/sessions/{session_id}/ecu"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/obd/sync",
+    "handler": "sync_obd_to_session",
+    "source": "backend/api/vehicle_diagnostic_routes.py",
+    "label": "POST /api/v1/vehicle-diagnostic/sessions/{session_id}/obd/sync"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/status",
+    "handler": "status",
+    "source": "backend/api/vehicle_diagnostic_routes.py",
+    "label": "GET /api/v1/vehicle-diagnostic/sessions/{session_id}/status"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/trace",
+    "handler": "trace",
+    "source": "backend/api/vehicle_diagnostic_routes.py",
+    "label": "GET /api/v1/vehicle-diagnostic/sessions/{session_id}/trace"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-profiles",
+    "handler": "list_profiles",
+    "source": "backend/api/client_features_routes.py",
+    "label": "GET /api/v1/vehicle-profiles"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/vehicle-profiles",
+    "handler": "create_profile",
+    "source": "backend/api/client_features_routes.py",
+    "label": "POST /api/v1/vehicle-profiles"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/v1/vehicle-profiles/{profile_id}",
+    "handler": "delete_profile",
+    "source": "backend/api/client_features_routes.py",
+    "label": "DELETE /api/v1/vehicle-profiles/{profile_id}"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/v1/vehicle-profiles/{profile_id}",
+    "handler": "update_profile",
+    "source": "backend/api/client_features_routes.py",
+    "label": "PUT /api/v1/vehicle-profiles/{profile_id}"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-reference",
+    "handler": "list_reference",
+    "source": "backend/api/vehicle_reference_routes.py",
+    "label": "GET /api/v1/vehicle-reference"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-reference/compatibility",
+    "handler": "profile",
+    "source": "backend/api/vehicle_reference_routes.py",
+    "label": "GET /api/v1/vehicle-reference/compatibility"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-reference/image",
+    "handler": "selected_image",
+    "source": "backend/api/vehicle_reference_routes.py",
+    "label": "GET /api/v1/vehicle-reference/image"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-reference/{reference_id}/image",
+    "handler": "image",
+    "source": "backend/api/vehicle_reference_routes.py",
+    "label": "GET /api/v1/vehicle-reference/{reference_id}/image"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-registry/compatibility",
+    "handler": "compatibility",
+    "source": "backend/api/vehicle_registry_routes.py",
+    "label": "GET /api/v1/vehicle-registry/compatibility"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-registry/detected-elm",
+    "handler": "detected_elm",
+    "source": "backend/api/vehicle_registry_routes.py",
+    "label": "GET /api/v1/vehicle-registry/detected-elm"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-registry/fitments",
+    "handler": "global_fitments",
+    "source": "backend/api/vehicle_registry_routes.py",
+    "label": "GET /api/v1/vehicle-registry/fitments"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-registry/makes",
+    "handler": "global_makes",
+    "source": "backend/api/vehicle_registry_routes.py",
+    "label": "GET /api/v1/vehicle-registry/makes"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-registry/models",
+    "handler": "global_models",
+    "source": "backend/api/vehicle_registry_routes.py",
+    "label": "GET /api/v1/vehicle-registry/models"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-registry/photo",
+    "handler": "photo",
+    "source": "backend/api/vehicle_registry_routes.py",
+    "label": "GET /api/v1/vehicle-registry/photo"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-registry/portrait",
+    "handler": "local_portrait",
+    "source": "backend/api/vehicle_registry_routes.py",
+    "label": "GET /api/v1/vehicle-registry/portrait"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-registry/profile",
+    "handler": "vehicle_profile",
+    "source": "backend/api/vehicle_registry_routes.py",
+    "label": "GET /api/v1/vehicle-registry/profile"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-registry/protocols",
+    "handler": "protocols",
+    "source": "backend/api/vehicle_registry_routes.py",
+    "label": "GET /api/v1/vehicle-registry/protocols"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-registry/stats",
+    "handler": "stats",
+    "source": "backend/api/vehicle_registry_routes.py",
+    "label": "GET /api/v1/vehicle-registry/stats"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/vehicle-registry/vin",
+    "handler": "vin_lookup",
+    "source": "backend/api/vehicle_registry_routes.py",
+    "label": "POST /api/v1/vehicle-registry/vin"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-registry/vpic/makes",
+    "handler": "vpic_makes",
+    "source": "backend/api/vehicle_registry_routes.py",
+    "label": "GET /api/v1/vehicle-registry/vpic/makes"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/vehicle-registry/vpic/models",
+    "handler": "vpic_models",
+    "source": "backend/api/vehicle_registry_routes.py",
+    "label": "GET /api/v1/vehicle-registry/vpic/models"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v2/ecosystem/accounts",
+    "handler": "register",
+    "source": "backend/ecosystem/api.py",
+    "label": "POST /api/v2/ecosystem/accounts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v2/ecosystem/auth/login",
+    "handler": "login",
+    "source": "backend/ecosystem/api.py",
+    "label": "POST /api/v2/ecosystem/auth/login"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v2/ecosystem/auth/logout",
+    "handler": "logout",
+    "source": "backend/ecosystem/api.py",
+    "label": "POST /api/v2/ecosystem/auth/logout"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v2/ecosystem/consents",
+    "handler": "consents",
+    "source": "backend/ecosystem/api.py",
+    "label": "GET /api/v2/ecosystem/consents"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/v2/ecosystem/consents/{consent_id}",
+    "handler": "revoke",
+    "source": "backend/ecosystem/api.py",
+    "label": "DELETE /api/v2/ecosystem/consents/{consent_id}"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v2/ecosystem/invitations",
+    "handler": "invitations",
+    "source": "backend/ecosystem/api.py",
+    "label": "GET /api/v2/ecosystem/invitations"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v2/ecosystem/invitations/{invitation_id}/accept",
+    "handler": "accept",
+    "source": "backend/ecosystem/api.py",
+    "label": "POST /api/v2/ecosystem/invitations/{invitation_id}/accept"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v2/ecosystem/me",
+    "handler": "me",
+    "source": "backend/ecosystem/api.py",
+    "label": "GET /api/v2/ecosystem/me"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v2/ecosystem/me",
+    "handler": "update_me",
+    "source": "backend/ecosystem/api.py",
+    "label": "PATCH /api/v2/ecosystem/me"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v2/ecosystem/service-centers",
+    "handler": "centers",
+    "source": "backend/ecosystem/api.py",
+    "label": "GET /api/v2/ecosystem/service-centers"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v2/ecosystem/service-centers",
+    "handler": "create_center",
+    "source": "backend/ecosystem/api.py",
+    "label": "POST /api/v2/ecosystem/service-centers"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v2/ecosystem/service-centers/{center_id}/invitations",
+    "handler": "invite",
+    "source": "backend/ecosystem/api.py",
+    "label": "POST /api/v2/ecosystem/service-centers/{center_id}/invitations"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v2/ecosystem/service-centers/{center_id}/vehicles/{profile_id}",
+    "handler": "shared_vehicle",
+    "source": "backend/ecosystem/api.py",
+    "label": "GET /api/v2/ecosystem/service-centers/{center_id}/vehicles/{profile_id}"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v2/ecosystem/vehicles",
+    "handler": "vehicles",
+    "source": "backend/ecosystem/api.py",
+    "label": "GET /api/v2/ecosystem/vehicles"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v2/ecosystem/vehicles",
+    "handler": "add_vehicle",
+    "source": "backend/ecosystem/api.py",
+    "label": "POST /api/v2/ecosystem/vehicles"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v2/ecosystem/workspace",
+    "handler": "workspace",
+    "source": "backend/ecosystem/api.py",
+    "label": "POST /api/v2/ecosystem/workspace"
+  },
+  {
+    "method": "GET",
+    "path": "/health",
+    "handler": "health",
+    "source": "backend/api/main.py",
+    "label": "GET /health"
+  }
+]

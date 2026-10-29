@@ -1,0 +1,19 @@
+PASS reference has exactly twelve expected workflows
+PASS four column reference layout
+PASS reference background loaded
+PASS all twelve 3D/reference images loaded
+PASS home screenshot
+PASS pointer drag reorders tiles
+PASS VCI card navigates to device connection
+PASS Application menu opens Settings
+PASS Settings controls readable in dark theme
+PASS safety status text readable
+PASS settings screenshot
+PASS Settings controls readable in light theme
+PASS safety status text readable
+PASS settings screenshot
+PASS unit dropdown can be changed with keyboard
+PASS text input visible and editable
+PASS mobile launcher uses two columns
+PASS mobile screenshot
+UI REGRESSION RESULT 18 passed, 0 failed

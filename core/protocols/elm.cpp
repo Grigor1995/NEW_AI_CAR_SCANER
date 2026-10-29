@@ -60,8 +60,8 @@ std::vector<Bytes> parseElm(const std::string &raw) {
         std::string compact;
         for (const auto &t : tokens)
             compact += t;
-        if (compact == "0100" || compact == "010C" || compact == "010D" || compact == "0105" ||
-            compact == "03" || compact == "07" || compact == "0A" || compact == "0902")
+        if ((compact.size() == 4 && compact.starts_with("01")) || compact == "03" ||
+            compact == "07" || compact == "0A" || compact == "0902")
             continue;
         if (ecu.empty() && compact.size() > 3 && compact.size() % 2) {
             ecu = compact.substr(0, 3);
@@ -119,32 +119,39 @@ Bytes pidData(uint8_t pid, const std::string &reply) {
             return Bytes(p.begin() + 2, p.end());
     throw std::invalid_argument("Requested PID absent");
 }
+const std::vector<PidDefinition> &livePids() {
+    static const std::vector<PidDefinition> pids{{0x0c, "rpm", "rpm", 2, 0.25, 0},
+                                                 {0x0d, "speed", "km/h", 1, 1, 0},
+                                                 {0x05, "coolant", "C", 1, 1, -40},
+                                                 {0x04, "engine_load", "%", 1, 100.0 / 255, 0},
+                                                 {0x0f, "intake_air", "C", 1, 1, -40},
+                                                 {0x10, "maf", "g/s", 2, 0.01, 0},
+                                                 {0x0b, "map", "kPa", 1, 1, 0},
+                                                 {0x11, "throttle", "%", 1, 100.0 / 255, 0},
+                                                 {0x06, "stft", "%", 1, 100.0 / 128, -100},
+                                                 {0x07, "ltft", "%", 1, 100.0 / 128, -100}};
+    return pids;
+}
 Measurement decodePid(uint8_t pid, const std::string &reply) {
     Measurement m;
     m.at = std::chrono::system_clock::now();
-    switch (pid) {
-    case 0x0c:
-        m.name = "rpm";
-        m.unit = "rpm";
-        break;
-    case 0x0d:
-        m.name = "speed";
-        m.unit = "km/h";
-        break;
-    case 0x05:
-        m.name = "coolant";
-        m.unit = "C";
-        break;
-    default:
+    const auto &pids = livePids();
+    auto it = std::find_if(pids.begin(), pids.end(), [pid](const auto &p) { return p.pid == pid; });
+    if (it == pids.end()) {
         m.name = "unknown";
         m.quality = Quality::Unsupported;
         return m;
     }
+    m.name = it->name;
+    m.unit = it->unit;
     try {
-        const auto d = pidData(pid, reply);
-        if (d.size() != (pid == 0x0c ? 2u : 1u))
+        const auto data = pidData(pid, reply);
+        if (data.size() != it->length)
             throw std::invalid_argument("Invalid PID size");
-        m.value = pid == 0x0c ? ((d[0] * 256 + d[1]) / 4.0) : (pid == 0x05 ? d[0] - 40.0 : d[0]);
+        unsigned value = 0;
+        for (auto byte : data)
+            value = (value << 8) | byte;
+        m.value = value * it->scale + it->offset;
         m.quality = Quality::Valid;
     } catch (const std::invalid_argument &) {
         m.quality =

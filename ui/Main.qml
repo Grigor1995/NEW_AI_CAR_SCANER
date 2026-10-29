@@ -41,6 +41,7 @@ ApplicationWindow {
             background: Rectangle { implicitWidth: 280; implicitHeight: 40; color: Neo.card; border.color: Neo.border; radius: 6 }
             MenuItem { text: App.email.length ? qsTr("Account") : qsTr("Sign in"); onTriggered: accountDialog.open() }
             MenuItem { objectName: "settingsMenuItem"; text: qsTr("Settings"); onTriggered: page = "settings" }
+            MenuItem { text: qsTr("Diagnostic platform"); onTriggered: page = "platform" }
             MenuSeparator { }
             MenuItem { text: qsTr("Auto monitoring"); onTriggered: page = "monitoring" }
             MenuItem { text: qsTr("Service centers"); onTriggered: page = "workshop" }
@@ -93,6 +94,10 @@ ApplicationWindow {
                 Item { Layout.fillWidth: true }
                 NeoButton { text: qsTr("Main menu"); visible: page !== "home"; onClicked: page = "home" }
             }
+            PlatformPage {
+                visible: ["platform", "guided", "teach", "network", "ai", "symptoms"].indexOf(page) >= 0
+                Layout.fillWidth: true; Layout.margins: 24
+            }
             LauncherPage {
                 Layout.leftMargin: 6; Layout.rightMargin: 6
                 visible: page === "home"
@@ -137,17 +142,15 @@ ApplicationWindow {
                 Label { text: qsTr("ECU writes are locked: no verified operation profile or qualified hardware validation is configured."); color: Neo.warning; wrapMode: Text.Wrap; Layout.fillWidth: true }
             }
             ColumnLayout {
-                visible: page === "ai" || page === "symptoms"; Layout.fillWidth: true; Layout.margins: 24; spacing: 16
-                Label { text: qsTr("Evidence-based rules; no LLM provider is configured. Recommendations do not establish a defective component."); color: Neo.muted; wrapMode: Text.Wrap; Layout.fillWidth: true }
-                NeoTextArea { id: symptomField; placeholderText: qsTr("Describe symptoms"); Layout.fillWidth: true; Layout.preferredHeight: 140; wrapMode: TextEdit.Wrap }
-                NeoButton { text: qsTr("Analyze available evidence"); onClicked: analysisResult = App.analyze(symptomField.text) }
-                Label { text: analysisResult; color: Neo.text; wrapMode: Text.Wrap; Layout.fillWidth: true }
-            }
-            ColumnLayout {
                 visible: page === "reports"; Layout.fillWidth: true; Layout.margins: 24
                 Label { text: qsTr("Export current measurements with timestamps, provenance and availability. No performed scan is inferred."); color: Neo.muted; wrapMode: Text.Wrap; Layout.fillWidth: true }
                 NeoTextField { id: exportPath; placeholderText: qsTr("Absolute JSON report path"); Layout.fillWidth: true }
                 NeoButton { text: qsTr("Export JSON report"); onClicked: App.exportReport(exportPath.text) }
+                RowLayout {
+                    visible: Platform.sessionId.length > 0
+                    NeoButton { text: "JSON · " + Platform.sessionId; onClicked: Qt.openUrlExternally("http://127.0.0.1:8001/api/v1/sessions/" + Platform.sessionId + "/report") }
+                    NeoButton { text: "PDF"; onClicked: Qt.openUrlExternally("http://127.0.0.1:8001/api/v1/sessions/" + Platform.sessionId + "/report?format=pdf") }
+                }
             }
             GridLayout {
                 visible: page === "settings"; columns: narrow ? 1 : 2; Layout.fillWidth: true; Layout.margins: 24; rowSpacing: 16
@@ -164,7 +167,7 @@ ApplicationWindow {
                 NeoButton { objectName: "savePreferencesButton"; text: qsTr("Save account preferences"); onClicked: App.savePreferences() }
             }
             ColumnLayout {
-                visible: ["home","vehicles","diagnostics","devices","live","dtc","dashboard","ai","symptoms","reports","settings"].indexOf(page) < 0
+                visible: ["home","vehicles","diagnostics","devices","live","dtc","dashboard","ai","symptoms","reports","settings","platform","guided","teach","network"].indexOf(page) < 0
                 Layout.fillWidth: true; Layout.margins: 24
                 Label { text: qsTr("Not implemented in this milestone"); color: Neo.warning; font.pixelSize: 22; wrapMode: Text.Wrap; Layout.fillWidth: true }
                 Label { text: page === "updates" ? qsTr("Version 0.1.0. Signature verification primitives exist; no update feed or installer is configured.") : page === "market" ? qsTr("Merchant listings and quotations are planned. Payment processing is disabled and not implemented.") : page === "monitoring" ? qsTr("Daily is the planned default. No unattended scan has been scheduled or performed.") : qsTr("This area requires a later implementation phase. No production data or service integration is claimed."); color: Neo.muted; wrapMode: Text.Wrap; Layout.fillWidth: true }
@@ -195,7 +198,7 @@ ApplicationWindow {
         Label { width: parent.width; text: qsTr("AI Car Scanner · C++ / Qt. Read-only diagnostics; unimplemented workflows are labeled in their pages."); color: Neo.text; wrapMode: Text.Wrap }
     }
     function pageTitle(key) {
-        const names = { vehicles:qsTr("Vehicles"), devices:qsTr("VCI / Devices"), symptoms:qsTr("Symptoms"), guided:qsTr("Guided Tests"), dtc:qsTr("DTC"), teach:qsTr("Teach AI"), dashboard:qsTr("Dashboard"), network:qsTr("ECU Network"), diagnostics:qsTr("Diagnostics"), live:qsTr("Live data"), ai:qsTr("AI analysis"), reports:qsTr("Reports"), settings:qsTr("Settings"), monitoring:qsTr("Auto monitoring"), workshop:qsTr("Service centers"), repair:qsTr("Repair guidance"), admin:qsTr("Administration"), market:qsTr("MARKET portal"), updates:qsTr("Online updates") }
+        const names = { platform:qsTr("Diagnostic platform"), vehicles:qsTr("Vehicles"), devices:qsTr("VCI / Devices"), symptoms:qsTr("Symptoms"), guided:qsTr("Guided Tests"), dtc:qsTr("DTC"), teach:qsTr("Teach AI"), dashboard:qsTr("Dashboard"), network:qsTr("ECU Network"), diagnostics:qsTr("Diagnostics"), live:qsTr("Live data"), ai:qsTr("AI analysis"), reports:qsTr("Reports"), settings:qsTr("Settings"), monitoring:qsTr("Auto monitoring"), workshop:qsTr("Service centers"), repair:qsTr("Repair guidance"), admin:qsTr("Administration"), market:qsTr("MARKET portal"), updates:qsTr("Online updates") }
         return names[key] || key
     }
 }

@@ -124,6 +124,46 @@ class ServiceTests : public QObject {
         QVERIFY(!transport.connected());
         peer->deleteLater();
     }
+    void controllerPollsAllNativeChannelsAcrossEcus() {
+        QTcpServer server;
+        QVERIFY(server.listen(QHostAddress::LocalHost));
+        connect(&server, &QTcpServer::newConnection, &server, [&] {
+            auto *peer = server.nextPendingConnection();
+            auto buffer = std::make_shared<QByteArray>();
+            connect(peer, &QTcpSocket::readyRead, peer, [peer, buffer] {
+                *buffer += peer->readAll();
+                while (buffer->contains('\r')) {
+                    auto at = buffer->indexOf('\r');
+                    auto cmd = buffer->left(at);
+                    buffer->remove(0, at + 1);
+                    QByteArray response = "OK";
+                    if (cmd == "0100") {
+                        quint32 mask = 0;
+                        for (auto pid : {4, 5, 6, 7, 11, 13, 15, 16, 17})
+                            mask |= quint32(1) << (32 - pid);
+                        response = "410000100000\r4100" +
+                                   QByteArray::number(mask, 16).rightJustified(8, '0');
+                    } else if (cmd.startsWith("01")) {
+                        response =
+                            "41" + cmd.mid(2) + (cmd == "010C" || cmd == "0110" ? "0100" : "40");
+                    }
+                    peer->write(response + ">\r");
+                }
+            });
+        });
+        cda::DiagnosticController controller;
+        controller.connectTcp("127.0.0.1", server.serverPort());
+        QTRY_VERIFY(controller.ready());
+        QCOMPARE(controller.values().size(), 10);
+        auto allValid = [&] {
+            for (const auto &value : controller.values())
+                if (value.toMap()["quality"] != "valid")
+                    return false;
+            return true;
+        };
+        QTRY_VERIFY_WITH_TIMEOUT(allValid(), 15000);
+        controller.disconnectDevice();
+    }
     void controllerUsesCapabilityBitmap() {
         QTcpServer server;
         QVERIFY(server.listen(QHostAddress::LocalHost));

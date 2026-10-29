@@ -586,6 +586,46 @@ window.CDA_ARCHITECTURE = {
       "failure": "Explicit unavailable/error state; no fabricated success",
       "source": "backend/api; dashboard",
       "documentation": "../PERFORMANCE_TESTING.md"
+    },
+    {
+      "id": "platform_engine",
+      "title": "Source diagnostic companion",
+      "group": "Migration",
+      "status": "IMPLEMENTED",
+      "technology": "Python / FastAPI + native C ABI",
+      "responsibility": "135 retained source API operations: reasoning, RAG, vehicle catalog, reports, telemetry and optional consent boundary",
+      "interfaces": "Local HTTP / C ABI",
+      "APIs": "/api/v1/migration/runtime",
+      "dependencies": [
+        "native_engine"
+      ],
+      "input": "Validated requests / timestamped samples",
+      "output": "Typed diagnostic results with provenance",
+      "database": "Separate SQLite by default; configured SQLAlchemy database respected",
+      "security": "Loopback only; separate accounts/session IDs; provider-dependent calls need configuration",
+      "failure": "Explicit errors; no physical hardware certification",
+      "source": "services/platform_engine",
+      "documentation": "../migration/README.md"
+    },
+    {
+      "id": "native_engine",
+      "title": "Native telemetry/PID kernels",
+      "group": "Migration",
+      "status": "IMPLEMENTED",
+      "technology": "C++20 / Qt Core shared library",
+      "responsibility": "Packed-array telemetry statistics and ten PID snapshot scalings called by companion",
+      "interfaces": "Local HTTP / C ABI",
+      "APIs": "cda_stats_binary; cda_engine_json",
+      "dependencies": [
+        "core"
+      ],
+      "input": "Validated requests / timestamped samples",
+      "output": "Typed diagnostic results with provenance",
+      "database": "No owned database",
+      "security": "Bounded C ABI; thread-local JSON result; explicit observable Python fallback",
+      "failure": "Explicit errors; no physical hardware certification",
+      "source": "native/engine; services/platform_engine/native_acceleration.py",
+      "documentation": "../migration/README.md"
     }
   ],
   "edges": [
@@ -732,6 +772,24 @@ window.CDA_ARCHITECTURE = {
       "to": "backend",
       "label": "actual health when same-origin available",
       "path": "online"
+    },
+    {
+      "from": "ui",
+      "to": "platform_engine",
+      "label": "Qt async loopback diagnostic API",
+      "path": "offline"
+    },
+    {
+      "from": "platform_engine",
+      "to": "native_engine",
+      "label": "ctypes packed-array statistics / PID JSON ABI",
+      "path": "offline"
+    },
+    {
+      "from": "native_engine",
+      "to": "core",
+      "label": "Shared C++ PID definitions",
+      "path": "offline"
     }
   ],
   "views": [
@@ -741,7 +799,7 @@ window.CDA_ARCHITECTURE = {
       "nodes": [
         "*"
       ],
-      "description": "System Overview: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "System Overview: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "core",
@@ -752,9 +810,11 @@ window.CDA_ARCHITECTURE = {
         "safety",
         "rules",
         "telemetry",
-        "session"
+        "session",
+        "platform_engine",
+        "native_engine"
       ],
-      "description": "C++ Shared Core: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "C++ Shared Core: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "windows",
@@ -766,7 +826,7 @@ window.CDA_ARCHITECTURE = {
         "transport",
         "storage"
       ],
-      "description": "Windows Architecture: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Windows Architecture: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "android",
@@ -778,7 +838,7 @@ window.CDA_ARCHITECTURE = {
         "transport",
         "settings"
       ],
-      "description": "Android Architecture: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Android Architecture: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "ios",
@@ -789,7 +849,7 @@ window.CDA_ARCHITECTURE = {
         "core",
         "settings"
       ],
-      "description": "iOS Architecture: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "iOS Architecture: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "macroservices",
@@ -804,7 +864,7 @@ window.CDA_ARCHITECTURE = {
         "updates",
         "backend"
       ],
-      "description": "Macroservice Architecture: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Macroservice Architecture: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "identity",
@@ -817,7 +877,7 @@ window.CDA_ARCHITECTURE = {
         "market",
         "storage"
       ],
-      "description": "Authentication & RBAC: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Authentication & RBAC: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "user",
@@ -829,7 +889,7 @@ window.CDA_ARCHITECTURE = {
         "diagnostics",
         "rules"
       ],
-      "description": "USER Mode: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "USER Mode: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "customer",
@@ -840,7 +900,7 @@ window.CDA_ARCHITECTURE = {
         "diagnostics",
         "repair"
       ],
-      "description": "CUSTOMER Mode: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "CUSTOMER Mode: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "admin",
@@ -852,7 +912,7 @@ window.CDA_ARCHITECTURE = {
         "updates",
         "observability"
       ],
-      "description": "ADMIN Mode: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "ADMIN Mode: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "market",
@@ -863,7 +923,7 @@ window.CDA_ARCHITECTURE = {
         "identity",
         "payments"
       ],
-      "description": "MARKET Portal: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "MARKET Portal: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "protocols",
@@ -875,7 +935,7 @@ window.CDA_ARCHITECTURE = {
         "protocols",
         "telemetry"
       ],
-      "description": "OBD Protocol Architecture: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "OBD Protocol Architecture: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "safety",
@@ -887,7 +947,7 @@ window.CDA_ARCHITECTURE = {
         "device",
         "identity"
       ],
-      "description": "OBD Read/Write Safety: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "OBD Read/Write Safety: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "rules",
@@ -898,7 +958,7 @@ window.CDA_ARCHITECTURE = {
         "repair",
         "telemetry"
       ],
-      "description": "AI Diagnostic Workflow: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "AI Diagnostic Workflow: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "telemetry",
@@ -907,9 +967,11 @@ window.CDA_ARCHITECTURE = {
         "device",
         "protocols",
         "telemetry",
-        "ui"
+        "ui",
+        "platform_engine",
+        "native_engine"
       ],
-      "description": "Live Telemetry: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Live Telemetry: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "monitoring",
@@ -920,7 +982,7 @@ window.CDA_ARCHITECTURE = {
         "device",
         "notifications"
       ],
-      "description": "Scheduled Monitoring: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Scheduled Monitoring: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "notifications",
@@ -930,7 +992,7 @@ window.CDA_ARCHITECTURE = {
         "monitoring",
         "identity"
       ],
-      "description": "Notifications: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Notifications: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "updates",
@@ -942,7 +1004,7 @@ window.CDA_ARCHITECTURE = {
         "ios",
         "backend"
       ],
-      "description": "Online Updates: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Online Updates: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "storage",
@@ -953,7 +1015,7 @@ window.CDA_ARCHITECTURE = {
         "vehicle",
         "settings"
       ],
-      "description": "Database Architecture: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Database Architecture: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "security",
@@ -964,7 +1026,7 @@ window.CDA_ARCHITECTURE = {
         "storage",
         "backend"
       ],
-      "description": "Security Architecture: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Security Architecture: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "payments",
@@ -973,7 +1035,7 @@ window.CDA_ARCHITECTURE = {
         "payments",
         "market"
       ],
-      "description": "Future Payment Architecture: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Future Payment Architecture: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "testing",
@@ -985,7 +1047,7 @@ window.CDA_ARCHITECTURE = {
         "backend",
         "ui"
       ],
-      "description": "Testing Architecture: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Testing Architecture: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "roadmap",
@@ -997,7 +1059,7 @@ window.CDA_ARCHITECTURE = {
         "updates",
         "market"
       ],
-      "description": "Development Roadmap: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Development Roadmap: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     },
     {
       "id": "observability",
@@ -1009,7 +1071,7 @@ window.CDA_ARCHITECTURE = {
         "device",
         "notifications"
       ],
-      "description": "Runtime Observability: inspect each node’s exact implementation status, security boundary and current limitations."
+      "description": "Runtime Observability: inspect each node\u2019s exact implementation status, security boundary and current limitations."
     }
   ]
 };

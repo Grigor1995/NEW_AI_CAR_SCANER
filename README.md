@@ -1,7 +1,9 @@
 # CAR DIAGNOSTIC ANALYSIS — V3
 
 New C++20 / Qt 6.8 / QML foundation for a shared automotive diagnostic system.
-V3 replaces the old application source. Git history and
+The native V3 application replaces the old desktop UI. The later functionality
+migration restores source-compatible backend services as a separate local
+companion; see the migration section below. Git history and
 `archive/pre-v3-ac8d946` preserve the previous implementation.
 
 **Current state:** Linux-built development milestone, not a complete production
@@ -10,6 +12,22 @@ private vehicle profiles, persistent settings, deterministic analysis, write
 safety policy and an interactive architecture dashboard are implemented in the
 scopes documented below. ECU writes remain locked. Hardware and native
 Windows/Android/iOS release validation have not run. Payments are not implemented.
+
+## Source functionality migration
+
+The source diagnostic platform is available through **Application → Diagnostic
+platform** and the Guided Tests / Teach AI / ECU Network tiles. It preserves
+135 source API operations, reasoning/RAG, telemetry, vehicle catalogs,
+JSON/PDF reports and the optional consent foundation. The Qt client and physical
+TCP/serial polling remain C++; the companion retains Python business/AI services
+and calls compiled C++ telemetry/PID kernels where enabled.
+
+[Full repository analysis, feature mapping, Windows startup and limitations](docs/migration/README.md).
+Companion setup: `bash scripts/build/setup_platform_engine.sh`; start it with
+`.engine-venv/Scripts/python.exe scripts/run_platform_engine.py` on Windows or
+`.engine-venv/bin/python scripts/run_platform_engine.py` on Linux, then launch the
+Qt application in another terminal. Companion sessions/accounts are separate
+from the V3 native Store; provider-dependent capabilities need configuration.
 
 ## Launcher UI correction
 

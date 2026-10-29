@@ -5,3 +5,6 @@
 *.user
 *.sqlite*
 __pycache__/
+
+/.engine-venv/
+.pytest_cache/

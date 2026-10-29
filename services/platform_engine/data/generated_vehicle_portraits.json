@@ -1,0 +1,668 @@
+{
+  "schema_version": 1,
+  "vehicles": {
+    "toyota_prius_xw30": {
+      "sha256": "4b90e4ab7a940046ac23331cd88dbf5822e25bbdf206ef8e0945280115df4e8c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/toyota_prius_xw30.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-e8e98efd-7414-4f03-9003-e95bf823d02d",
+      "registered_at": "2026-10-22T11:59:42.296437+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "toyota_yaris_xp90": {
+      "sha256": "533f1a1161eb2d09c758256bfe4b8923508e5bd9189a33bc1ec3355bd07e36af",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/toyota_yaris_xp90.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-a767f682-fac0-491f-8204-e7cc94d03483",
+      "registered_at": "2026-10-22T11:59:42.296935+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "toyota_land-cruiser-prado_j150": {
+      "sha256": "c68a5efbb247ebb53e378986ede46c03bca1beec7ba33e78aeb1981e8fb7853b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/toyota_land-cruiser-prado_j150.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-162de283-a537-49b1-b527-2cd44362a8a3",
+      "registered_at": "2026-10-22T11:59:42.297740+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "honda_civic_fb": {
+      "sha256": "144754fe12f3bfa904f6d64911c2661e1ae1a244f562ec817f7504c301375c3f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/honda_civic_fb.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-2815f02d-9b95-4d1c-8408-acfd596ec8f2",
+      "registered_at": "2026-10-22T11:59:42.298180+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "honda_accord_cp": {
+      "sha256": "c712d08e51c1cdb59b84562bdb94c1e86cc173111d8e8f89b2477160827aa0ea",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/honda_accord_cp.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-9b300f7b-038b-4473-9833-26d00a18e888",
+      "registered_at": "2026-10-22T11:59:42.298866+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "honda_cr-v_re": {
+      "sha256": "9a44f0cfa63b41273ad87868a44c25d24bef19e2b08d804a35f65c8742d96588",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/honda_cr-v_re.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-39c36ac6-8c8e-49d5-81c2-de74d623abd3",
+      "registered_at": "2026-10-22T11:59:42.299302+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "nissan_qashqai_j10": {
+      "sha256": "9deba3133d3d528d0f2848a9118bd8948132527fd86c054d0eb31f59bfb84a3b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/nissan_qashqai_j10.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-74a65f36-44ae-4b1c-94d9-ad77abfc4b91",
+      "registered_at": "2026-10-22T11:59:42.299910+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "nissan_x-trail_t31": {
+      "sha256": "bc8132aa1819ff2d759001f5e5a3b66709599fede8211572a201dd071eea828c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/nissan_x-trail_t31.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-0776149d-4318-49a4-8951-42487b048ece",
+      "registered_at": "2026-10-22T11:59:42.300619+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "nissan_altima_l32": {
+      "sha256": "c8fbd0fc37ca4f9db865374ba28e23a95d365c683a9fdc1c97f9dad932090153",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/nissan_altima_l32.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-510bb94f-4c36-43fd-9c25-dffdb0f1c083",
+      "registered_at": "2026-10-22T11:59:42.301025+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "mazda_mazda3_bl": {
+      "sha256": "0586f60fa211794703b8d834b172ca92043b51abff44e2f60ebac73743e70790",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/mazda_mazda3_bl.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-0f34eaf1-5498-4afa-b635-6160d0ed6aad",
+      "registered_at": "2026-10-22T11:59:42.301636+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "mazda_cx-5_ke": {
+      "sha256": "ae38960ec3baa24b11ab9d3902d2155b23e20b49fc9fd20d029d2cc2a4f21a1f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/mazda_cx-5_ke.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-99d6c5b6-f629-4332-a911-cecb806b90c8",
+      "registered_at": "2026-10-22T11:59:42.302070+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "subaru_forester_sh": {
+      "sha256": "76f4d4e9038e76e1e6c22e849ed252b8e1b6675ec1eb25c7c0b1d1a3c9001058",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/subaru_forester_sh.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-da667640-2d8c-4851-b3db-03dee35dab55",
+      "registered_at": "2026-10-22T11:59:42.302733+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "subaru_outback_br": {
+      "sha256": "ef89d7eb143b9822e000d7711ac2c9433b83ef2088172d19368a4ae03b64592b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/subaru_outback_br.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-e08218e7-af75-42b1-af78-38c9b32e1b2d",
+      "registered_at": "2026-10-22T11:59:42.303184+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "mitsubishi_lancer_cy": {
+      "sha256": "0f830ef63393955feededc4ea1da378848688bb1058d15a60d66c5a1e67adb60",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/mitsubishi_lancer_cy.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-233f4873-c2ae-4401-a7c1-47d4895f4f20",
+      "registered_at": "2026-10-22T11:59:42.303936+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "mercedes-benz_ml-class_w164": {
+      "sha256": "d9d0140db68d693f37fea7aa503c2cd049df6ff42d7d2d776b4a63633c4f8995",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/mercedes-benz_ml-class_w164.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-cb98fce3-81b8-4745-88fa-cef11bb52ecd",
+      "registered_at": "2026-10-22T11:59:42.304519+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "bmw_x5_e70": {
+      "sha256": "7d70c3ac6c46d31aa6dee2330861d1b756b23349848de0b8a923fb7d03b861ae",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/bmw_x5_e70.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-12d84bf4-0f0e-4fd4-86ae-9a5054f52ba9",
+      "registered_at": "2026-10-22T11:59:42.304997+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "audi_a4_b8": {
+      "sha256": "999f78bbf1ab08a8d2b6accfe5136afaedbd7662756816e02e917e4ee1b6fda9",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/audi_a4_b8.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-74958791-94e6-4a21-b403-9ebc1f9a4382",
+      "registered_at": "2026-10-22T11:59:42.305587+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "bmw_x5_f15": {
+      "sha256": "1d90d218bfdc55d57fd0f740338cbccfcbb29361e1f835d4604e335b37d7099c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/bmw_x5_f15.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-fc11bf04-0d15-421f-b598-9ada246971eb",
+      "registered_at": "2026-10-22T11:59:42.306286+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "kia_sportage_ql": {
+      "sha256": "23451f3418438f313657af1ae1fbaf53824a8f58e436883b4c021df68f0a53c7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/kia_sportage_ql.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-250b7785-ead9-4fc0-82a5-9da33dfc7f63",
+      "registered_at": "2026-10-22T11:59:42.306816+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "volkswagen_jetta_a6": {
+      "sha256": "81d670957dac60556f283893011e025857762df0f2a225d753f96826f093c6a5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/volkswagen_jetta_a6.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-242a9aaa-7ac9-419d-a709-c56f30a2572f",
+      "registered_at": "2026-10-22T11:59:42.307204+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "hyundai_elantra_ad": {
+      "sha256": "d801b9a664c743a8b31d65acb619c3d410621ff36fc628aeacaf66a6197a2daa",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/hyundai_elantra_ad.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-9eb6bcc2-0481-48b8-9e96-12bcfb09bcb8",
+      "registered_at": "2026-10-22T11:59:42.307721+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "lexus_es_xv60": {
+      "sha256": "d7fb1c6c7dd9320655ebbaef495c072f83f16d275fd0e005946178126713a4b8",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/lexus_es_xv60.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-587cb533-bd94-4b92-a5a5-dfbc89f9e374",
+      "registered_at": "2026-10-22T11:59:42.308167+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "mazda_mazda6_gj": {
+      "sha256": "a5bf276b4a401cc25323ca5c8dfeb817463ba25ceb1d845606adeab9cdda6bd1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/mazda_mazda6_gj.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-ff9b2306-8b00-4dc8-b601-c7cc38a17974",
+      "registered_at": "2026-10-22T11:59:42.308744+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "audi_q5_8r": {
+      "sha256": "9aa3b852323fb3ec02493915d8b9dbb66264313b3cc39119f35b7a3b19e60762",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/audi_q5_8r.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-7d05beb2-75cb-40dc-8c17-999d274621b4",
+      "registered_at": "2026-10-22T11:59:42.309513+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "lada_granta_2190": {
+      "sha256": "0b88369fe19e32b0c98a4622af957e0e8e8bea0a8b9ba3119d2dc8d98659a26b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/lada_granta_2190.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-3ce666aa-c440-4315-b988-c792072bae96",
+      "registered_at": "2026-10-22T11:59:42.309972+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "lada_vesta_2180": {
+      "sha256": "94c50932e2a96d480441340a2cc5677abaad05191b5b8e3acbde03f40e8575ff",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/lada_vesta_2180.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-e8f1411e-b560-4c25-a24c-5817e6da8e85",
+      "registered_at": "2026-10-22T11:59:42.310495+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "skoda_octavia_1z": {
+      "sha256": "eeae7da121ac55814c4469735834f66b8be42cb48f78fe7210c2aaba2720e82e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/skoda_octavia_1z.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-bd931468-4dd1-46fc-9749-ae47f80f525a",
+      "registered_at": "2026-10-22T11:59:42.311156+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "audi_a6_c6": {
+      "sha256": "d5d87b410f5febf6b54a8c375aee2ed2951b1661266f1df52322c7ddde60cb94",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/audi_a6_c6.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-c407f328-a9fc-41fd-bc9c-131ef41634e2",
+      "registered_at": "2026-10-22T11:59:42.311624+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "volkswagen_tiguan_5n": {
+      "sha256": "470c58943c070cc17ccfc27a62eee62e4f199f93f9ecd9c1155e52709ed99b96",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/volkswagen_tiguan_5n.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-6b8c6d0c-01fe-4aaf-a473-c7a8efaf166e",
+      "registered_at": "2026-10-22T11:59:42.312084+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "hyundai_elantra_hd": {
+      "sha256": "154cc68e74f0920d354bd88c15f70e8a657bb88d9e8d9d495231d93b59200687",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/hyundai_elantra_hd.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-84839e33-6006-482a-8c3f-b998dc17a33f",
+      "registered_at": "2026-10-22T11:59:42.312606+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "hyundai_sonata_yf": {
+      "sha256": "d6896ea91d56ce6e62466434dbf3cc5131eaa90d7b9cad8f46c001cd2b7e0714",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/hyundai_sonata_yf.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-f125b2bc-2ccf-4579-813f-5e679964bdb5",
+      "registered_at": "2026-10-22T11:59:42.313068+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "hyundai_tucson_lm": {
+      "sha256": "f9034be05b2aad9551d8c32b64565830c07ced33e662c91dc1023e9a4a052ff7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/hyundai_tucson_lm.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-70988dde-3fe3-49b3-854c-2eb0f44dba79",
+      "registered_at": "2026-10-22T11:59:42.313606+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "ford_fiesta_b299": {
+      "sha256": "c455fe0b3d3c3d488636c49b5f37c50ab3b0b1bedcbdf3b00fefaaff837e7af9",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/ford_fiesta_b299.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-f657d94d-15ed-46e5-8f35-8d854808692c",
+      "registered_at": "2026-10-22T11:59:42.314289+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "chevrolet_cruze_j300": {
+      "sha256": "459d91e2a67f74a5eaa608dbe095cae7891497d40ff77c6607c144c459573b68",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/chevrolet_cruze_j300.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-241077d4-f29f-40b3-bdd0-e10490249b6b",
+      "registered_at": "2026-10-22T11:59:42.315311+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "chevrolet_malibu_eighth-generation": {
+      "sha256": "a2bd29680757ec522946ecbca721c9eada8886ab697b69c3a14c2ca4a00d67e3",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/chevrolet_malibu_eighth-generation.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-f8e5ebb9-7040-4edf-bf85-9b4ad36d2358",
+      "registered_at": "2026-10-22T11:59:42.315855+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "renault_megane_iii": {
+      "sha256": "fabf2a72f4f051567dec4a1af93704dd0d8fd5ee966f1e5bdb60b3a873aad2bd",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/renault_megane_iii.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-0e328dac-d20f-4894-b8c7-cca8ed8f8388",
+      "registered_at": "2026-10-22T11:59:42.316781+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "renault_duster_hs": {
+      "sha256": "66a5ab8f760fafe187c068dda957596641ebfd194ef4fb9b141f89bbce6615d5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/renault_duster_hs.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-3d7bee21-6617-4da1-b2f5-93980cc5e156",
+      "registered_at": "2026-10-22T11:59:42.317462+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "opel_astra_j": {
+      "sha256": "d6650329196ab511dd1177f60024322dea5c988976b60d62036c3f4f1a902ee1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/opel_astra_j.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-1148f6f5-f039-4c60-8cbf-5367321d3d83",
+      "registered_at": "2026-10-22T11:59:42.317903+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "peugeot_308_t7": {
+      "sha256": "ba60dc7778a7d87ae59724e74788ea60b9c575112454616aa5d293ed44a29402",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/peugeot_308_t7.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-8f7d5d3b-df61-4c9c-a725-08bd85fa5429",
+      "registered_at": "2026-10-22T11:59:42.318467+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "lexus_rx_al10": {
+      "sha256": "3a593369de997bf5637352639d2ecd3cf94734443349895ad6f15f45b54b93c9",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/lexus_rx_al10.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-00105056-5ddd-4c09-9d3a-fa6ec8c8070d",
+      "registered_at": "2026-10-22T11:59:42.319096+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "toyota_camry_xv70": {
+      "sha256": "2beecbdd62dd739a7d40e76e08ad31d59c89acbd63f6dcbd0dcb54b341e527ff",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/toyota_camry_xv70.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-fbd1650b-ac18-4ea0-a7fa-ff1c10a18407",
+      "registered_at": "2026-10-22T11:59:42.319591+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "toyota_corolla_e210": {
+      "sha256": "08c3a219157437106ac8477b484415c6b384476e4ed095b84bff27ec033808d2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/toyota_corolla_e210.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-aa706745-c835-47a4-a795-a2c54e93e7fe",
+      "registered_at": "2026-10-22T11:59:42.319976+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "toyota_rav4_xa50": {
+      "sha256": "062b80116d8f10a721fbed20e63f78467d9b8ead40336c28fe418c01b7fe2f3f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/toyota_rav4_xa50.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-2634f8ab-7632-4a11-b4ae-7a43a585f52d",
+      "registered_at": "2026-10-22T11:59:42.320334+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "toyota_land-cruiser_j200": {
+      "sha256": "8a8d745c53e0c1f81428c7f67f632ddfbbf961e7293a79bcb9f82cde483a5b2a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/toyota_land-cruiser_j200.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-4cbb0bc6-96d5-4721-b76e-88c822189d56",
+      "registered_at": "2026-10-22T11:59:42.320789+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "toyota_prius_xw50": {
+      "sha256": "f89046b21e82389c952d4dcb793b3e10c422cc92a80553492220962e87f6e85d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/toyota_prius_xw50.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-29e88ae5-5d7c-45d4-83dd-2435f20e816a",
+      "registered_at": "2026-10-22T11:59:42.321253+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "honda_civic_fc-fk": {
+      "sha256": "50b27ff165dcf24b021df3853a7f5e195453cab728bbbda3a7d0a4638fa4904f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/honda_civic_fc-fk.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-a2ed35a7-4065-4e21-b41e-ec848dbe4468",
+      "registered_at": "2026-10-22T11:59:42.321611+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "honda_cr-v_rw-rt": {
+      "sha256": "e6b8312646859c1231d5cbcc38f7d13cc2a21935e42e832c6cc9df6b9babc55d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/honda_cr-v_rw-rt.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-d1ce58d2-5c51-4c8e-b6f6-2044d8026e8e",
+      "registered_at": "2026-10-22T11:59:42.322386+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "nissan_rogue_t32": {
+      "sha256": "6b2d2d8805f14358b6124c4bcced7aea25c6094314994acf551ba870645d94a9",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/nissan_rogue_t32.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-f933ac71-6824-4a16-a7ac-eda1d14154bb",
+      "registered_at": "2026-10-22T11:59:42.322856+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "nissan_sentra_b17": {
+      "sha256": "46ce0b6503b35b11f8582957866f1d3b2e43540b2d1908f2b0a86c5f2175bd0d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/nissan_sentra_b17.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-7b3227e1-fac4-48e9-b70f-527846940ffe",
+      "registered_at": "2026-10-22T11:59:42.323297+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "mercedes-benz_c-class_w205": {
+      "sha256": "c9185c0822ebce12d3a3c135fdcdbd4619eb7fad1a8351001362ee36b204ad2e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/mercedes-benz_c-class_w205.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-409e5a92-fc39-47ae-a83d-e852369c7ae2",
+      "registered_at": "2026-10-22T11:59:42.324080+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    },
+    "bmw_5-series_f10": {
+      "sha256": "7b1b1f696d732ea46443c5cf8c8301530debcc98b489d0ccaa4b9596cf85da05",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "path": "assets/vehicle_models/bmw_5-series_f10.png",
+      "kind": "generated_illustration",
+      "generator": "image_gen",
+      "generated_asset_id": "exec-1e2e8481-f177-4491-9432-c9eca185ca9f",
+      "registered_at": "2026-10-22T11:59:42.324589+00:00",
+      "notice": "Illustration only; vehicle geometry/trim is not manufacturer-certified"
+    }
+  }
+}

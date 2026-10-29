@@ -1,0 +1,2 @@
+{"case_id":"RAG-P0302-LPG","query":"Mercedes M272 P0302 LPG misfire below 2000 rpm","expected_document_ids":["lpg_misfire_procedure"],"graded_relevance":{"lpg_misfire_procedure":3,"generic_misfire":1},"required_terms":["LPG","P0302","misfire"]}
+{"case_id":"RAG-MAF-01","query":"MAF sensor implausible air mass rough running","expected_document_ids":["maf_diagnostic"],"graded_relevance":{"maf_diagnostic":3,"generic_rough_running":1},"required_terms":["MAF"]}

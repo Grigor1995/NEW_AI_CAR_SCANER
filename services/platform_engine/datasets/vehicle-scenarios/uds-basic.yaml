@@ -1,0 +1,11 @@
+scenario_id: UDS_BASIC_001
+name: Basic UDS read session
+request_id: 0x7E0
+response_id: 0x7E8
+operations:
+  - service: DiagnosticSessionControl
+    request: "10 03"
+    expected_response_prefix: "50 03"
+  - service: ReadDataByIdentifier
+    request: "22 F1 90"
+    expected_response_service: "62"

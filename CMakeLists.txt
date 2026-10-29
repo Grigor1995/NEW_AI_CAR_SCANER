@@ -3,6 +3,8 @@ project(CarDiagnosticAnalysis VERSION 0.1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+option(CDA_BUILD_ENGINE "Build native platform-engine acceleration library" ON)
 option(CDA_BUILD_UI "Build shared Qt Quick client" ON)
 option(CDA_BUILD_BACKEND "Build local macroservice host" ON)
 option(CDA_SANITIZE "Enable address/undefined sanitizers" OFF)
@@ -49,7 +51,7 @@ endif()
 if(CDA_BUILD_UI)
  find_package(Qt6 REQUIRED COMPONENTS Quick QuickControls2 Svg LinguistTools)
  qt_standard_project_setup(REQUIRES 6.8)
- qt_add_executable(car_diagnostic apps/shared/main.cpp apps/shared/app_model.cpp)
+ qt_add_executable(car_diagnostic apps/shared/main.cpp apps/shared/app_model.cpp apps/shared/platform_client.cpp)
  if(WIN32)
   configure_file(apps/windows/app.rc.in "${CMAKE_CURRENT_BINARY_DIR}/app.rc" @ONLY)
   target_sources(car_diagnostic PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/app.rc")
@@ -65,10 +67,10 @@ if(CDA_BUILD_UI)
  set_source_files_properties(ui/themes/Neo.qml PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
  file(GLOB NAV_ICONS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/*.svg")
  qt_add_qml_module(car_diagnostic URI CarDiagnostic VERSION 1.0
-  QML_FILES ui/Main.qml ui/components/MetricCard.qml ui/themes/Neo.qml ui/charts/TelemetryTrace.qml
+  QML_FILES ui/pages/PlatformPage.qml ui/Main.qml ui/components/MetricCard.qml ui/themes/Neo.qml ui/charts/TelemetryTrace.qml
    ui/pages/LauncherPage.qml ui/components/NeoButton.qml ui/components/NeoComboBox.qml
    ui/components/NeoTextField.qml ui/components/NeoTextArea.qml ui/components/NeoSpinBox.qml ui/components/NeoDialog.qml
-  RESOURCES assets/app_icon/canonical.svg assets/launcher/background.png assets/launcher/icons-3d.png assets/launcher/brand-car.png ${NAV_ICONS})
+  RESOURCES assets/platform-operations.json assets/app_icon/canonical.svg assets/launcher/background.png assets/launcher/icons-3d.png assets/launcher/brand-car.png ${NAV_ICONS})
  set_target_properties(car_diagnostic PROPERTIES WIN32_EXECUTABLE TRUE MACOSX_BUNDLE TRUE
   MACOSX_BUNDLE_BUNDLE_NAME "Car Diagnostic Analysis"
   MACOSX_BUNDLE_GUI_IDENTIFIER "org.cardiagnostic.analysis")
@@ -79,4 +81,11 @@ if(CDA_BUILD_BACKEND)
  find_package(Qt6 REQUIRED COMPONENTS HttpServer)
  qt_add_executable(cda_backend backend/api/main.cpp)
  target_link_libraries(cda_backend PRIVATE cda_services Qt6::HttpServer)
+endif()
+
+if(CDA_BUILD_ENGINE)
+ find_package(Qt6 6.8 REQUIRED COMPONENTS Core)
+ add_library(cda_engine SHARED native/engine/bridge.cpp)
+ target_link_libraries(cda_engine PRIVATE cda_core Qt6::Core)
+ install(TARGETS cda_engine LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
 endif()

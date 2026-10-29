@@ -1,0 +1,11 @@
+{
+  "register": 201,
+  "login": 200,
+  "me": 200,
+  "roles": [
+    "USER"
+  ],
+  "migration_applied": true,
+  "database_scope": "separate_ecosystem_database",
+  "remote_delivery": false
+}

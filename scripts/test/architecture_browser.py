@@ -53,16 +53,16 @@ def run(browser,binary):
             with connect(tab['webSocketDebuggerUrl'],open_timeout=5) as ws:
                 c=Browser(ws)
                 for _ in range(100):
-                    if c.evaluate('document.querySelectorAll(".node").length===30'):break
+                    if c.evaluate('document.querySelectorAll(".node").length===32'):break
                     time.sleep(.03)
                 checks={}
                 def check(name,value):
                     if not value: raise AssertionError(name)
                     checks[name]=value
-                check('30_actual_nodes',c.evaluate('document.querySelectorAll(".node").length===30'))
+                check('32_actual_nodes',c.evaluate('document.querySelectorAll(".node").length===32'))
                 check('24_sections',c.evaluate('''(()=>{const s=document.getElementById('section');for(const o of s.options){s.value=o.value;s.dispatchEvent(new Event('change'));if(!document.querySelector('.node'))return false;}s.value='overview';s.dispatchEvent(new Event('change'));return s.options.length===24;})()'''))
                 check('search',c.evaluate('''(()=>{const s=document.getElementById('search');s.value='SQLite / PostgreSQL';s.dispatchEvent(new Event('input'));const ok=document.querySelectorAll('.node').length===1;s.value='';s.dispatchEvent(new Event('input'));return ok;})()'''))
-                check('collapse_expand',c.evaluate('''(()=>{const b=document.querySelector('[data-group=Clients]');b.click();const ok=document.querySelectorAll('.node').length===26;document.getElementById('expand').click();return ok&&document.querySelectorAll('.node').length===30;})()'''))
+                check('collapse_expand',c.evaluate('''(()=>{const b=document.querySelector('[data-group=Clients]');b.click();const ok=document.querySelectorAll('.node').length===28;document.getElementById('expand').click();return ok&&document.querySelectorAll('.node').length===32;})()'''))
                 check('component_inspector',c.evaluate('''(()=>{document.querySelector('[data-node=safety]').dispatchEvent(new Event('click',{bubbles:true}));return document.getElementById('inspector').textContent.includes('CUSTOMER')&&document.getElementById('inspector').textContent.includes('source');})()'''))
                 check('edge_details',c.evaluate('''(()=>{document.querySelector('[data-edge]').dispatchEvent(new Event('click',{bubbles:true}));return document.getElementById('inspector').textContent.includes('Direction:');})()'''))
                 check('offline_filter',c.evaluate('''(()=>{const s=document.getElementById('path');s.value='offline';s.dispatchEvent(new Event('change'));const ok=!document.querySelector('.edge.online');s.value='all';s.dispatchEvent(new Event('change'));return ok;})()'''))
@@ -90,9 +90,9 @@ def run(browser,binary):
                     checks['offline_file_dashboard']={'status':'BLOCKED','reason':'Managed Chromium policy blocks file:// navigation; policy was not bypassed. Local HTTP bundled dashboard passed.'}
                 else:
                     for _ in range(100):
-                        if c.evaluate('location.protocol==="file:"&&document.querySelectorAll(".node").length===30'):break
+                        if c.evaluate('location.protocol==="file:"&&document.querySelectorAll(".node").length===32'):break
                         time.sleep(.03)
-                    check('offline_file_dashboard',c.evaluate('location.protocol==="file:"&&document.querySelectorAll(".node").length===30&&document.getElementById("metrics").textContent.includes("UNAVAILABLE")'))
+                    check('offline_file_dashboard',c.evaluate('location.protocol==="file:"&&document.querySelectorAll(".node").length===32&&document.getElementById("metrics").textContent.includes("UNAVAILABLE")'))
                 print(json.dumps({'status':'PASS_WITH_BLOCKED' if isinstance(checks.get('offline_file_dashboard'),dict) else 'PASS','checks':checks},indent=2))
         finally:
             if chrome:chrome.terminate();chrome.wait(timeout=10)

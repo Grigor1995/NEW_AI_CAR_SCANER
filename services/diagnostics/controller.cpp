@@ -3,14 +3,15 @@
 #include <QDateTime>
 namespace cda {
 DiagnosticController::DiagnosticController(QObject *p) : QObject(p) {
-    for (const auto &name : {"rpm", "speed", "coolant"})
-        values_.append(QVariantMap{{"name", name},
+    for (const auto &definition : livePids())
+        values_.append(QVariantMap{{"name", definition.name},
                                    {"quality", "unavailable"},
                                    {"value", QVariant()},
                                    {"unit", QString()},
                                    {"at", QString()}});
     status_ = tr("No adapter connected");
-    poll_.setInterval(1000);
+    // One outstanding command at a time; schedule up to ten requests/second.
+    poll_.setInterval(100);
     connect(&transport_, &QtElm::ready, this, [this] {
         queue_ = {"ATZ", "ATE0", "ATL0", "ATS0", "ATH0", "ATCAF1", "ATSP0", "0100"};
         status_ = tr("Detecting supported PIDs");
@@ -75,10 +76,20 @@ void DiagnosticController::response(const QString &raw) {
             if (raw.contains('?') || raw.contains("ERROR"))
                 throw std::invalid_argument("Adapter rejected initialization");
         } else if (command == "0100") {
-            auto supported = supportedPids(0, pidData(0, raw.toStdString()));
+            std::vector<unsigned> supported;
+            bool completeBitmap = false;
+            for (const auto &frame : parseElm(raw.toStdString()))
+                if (frame.size() == 6 && frame[0] == 0x41 && frame[1] == 0) {
+                    completeBitmap = true;
+                    auto page = supportedPids(0, Bytes(frame.begin() + 2, frame.end()));
+                    supported.insert(supported.end(), page.begin(), page.end());
+                }
+            if (!completeBitmap)
+                throw std::invalid_argument("Complete supported PID bitmap required");
             polling_.clear();
             pollIndex_ = 0;
-            for (auto pid : {0x0c, 0x0d, 0x05}) {
+            for (const auto &definition : livePids()) {
+                auto pid = definition.pid;
                 bool present =
                     std::find(supported.begin(), supported.end(), unsigned(pid)) != supported.end();
                 if (present)
@@ -86,7 +97,7 @@ void DiagnosticController::response(const QString &raw) {
                 else
                     for (auto &v : values_) {
                         auto m = v.toMap();
-                        QString name = pid == 12 ? "rpm" : pid == 13 ? "speed" : "coolant";
+                        QString name = definition.name;
                         if (m["name"] == name) {
                             m["quality"] = "unsupported";
                             v = m;

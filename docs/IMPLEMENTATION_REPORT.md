@@ -1,5 +1,10 @@
 # V3 implementation report — new C++/Qt foundation
 
+Update 2026-10-29: the subsequent explicit source-functionality request restores a
+source-compatible Python companion and adds C++ kernels/Qt integration.
+[Current migration report](migration/README.md) supersedes earlier no-reuse
+statements for those services. The historical reset record below remains valid.
+
 Date: 2026-10-28. Repository: Grigor1995/NEW_AI_CAR_SCANER.
 This is a tested development milestone, not completion of the production product.
 

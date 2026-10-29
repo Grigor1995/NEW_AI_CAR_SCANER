@@ -1,0 +1,9 @@
+Test project /workspace/NEW_AI_CAR_SCANER/build/dev
+    Start 1: core_contracts
+1/2 Test #1: core_contracts ...................   Passed    0.18 sec
+    Start 2: service_contracts
+2/2 Test #2: service_contracts ................   Passed    1.87 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =   2.05 sec

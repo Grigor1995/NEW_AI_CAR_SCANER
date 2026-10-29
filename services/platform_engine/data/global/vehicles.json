@@ -1,0 +1,18 @@
+[
+  {
+    "make": "Mercedes-Benz",
+    "model": "W211 E350",
+    "chassis": "W211",
+    "year": 2006,
+    "engine": "M272 3.5",
+    "fuel": ["petrol", "LPG"],
+    "ecu": "ME 9.7"
+  },
+  {
+    "make": "Toyota",
+    "model": "Camry",
+    "year": 2020,
+    "engine": "2.5",
+    "fuel": ["petrol"]
+  }
+]

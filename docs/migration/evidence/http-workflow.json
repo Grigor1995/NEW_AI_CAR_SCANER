@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "method": "GET",
+      "path": "/api/v1/migration/runtime",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/openapi.json",
+      "status": 200
+    },
+    {
+      "check": "all_source_operations_registered",
+      "count": 135
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/6412ae3f-093a-4f10-9b1c-7bd7300ffbe8/symptoms",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/6412ae3f-093a-4f10-9b1c-7bd7300ffbe8/dtcs",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/intelligence/sessions/6412ae3f-093a-4f10-9b1c-7bd7300ffbe8/analyze",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/decision/sessions/6412ae3f-093a-4f10-9b1c-7bd7300ffbe8/plan",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/ai/sessions/6412ae3f-093a-4f10-9b1c-7bd7300ffbe8/context",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/ai/knowledge",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/ai/knowledge/search",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/telemetry/sessions/6412ae3f-093a-4f10-9b1c-7bd7300ffbe8/samples",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/telemetry/sessions/6412ae3f-093a-4f10-9b1c-7bd7300ffbe8/summary",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/telemetry/sessions/6412ae3f-093a-4f10-9b1c-7bd7300ffbe8/analyze",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/network-discovery/sessions/6412ae3f-093a-4f10-9b1c-7bd7300ffbe8/frames",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/network-discovery/sessions/6412ae3f-093a-4f10-9b1c-7bd7300ffbe8/map",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-reference",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-reference/toyota_corolla_e140-e150/image",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/obd/j1939/decode",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/sessions/6412ae3f-093a-4f10-9b1c-7bd7300ffbe8/report",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/sessions/6412ae3f-093a-4f10-9b1c-7bd7300ffbe8/report?format=pdf",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/sessions/6412ae3f-093a-4f10-9b1c-7bd7300ffbe8",
+      "status": 200
+    }
+  ],
+  "session_id": "6412ae3f-093a-4f10-9b1c-7bd7300ffbe8",
+  "physical_hardware_tested": false
+}

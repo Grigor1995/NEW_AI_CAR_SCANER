@@ -1,4 +1,5 @@
 #include "apps/shared/app_model.hpp"
+#include "apps/shared/platform_client.hpp"
 #include <QDir>
 #include <QFile>
 #include <QGuiApplication>
@@ -16,6 +17,7 @@
 #include <QTimer>
 #include <iostream>
 #ifdef CDA_UI_CHECKS
+#include "tests/ui/platform_workflow.hpp"
 #include "tests/ui/reference_launcher.hpp"
 #endif
 int main(int argc, char **argv) {
@@ -50,7 +52,9 @@ int main(int argc, char **argv) {
     const auto directory = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     QDir().mkpath(directory);
     AppModel model(directory + "/local.sqlite");
+    PlatformClient platform;
     QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty("Platform", &platform);
     engine.rootContext()->setContextProperty("App", &model);
     QObject::connect(&model, &AppModel::settingsChanged, &engine,
                      &QQmlApplicationEngine::retranslate);
@@ -61,6 +65,13 @@ int main(int argc, char **argv) {
     if (!window)
         return 1;
 #ifdef CDA_UI_CHECKS
+    if (arguments.contains("--platform-self-test")) {
+        QTimer::singleShot(200, &app, [&] {
+            const auto at = arguments.indexOf("--platform-self-test");
+            const auto path = at + 1 < arguments.size() ? arguments[at + 1] : QString();
+            app.exit(runPlatformWorkflow(platform, window, path) ? 0 : 2);
+        });
+    }
     if (arguments.contains("--ui-regression")) {
         const auto index = arguments.indexOf("--ui-regression");
         const QString output = index + 1 < arguments.size() ? arguments[index + 1] : "artifacts/ui";

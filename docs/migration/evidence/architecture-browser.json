@@ -1,0 +1,22 @@
+{
+  "status": "PASS_WITH_BLOCKED",
+  "checks": {
+    "32_actual_nodes": true,
+    "24_sections": true,
+    "search": true,
+    "collapse_expand": true,
+    "component_inspector": true,
+    "edge_details": true,
+    "offline_filter": true,
+    "zoom_buttons": true,
+    "theme": true,
+    "real_pointer_pan": true,
+    "real_wheel_zoom": true,
+    "real_backend_observations": true,
+    "responsive_layout": true,
+    "offline_file_dashboard": {
+      "status": "BLOCKED",
+      "reason": "Managed Chromium policy blocks file:// navigation; policy was not bypassed. Local HTTP bundled dashboard passed."
+    }
+  }
+}

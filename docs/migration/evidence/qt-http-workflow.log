@@ -1,0 +1,11 @@
+PASS GET /api/v1/migration/runtime
+PASS POST /api/v1/sessions
+PASS POST /api/v1/sessions/96ba4575-1394-494a-bd37-5e4bf1883149/symptoms
+PASS POST /api/v1/sessions/96ba4575-1394-494a-bd37-5e4bf1883149/dtcs
+PASS POST /api/v1/intelligence/sessions/96ba4575-1394-494a-bd37-5e4bf1883149/analyze
+PASS GET /api/v1/decision/sessions/96ba4575-1394-494a-bd37-5e4bf1883149/plan
+PASS GET /api/v1/network-discovery/sessions/96ba4575-1394-494a-bd37-5e4bf1883149/map
+PASS POST /api/v1/ai/knowledge
+PASS POST /api/v1/ai/knowledge/search
+PASS malformed JSON rejected locally
+PLATFORM UI WORKFLOW 10 passed

@@ -1,0 +1,26 @@
+{
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "repetitions": 7,
+  "includes_marshalling": true,
+  "results": [
+    {
+      "samples": 100,
+      "python_median_ms": 0.18421300046611577,
+      "cpp_packed_median_ms": 0.051126000471413136,
+      "speedup": 3.6031177633211815
+    },
+    {
+      "samples": 5000,
+      "python_median_ms": 7.716514010098763,
+      "cpp_packed_median_ms": 3.75018100021407,
+      "speedup": 2.0576377539266195
+    },
+    {
+      "samples": 50000,
+      "python_median_ms": 153.49931399396155,
+      "cpp_packed_median_ms": 49.9252930021612,
+      "speedup": 3.074580132906116
+    }
+  ]
+}

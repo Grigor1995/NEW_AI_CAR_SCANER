@@ -1,0 +1,22 @@
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1
+pydantic>=2.8,<3
+sqlalchemy>=2.0,<3
+psycopg[binary]>=3.2,<4
+alembic>=1.13,<2
+
+# Physical transport support
+bleak>=3.0,<4
+pyserial>=3.5,<4
+
+pypdf>=5,<7
+PyYAML>=6,<7
+python-multipart>=0.0.9,<1
+
+# Local LLM is provided by llama-server.exe and accessed through its HTTP API.
+
+# Unicode PDF reports shared by all native clients
+reportlab>=4.2,<5
+
+# IANA timezone data for the preserved ecosystem branch on Windows
+tzdata>=2024.1

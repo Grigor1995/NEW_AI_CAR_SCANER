@@ -133,5 +133,29 @@
       "Unimplemented workflows remain labeled in destination pages",
       "Qt service/UI line coverage not measured; historical pure-domain coverage is not UI coverage"
     ]
+  },
+  "source_functionality_migration": {
+    "date": "2026-10-29",
+    "source_main": "a71c547b4b58f88f9c09f7f25d86931b79131bd2",
+    "source_operations": 135,
+    "source_contracts_native": {
+      "passed": 373,
+      "skipped": 1,
+      "skip_reason": "Live PostgreSQL/pgvector placeholder"
+    },
+    "native_abi_tests": 17,
+    "ctest_executables_passed": 2,
+    "ui_reference_checks": 18,
+    "qt_http_workflow_checks": 10,
+    "http_workflow_checks": 22,
+    "architecture": {
+      "nodes": 32,
+      "views": 24,
+      "browser_http": "PASS",
+      "file_url": "BLOCKED_BY_BROWSER_POLICY"
+    },
+    "scope": "Linux native client + hybrid companion; Python AI/business services retained",
+    "windows_android_hardware": "NOT_RUN",
+    "evidence": "../migration/evidence"
   }
 }

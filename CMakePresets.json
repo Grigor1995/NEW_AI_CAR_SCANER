@@ -16,7 +16,8 @@
       "binaryDir": "${sourceDir}/build/core",
       "cacheVariables": {
         "CDA_BUILD_UI": "OFF",
-        "CDA_BUILD_BACKEND": "OFF"
+        "CDA_BUILD_BACKEND": "OFF",
+        "CDA_BUILD_ENGINE": "OFF"
       }
     },
     {

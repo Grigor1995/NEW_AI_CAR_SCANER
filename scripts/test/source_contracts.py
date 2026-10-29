@@ -10,7 +10,7 @@ def check(name,condition):
     if not condition: raise AssertionError(name)
     checks.append(name)
 
-check('no_legacy_application',not (root/'finalbuild').exists() and not (root/'native').exists())
+check('no_legacy_desktop_application',not (root/'finalbuild').exists() and not (root/'services/platform_engine/apps').exists())
 check('no_cicd_workflows',not (root/'.github/workflows').exists())
 for folder in ['protocols','security','telemetry','ai','interfaces']:
     for p in (root/'core'/folder).rglob('*'):

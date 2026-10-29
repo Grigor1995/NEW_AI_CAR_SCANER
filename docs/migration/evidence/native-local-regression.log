@@ -1,0 +1,51 @@
+Test project /workspace/NEW_AI_CAR_SCANER/build/dev
+    Start 1: core_contracts
+1/2 Test #1: core_contracts ...................   Passed    0.21 sec
+    Start 2: service_contracts
+2/2 Test #2: service_contracts ................   Passed    1.84 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =   2.05 sec
+{
+  "status": "PASS",
+  "checks": [
+    "unauthenticated_vehicle_access_denied",
+    "register",
+    "self_granted_admin_denied",
+    "owned_vehicle",
+    "cross_account_isolation",
+    "settings_field_whitelist",
+    "invalid_locale_rejected",
+    "token_and_vehicle_survive_restart",
+    "preferences_survive_restart",
+    "logout",
+    "revoked_token_denied",
+    "no_fake_hardware_or_payment_claims"
+  ]
+}
+UI self-test: PASS; 13 pages, 4 runtime locales, 3 themes, 2 units, narrow rendering
+PASS reference has exactly twelve expected workflows
+PASS four column reference layout
+PASS reference background loaded
+PASS all twelve 3D/reference images loaded
+PASS home screenshot
+PASS pointer drag reorders tiles
+PASS VCI card navigates to device connection
+PASS Application menu opens Settings
+PASS Settings controls readable in dark theme
+PASS safety status text readable
+PASS settings screenshot
+PASS Settings controls readable in light theme
+PASS safety status text readable
+PASS settings screenshot
+PASS unit dropdown can be changed with keyboard
+PASS text input visible and editable
+PASS mobile launcher uses two columns
+PASS mobile screenshot
+UI REGRESSION RESULT 18 passed, 0 failed
+{
+  "status": "PASS",
+  "checks": 705,
+  "translation_messages": 172
+}

@@ -1,0 +1,2830 @@
+{
+  "source_commit": "a71c547b4b58f88f9c09f7f25d86931b79131bd2",
+  "files": [
+    {
+      "path": "backend/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/acquisition/__init__.py",
+      "sha256": "f1c7ab4a2f93de7d027556ff1e165300c7a697a254f324d26b16aa77b644345a"
+    },
+    {
+      "path": "backend/acquisition/models.py",
+      "sha256": "3b0d1d2cbb19d597ee83f0922d9fc226039ab9c7f02134fb45bcefb26770487a"
+    },
+    {
+      "path": "backend/acquisition/service.py",
+      "sha256": "ea85b262f41ed0e99881cf2dd76581e36f980c8cebe64b57afcc68b1c773735c"
+    },
+    {
+      "path": "backend/ai/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/ai/embeddings/__init__.py",
+      "sha256": "d5f0a10953842bf64f6181ee1042b9b11a8445fab22021e2c92988aa9a47f8d5"
+    },
+    {
+      "path": "backend/ai/embeddings/providers.py",
+      "sha256": "f64c73dd04fc21588bd8a2a99dd2760c34e2aa5bb967b6e3399a51469450bc64"
+    },
+    {
+      "path": "backend/ai/evaluation/golden.py",
+      "sha256": "c3b50bcebfc7e0734fef4a866055b22b89149ac0ca72a6a96af955ffca1b6bb0"
+    },
+    {
+      "path": "backend/ai/evaluation/grounding.py",
+      "sha256": "cabc7a80923bc4d23f7e1ef41d897895e3578c765310c49740eda70edce6ce27"
+    },
+    {
+      "path": "backend/ai/ingestion/__init__.py",
+      "sha256": "2b6e22f6217b386ab1ddcd78b0a9afde78b62bf736431754b8e37f316e3cbb63"
+    },
+    {
+      "path": "backend/ai/ingestion/chunker.py",
+      "sha256": "d7319299009a4b99218ff857a24157ea4b0f48febaf29e5092b85def797b8808"
+    },
+    {
+      "path": "backend/ai/ingestion/dataset.py",
+      "sha256": "15d2bdb45729803c118ae45971cec161c913dc59cdeb0545cdf811cde47500ec"
+    },
+    {
+      "path": "backend/ai/ingestion/models.py",
+      "sha256": "c484fdc9ae822c706801bcb6e16aea3f4245e3f807a9bf959fc7b2c2905a230f"
+    },
+    {
+      "path": "backend/ai/ingestion/parsers.py",
+      "sha256": "38c3a61de7be54b5d97b7fb1603c7861a22e8ff57f644c860bc3a3fa29e7be3e"
+    },
+    {
+      "path": "backend/ai/ingestion/pipeline.py",
+      "sha256": "adb28f16bde7abcf23d01fd31631f7193fe88e3ea6df240a68f8ac8a2ae5580d"
+    },
+    {
+      "path": "backend/ai/interfaces.py",
+      "sha256": "afd0b302b04ce22a7c0782d7866c82c4b9cbc61a9a1065ca6f92a0fb1f20bf6e"
+    },
+    {
+      "path": "backend/ai/live_analysis.py",
+      "sha256": "38a6fe926d4e92ba45e28f0bcd275c70a26d7e7a4fcbf0ccec5d22501d3f4329"
+    },
+    {
+      "path": "backend/ai/llm/__init__.py",
+      "sha256": "ff7bc5c221401f8f5cf52469fb03391dd18b7af78da7da4e3058c2b44f553fdf"
+    },
+    {
+      "path": "backend/ai/llm/factory.py",
+      "sha256": "3537914fed5d79277097fb19b5d5604868e927234416571d0a930412198ddefc"
+    },
+    {
+      "path": "backend/ai/llm/interfaces_guard.py",
+      "sha256": "fbeb2e11dd9536e0bb6efc216e036b95a44e33e0e04245fbc4e4190e77cfe9ce"
+    },
+    {
+      "path": "backend/ai/llm/llama_cpp.py",
+      "sha256": "ed4c74f4ffb5cc83f1edf106a3bc8be5c2e9f8ed84b20ef44583c518af6998f2"
+    },
+    {
+      "path": "backend/ai/llm/llama_server.py",
+      "sha256": "7211b0b90295a0e527aaccac9e50ff898c3e359a817cd64c94bc37a7925e333e"
+    },
+    {
+      "path": "backend/ai/llm/ollama.py",
+      "sha256": "ce6e00496410c7fc56bd9142aac20f7f9c0752d17d0a1d08a8857372d3b48fec"
+    },
+    {
+      "path": "backend/ai/llm/openai_compatible.py",
+      "sha256": "ade7bc7de9ce265c092c5c729007b08e839323c5758cc5d60e77ee912f56130f"
+    },
+    {
+      "path": "backend/ai/llm/orchestrator.py",
+      "sha256": "ddf6aa5744cc715f0289d5967b7a6d50828f423dd8a6378988e26acdaa889967"
+    },
+    {
+      "path": "backend/ai/ml/__init__.py",
+      "sha256": "38c5a302be201b0c09e5e4dcb9fa14afe8141997e37e32fd109682b0982eca70"
+    },
+    {
+      "path": "backend/ai/ml/anomaly.py",
+      "sha256": "f534d9784e0f31cd979bb279393d1c31824c13582c9972a6a5e79cf09c280941"
+    },
+    {
+      "path": "backend/ai/rag/__init__.py",
+      "sha256": "40c42ee320547b6589b56941ce07cfbc111c94605a085f2eb3490c3373cdcb42"
+    },
+    {
+      "path": "backend/ai/rag/evaluation.py",
+      "sha256": "cd87c05bdb1b9a53879db0bef79a3e90f131d99daa58978ef9bbd65e65f48be8"
+    },
+    {
+      "path": "backend/ai/rag/evaluator.py",
+      "sha256": "476c07ad2ee09f31afb811cc27c9367b3de2f34a49960f969aa884f9a9a2f900"
+    },
+    {
+      "path": "backend/ai/rag/hybrid.py",
+      "sha256": "c17207dbf1dac39d821ecae76927d5ce46c2b8c4bf02a0eff5488b952cae04d9"
+    },
+    {
+      "path": "backend/ai/rag/pgvector_hybrid.py",
+      "sha256": "0817425b024903f0fc195257f4aa9ddc7e70c6f00808a2643749866247d9d6e6"
+    },
+    {
+      "path": "backend/ai/rag/quality.py",
+      "sha256": "a0f24038fbcc2d92370152cfc5f503be76ce8b28718c4fbb0b4ee3c1732c19d8"
+    },
+    {
+      "path": "backend/ai/rag/reranker.py",
+      "sha256": "22e0bfcc4df0e35842270393359d906596a597e92040ecdc687ee22f333ef64d"
+    },
+    {
+      "path": "backend/ai/rag/retrieval.py",
+      "sha256": "9b99e9d78d4d202298a0136da38b6213d790248ad87694a8c72c9d4613cc453f"
+    },
+    {
+      "path": "backend/ai/rag/store.py",
+      "sha256": "ee052ce4913bd9a9121d865916f593468715dc8d0ba3f714cc3feacd9c823001"
+    },
+    {
+      "path": "backend/ai/rag/vector_store.py",
+      "sha256": "18ea15771eafeafb754e9e807cd75f93b0fae7e97da2d95164ddfb97c163e86d"
+    },
+    {
+      "path": "backend/ai/reasoning/__init__.py",
+      "sha256": "db8b6996f7be97aaa42988ac015587db592f77f05be9db0ee7c376166bf56b14"
+    },
+    {
+      "path": "backend/ai/reasoning/engine.py",
+      "sha256": "873b661192aee4c2a2a61fbe3c613efe2805c94cbf2e4d568845fd829a9842cb"
+    },
+    {
+      "path": "backend/ai/reasoning/evidence_extractor.py",
+      "sha256": "c65e9bc53d04dc71dfb114aa0a13fc1ec409a017b43f61208edcbef1d4de2f2a"
+    },
+    {
+      "path": "backend/ai/reasoning/pipeline.py",
+      "sha256": "26557d51f924818810ea4e2803ad98a1bc5e11814e2edabcb72c8fa3f851ac7a"
+    },
+    {
+      "path": "backend/api/__init__.py",
+      "sha256": "c2c70a14c9e286ae5266e37991d6a471ed684bd76d4f405993ef2911f0058790"
+    },
+    {
+      "path": "backend/api/acquisition_routes.py",
+      "sha256": "73424527f1583732dd8c0f5b2e0ff454bc5c402dad56c83d75521ca59a5637df"
+    },
+    {
+      "path": "backend/api/active_discovery_routes.py",
+      "sha256": "987a3b3919ae6b481d40bdb3f44fb048ec071f5c40874cbae7dc20ba47d44e12"
+    },
+    {
+      "path": "backend/api/advanced_obd_routes.py",
+      "sha256": "0d29b0865d476f60ee4cb2b5e0b1fe24af41b3e2a14b90e6e81cbdbf076355e4"
+    },
+    {
+      "path": "backend/api/ai_routes.py",
+      "sha256": "48adcaa88727484103a221627c7ea3e0ad736ff3295ca14798da02c0539e66c0"
+    },
+    {
+      "path": "backend/api/client_features_routes.py",
+      "sha256": "0cb81da985b30423d1ead1bb39de5136745c911264617fadf9dda40278018767"
+    },
+    {
+      "path": "backend/api/decision_routes.py",
+      "sha256": "514ce4bb2333c4cce603b0e0423e33c1bcbb08e5e2e7e3998e947881d966d025"
+    },
+    {
+      "path": "backend/api/device_routes.py",
+      "sha256": "4c23e60cc9b4a67eab5f9ab081df5d798dd79c53c70a4cb9f981842baa28dc5c"
+    },
+    {
+      "path": "backend/api/global_data_routes.py",
+      "sha256": "23404e5aabd05fd905b0d030e4595f1ec23d5aeb28a59156270d9905485379ae"
+    },
+    {
+      "path": "backend/api/intelligence_routes.py",
+      "sha256": "85c6a1cdfe80f2b037ee8b52aa497a9476a2b55aa5247d730d48d7a117c11a09"
+    },
+    {
+      "path": "backend/api/knowledge_routes.py",
+      "sha256": "89fafee05f5f82d92e971322f0961fe14f899490852442ce5e0a7e45771374b2"
+    },
+    {
+      "path": "backend/api/multi_bus_routes.py",
+      "sha256": "8ad22df42a82ca6a924246c1fb2188554b6a2cc522c3a7123ca29dee67c029de"
+    },
+    {
+      "path": "backend/api/multi_ecu_routes.py",
+      "sha256": "080d074b5f245bf83a93f6f135e28b35bdeac422f3920027e20f1c0b180a75ed"
+    },
+    {
+      "path": "backend/api/network_discovery_routes.py",
+      "sha256": "5d5b7fe2cc16aba1f8d0338b6a3ef731e0539406704c90c30f68c7404db19327"
+    },
+    {
+      "path": "backend/api/obd_routes.py",
+      "sha256": "537b29a6668c57e36b24ca3311fe840149185f36cb26d90ff4c31319e5467bf8"
+    },
+    {
+      "path": "backend/api/platform_routes.py",
+      "sha256": "8520225f2a0e8ff24010460259a99fc8e1f60cb02fc046d7c233fbbb8bc4d56d"
+    },
+    {
+      "path": "backend/api/rag_routes.py",
+      "sha256": "ca74278065d1a32751c43d3c88221c2dbbc3c76f6e66539b878ec7d55e3d023d"
+    },
+    {
+      "path": "backend/api/state.py",
+      "sha256": "134e2725483ae0cb9c3c10bb81e3550e1b6b20107b2c59381143adf0704296de"
+    },
+    {
+      "path": "backend/api/telemetry_routes.py",
+      "sha256": "a2586d19900c9d2bab357349c91341846d95a9c2808c5e96431d973422f12210"
+    },
+    {
+      "path": "backend/api/vehicle_catalog_routes.py",
+      "sha256": "cbe6405a2887617a5002d5498757b0a1289893074d73d2c47922c11f704b8425"
+    },
+    {
+      "path": "backend/api/vehicle_diagnostic_routes.py",
+      "sha256": "0c24fef0f5cadc0d3278094e6e2e4a923843ea31889e165544d41260bea2fd69"
+    },
+    {
+      "path": "backend/api/vehicle_reference_routes.py",
+      "sha256": "64d2b697a35efac280e7f05f14446f7bc07a1855357f4a74b2f32cfc004ebd24"
+    },
+    {
+      "path": "backend/api/vehicle_registry_routes.py",
+      "sha256": "028ccbbad08cb3572dff55e8ac90fa4fe7a1e945191b72bf3444a9352b644c02"
+    },
+    {
+      "path": "backend/catalog_sources/__init__.py",
+      "sha256": "36b5d886bc3d4e448ddaf333c404ca7953e375c1c331ee26f6fac340b905adeb"
+    },
+    {
+      "path": "backend/catalog_sources/wikimedia.py",
+      "sha256": "47167ae548ea0b062f20ca97f0d3588009a55df8b3526cae706c7a706c5e1633"
+    },
+    {
+      "path": "backend/device/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/device/manager.py",
+      "sha256": "de16ea71538d34ff1568bf2b9e6784134ba620de9dc658688a103dcd34a3710d"
+    },
+    {
+      "path": "backend/diagnostic/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/diagnostic/database.py",
+      "sha256": "2653da8d79ab5cba69ee3b7f621279840371ca6e567077e89f67bb906cf08bdb"
+    },
+    {
+      "path": "backend/diagnostic/db_models.py",
+      "sha256": "c69d10c22091f49717703c2fb0c572b612d411cdfb4c6b9b5a1f362a5e198da4"
+    },
+    {
+      "path": "backend/diagnostic/decision.py",
+      "sha256": "579473fa4eeb68ef17086395a4e3204cbd08594754115f059faa066e596cbe8c"
+    },
+    {
+      "path": "backend/diagnostic/intelligence.py",
+      "sha256": "9a978c02e13e4f785258be24ec3c77dc90b92b9e885e381a607f892cd3e7e2f9"
+    },
+    {
+      "path": "backend/diagnostic/local_database.py",
+      "sha256": "9505fc4554f1bcf3620eb3f6f942a95ab61955e01ede8350fd64926849c6ec79"
+    },
+    {
+      "path": "backend/diagnostic/localization.py",
+      "sha256": "8c66d273d660f74bb1783583d903ce621c35bebc243aa591144cf7e4d74be4f5"
+    },
+    {
+      "path": "backend/diagnostic/models.py",
+      "sha256": "e056726cf91a9506780d652bff289c59f28c7350aaca4a6d38caa8de517044bc"
+    },
+    {
+      "path": "backend/diagnostic/rules.py",
+      "sha256": "fae4b4e22cce0d2f72021f9376e1cab6a5f230e7b598cc128b07f2f03e93b47e"
+    },
+    {
+      "path": "backend/diagnostic/session_persistence.py",
+      "sha256": "e5037d8ba199e61ecac5be84124faf9d1f7ed756621f6b7340f06276d85d47be"
+    },
+    {
+      "path": "backend/global_data.py",
+      "sha256": "ee5b284466a22571e98414f5457e7628202eef64d98e6ca0b0e2c4a38344e71b"
+    },
+    {
+      "path": "backend/multi_ecu/__init__.py",
+      "sha256": "c8b78591ce9c9d23331444879798400808bb0888c039c7ab818b50073081abf4"
+    },
+    {
+      "path": "backend/multi_ecu/models.py",
+      "sha256": "be07b748fb2cc6367f2402683f2a92dd218525c090db01e282b4ca9592252efc"
+    },
+    {
+      "path": "backend/multi_ecu/multibus_runtime.py",
+      "sha256": "ae64fc0df72b8465752e685927d9f601af73e633bfa5adb79c572d26ba6b982f"
+    },
+    {
+      "path": "backend/multi_ecu/service.py",
+      "sha256": "9694f270487dba353fdb03d0a139f843a0b9672f3047ded68efd143bd249660c"
+    },
+    {
+      "path": "backend/network_discovery/__init__.py",
+      "sha256": "8b8884b512c978dd660ff0e03ee621444892396afdae801aa31f29d253423b5d"
+    },
+    {
+      "path": "backend/network_discovery/active_service.py",
+      "sha256": "37eefebc54915124465cb6f0de53184aaefcace08a4a485d74e8b6f58afd1772"
+    },
+    {
+      "path": "backend/network_discovery/service.py",
+      "sha256": "3e05e924fbfce8a5b9a0c4ec1e74a5119d9e3eca48e45c4dbe6b647b99c395c5"
+    },
+    {
+      "path": "backend/network_discovery/state.py",
+      "sha256": "2ba6ec8bb72b7c3d5c4d8ef8584dd6bc1ac2995c2ec46ab6b99abb3b3f0df263"
+    },
+    {
+      "path": "backend/obd/__init__.py",
+      "sha256": "7e351d3f6037bfde62e6c1e8376c6945ba6f68a85c7df510f8313ddac5bb52f4"
+    },
+    {
+      "path": "backend/obd/catalog.py",
+      "sha256": "17d06d96490e5b9ed5d49783c12a72487225ad007790cdf1e148c943662b6518"
+    },
+    {
+      "path": "backend/obd/decoding.py",
+      "sha256": "95a5b04ee24e1abd1219b61266e9b81cae2be6a77ae07aa3e1ee5062c6248c11"
+    },
+    {
+      "path": "backend/obd/j1587.py",
+      "sha256": "29abd9a4c45dcbc236b803fe913332620c2283e05efc841ab01d4148161af6a4"
+    },
+    {
+      "path": "backend/obd/j1939.py",
+      "sha256": "043f2d0fdebd4da2bb99f58a37962c040e4d8e590375d7836f53b68b83c8c44a"
+    },
+    {
+      "path": "backend/obd/protocols.py",
+      "sha256": "4990092b5f49682e5453ebb61c2d84145ff0a4d21b92be233d4e66a12d502c93"
+    },
+    {
+      "path": "backend/observability/__init__.py",
+      "sha256": "c132d2e2ece369ba64c872b0c406ad3fbdedbd397368e6e8ee3a2e692256a91b"
+    },
+    {
+      "path": "backend/observability/metrics.py",
+      "sha256": "a1815bb971a23261ae9689a09da1dbe07494b94c5eb3e903ba2e63adb5f56d29"
+    },
+    {
+      "path": "backend/observability/tracing.py",
+      "sha256": "1ff9091efc7e0d6d568169c107b76c25573839750d9b670b4abc7f96fd40f4d9"
+    },
+    {
+      "path": "backend/professional_platform/__init__.py",
+      "sha256": "6207ed204e6a457285043ec458e8ce2f98f8535179ace11f8270eda52259435d"
+    },
+    {
+      "path": "backend/professional_platform/analytics.py",
+      "sha256": "0de9e5ff81e817acb64838ec9d67b35b8d7b047f191a20d25bc83035499d3a74"
+    },
+    {
+      "path": "backend/professional_platform/audit.py",
+      "sha256": "48e599d5cfe3d9169858228bfef3646ddc1f0336f164726e8782201d80be185a"
+    },
+    {
+      "path": "backend/professional_platform/models.py",
+      "sha256": "245dd2c6d542f346de575bac4a862101859d4fd67499661c24a34a30bd222c17"
+    },
+    {
+      "path": "backend/professional_platform/rbac.py",
+      "sha256": "b5bd2fb30236bc8e5bacc9aed8d63f49310564debff644ac2175db819a04019b"
+    },
+    {
+      "path": "backend/professional_platform/reporting.py",
+      "sha256": "c1010f2fe9ad34bb00e567bd96ffae5af2d4acec8811f5d83a19ec08a6b6d288"
+    },
+    {
+      "path": "backend/professional_platform/service.py",
+      "sha256": "6cf30535ae0afd119f791b3ed7d50d53cdb7eea14581784be0952165f1e2eb0e"
+    },
+    {
+      "path": "backend/requirements-ai.txt",
+      "sha256": "9c15012f7c24e88b562ef64b3187df0d90481b36bf3785b5b10a57fd4de689d7"
+    },
+    {
+      "path": "backend/requirements-dev.txt",
+      "sha256": "d48ab5b7b256b73ee6aa1286d6ac63fea30513b1b2da4f70da9e68234903aca1"
+    },
+    {
+      "path": "backend/requirements.txt",
+      "sha256": "986605a02b43f5309c4ad5c882a9fa7af3535991cc25b2d46fda6b96281b7031"
+    },
+    {
+      "path": "backend/resources/fonts/DejaVuSans.ttf",
+      "sha256": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e"
+    },
+    {
+      "path": "backend/resources/fonts/LICENSE.txt",
+      "sha256": "e81d9dced49fea2a7d576cbea283873de58563c5d488f954deb282843c3ea79c"
+    },
+    {
+      "path": "backend/scripts/__init__.py",
+      "sha256": "8930ca0ba5e4e2c3a0a0202cafd46a033a1043abfa5fac5d1fd2afc5a01462cd"
+    },
+    {
+      "path": "backend/scripts/seed_vehicle_catalog.py",
+      "sha256": "a8099af40d22a621ce711441c8776682be2337d68bd9479627cdef71ea935db7"
+    },
+    {
+      "path": "backend/security/__init__.py",
+      "sha256": "0c740279e51749d8075a12f672d2cb8b05eaa0eb5beb07af80502b369bdd3c2f"
+    },
+    {
+      "path": "backend/security/audit_security.py",
+      "sha256": "1ffa936a0f8fc9298ce9a37121cd29dd585d093920207b7b1f4eda6161a32438"
+    },
+    {
+      "path": "backend/security/auth.py",
+      "sha256": "c8eac73baa742125933abfd7f83fc450a837225e44c362244c3896c69b814e10"
+    },
+    {
+      "path": "backend/security/rate_limit.py",
+      "sha256": "53d50f2b4dcf297d0d0f103485b1ed1a8ef63184bae4fbf1d70a7c6a9e63ae7e"
+    },
+    {
+      "path": "backend/security/rbac.py",
+      "sha256": "820031115b3920a5f87faa998be64c2839c96d5928d3b79af75a9fa61186eae7"
+    },
+    {
+      "path": "backend/simulator/__init__.py",
+      "sha256": "77a2d723bc2c1aca9d5041f0cd3d83c485139ca12a1f0e8284a4547720dbd47d"
+    },
+    {
+      "path": "backend/simulator/vehicle.py",
+      "sha256": "ed2c74e4d41f6b9a8b2b9deb7d76d1eb1d41b0016c586ef480ee868957074abf"
+    },
+    {
+      "path": "backend/telemetry/__init__.py",
+      "sha256": "d0234e1a9619983aad598d9579a59e443dbe808d99f5f6189f8796978c2dd4c2"
+    },
+    {
+      "path": "backend/telemetry/analysis.py",
+      "sha256": "cf918f9c77fc8aaa42bd314eb2c3681dfe0a3292feed6284d8b224e86cc5ca32"
+    },
+    {
+      "path": "backend/telemetry/channels.py",
+      "sha256": "dfa5ecffa93f65071be39e03079f300f9f51524c71b08fc9cc7271567f05852d"
+    },
+    {
+      "path": "backend/telemetry/definitions.py",
+      "sha256": "2567512befd8de17232e49f880e9dac8c4f073c759582ef48659a8d8ee4755db"
+    },
+    {
+      "path": "backend/telemetry/evidence.py",
+      "sha256": "88fb678946f5dca8600621426cbac1bb6c3f02790d583b0b2774acc1edb53799"
+    },
+    {
+      "path": "backend/telemetry/models.py",
+      "sha256": "2c48b7b66655a5b2ed1189075a8b363457f5cb589852c315b1c73bc9444d1c8c"
+    },
+    {
+      "path": "backend/telemetry/service.py",
+      "sha256": "f8652df767566c704fb2533845d5e719d81ef09a2bc23928e83e138c164d953f"
+    },
+    {
+      "path": "backend/tools/import_check.py",
+      "sha256": "44c50862cdbfde0a45d2610407ad517f526cde28a7a6489571414282f405ccb6"
+    },
+    {
+      "path": "backend/vehicle/__init__.py",
+      "sha256": "abcf0732ee1ee34c387c31519c4fd33648d3deac16e5888f7d80f5c9e84d58bb"
+    },
+    {
+      "path": "backend/vehicle/adapters/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/vehicle/adapters/can_simulator.py",
+      "sha256": "caaadfea47400aedaf9c1d280c7af1261ba71ddfb1f2cd59e16fd23e7c94fed8"
+    },
+    {
+      "path": "backend/vehicle/adapters/uds_simulator.py",
+      "sha256": "5ff319116fcd30d78e9f14585e01b625c119ba3638a3d5d1f4fb124f4a1fc92d"
+    },
+    {
+      "path": "backend/vehicle/can/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/vehicle/can/models.py",
+      "sha256": "93b1760e9bbe0acdbe9eb08a5d3b038b59b458fe388b6a216605c1581811d8c1"
+    },
+    {
+      "path": "backend/vehicle/interfaces.py",
+      "sha256": "afaa6400165632a67ba28cc58d75f2b7817d58df254bff13a202f8ad2cf96640"
+    },
+    {
+      "path": "backend/vehicle/isotp/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/vehicle/isotp/stack.py",
+      "sha256": "df5f15bda37e72b221c507e6dac25bb0dce3d2e870b34a08fbdf2b26c7825db2"
+    },
+    {
+      "path": "backend/vehicle/network/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/vehicle/network/active_discovery.py",
+      "sha256": "16a33978d24fc23fa89575303201066b72a48aefee4c4e977eb8e4cc9d3f0d7a"
+    },
+    {
+      "path": "backend/vehicle/network/discovery.py",
+      "sha256": "a25ed1e2e3ca8d0357e85fc048bf9b436628ee02f24c67f10a559477861933cb"
+    },
+    {
+      "path": "backend/vehicle/network/models.py",
+      "sha256": "1d81838cdb8fd1c5aafa79be99f5bdc566f75af3574aa5a9911630795f34acbd"
+    },
+    {
+      "path": "backend/vehicle/network/multibus.py",
+      "sha256": "e215ff6c35d1786b0be31cdafd9a89c056071d0f00fc1af076d43a1e6b34a269"
+    },
+    {
+      "path": "backend/vehicle/obd/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/vehicle/obd/client.py",
+      "sha256": "ee6400c38720ab071c2b50d97f14f0cfa84585ef3377d76a38b57ba872e6f061"
+    },
+    {
+      "path": "backend/vehicle/obd/service.py",
+      "sha256": "d3b904dbc4bc7370cf2d31ee217c8c0909fa4d230604146b2048f13c8f9f70cc"
+    },
+    {
+      "path": "backend/vehicle/protocol/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/vehicle/protocol/trace.py",
+      "sha256": "4bc37af9ac75e00a15670a220895d4cf2d21ceb744fc20887866b401f948ce2c"
+    },
+    {
+      "path": "backend/vehicle/uds/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/vehicle/uds/client.py",
+      "sha256": "64e9139db199434d93b4204e279e6e9ce0f616b67fc507ee2e002619c6f998c7"
+    },
+    {
+      "path": "backend/vehicle/uds/diagnostics.py",
+      "sha256": "5afd220aa69af3f3b5209b55fecac441729071b2fa746d66ae5b251f6fa7e83a"
+    },
+    {
+      "path": "backend/vehicle_diagnostic/__init__.py",
+      "sha256": "c9b5798d57c128a51fa5e67a79905258911d56d5b9b4676a4c14639565d5dd9e"
+    },
+    {
+      "path": "backend/vehicle_diagnostic/models.py",
+      "sha256": "43147414f8d546bce801ae16046584eb6f1897ca2fc0e4792fd0ea1e5dd369f3"
+    },
+    {
+      "path": "backend/vehicle_diagnostic/service.py",
+      "sha256": "9a23175e797e7aaa8aef6405413ee579b2fe525f325040c90e2b2c748f25a2ff"
+    },
+    {
+      "path": "vehicle/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vehicle/acquisition/__init__.py",
+      "sha256": "cb4d74444a5912d48f403de413dcf53950f9b462283bcda46904811f367239c7"
+    },
+    {
+      "path": "vehicle/acquisition/factory.py",
+      "sha256": "43380c684cc4871962cd19f877d88b9ceaafac7df08b8c372558311c1c83b35f"
+    },
+    {
+      "path": "vehicle/acquisition/manager.py",
+      "sha256": "31aeac04986ec17e34935964dfb60842c743405e70191ef8bf30b8be143196d7"
+    },
+    {
+      "path": "vehicle/acquisition/models.py",
+      "sha256": "c2d66b885583804631e21a9f43ef8b4c99682e6a4cbd788b96ef5b0ccdcba27f"
+    },
+    {
+      "path": "vehicle/acquisition/offline_queue.py",
+      "sha256": "82473ceb0196d34181327f8731e24dcf7222279cea53947960b49039f16c9af9"
+    },
+    {
+      "path": "vehicle/acquisition/sources.py",
+      "sha256": "ced4a7c38d83b4c18ab4d5e33eb8ad952c47727e3294b233e7d8dd43c5c7bc9c"
+    },
+    {
+      "path": "vehicle/adapters/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vehicle/adapters/base.py",
+      "sha256": "f2f03b25a95e22e4a91254d5b0f71fffdac48c7f139a9383d2e4f2ef9630df59"
+    },
+    {
+      "path": "vehicle/adapters/can_simulator.py",
+      "sha256": "8b40929a4ca85edb6456990f3f6dff68ce2cbf275f22b1bd1d849ef2e1d19bbd"
+    },
+    {
+      "path": "vehicle/adapters/j2534.py",
+      "sha256": "401eafa270eb9edb0c9950b3959f7704631a714725ac3ba4aeda2e0a1524a4e5"
+    },
+    {
+      "path": "vehicle/adapters/simulator.py",
+      "sha256": "85872d5e9299d8dabaa19a69d37d302026fb82d3e663b9ed2abad5c32bcb633b"
+    },
+    {
+      "path": "vehicle/adapters/uds_simulator.py",
+      "sha256": "4131dd57cfefbe4cb26a00d96024d5f1c2d9ce4b8c5ed5aea4878d696d8b791f"
+    },
+    {
+      "path": "vehicle/adapters/vendor.py",
+      "sha256": "d34a444bcecaaa2fd0930b1181ec352a1b0c542ecae37d9fb0ad6307d8880991"
+    },
+    {
+      "path": "vehicle/can/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vehicle/can/bus.py",
+      "sha256": "9bf9f65c5ca9f3fe7a478b4f9ead0d5c8bddaf46e30cf79ad13ed4cab787883e"
+    },
+    {
+      "path": "vehicle/can/models.py",
+      "sha256": "6918e9facc792d96aacf6a87acfcc979b5b9e261eba3ee1bb421ce05f44ef0f9"
+    },
+    {
+      "path": "vehicle/catalog_registry.py",
+      "sha256": "22d5889ff890ad123adbdefa26db3c85715112e81d4f3bedbab7d3626055a866"
+    },
+    {
+      "path": "vehicle/devices/connection.py",
+      "sha256": "5212e110e05e3a86761e7b70dd084668462ef7ac421f309249c571ec6aef09e7"
+    },
+    {
+      "path": "vehicle/devices/models.py",
+      "sha256": "d49dd5c0885c3fa8628a67697b8f06fad564a0a63e545e811c33bab2ab4bfc88"
+    },
+    {
+      "path": "vehicle/devices/registry.py",
+      "sha256": "e3b9148f3609106cfa84fa057e3981204d90e4a513f626bc3f947acd7c2fcac0"
+    },
+    {
+      "path": "vehicle/diagnostic_discovery.py",
+      "sha256": "42bd31f00098d6081bb2344eccb0cf3fa863a083581402f767fa8342547f3c0c"
+    },
+    {
+      "path": "vehicle/doip/__init__.py",
+      "sha256": "35f9c54f6e0e5a6b2e8834ec3db531f6c9d25d8e921dd75727e2860e109b1a92"
+    },
+    {
+      "path": "vehicle/doip/client.py",
+      "sha256": "d889ff8663d7327fe32c85a85d0b1f9a35bb80eb71aaa013c2fb4d04a087364b"
+    },
+    {
+      "path": "vehicle/external_registry.py",
+      "sha256": "25a75fc24a786d655939763e31066c5bac5e20d92d78131b02896570a692d2c4"
+    },
+    {
+      "path": "vehicle/interfaces.py",
+      "sha256": "4622d28b0a6b1263194fd2fde11cfb5b268e28f7fbcb2b5e43dc0c174970b3f2"
+    },
+    {
+      "path": "vehicle/isotp/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vehicle/isotp/models.py",
+      "sha256": "c1872a2fd241280a1986f3d40a6dca92398a19024a51bc0b3d65ccd4d5957b11"
+    },
+    {
+      "path": "vehicle/isotp/stack.py",
+      "sha256": "915a1521e1877d17f6e162cc0a2e893c0ee45bfa24c2384aafd832f2a562ec28"
+    },
+    {
+      "path": "vehicle/j2534/constants.py",
+      "sha256": "95b641adc9b0e056ff25dfe5188a340862c4aa282fda3ce750ded097575b9b5c"
+    },
+    {
+      "path": "vehicle/j2534/interface.py",
+      "sha256": "e55ac0997f41fe12e4762a341654e58307f73721b2d63d30626840649efe6fc3"
+    },
+    {
+      "path": "vehicle/j2534/windows.py",
+      "sha256": "064cdedd3a2f428065ae4c2985e31155adf83579e9fed46a05aff6c39b33a25e"
+    },
+    {
+      "path": "vehicle/network/__init__.py",
+      "sha256": "ce2ce7dafc244a4e324acc0e908c64e84554ea605505ce37046353828ca677f8"
+    },
+    {
+      "path": "vehicle/network/active_discovery.py",
+      "sha256": "8e4f1c8824175161bc2265c4a38eb1828326a3ca924122c2dee91148a8df56db"
+    },
+    {
+      "path": "vehicle/network/discovery.py",
+      "sha256": "2c99953351683aae7b571fe24b9a025c05e9530eb8814fd0ec8fec2fdcefcd7a"
+    },
+    {
+      "path": "vehicle/network/models.py",
+      "sha256": "f5cb17bdfcb5df688ff61cc649dddc2a26db5ff443971ea15fcfef3c9a93dddf"
+    },
+    {
+      "path": "vehicle/network/multibus.py",
+      "sha256": "0b5743e46094bfef99e3c668922a5e2b5dd1987535e7babb90f2cfbf730dd933"
+    },
+    {
+      "path": "vehicle/network/multiplexer.py",
+      "sha256": "52e299b450e0cc1557bae3fc611b815f7d19e43bbb71d5289f36dafc3c804139"
+    },
+    {
+      "path": "vehicle/network/runtime.py",
+      "sha256": "a1653ddc381b250731291ff5424230a3aa8c5c403d99fbbe86ca412663218529"
+    },
+    {
+      "path": "vehicle/obd/__init__.py",
+      "sha256": "71cfaac8b18a097b533e3ec249196e4642a3ec51327ffec84a2c850f53bda60a"
+    },
+    {
+      "path": "vehicle/obd/adapters/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vehicle/obd/adapters/ble.py",
+      "sha256": "c12367d42c5e56f9e5c32e1a3a4b4c3a43935a54969e1b3ca7d99cadbd1d64ed"
+    },
+    {
+      "path": "vehicle/obd/adapters/simulator.py",
+      "sha256": "011525f3be46a0a7fa06b8747b7cd73c9cb6903dcf6ea4b475aa6b2c97fb0a2a"
+    },
+    {
+      "path": "vehicle/obd/adapters/tcp_wifi.py",
+      "sha256": "8a2214b7b2434ede8ca06bf57a9f8d0397d15a6fa415ec764ba28e40c5a00543"
+    },
+    {
+      "path": "vehicle/obd/adapters/usb_serial.py",
+      "sha256": "4d47b192eb298f18735e7ee5d701fe8ee4f06e46bebbf61dcd7f72412285b1c1"
+    },
+    {
+      "path": "vehicle/obd/client.py",
+      "sha256": "f6862e5adc4fff4ec6c9eab6340fec0eb82b9143086cd0a53aba75ed0dee0b53"
+    },
+    {
+      "path": "vehicle/obd/pid_catalog.py",
+      "sha256": "bf02305f09d5837b00ebbabb9035939dda801352c08b93d34a3fcdf1842a9abc"
+    },
+    {
+      "path": "vehicle/obd/protocols/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vehicle/obd/protocols/elm327.py",
+      "sha256": "e9c16371f0194958c74467c4a3da296c39a8e9e5ebfdab74681a95ac60c343c8"
+    },
+    {
+      "path": "vehicle/obd/transport.py",
+      "sha256": "1005f70557e48d4706e65ddba345f3150c80c3e7849d95625f4f55af8852e7b8"
+    },
+    {
+      "path": "vehicle/protocol/__init__.py",
+      "sha256": "85afa1b03e75e9f5dd83b0d598cde3557370ac2b738ad8cb34c1e47efd94efe3"
+    },
+    {
+      "path": "vehicle/protocol/elm327_probe.py",
+      "sha256": "6fdbe9bf0dd7b515c478230ff252d66b7392dfadde060fbf5ae25a7b6868f0b7"
+    },
+    {
+      "path": "vehicle/protocol/registry.py",
+      "sha256": "4b2ac35e263086b5f9fe621faa90095563231436ce911d54e8780031cad10a83"
+    },
+    {
+      "path": "vehicle/protocol/trace.py",
+      "sha256": "2950892a94bd5e15f279f5f6ca200be1756248426405ed0949647ad58fb630da"
+    },
+    {
+      "path": "vehicle/uds/__init__.py",
+      "sha256": "efc19615aaccd21a921a3bd19a90d8cf3ef1ad0961f50299b06d290ad59dc8a6"
+    },
+    {
+      "path": "vehicle/uds/client.py",
+      "sha256": "0262f03423e1fc2a5c15c3bc815c5060d08ec01e6aca251b1dae29c2406ef53d"
+    },
+    {
+      "path": "vehicle/uds/decoder.py",
+      "sha256": "f73120a8f055496246fd8c17ce729d017bca061362509f8c2488c5bc546e2280"
+    },
+    {
+      "path": "vehicle/uds/diagnostics.py",
+      "sha256": "0042d095d1465c143e96f982e20495db4a84a0ed6bb8b0304520c08831ab37c8"
+    },
+    {
+      "path": "vehicle/uds/read_only.py",
+      "sha256": "f68a983218efc98d8980dd48995818195c88b34b9b2f7b3cd3ebb7f2f65c13e2"
+    },
+    {
+      "path": "device/android-diagnostic-device/__init__.py",
+      "sha256": "7b5d690f64392c27fdd40e8b59cb5f83d34d4cbd851c95f86e0735cc7cef075e"
+    },
+    {
+      "path": "device/android-diagnostic-device/core/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "device/android-diagnostic-device/core/device.py",
+      "sha256": "01054329c23a349401d06b8fd7a7eea69763b7a4c350d6d75f9099b75fbfcfc2"
+    },
+    {
+      "path": "device/android-diagnostic-device/health/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "device/android-diagnostic-device/health/monitor.py",
+      "sha256": "f20b1c713ed76b20835742c117604424dd977e31ffb9322424ebc7d859059fb8"
+    },
+    {
+      "path": "device/android-diagnostic-device/ota/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "device/android-diagnostic-device/ota/manifest.py",
+      "sha256": "5cc1a2fd39b6edd22b2a5e5b00376f2da16a930404e5b2614642a01fb527c5ca"
+    },
+    {
+      "path": "device/android-diagnostic-device/storage/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "device/android-diagnostic-device/storage/local_store.py",
+      "sha256": "e1aea2826e853db5b73b2112d6308ef6d5f8e20c8595b436c6ae88c359ec7bed"
+    },
+    {
+      "path": "device/android-diagnostic-device/sync/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "device/android-diagnostic-device/sync/queue.py",
+      "sha256": "3ab94deb325ae27b7942121d984ae36261f952201e45a4fcf935ae67dae4e2d8"
+    },
+    {
+      "path": "device/android-diagnostic-device/transport/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "device/android-diagnostic-device/transport/custom_vci.py",
+      "sha256": "b56d88a8d9d86a7c688954f2b10550c531d25b20130af41d2d2451e1450d486c"
+    },
+    {
+      "path": "shared/environment.py",
+      "sha256": "90e0c8f6bbe3ccbd109e1d09b6812bb2f69f7341d7dbaaa7181864c9538e6500"
+    },
+    {
+      "path": "shared/reporting.py",
+      "sha256": "bb60a440715b229edf29438017b538002686abfad1f381f1561c5a8ad5d92140"
+    },
+    {
+      "path": "shared/vehicle_catalog.json",
+      "sha256": "d2a0442b1c850881a3b66886e59a30ffb1e041127040f0e07c1a0ffd07c8eb15"
+    },
+    {
+      "path": "data/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "data/generated_vehicle_portraits.json",
+      "sha256": "0f9c2430724d24685b123e3dbd9e58a6ba7c34197f20220b85bc2780a0e20c66"
+    },
+    {
+      "path": "data/global/diagnostic_cases.json",
+      "sha256": "026e61eded1530fe3fbad1cdf374e3ba52d59ab63a98e36037c7aac747580abe"
+    },
+    {
+      "path": "data/global/manifest.json",
+      "sha256": "cd1d734018f3bfb0bd42a3bf0e2ead0a90d4193830107f126b12b34737564ffa"
+    },
+    {
+      "path": "data/global/vehicles.json",
+      "sha256": "72baef1478ac493b7b2de57fe82542978bcd4b6fbf34ffd5b20ec00d9dcfd6a1"
+    },
+    {
+      "path": "data/vehicle_catalog.json",
+      "sha256": "e9c153aa6aa7ff4f487982fe2be624d96b26a87a9386b1dad709492ac8559041"
+    },
+    {
+      "path": "data/vehicle_fitment_catalog.json",
+      "sha256": "710c2611034b9204d3269940e61735242cca3d706f33f0b190cedb7574d16448"
+    },
+    {
+      "path": "data/vehicle_fitments.json",
+      "sha256": "d725c7510faff9064a457d218af1d0eb7e1ec952216e0d3bf57b8659a21b256f"
+    },
+    {
+      "path": "data/vehicle_reference.json",
+      "sha256": "d803b93387ea06763cec771b11fbd7d13213ff8ec9527095e67f7bc39f2fab98"
+    },
+    {
+      "path": "datasets/golden-cases/LPG_MISFIRE_001.yaml",
+      "sha256": "67db6631832bc9a7bf349819a62862c0fa0c21132479d1ebf0e93a9e065417a5"
+    },
+    {
+      "path": "datasets/index.yaml",
+      "sha256": "51b856bec4d66b08a8b40b418dd4e1a464f99fb0fed1706c91e7994fc01b3491"
+    },
+    {
+      "path": "datasets/rag-eval/phase12_golden_cases.jsonl",
+      "sha256": "39fabf47495d02d4957ef0102170d8ecac78369d746f0a274e92e427ccc1b685"
+    },
+    {
+      "path": "datasets/vehicle-scenarios/uds-basic.yaml",
+      "sha256": "8abd0766f0647af32e2eb722edaa290d3cee43bb207471b54f27c1a4446f2031"
+    },
+    {
+      "path": "config/client_contract.json",
+      "sha256": "9f9acff3a0c4c4ae7aebe95b2bd88f43b64bae1cd1a93e575aa1e1a2fe372e38"
+    },
+    {
+      "path": "config/environment.json",
+      "sha256": "c755f357191bca610563508d0ee585b4f30d629f093a2a3eb6776f125270f608"
+    },
+    {
+      "path": "tests/ai/test_llm_factory.py",
+      "sha256": "b6c7c70a5dde7193435d8ea8cf11070ae2831e715052d6e23fa7b943de9bbe4f"
+    },
+    {
+      "path": "tests/ai/test_low_coverage_document_parsers.py",
+      "sha256": "d83a4b179acfda1aa6dd6e782e1ec4b88701249ed1126af57b782eb1cb811d3b"
+    },
+    {
+      "path": "tests/ai/test_low_coverage_embedding_providers.py",
+      "sha256": "126e4e3eefc5461774a19142e992d05affc4305c663e468edd7285c64c3841ea"
+    },
+    {
+      "path": "tests/ai/test_low_coverage_ingestion_pipeline.py",
+      "sha256": "2eb0282231dd02776b3f27cf4ca3249a9ae0c9d23238dc9f3fdbf22edb62c624"
+    },
+    {
+      "path": "tests/ai/test_low_coverage_live_analysis.py",
+      "sha256": "23b3fa4886390cb334f3ab657613387abac509a6c166868914bfd935689f66a3"
+    },
+    {
+      "path": "tests/ai/test_low_coverage_llama_server.py",
+      "sha256": "d65d795adcf10552b65db5ba5144c89df7692220c710c787292ec610813bd543"
+    },
+    {
+      "path": "tests/ai/test_low_coverage_openai_compatible.py",
+      "sha256": "9b0e5ffb96317630cd70e17f5bbbd8b5a90fe2065c1758201a3dc956aa26728e"
+    },
+    {
+      "path": "tests/ai/test_low_coverage_orchestrator.py",
+      "sha256": "7939c61b003ca86eb02b660ae02087bc916eb51148ed679669cc856df9971748"
+    },
+    {
+      "path": "tests/ai/test_low_coverage_pgvector_hybrid.py",
+      "sha256": "ae4604eee6c15a9fc68dfe70f9943af6898bd931409b4db672bb9eeb9fd7705f"
+    },
+    {
+      "path": "tests/ai/test_low_coverage_rag_retrieval.py",
+      "sha256": "6df23275d585147a8a93eef1ae2f1b0b9553b52e8eb024d037001ec682db4ff7"
+    },
+    {
+      "path": "tests/ai/test_low_coverage_reasoning_pipeline.py",
+      "sha256": "8790b5855a72073f702a78a68fec4c399144c980ea7fb3b5094cec122e492de2"
+    },
+    {
+      "path": "tests/ai/test_low_coverage_reranker.py",
+      "sha256": "29a67cffc4749589670317c10d470d554ec0be60666e95ad365fda063e56fae2"
+    },
+    {
+      "path": "tests/ai/test_openai_runtime_availability.py",
+      "sha256": "c9d90e7864840998b3c75590977e75be793b70fd023e21f8fd296f422ece3b08"
+    },
+    {
+      "path": "tests/ai/test_phase10_ingestion.py",
+      "sha256": "a5dd271459ff3267f31a1e3346f9752cb0423b34d5ac7862b8dcb004b31f7cb4"
+    },
+    {
+      "path": "tests/ai/test_phase11_retrieval.py",
+      "sha256": "af1d4147017daa22577053cc79cb620af12adc83937cb8269f596adf6345cafe"
+    },
+    {
+      "path": "tests/ai/test_phase12_providers.py",
+      "sha256": "45b324ffe435aaada400c238f1636061e58380b177bf56e36b30399634bc74f4"
+    },
+    {
+      "path": "tests/ai/test_phase12_quality.py",
+      "sha256": "e946ecd06154a4a00cfaf84d6d4b7c79d27e268303d98559f9f5ceb2c2390201"
+    },
+    {
+      "path": "tests/ai/test_phase13_decision.py",
+      "sha256": "3c84c84a5b944892d46739265ad84f3087b77525d1d0469d8594fb5a3fd50dee"
+    },
+    {
+      "path": "tests/ai/test_phase23_dynamic_reasoning.py",
+      "sha256": "2e6c91066963d47a5f20a05e5090b18bbc28ed46a1fe221ab43b1f0d6a130331"
+    },
+    {
+      "path": "tests/ai/test_phase28_live_ai.py",
+      "sha256": "608bb90de6123a7810661a4e68d319801955475f1fc31014eca491617c315054"
+    },
+    {
+      "path": "tests/ai/test_phase30_local_llm.py",
+      "sha256": "3aab8e76a7deed329411c399adb4711a0a4a6cc2f4ae114ae8de7c1f8378e63d"
+    },
+    {
+      "path": "tests/ai/test_phase31_llama_server.py",
+      "sha256": "a04b19051b48bc9dfc5548c0efba38e1b6147c4d8f83dd73ae81341e9ca1ee23"
+    },
+    {
+      "path": "tests/ai/test_phase33_context.py",
+      "sha256": "c16bd7d342cbbcfedff1604adc1cae0bfcc5ad5a3f01d357e2eb8b02bcff97ca"
+    },
+    {
+      "path": "tests/ai/test_phase35_context_budget.py",
+      "sha256": "b538a93c54326e59137101b3ab3f4871b69ce8845f0342b998b8280de0de7b35"
+    },
+    {
+      "path": "tests/ai/test_phase8_intelligence.py",
+      "sha256": "ff05daa2071df3a5a793da82a76085c68d5a01ae8280e44eab40890daa31271c"
+    },
+    {
+      "path": "tests/ai/test_phase9_rag_llm.py",
+      "sha256": "fce633d0f85ef1b01508e436117f466f38cdcf28b96980fe33fc50f46cde968e"
+    },
+    {
+      "path": "tests/ai/test_test_result_scores.py",
+      "sha256": "427cde726da18f0d03a8120f214ed3a98e539f2555900b18c7f6c17fa25ad544"
+    },
+    {
+      "path": "tests/ai/test_zero_coverage_llm_vector_store.py",
+      "sha256": "bba1c0d3e71183003b990c3e78967a55be36879d668d0af83325018a7d5a85ab"
+    },
+    {
+      "path": "tests/api/test_api.py",
+      "sha256": "b4c88a0ee169bcc8c8ac2eab92f31661622d7982a35421a6a892bc4bd58507a7"
+    },
+    {
+      "path": "tests/api/test_api_lifespan.py",
+      "sha256": "d3a98046e46caf068dc3ce22ce9b9cdfff8fa872af41fc6d6f4472828608ad40"
+    },
+    {
+      "path": "tests/api/test_completed_test_reanalysis.py",
+      "sha256": "7257d9fc2b935aac4bbfabd60d03a176d09c2cad5a0dc4540d35794884e84f2a"
+    },
+    {
+      "path": "tests/api/test_decision_routes_low_coverage.py",
+      "sha256": "940216ef5c040e66b50bf77c4327432ced4ec5744d4a3dc468630dabab83dd34"
+    },
+    {
+      "path": "tests/api/test_diagnostic_session_api.py",
+      "sha256": "f838c7e5b40f49effe6cb68c3d3cfe2997a12833bb72df57aaee70ceba88cca3"
+    },
+    {
+      "path": "tests/api/test_full_diagnostic_lifecycle.py",
+      "sha256": "358583f4b73511c85a590ff499c7ba555b5edd0b87308b7f0d6c385b5aa822a5"
+    },
+    {
+      "path": "tests/api/test_guided_tests_and_signal_names.py",
+      "sha256": "a9950d83392053295bfe2cec11dacc3242f3b1975df4fbbbab692d9c72bd3f00"
+    },
+    {
+      "path": "tests/api/test_low_coverage_active_discovery.py",
+      "sha256": "7c1614aa501e84955913ee49ea8dc0e5abb724c52125e1890260ef69c2e60291"
+    },
+    {
+      "path": "tests/api/test_low_coverage_ai_routes.py",
+      "sha256": "3eab8f0f567cf5b1ad8deca448e14b20b6abc01abbabb2e12e254a023b576e74"
+    },
+    {
+      "path": "tests/api/test_low_coverage_device_routes.py",
+      "sha256": "1f788f06a2fbc17d4815ca7c9a164ea649f17166a721bd7a6272e1ffee6d62ca"
+    },
+    {
+      "path": "tests/api/test_low_coverage_intelligence_routes.py",
+      "sha256": "838ba2781d1b69fe66850548a6ac0af6fde9dd2bdd9f32c1310f940be078f5ce"
+    },
+    {
+      "path": "tests/api/test_low_coverage_knowledge_routes.py",
+      "sha256": "3177ee605b0e5eb1a563294a8c106389b98d5881cec3bfa0548de5eba49e12db"
+    },
+    {
+      "path": "tests/api/test_low_coverage_main_endpoints.py",
+      "sha256": "13173da45d8f68219104154fcc5ae47853e774b13cc8222dc50189b4be842ad9"
+    },
+    {
+      "path": "tests/api/test_low_coverage_multi_bus_routes.py",
+      "sha256": "67c790ffb72b25a2cbe59d5edb9d78a5dd61c53f8e9b5b76b68e0df14e94d095"
+    },
+    {
+      "path": "tests/api/test_low_coverage_multi_ecu_routes.py",
+      "sha256": "902737ddaa63b90c8e5592ecf2445e5eba8cea43e2a282fd5f54fc7d36ed166b"
+    },
+    {
+      "path": "tests/api/test_low_coverage_network_discovery_routes.py",
+      "sha256": "d5a2b54979b0753f57ef60495a9c2ef011dfb3d7123d7c830220ac5b1dd0f28d"
+    },
+    {
+      "path": "tests/api/test_low_coverage_rag_routes.py",
+      "sha256": "048ed893f1397bdee9e1a6aa6011d2e9d38db4419ea195b45ae0c377fed9caf9"
+    },
+    {
+      "path": "tests/api/test_low_coverage_simple_routes.py",
+      "sha256": "b27ff01cce69a18ee9284bf8e626861b67f0f1a7e8d9060d8b9b375345976a7e"
+    },
+    {
+      "path": "tests/api/test_low_coverage_telemetry_routes.py",
+      "sha256": "9cea657ca93100addcbb0229fcfc06f7e4a1b0180cc960dc4b45d5f9618d03ec"
+    },
+    {
+      "path": "tests/api/test_low_coverage_vehicle_catalog_routes.py",
+      "sha256": "9911b016c6b36cbe420a90f16f321d1613236845a930158e35b5944eb72fd806"
+    },
+    {
+      "path": "tests/api/test_low_coverage_vehicle_diagnostic_routes.py",
+      "sha256": "f1f63dfc9aafe129907d3c987ca19a3920aff14f821526076af62bb9fb9efc70"
+    },
+    {
+      "path": "tests/api/test_native_client_features.py",
+      "sha256": "4e5a70dd8bb412fe3b2f9b928a6c48b156e14f9732f2424a31660e23924a2828"
+    },
+    {
+      "path": "tests/api/test_phase15_acquisition_api.py",
+      "sha256": "f9d312d469ba23e991c20efe90f1e32c09bb6ec80f114d24b222dcc37f10474e"
+    },
+    {
+      "path": "tests/api/test_phase16_vehicle_diagnostic.py",
+      "sha256": "55edf2c5ce7c94da1716696f7bdc5e9debc5398dfd091237265363560d559d3b"
+    },
+    {
+      "path": "tests/api/test_phase17_multi_ecu.py",
+      "sha256": "2224576ebc65d3c4fe891d0cd6e6fa12ed4a58640174bafc16446425310cd8b0"
+    },
+    {
+      "path": "tests/api/test_phase18_multibus_api.py",
+      "sha256": "0c32c65e9cc2bbae56f41cf07010fcb9aec39ede8c405a6da9e2b7b5ddee7f71"
+    },
+    {
+      "path": "tests/api/test_phase19_network_discovery.py",
+      "sha256": "10b05f2a79110b01b61f591d2a1092e0bdf6c7b88894d16442bda3ab4b5b6f68"
+    },
+    {
+      "path": "tests/api/test_phase20_active_discovery.py",
+      "sha256": "6face655f6822c28ee4bcc1d80fb6eb51a4d8aa44d879466c4738e0f4dce0f18"
+    },
+    {
+      "path": "tests/api/test_phase26_devices.py",
+      "sha256": "5d5f00edfc90435b8ada0d8e8c79262c1d747b819c7e4d8eb789b2fb90c6a7fb"
+    },
+    {
+      "path": "tests/api/test_phase27_session_integration.py",
+      "sha256": "9127dd2c1c8e1a7fea186dd0e79e4fb17d34597839d68bc67ee5816a62a26166"
+    },
+    {
+      "path": "tests/api/test_session_persistence.py",
+      "sha256": "638860c210633b46f15627408536d9ff6d947910694627b6b4589c7e84995f37"
+    },
+    {
+      "path": "tests/api/test_state_registry_low_coverage.py",
+      "sha256": "a17ed0a827fbb768451c14a6d8e1217067032d61abe1c779910c69f944cf7ca4"
+    },
+    {
+      "path": "tests/api/test_vehicle_registry_routes.py",
+      "sha256": "edfbe6f7210360d987fcf89e844447cf88a18daa3816c99ea71ae910031b7d55"
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "452df4da752e40a7ceee53af408760ff15e2e26506ef08f21e21f2f30889776c"
+    },
+    {
+      "path": "tests/desktop/test_backend_autostart.py",
+      "sha256": "db80b3b735910639740f68138f6cb3cbf788f9ed470b22e5e22f9731b295b0af"
+    },
+    {
+      "path": "tests/desktop/test_backend_recovery.py",
+      "sha256": "9e573c59d2ede9a59e05454a6ac331032643ab2ef03dee365627cbfa56374e47"
+    },
+    {
+      "path": "tests/desktop/test_check_backend_cleanup.py",
+      "sha256": "75e4a60991750848ff3e5a440fd482863d6f77f494ae7589ba9a98ff48435908"
+    },
+    {
+      "path": "tests/desktop/test_fastapi_startup_cleanup.py",
+      "sha256": "d58093e3f79c75f61bf382cbc95796339e6b0c91b3ca38dfce098ac687616ca6"
+    },
+    {
+      "path": "tests/desktop/test_offline_ai_setup.py",
+      "sha256": "3dc3598671d4a91a07e921b1d75e4f377c1920b2ed97f51221721926449802e6"
+    },
+    {
+      "path": "tests/desktop/test_performance_tool.py",
+      "sha256": "630dfb0e2517d7ee88792de8c8179b35da107ff2e0c22bb573f234d2c8cf0ef8"
+    },
+    {
+      "path": "tests/desktop/test_phase25_standalone.py",
+      "sha256": "c478f6a35aa16b70c8732332c53a213ed25cb33bf0c065b904a9e4cb94e07922"
+    },
+    {
+      "path": "tests/desktop/test_phase31_llm_autostart.py",
+      "sha256": "cee12ef0a12d306b63a896d0e9ff2a762d0340cd2875a85584ca7efdd02ffbc3"
+    },
+    {
+      "path": "tests/desktop/test_phase32_ports_and_timeout.py",
+      "sha256": "289d262c9cb1fc339aa3f242b8d63c512585400b196ba05131088a4316f9784f"
+    },
+    {
+      "path": "tests/desktop/test_zero_coverage_helpers.py",
+      "sha256": "7b0bf0a45410c1048bef597d29655c87916c101698ee1e8a38c35c55fad263b2"
+    },
+    {
+      "path": "tests/device/test_phase5.py",
+      "sha256": "ff05a196ed662bb1616bd59299c833c455a74caf24259fd283624cba8bac9806"
+    },
+    {
+      "path": "tests/diagnostic/test_desktop_local_database.py",
+      "sha256": "7c2d8b804170f3b0ccdb9653bc56381313fbb5f298eca8702b0f320090eb18a7"
+    },
+    {
+      "path": "tests/diagnostic/test_low_coverage_localization.py",
+      "sha256": "06a00cdd98cbdb25ea0b7d315d89e3d18471a0debb7388279c657080a0bb8830"
+    },
+    {
+      "path": "tests/diagnostic/test_low_coverage_session_persistence.py",
+      "sha256": "99a1d7be3416b2ab00eacba5eb8759062aa14789a1c3d99259b492ed5d0efbf2"
+    },
+    {
+      "path": "tests/harness/README.md",
+      "sha256": "76f9af8acb699066bf3d85f06bb6575c694002e0e40c520184ea8b42e88a88f9"
+    },
+    {
+      "path": "tests/harness/test_engine_contracts.py",
+      "sha256": "7fccdb832fc4193562c5afb36851b9b1a0e5b7ce297cf433d410f8bc13b2b259"
+    },
+    {
+      "path": "tests/harness/test_global_data.py",
+      "sha256": "0613e12e06a14fccfcc1b1f0eed4666bbfb07e241dc9beb929f2d60e8234b0ac"
+    },
+    {
+      "path": "tests/harness/test_golden_cases.py",
+      "sha256": "6b3a917cf1e73ca4cac546de667c4b836dbac4cdfcd06746553c602a7013baee"
+    },
+    {
+      "path": "tests/harness/test_performance.py",
+      "sha256": "71e91da85095d1558c349763e6f6277f47f2d0dd60ea427f8059f0f9553abaf9"
+    },
+    {
+      "path": "tests/integration/test_simulator.py",
+      "sha256": "357cce13e3b29c6f29c2ed4e944feef7458851439593e835158c5abb1e5be820"
+    },
+    {
+      "path": "tests/obd/test_advanced_protocols.py",
+      "sha256": "791c1cb58c922b44d86b7886d8340a8992dc28fcc79833f65fa362e00e12a04d"
+    },
+    {
+      "path": "tests/obd/test_protocols_and_bridge.py",
+      "sha256": "72e93029f9d9d686991ff30cf35eddfda447a3370ec76f34dfbc6ea043801ea1"
+    },
+    {
+      "path": "tests/obd/test_shared_selector_snapshot.py",
+      "sha256": "19c377f072abef39ffa45a89e9d41011ab9806214d79095bd8b6c0266888b69e"
+    },
+    {
+      "path": "tests/obd/test_supported_polling.py",
+      "sha256": "38b1109a4e09fa362e0ef8595d23d26d568a119207796c5c73b86485ec2f62cc"
+    },
+    {
+      "path": "tests/obd/test_vehicle_reference.py",
+      "sha256": "d8ab030a7658539a3e15b08009184a4c25fdb453ad14270364709c6231016fd5"
+    },
+    {
+      "path": "tests/observability/test_observability.py",
+      "sha256": "ac0ab91e9e3f060ad0a4e87ae6ad6c1d8c3e948334b9efd96311b43543effb2d"
+    },
+    {
+      "path": "tests/platform/test_platform.py",
+      "sha256": "78b9572aa6b88a5a2abeb84c9926c8c1e8ff5c8dc5985efcddf4005adf954fff"
+    },
+    {
+      "path": "tests/professional_platform/test_low_coverage_rbac.py",
+      "sha256": "4c4d75c1693704003b704ad1c66262292dd8fed378d51ac6c6238d1a85da6a6f"
+    },
+    {
+      "path": "tests/regression/test_golden_case.py",
+      "sha256": "cdc46c54d6d3c215bf743a779f78c881bd3d9b4394428cbcf2b9141edd19f3d2"
+    },
+    {
+      "path": "tests/security/test_security.py",
+      "sha256": "02ac299a0052c0914d1a0077a60abf2570d2b967ad2d417e0cd500f9feefb4d7"
+    },
+    {
+      "path": "tests/telemetry/test_phase14_telemetry.py",
+      "sha256": "75d4bf25b03652a3d3b2e8be8832e315f2ef0938eb68d33165ac75d474bc5118"
+    },
+    {
+      "path": "tests/test_build_all.py",
+      "sha256": "b03296e18aba0fbd3ff30bbfed87ba01f14e88c2ab1b920ff6bd3f8d6ba98fbd"
+    },
+    {
+      "path": "tests/test_clean_repository.py",
+      "sha256": "f0989031bd576d10985dbff38addefff0ff41813232f0d5393b1f28c2f09dd65"
+    },
+    {
+      "path": "tests/test_coverage_zero_modules.py",
+      "sha256": "4a017f61aa677a8e9ef417386a24c2068ff716a78957930975bf82d953bb26a3"
+    },
+    {
+      "path": "tests/test_environment_config.py",
+      "sha256": "94630eebccc4edf906838137440c8c2bdec62b288956cb8d9c846c3fdb153eb9"
+    },
+    {
+      "path": "tests/test_ios_vehicle_selection_parity.py",
+      "sha256": "6335b5393e6077c6f35b46cdf4c926590cf98f6628e3c72a8d9166eec3c821f3"
+    },
+    {
+      "path": "tests/test_issue_18_23_ui_contracts.py",
+      "sha256": "89987537f5ba5637fafde4297817d27ce07abb3d8ff13d98d939d52f0e5d4e43"
+    },
+    {
+      "path": "tests/test_local_runner.py",
+      "sha256": "81341ea949194ccf25bee4edb20fedef0be6924126ced65bd83cc9b037c16846"
+    },
+    {
+      "path": "tests/test_low_coverage_acquisition_api_service.py",
+      "sha256": "6e950fa924e04fe675ab786393ae2f0c344a1cf899c751f2a943644dcad46bc8"
+    },
+    {
+      "path": "tests/test_low_coverage_seed_vehicle_catalog.py",
+      "sha256": "14175e0564211741940597e4639bccc8daa8f38e504fbdc27923e7848c742350"
+    },
+    {
+      "path": "tests/test_low_coverage_small_modules.py",
+      "sha256": "1ed2d14e0fb3427dd0b393b1e6cf9ed765bd53d7ef118b570afa9142a9142b30"
+    },
+    {
+      "path": "tests/test_mobile_dashboard_parity.py",
+      "sha256": "d9c500b18bf5b590b901cefd0cc6d3809f9e3d1847a2ed2ce15a6d53409fd2d0"
+    },
+    {
+      "path": "tests/test_mobile_navigation_parity.py",
+      "sha256": "38b999cda1e727ab169721335b1f38ecb853f3c4749a6e698c869550f7f6616e"
+    },
+    {
+      "path": "tests/test_mobile_vehicle_catalog_parity.py",
+      "sha256": "95bedf8381cc06fb8b58acf0d9a5833784cd3d08edd15886569f6c8ec1c0f375"
+    },
+    {
+      "path": "tests/test_mobile_vehicle_picker_regressions.py",
+      "sha256": "ace865905b0e2e05a6fb211baed4992613f63d36a8b27c87f82ee04ea4a05cbc"
+    },
+    {
+      "path": "tests/test_native_app_icon_parity.py",
+      "sha256": "11420c9ba68379e3b3f210e964be9ebd1e4534a1ebd398e520fabff5a95f6cf5"
+    },
+    {
+      "path": "tests/test_vehicle_catalog_seed.py",
+      "sha256": "ff5be44cd283b2172d45078c31fe06118be1e4cb3f356ef68db80ce2318e3c4a"
+    },
+    {
+      "path": "tests/test_windows_installer.py",
+      "sha256": "69503cb678b375f9f73b0de71320cc9bc2dab424e6bed6fec1943c161016a655"
+    },
+    {
+      "path": "tests/unit/test_reasoning.py",
+      "sha256": "ceabf4b553605329014286b9b28ecec071bc1012a1d3282de2c9004d8f892fc9"
+    },
+    {
+      "path": "tests/vehicle/acquisition/test_live_disconnect_recovery.py",
+      "sha256": "35d29870cbff3b2bbc1d88a430b83916fba52a102695b20b4d31a461492af634"
+    },
+    {
+      "path": "tests/vehicle/acquisition/test_phase15_acquisition.py",
+      "sha256": "3b40b4b1079f63a8fa2ff665c1ee5ee890edb3006b92517f8b9ad8bd856de444"
+    },
+    {
+      "path": "tests/vehicle/acquisition/test_phase15_sources.py",
+      "sha256": "e01996d469c263f79caa990c9c7a9482795616fa940f59be8c6a6fcad4127672"
+    },
+    {
+      "path": "tests/vehicle/can/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/vehicle/can/test_can_models.py",
+      "sha256": "1fa879f9155443e73f40c460f7d758b5d11f9ea3d6da47b04ff3e417deb883e4"
+    },
+    {
+      "path": "tests/vehicle/devices/test_low_coverage_connection_manager.py",
+      "sha256": "2175bf1dac276792126c14e369dc66d49fe69ba2f3b878faf25e1b88aaecb394"
+    },
+    {
+      "path": "tests/vehicle/devices/test_optin_vci_backend.py",
+      "sha256": "736635f6825a0cc9cb498240f0942050ece5f774b26d30ff30db48471583f616"
+    },
+    {
+      "path": "tests/vehicle/devices/test_phase26_vci.py",
+      "sha256": "ba9329e521477ef8a34a96550f45b9a49c754a2d31e6bdfacd03dd53448929b7"
+    },
+    {
+      "path": "tests/vehicle/devices/test_registry.py",
+      "sha256": "20cc84c127e06afb1f2972673e36feb8112fd476fd437e9cdaaab3f8d0cdce68"
+    },
+    {
+      "path": "tests/vehicle/isotp/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/vehicle/isotp/test_isotp.py",
+      "sha256": "a2d6448ce7f603d6eb5dc48361f5449c5e07bfef22fef14b7ed345fcdf88cc12"
+    },
+    {
+      "path": "tests/vehicle/isotp/test_low_coverage_stack.py",
+      "sha256": "a85c1107486d9ec155c33d1e7fd287a45301b115852ead5bdd1c2eabaa6a3c67"
+    },
+    {
+      "path": "tests/vehicle/j2534/test_j2534.py",
+      "sha256": "03ec4008ad023ba90cb23369bc261f3cc5cbae6097cae5dfc568169bfc6ad0ca"
+    },
+    {
+      "path": "tests/vehicle/network/test_phase17_network.py",
+      "sha256": "2399c0a497095daae0882b3b3dbc9ba1b84a02d647aa3ba748c7ed62bbc1b4e8"
+    },
+    {
+      "path": "tests/vehicle/network/test_phase18_multibus.py",
+      "sha256": "48bf19f2ec6fb3043a9851baa201e035975fe850928064500f8a49afb5e35783"
+    },
+    {
+      "path": "tests/vehicle/protocol/test_elm327_probe.py",
+      "sha256": "185a4de9b16ab939398d1e890efbf603dbda2b77936c44873062806118e208ea"
+    },
+    {
+      "path": "tests/vehicle/protocol/test_registry_catalog.py",
+      "sha256": "e641850880f634fff5ca9c2128fabe0a989b2a086bdadac0f694da45d04d0a5e"
+    },
+    {
+      "path": "tests/vehicle/protocol/test_trace.py",
+      "sha256": "3d02bbb97ff065c1668cf6e0a8e65e93daed5ca017314af5828623d4376a6649"
+    },
+    {
+      "path": "tests/vehicle/test_canonical_vehicle_core.py",
+      "sha256": "7f2cf83b1c19a09e5a9a86aa11e6da23fba27d6f2b0d76003b74d925efc09788"
+    },
+    {
+      "path": "tests/vehicle/test_diagnostic_discovery.py",
+      "sha256": "23e7b0a1701b4d09d9316c6c01a381cc2cbf41834bfaef3e7ee502a598846373"
+    },
+    {
+      "path": "tests/vehicle/test_elm327.py",
+      "sha256": "e54c6e7a4c4769e7c1d62a423d3b849653e90e3b12f655268cc665340fb1d5c1"
+    },
+    {
+      "path": "tests/vehicle/test_global_catalog_registry.py",
+      "sha256": "d68661a33a6a5fc7a29f0ade7e34988780b84dc9c0f434a26259234cc061f602"
+    },
+    {
+      "path": "tests/vehicle/test_low_coverage_acquisition_manager.py",
+      "sha256": "be1dd88eb5c20706eb5ef23bae38ad8fbfb61f915afeae8b4e0abe4f823374e8"
+    },
+    {
+      "path": "tests/vehicle/test_low_coverage_acquisition_sources.py",
+      "sha256": "1b541d433cd234fb741c3de95ffb686bee38b189054f9588d21d87dba5b54f8d"
+    },
+    {
+      "path": "tests/vehicle/test_low_coverage_multibus_runtime.py",
+      "sha256": "2a8858e3f6bd30016cec06c70dd6d247c5e98f278e7c793b83491baf40355909"
+    },
+    {
+      "path": "tests/vehicle/test_low_coverage_multiplexer.py",
+      "sha256": "731608d65731de4604565d73ca49dcd76348cd53e30bf5a779cb93b3f808819c"
+    },
+    {
+      "path": "tests/vehicle/test_low_coverage_obd_transports.py",
+      "sha256": "994fb6325961da93ccd6c7c327166417a567506a1d527a719064810051e93ef8"
+    },
+    {
+      "path": "tests/vehicle/test_low_coverage_uds_simulator.py",
+      "sha256": "d4b5665448a044ff67cd4fa3772c840c3976079100588b44efba08aaaa5c3aa9"
+    },
+    {
+      "path": "tests/vehicle/test_low_coverage_vehicle_diagnostic_service.py",
+      "sha256": "72a7da17215f2cec38a2846fc91774a3e30ea08aaf5badc8f6695d7ab90fb34d"
+    },
+    {
+      "path": "tests/vehicle/test_obd_client.py",
+      "sha256": "6471c29360b3f1a06b5465ee368bd64c10750f6394fee4a169c8ac64c87bd754"
+    },
+    {
+      "path": "tests/vehicle/test_vehicle_external_registry.py",
+      "sha256": "15c608ca07e4ea0d5849d7dadd4e6828f8b34866235b3fbbbc664b4156f4939b"
+    },
+    {
+      "path": "tests/vehicle/uds/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/vehicle/uds/test_phase16_diagnostics.py",
+      "sha256": "25e557d466c9ae1702589816a81858e4e0b974dbd9b349b0ec6573125d8c88bc"
+    },
+    {
+      "path": "tests/vehicle/uds/test_uds.py",
+      "sha256": "7b6a41dd70c24c839f1a76adcd8d1d30caa68527a3bcbe3868b4b7f8b2157bc6"
+    },
+    {
+      "path": "tests/vehicle_network/test_phase19_discovery.py",
+      "sha256": "a73d58e86bb96d44520f19efe9982d589684e7dcb73348848552f76b7db70fd7"
+    },
+    {
+      "path": "tests/vehicle_network/test_phase20_active_engine.py",
+      "sha256": "119a431c9b4899bf2c08a5b53cacdd3504d57b42a5d350c0c5f11da7adf8870f"
+    },
+    {
+      "path": "assets/vehicle_models/audi_a4_b8.png",
+      "sha256": "1cf7f1c344765303acd32a8d00659a0e57df7068bffbe293a6d9d0c82f53101b"
+    },
+    {
+      "path": "assets/vehicle_models/audi_a6_c6.png",
+      "sha256": "cffac174e91d33b1abc318c0785d279e960a0a0cbd74244e7342fa416b7a7dfb"
+    },
+    {
+      "path": "assets/vehicle_models/audi_q5_8r.png",
+      "sha256": "7b1fafa63d9529a4e5c82cc34eba5d4f847ff9a81945d1ff232141a123859ed4"
+    },
+    {
+      "path": "assets/vehicle_models/bmw_3-series_e90.png",
+      "sha256": "30ca586cbdf1e8fc2ac961cc3210357a90d84280b0dec59c895eb1ac2b818c45"
+    },
+    {
+      "path": "assets/vehicle_models/bmw_3-series_e90.svg",
+      "sha256": "b2a59745f38d707062dc0e54cfa9f1b13ef3593b6d1a46788164ddb39681bee1"
+    },
+    {
+      "path": "assets/vehicle_models/bmw_3-series_f30.png",
+      "sha256": "aed5f193bb7c30c4c2a4ff4c3469cea5310d7187c352630e43a559c7764595e4"
+    },
+    {
+      "path": "assets/vehicle_models/bmw_3-series_f30.svg",
+      "sha256": "b88e96422b252db8517772efbc47e13957c668aff4fa13c2d2713d6e8e18bb19"
+    },
+    {
+      "path": "assets/vehicle_models/bmw_5-series_e60.png",
+      "sha256": "ace74d93309a6da391c1bd701f63781dbd7ff00a6f8359aeeecceb82456da12d"
+    },
+    {
+      "path": "assets/vehicle_models/bmw_5-series_e60.svg",
+      "sha256": "8f63b5fe5e5cd9e397fff1fb0714679f2f34783c823050d99bb9e6a504fc2267"
+    },
+    {
+      "path": "assets/vehicle_models/bmw_5-series_f10.png",
+      "sha256": "e23e0510f3383bb6bd396a70ffe2fd5a3cd1ce77f711742f57240d4e2c3f8842"
+    },
+    {
+      "path": "assets/vehicle_models/bmw_x5_e70.png",
+      "sha256": "b7c4cbfd3b6d668c271a5fa354cc7778bcd5dd95a010d4eecb40d16afcb7a871"
+    },
+    {
+      "path": "assets/vehicle_models/bmw_x5_f15.png",
+      "sha256": "3dd588ff739919fe1297642150408089593f78abd6d1b9fb6dcfdb7f51f4320b"
+    },
+    {
+      "path": "assets/vehicle_models/chevrolet_cruze_j300.png",
+      "sha256": "d8580f662e1367b6fed659e6ac7b1ac4669355faedd5b040245bc4fd0611234f"
+    },
+    {
+      "path": "assets/vehicle_models/chevrolet_malibu_eighth-generation.png",
+      "sha256": "895052af77b6c9d79ffb20416abf8fc48a227e2d5f38098e842331485dc4223a"
+    },
+    {
+      "path": "assets/vehicle_models/ford_fiesta_b299.png",
+      "sha256": "3146be0fd06e591595d451681b293cd50472f3d7baaf75369e7358bdceee875e"
+    },
+    {
+      "path": "assets/vehicle_models/ford_focus_mk3.png",
+      "sha256": "0dc4c551fbe558c220717371bca2fba929cb0b7fd3226240f712910a11bde6fb"
+    },
+    {
+      "path": "assets/vehicle_models/ford_focus_mk3.svg",
+      "sha256": "291a46965d1f877465a0e27f6af9ab2400b4dd4ad82fd8d575bcc16a7ef7dd22"
+    },
+    {
+      "path": "assets/vehicle_models/ford_mondeo_mk4.png",
+      "sha256": "37d014028f59c1596935c14d48bfcbad3c50925997c3420a59d1330e45054177"
+    },
+    {
+      "path": "assets/vehicle_models/ford_mondeo_mk4.svg",
+      "sha256": "c4e1e746c62eeaa26298fe5369ead5e222e0da11cb344053ce752601f554af90"
+    },
+    {
+      "path": "assets/vehicle_models/honda_accord_cp.png",
+      "sha256": "5a749d637e1a1b242340419b570fe7bdbf65499c68622c369c3c75df2f032f65"
+    },
+    {
+      "path": "assets/vehicle_models/honda_accord_cu.png",
+      "sha256": "af8ce32ee99430ed74f3e3cf4207077fe32f2c8c7801672b6570f96baa0c08c4"
+    },
+    {
+      "path": "assets/vehicle_models/honda_accord_cu.svg",
+      "sha256": "53b2e38136b2a2b40db5ee0f2b9da9b48168b19c2f0a432b6c28551aff1027ed"
+    },
+    {
+      "path": "assets/vehicle_models/honda_civic_fb.png",
+      "sha256": "b5d978b35f1a8a4f45e8a1ae109030b5ff4c1a28f69c1c0107d4726e00fcf557"
+    },
+    {
+      "path": "assets/vehicle_models/honda_civic_fc-fk.png",
+      "sha256": "ecf7fa1d8c1e3f84a116cdbcc6d18fd120132f8c19f4c8c1bdc54af765d65a8e"
+    },
+    {
+      "path": "assets/vehicle_models/honda_civic_fd.png",
+      "sha256": "f5977952a082b8727ef425c63290abd3dabc2041124be10e23e52115da449b81"
+    },
+    {
+      "path": "assets/vehicle_models/honda_civic_fd.svg",
+      "sha256": "bb7124ecfaabb54f4e8939ed93e7b5ca18b39cb2758901913019e1991c09e830"
+    },
+    {
+      "path": "assets/vehicle_models/honda_cr-v_re.png",
+      "sha256": "f4f41349850a133e3ccb3b12973b20606e87eca63bade688df22102c0f2114da"
+    },
+    {
+      "path": "assets/vehicle_models/honda_cr-v_rw-rt.png",
+      "sha256": "b9965edcebb788e6cc11f7f0fdaf5b2855a1afca3438e998682d8ee5057dcbaf"
+    },
+    {
+      "path": "assets/vehicle_models/hyundai_elantra_ad.png",
+      "sha256": "fdf31576a7227baae24080d7f166b8bc4f9524ba54f77dc4511a818d7cbad732"
+    },
+    {
+      "path": "assets/vehicle_models/hyundai_elantra_ad.svg",
+      "sha256": "f88ee6629d6d5e1793e5f23b69e2f554b05e7009c15068d0f34847d56872556e"
+    },
+    {
+      "path": "assets/vehicle_models/hyundai_elantra_hd.png",
+      "sha256": "0e3d94b694ee4c7b9d993a170e0d4aa4fa4e66478ccc2281849dc1df35d01fd2"
+    },
+    {
+      "path": "assets/vehicle_models/hyundai_elantra_md.png",
+      "sha256": "3f30a99983c1e16da57dbb1cf67979531b7251e3cdeb77b5b4de3ec0cf576671"
+    },
+    {
+      "path": "assets/vehicle_models/hyundai_elantra_md.svg",
+      "sha256": "5208134d247a0eeed45846311dfab7f7a3b2e985372df1f82b904b8c5d6f39e0"
+    },
+    {
+      "path": "assets/vehicle_models/hyundai_sonata_yf.png",
+      "sha256": "ce48bca60b1f41ab98b229b0d93d434b1879b0d2cd4d069e3a19d2e97be7c65f"
+    },
+    {
+      "path": "assets/vehicle_models/hyundai_tucson_lm.png",
+      "sha256": "7ecea6221f8104649810711453adda5dbcc26dce0c24da3f221a53d55ecab933"
+    },
+    {
+      "path": "assets/vehicle_models/hyundai_tucson_tl.png",
+      "sha256": "23f159e66162a4c21f0769dae4686242d8a1063e14779737334d6b69bd307e6a"
+    },
+    {
+      "path": "assets/vehicle_models/hyundai_tucson_tl.svg",
+      "sha256": "d833fdb4eef2339174ce17f097efe90928e5cd919e13ad3219957ac21b327c50"
+    },
+    {
+      "path": "assets/vehicle_models/kia_forte_td.png",
+      "sha256": "1278eee5af309575a47e4c2ddcb5346cc7f31761838cff64fedfc2e4311ef508"
+    },
+    {
+      "path": "assets/vehicle_models/kia_forte_td.svg",
+      "sha256": "fa7d5de62c4aa9a6fb991d68a6f1ce02709b29355a0c55c1ef7e3968aba475db"
+    },
+    {
+      "path": "assets/vehicle_models/kia_forte_yd.png",
+      "sha256": "1e89a74b7834ffd20ea2363190a731fc8852dcd505c8dc9fb7c2c57fe8822e94"
+    },
+    {
+      "path": "assets/vehicle_models/kia_forte_yd.svg",
+      "sha256": "5d86e81d3b20c8a94139cbf45efd3bb81e03ff84c6b6eb0bbcb88d5cbfeab023"
+    },
+    {
+      "path": "assets/vehicle_models/kia_sportage_ql.png",
+      "sha256": "3dbb55237ae53a74b6c6487b17816d66bc1fb8a29e8f8330c5a53e6659bd7cdd"
+    },
+    {
+      "path": "assets/vehicle_models/kia_sportage_sl.png",
+      "sha256": "da3a06767c1c0ae4b6e76cb75c025ca2e7eafcb6f462c52c87aecd1a2cd95aef"
+    },
+    {
+      "path": "assets/vehicle_models/kia_sportage_sl.svg",
+      "sha256": "168491110487553e1eb264d5e6b61c16ec9975b791a516677fe66f63d1f1faf6"
+    },
+    {
+      "path": "assets/vehicle_models/lada_granta_2190.png",
+      "sha256": "c74dd46f5fda9f7907e892e3adae3b1637e6c736a78d9e8c6fdf8f14e3af3efd"
+    },
+    {
+      "path": "assets/vehicle_models/lada_vesta_2180.png",
+      "sha256": "37b00892c5889efea6312339551ed7871f7c9adf49927cbf4b8fe9f60cc421e1"
+    },
+    {
+      "path": "assets/vehicle_models/lexus_es_xv60.png",
+      "sha256": "3d4513ef3d8bd0f56a3c15bda5b0dd3b9655e778ffd6f6dca7a65ba1e74101e0"
+    },
+    {
+      "path": "assets/vehicle_models/lexus_rx_al10.png",
+      "sha256": "2af71274693572e6ed8460ffe879b1bd962aba3a6d430311fb961e56df94a3ba"
+    },
+    {
+      "path": "assets/vehicle_models/mazda_cx-5_ke.png",
+      "sha256": "63eeba13b952fb683954cf123d930f18f95cf9c13743adde419ea4b854cd729f"
+    },
+    {
+      "path": "assets/vehicle_models/mazda_mazda3_bl.png",
+      "sha256": "113073e3959e5451c40945789ebd0a7f793becbeabbd306991d55db6ffa6428c"
+    },
+    {
+      "path": "assets/vehicle_models/mazda_mazda6_gj.png",
+      "sha256": "7f8872dfa6793d405efba0e5d64eb7a09a29ebdece14f37e5c7908eee6c8bbee"
+    },
+    {
+      "path": "assets/vehicle_models/mercedes-benz_c-class_w204.png",
+      "sha256": "3e24ec4d541b6ceb0af2386562a2dedcbd265e36dbd28e29455e05e066f91627"
+    },
+    {
+      "path": "assets/vehicle_models/mercedes-benz_c-class_w204.svg",
+      "sha256": "6801439d9c979befe38627158a095558d41eabb5ce46ff81a4eeda3c98b5861f"
+    },
+    {
+      "path": "assets/vehicle_models/mercedes-benz_c-class_w205.png",
+      "sha256": "0ead828020ed1e8b5fea1419df5aea6eae9be0f00db2f76f4c0f3aff68791f0d"
+    },
+    {
+      "path": "assets/vehicle_models/mercedes-benz_e-class_w211.png",
+      "sha256": "4a916bd272edff693314f31748768080b0dc07042f6e039dfcdb21aa5a5dc010"
+    },
+    {
+      "path": "assets/vehicle_models/mercedes-benz_e-class_w211.svg",
+      "sha256": "db808da7de8785cb584db9ca3f3265568d9c935f7063adc7d5f330e520128d83"
+    },
+    {
+      "path": "assets/vehicle_models/mercedes-benz_e-class_w212.png",
+      "sha256": "e5015a6f2840f0c895d8be8bb0aa17302dc95723e0f66c53a337aca117a13f60"
+    },
+    {
+      "path": "assets/vehicle_models/mercedes-benz_e-class_w212.svg",
+      "sha256": "e23c6d46ef2b99425e9051f5c6e23db3fff8f51f5062404cbcf9dcfef3da8d75"
+    },
+    {
+      "path": "assets/vehicle_models/mercedes-benz_ml-class_w164.png",
+      "sha256": "ff46d4d25c08c4a4b48456c5478ce618e3cab3c757ae8d0d04135796420e47ff"
+    },
+    {
+      "path": "assets/vehicle_models/mitsubishi_lancer_cy.png",
+      "sha256": "0f532b39810eb95dbaba27ea6a99082fb140105b689360dd64c73706796a7eeb"
+    },
+    {
+      "path": "assets/vehicle_models/neon-manifest.json",
+      "sha256": "b9f4936c938072ba8724f2a480d71c365aea8cd6a1254a29924d98e88f3dbdee"
+    },
+    {
+      "path": "assets/vehicle_models/nissan_altima_l32.png",
+      "sha256": "1d708c6b8b42c86bd218a28c0bf4eb567bc4e2f257cd782d67865dd95bfc5aac"
+    },
+    {
+      "path": "assets/vehicle_models/nissan_qashqai_j10.png",
+      "sha256": "9dc9431166af95f40023a22e399b03acab36d9b3c2f02ba9eb8249fb919aa169"
+    },
+    {
+      "path": "assets/vehicle_models/nissan_rogue_t32.png",
+      "sha256": "f7a1a0826cb3b9cbafa2eacd1cbe977bd4c6016a201f1f4ea3b3ccf680dea3a0"
+    },
+    {
+      "path": "assets/vehicle_models/nissan_sentra_b17.png",
+      "sha256": "b2d238fb9ea1cd08aa6de8e3bc4230a0691ac774bfff0c69aa19a799c32ebb07"
+    },
+    {
+      "path": "assets/vehicle_models/nissan_x-trail_t31.png",
+      "sha256": "8642c233989479223e8b0f20c1ddaf79ba3845f8e331658ffc771c393836ee76"
+    },
+    {
+      "path": "assets/vehicle_models/opel_astra_j.png",
+      "sha256": "3591281470bab4c946efae2327ee51aa60d0a8c2f0dad430b1603f41bd678e2e"
+    },
+    {
+      "path": "assets/vehicle_models/peugeot_308_t7.png",
+      "sha256": "90c1c6fa7c2165e914ef4d5a2cf5ca89cfe690ed840b3413c776929d3bb9e449"
+    },
+    {
+      "path": "assets/vehicle_models/renault_duster_hs.png",
+      "sha256": "cc0bd271b5ed7afdc3c9091c978b22e47a0ac910146bdfad7522889ab19c63d4"
+    },
+    {
+      "path": "assets/vehicle_models/renault_megane_iii.png",
+      "sha256": "bf243d4e830a644f02cd4a04047af473689c3582f6cb98cef594513984551964"
+    },
+    {
+      "path": "assets/vehicle_models/skoda_octavia_1z.png",
+      "sha256": "57b36f5ac63b28248caf3550757b807968a4b432fa6b10e9e289467129b0f0b5"
+    },
+    {
+      "path": "assets/vehicle_models/subaru_forester_sh.png",
+      "sha256": "b73c7e2b5c20efe0f4eae080b2900f3eb8f8052499541b28d578a12fda78d96d"
+    },
+    {
+      "path": "assets/vehicle_models/subaru_outback_br.png",
+      "sha256": "ca5b0b87b0b71ff3ff90f57ed63b47b9f186a70e8257438e4183701ee84c7892"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_camry_xv40.png",
+      "sha256": "6b6e35422213ab20c5a0b3d08caa96d2c8f5c458b646071554a5673667c961a6"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_camry_xv40.svg",
+      "sha256": "7a49b3c2a4d4d8b45e036a4396c458c72bc0d4844c4d019885eec83cbc22abab"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_camry_xv70.png",
+      "sha256": "3cafa8db10393f943d6e776a87264dd017d1811bd3bc65c8692408c3d9a64490"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_corolla_e140-e150.png",
+      "sha256": "b10033f5be1ff002ed7c95633312d8ebb0a6e0bcf65534deb834de53bb8da0cb"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_corolla_e140-e150.svg",
+      "sha256": "b9edc51562f31e8f9eb9fe98a474a150ba409db3685525baa5a517786d36084a"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_corolla_e210.png",
+      "sha256": "ed20934931c81f090d76fd5f982129210cec847ea29dafdb3080133332da0fe5"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_land-cruiser-prado_j150.png",
+      "sha256": "3091533c2771ad917cd0aba5e045073cfae26a77e70c46e336b2245808b3dd41"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_land-cruiser_j200.png",
+      "sha256": "989f6f2732b92d5e67448e45b1a9e068e694d3a3d2b061ae79cb13e06f94e9fd"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_prius_xw30.png",
+      "sha256": "172aae9ee48587177738956d990e57471bceb2e2c16ec106de3355573a58363f"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_prius_xw50.png",
+      "sha256": "822e4057a53819bbb148a3dad43304e5b1042e6719806297a12e7459f76f1700"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_rav4_xa30.png",
+      "sha256": "2dd6a521690dec7c07c6a3fcf51d5da8adb2f3b00a3b2c6b14140186c070863b"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_rav4_xa30.svg",
+      "sha256": "e7027884bacb3ae74892dedc768144d1047fe22d41259dfa05d693edcf59ef5a"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_rav4_xa50.png",
+      "sha256": "0b626804d6934e487062d089f9b9b3930f4e7a28d32ad56500351bef051df162"
+    },
+    {
+      "path": "assets/vehicle_models/toyota_yaris_xp90.png",
+      "sha256": "7798175bf4ae574e6bdbe7654d85631a96adf22ea84a5af99bde5116ee35af8d"
+    },
+    {
+      "path": "assets/vehicle_models/volkswagen_golf_mk6.png",
+      "sha256": "3b9035be2417b82f0c9c2ea7ce325d4a7d713d52a1a6f545fcbb978bc27fc14f"
+    },
+    {
+      "path": "assets/vehicle_models/volkswagen_golf_mk6.svg",
+      "sha256": "119261131ca6041e5a0f93deb31ffffc3f6b0dd16010bc6f85beb0f8d16641d2"
+    },
+    {
+      "path": "assets/vehicle_models/volkswagen_golf_mk7.png",
+      "sha256": "610b4a634ed5198285769d43b675aae70d382024c2a0a4956b3ebffb35f73c9a"
+    },
+    {
+      "path": "assets/vehicle_models/volkswagen_golf_mk7.svg",
+      "sha256": "628b8d4b718984bd683a2e54cb98ef5dd38c37fbb84adbad41df0bebc4e245a0"
+    },
+    {
+      "path": "assets/vehicle_models/volkswagen_jetta_a6.png",
+      "sha256": "bb3619200f16e56e3604291464db5df4d055f872330a8811e293a83fefcedd29"
+    },
+    {
+      "path": "assets/vehicle_models/volkswagen_passat_b7.png",
+      "sha256": "4bbf4c43382d0b6b93e957a177ce91cbd3d500fab1bc97fbf778234c07cfadac"
+    },
+    {
+      "path": "assets/vehicle_models/volkswagen_passat_b7.svg",
+      "sha256": "4fba667a8c6987699b9e10c0b08ed2ed525b527b873d657cd885d560a1884f52"
+    },
+    {
+      "path": "assets/vehicle_models/volkswagen_tiguan_5n.png",
+      "sha256": "6c21e573274830e5c36dbf877d38c2c20b86bf71100fb3e90e1b3ff6426d9e71"
+    },
+    {
+      "path": "scripts/import_wikimedia_vehicles.py",
+      "sha256": "22172d65503d9eb56a8158b6c67a978cb05ee6854383b0bbee7d4cccc898b3a8"
+    },
+    {
+      "path": "scripts/sync_offline_selector.py",
+      "sha256": "5f075671a8bd4868c6e87aba68f38fbf723e44cf7f9b49699fc65b40c928e7f3"
+    },
+    {
+      "path": "backend/alembic.ini",
+      "sha256": "96d317f7fd9c7cfd5f18bd3a5a59a4fdc0d7c3dda717856e1a2aa01796267aed",
+      "source_commit": "540e00f07b8f60c2788c8d12dea1200817669afb"
+    },
+    {
+      "path": "backend/api/main.py",
+      "sha256": "d1cc3dc06e6cced0af0799133f9ba4e3792b4ecb72fea0cd50ed5fc19fb741c4",
+      "source_commit": "540e00f07b8f60c2788c8d12dea1200817669afb"
+    },
+    {
+      "path": "backend/ecosystem/__init__.py",
+      "sha256": "58f37d33af153535dd9f71cb7782bcb521699c278a1d5f7e36023243605ff194",
+      "source_commit": "540e00f07b8f60c2788c8d12dea1200817669afb"
+    },
+    {
+      "path": "backend/ecosystem/api.py",
+      "sha256": "2335470fa7045b837dcffa47cc377fdc8993ff64bda8be723d265c438a640099",
+      "source_commit": "540e00f07b8f60c2788c8d12dea1200817669afb"
+    },
+    {
+      "path": "backend/ecosystem/errors.py",
+      "sha256": "7a0ecfdd84e9a2e1c61deba519f3200ef8704f6ccc32e0a746a9d8fcf047c72d",
+      "source_commit": "540e00f07b8f60c2788c8d12dea1200817669afb"
+    },
+    {
+      "path": "backend/ecosystem/migration_policy.py",
+      "sha256": "22bbaedec4d0ab7592400a4d29a5e3c4bc6f8cd64c1acb7e8677cc11aeb84667",
+      "source_commit": "540e00f07b8f60c2788c8d12dea1200817669afb"
+    },
+    {
+      "path": "backend/ecosystem/models.py",
+      "sha256": "2a0d42fdb4b1dae500cd50f511ab5f6a7f98a6782dc382597fc2a96bd866ab94",
+      "source_commit": "540e00f07b8f60c2788c8d12dea1200817669afb"
+    },
+    {
+      "path": "backend/ecosystem/schemas.py",
+      "sha256": "9a691e4c3bc7ff5c6ba3df69aa443a2d08244d5cd02c0f966c3b7e375f15f681",
+      "source_commit": "540e00f07b8f60c2788c8d12dea1200817669afb"
+    },
+    {
+      "path": "backend/ecosystem/security.py",
+      "sha256": "b06d9752c5ce34c6946f1d3850d7381fcf1cf02bdcfbef25686a729b39b79e55",
+      "source_commit": "540e00f07b8f60c2788c8d12dea1200817669afb"
+    },
+    {
+      "path": "backend/ecosystem/service.py",
+      "sha256": "dc6031972107e526f2c566938302483a4d630ec7ec231c1732fcf22fe23f3560",
+      "source_commit": "540e00f07b8f60c2788c8d12dea1200817669afb"
+    },
+    {
+      "path": "backend/migrations/env.py",
+      "sha256": "ec9e1fc2389a8bff812e92cf64cafcbca3b1613ce03fb3dcbc0a8135ab8acfda",
+      "source_commit": "540e00f07b8f60c2788c8d12dea1200817669afb"
+    },
+    {
+      "path": "backend/migrations/versions/0001_ecosystem_foundation.py",
+      "sha256": "8fd07c3261c299b7db8df0de0e4b41f43fdb502f4d4cd869b0707df163403eb6",
+      "source_commit": "540e00f07b8f60c2788c8d12dea1200817669afb"
+    },
+    {
+      "path": "tests/ecosystem/test_foundation.py",
+      "sha256": "94d2de4d221459f27dae59a385f202a13e7b369decdab02d95ffd0f0ac1eae32",
+      "source_commit": "540e00f07b8f60c2788c8d12dea1200817669afb"
+    },
+    {
+      "path": "pytest.ini",
+      "sha256": "50e038eeb363a07f1823a6956a4718d2b5fdc967246d625e81931c1c5edc44eb"
+    }
+  ],
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/api/v1/acquisition/sessions/{session_id}/start",
+      "handler": "start_acquisition",
+      "source": "backend/api/acquisition_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/acquisition/sessions/{session_id}/stop",
+      "handler": "stop_acquisition",
+      "source": "backend/api/acquisition_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/acquisition/sessions/{session_id}/status",
+      "handler": "acquisition_status",
+      "source": "backend/api/acquisition_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/acquisition/sessions/{session_id}/records",
+      "handler": "acquisition_records",
+      "source": "backend/api/acquisition_routes.py"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/acquisition/sessions/{session_id}/simulator/parameters",
+      "handler": "simulator_parameters",
+      "source": "backend/api/acquisition_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/network-discovery/sessions/{session_id}/active-probe",
+      "handler": "active_probe",
+      "source": "backend/api/active_discovery_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/network-discovery/sessions/{session_id}/active-map",
+      "handler": "active_map",
+      "source": "backend/api/active_discovery_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/obd/uds/doip/read",
+      "handler": "read_doip",
+      "source": "backend/api/advanced_obd_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/obd/j1939/decode",
+      "handler": "decode_j1939",
+      "source": "backend/api/advanced_obd_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/obd/j1939/decode-bam",
+      "handler": "decode_j1939_bam",
+      "source": "backend/api/advanced_obd_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/obd/j1708/decode",
+      "handler": "decode_j1708",
+      "source": "backend/api/advanced_obd_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/obd/uds/elm/read",
+      "handler": "read_elm_uds",
+      "source": "backend/api/advanced_obd_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/ai/knowledge",
+      "handler": "add_knowledge",
+      "source": "backend/api/ai_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/ai/knowledge/search",
+      "handler": "search_knowledge",
+      "source": "backend/api/ai_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/ai/sessions/{session_id}/context",
+      "handler": "build_ai_context",
+      "source": "backend/api/ai_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/ai/provider",
+      "handler": "provider_info",
+      "source": "backend/api/ai_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-profiles",
+      "handler": "list_profiles",
+      "source": "backend/api/client_features_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/vehicle-profiles",
+      "handler": "create_profile",
+      "source": "backend/api/client_features_routes.py"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/vehicle-profiles/{profile_id}",
+      "handler": "update_profile",
+      "source": "backend/api/client_features_routes.py"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/vehicle-profiles/{profile_id}",
+      "handler": "delete_profile",
+      "source": "backend/api/client_features_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/sessions/{session_id}/report",
+      "handler": "report",
+      "source": "backend/api/client_features_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/decision/sessions/{session_id}/plan",
+      "handler": "decision_plan",
+      "source": "backend/api/decision_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/decision/sessions/{session_id}/refresh",
+      "handler": "refresh_decision_plan",
+      "source": "backend/api/decision_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/decision/sessions/{session_id}/select",
+      "handler": "select_test",
+      "source": "backend/api/decision_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/devices",
+      "handler": "list_devices",
+      "source": "backend/api/device_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/devices/scan/{transport}",
+      "handler": "scan_devices",
+      "source": "backend/api/device_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/devices/wifi/probe",
+      "handler": "wifi_probe",
+      "source": "backend/api/device_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/devices/simulator",
+      "handler": "add_simulator",
+      "source": "backend/api/device_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/devices/{device_id:path}/connect",
+      "handler": "connect_device",
+      "source": "backend/api/device_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/devices/{device_id:path}/reconnect",
+      "handler": "reconnect_device",
+      "source": "backend/api/device_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/devices/{device_id:path}/disconnect",
+      "handler": "disconnect_device",
+      "source": "backend/api/device_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/devices/{device_id:path}/status",
+      "handler": "device_status",
+      "source": "backend/api/device_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/devices/{device_id:path}/obd/vin",
+      "handler": "read_vin",
+      "source": "backend/api/device_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/devices/{device_id:path}/obd/dtcs",
+      "handler": "read_dtcs",
+      "source": "backend/api/device_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/devices/{device_id:path}/obd/live-data",
+      "handler": "read_live_data",
+      "source": "backend/api/device_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/devices/{device_id:path}/obd/protocol",
+      "handler": "read_device_obd_protocol",
+      "source": "backend/api/device_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/devices/{device_id:path}/diagnostic-discovery",
+      "handler": "diagnostic_discovery",
+      "source": "backend/api/device_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/global-data",
+      "handler": "get_global_data",
+      "source": "backend/api/global_data_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/global-data/cases/{case_id}",
+      "handler": "get_global_case",
+      "source": "backend/api/global_data_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/intelligence/sessions/{session_id}/evidence/text",
+      "handler": "ingest_text",
+      "source": "backend/api/intelligence_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/intelligence/sessions/{session_id}/analyze",
+      "handler": "analyze",
+      "source": "backend/api/intelligence_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/intelligence/sessions/{session_id}/test-results",
+      "handler": "add_test_result",
+      "source": "backend/api/intelligence_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/knowledge/ingest/text",
+      "handler": "ingest_text",
+      "source": "backend/api/knowledge_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/knowledge/ingest/file",
+      "handler": "ingest_file",
+      "source": "backend/api/knowledge_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "handler": "health",
+      "source": "backend/api/main.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions",
+      "handler": "create_session",
+      "source": "backend/api/main.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/sessions",
+      "handler": "list_sessions",
+      "source": "backend/api/main.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/sessions/{session_id}",
+      "handler": "read_session",
+      "source": "backend/api/main.py"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/sessions/{session_id}/vehicle",
+      "handler": "update_vehicle",
+      "source": "backend/api/main.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/symptoms",
+      "handler": "add_symptom",
+      "source": "backend/api/main.py"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/sessions/{session_id}/symptoms/{symptom_id}",
+      "handler": "update_symptom",
+      "source": "backend/api/main.py"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/sessions/{session_id}/symptoms/{symptom_id}",
+      "handler": "delete_symptom",
+      "source": "backend/api/main.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/dtcs",
+      "handler": "add_dtc",
+      "source": "backend/api/main.py"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/sessions/{session_id}/dtcs/{dtc_id}",
+      "handler": "update_dtc",
+      "source": "backend/api/main.py"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/sessions/{session_id}/dtcs/{dtc_id}",
+      "handler": "delete_dtc",
+      "source": "backend/api/main.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/analyze",
+      "handler": "analyze",
+      "source": "backend/api/main.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/analysis/{session_id}",
+      "handler": "analyze_compat",
+      "source": "backend/api/main.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/multi-bus/sessions/{session_id}/connect",
+      "handler": "connect",
+      "source": "backend/api/multi_bus_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/multi-bus/sessions/{session_id}/topology",
+      "handler": "topology",
+      "source": "backend/api/multi_bus_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/multi-bus/sessions/{session_id}/identify-all",
+      "handler": "identify_all",
+      "source": "backend/api/multi_bus_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/multi-bus/sessions/{session_id}/dtcs/read-all",
+      "handler": "read_dtcs",
+      "source": "backend/api/multi_bus_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/multi-ecu/sessions/{session_id}/connect",
+      "handler": "connect",
+      "source": "backend/api/multi_ecu_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/multi-ecu/sessions/{session_id}/disconnect",
+      "handler": "disconnect",
+      "source": "backend/api/multi_ecu_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/multi-ecu/sessions/{session_id}/topology",
+      "handler": "topology",
+      "source": "backend/api/multi_ecu_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/multi-ecu/sessions/{session_id}/identify-all",
+      "handler": "identify_all",
+      "source": "backend/api/multi_ecu_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/multi-ecu/sessions/{session_id}/dtcs/read-all",
+      "handler": "read_all_dtcs",
+      "source": "backend/api/multi_ecu_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/multi-ecu/sessions/{session_id}/trace",
+      "handler": "trace",
+      "source": "backend/api/multi_ecu_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/network-discovery/sessions/{session_id}/frames",
+      "handler": "ingest_frames",
+      "source": "backend/api/network_discovery_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/network-discovery/sessions/{session_id}/map",
+      "handler": "discover_map",
+      "source": "backend/api/network_discovery_routes.py"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/network-discovery/sessions/{session_id}/frames",
+      "handler": "reset_discovery",
+      "source": "backend/api/network_discovery_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/obd/protocols",
+      "handler": "protocols",
+      "source": "backend/api/obd_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/obd/plan",
+      "handler": "plan",
+      "source": "backend/api/obd_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/obd/plan",
+      "handler": "observed_plan",
+      "source": "backend/api/obd_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/obd/decode",
+      "handler": "decode",
+      "source": "backend/api/obd_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/obd/detected-protocol",
+      "handler": "detected",
+      "source": "backend/api/obd_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/obd/discovery/plan",
+      "handler": "discovery_plan",
+      "source": "backend/api/obd_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/obd/discovery/decode",
+      "handler": "discovery_decode",
+      "source": "backend/api/obd_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/platform/roles",
+      "handler": "roles",
+      "source": "backend/api/platform_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/platform/organizations/{organization_id}/audit",
+      "handler": "audit",
+      "source": "backend/api/platform_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/rag/config",
+      "handler": "rag_config",
+      "source": "backend/api/rag_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/rag/search",
+      "handler": "rag_search",
+      "source": "backend/api/rag_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/telemetry/sessions/{session_id}/samples",
+      "handler": "append_samples",
+      "source": "backend/api/telemetry_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/telemetry/sessions/{session_id}/summary",
+      "handler": "telemetry_summary",
+      "source": "backend/api/telemetry_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/telemetry/sessions/{session_id}/analyze",
+      "handler": "analyze_telemetry",
+      "source": "backend/api/telemetry_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/telemetry/sessions/{session_id}/ai-analyze-live",
+      "handler": "ai_analyze_live",
+      "source": "backend/api/telemetry_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-catalog/entries",
+      "handler": "list_entries",
+      "source": "backend/api/vehicle_catalog_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-catalog/makes",
+      "handler": "list_makes",
+      "source": "backend/api/vehicle_catalog_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-catalog/models",
+      "handler": "list_models",
+      "source": "backend/api/vehicle_catalog_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-catalog/chassis",
+      "handler": "list_chassis",
+      "source": "backend/api/vehicle_catalog_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-catalog/years",
+      "handler": "list_years",
+      "source": "backend/api/vehicle_catalog_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-catalog/engines",
+      "handler": "list_engines",
+      "source": "backend/api/vehicle_catalog_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-catalog/ecus",
+      "handler": "list_ecus",
+      "source": "backend/api/vehicle_catalog_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-catalog/resolve",
+      "handler": "resolve_variant",
+      "source": "backend/api/vehicle_catalog_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/connect",
+      "handler": "connect",
+      "source": "backend/api/vehicle_diagnostic_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/disconnect",
+      "handler": "disconnect",
+      "source": "backend/api/vehicle_diagnostic_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/status",
+      "handler": "status",
+      "source": "backend/api/vehicle_diagnostic_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/ecu",
+      "handler": "identify_ecu",
+      "source": "backend/api/vehicle_diagnostic_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/dtcs/read",
+      "handler": "read_dtcs",
+      "source": "backend/api/vehicle_diagnostic_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/trace",
+      "handler": "trace",
+      "source": "backend/api/vehicle_diagnostic_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/device/bind",
+      "handler": "bind_device",
+      "source": "backend/api/vehicle_diagnostic_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/device",
+      "handler": "device_binding",
+      "source": "backend/api/vehicle_diagnostic_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/vehicle-diagnostic/sessions/{session_id}/obd/sync",
+      "handler": "sync_obd_to_session",
+      "source": "backend/api/vehicle_diagnostic_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-reference",
+      "handler": "list_reference",
+      "source": "backend/api/vehicle_reference_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-reference/compatibility",
+      "handler": "profile",
+      "source": "backend/api/vehicle_reference_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-reference/{reference_id}/image",
+      "handler": "image",
+      "source": "backend/api/vehicle_reference_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-reference/image",
+      "handler": "selected_image",
+      "source": "backend/api/vehicle_reference_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-registry/stats",
+      "handler": "stats",
+      "source": "backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-registry/makes",
+      "handler": "global_makes",
+      "source": "backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-registry/models",
+      "handler": "global_models",
+      "source": "backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-registry/fitments",
+      "handler": "global_fitments",
+      "source": "backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-registry/profile",
+      "handler": "vehicle_profile",
+      "source": "backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-registry/vpic/makes",
+      "handler": "vpic_makes",
+      "source": "backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-registry/vpic/models",
+      "handler": "vpic_models",
+      "source": "backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-registry/protocols",
+      "handler": "protocols",
+      "source": "backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-registry/compatibility",
+      "handler": "compatibility",
+      "source": "backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-registry/detected-elm",
+      "handler": "detected_elm",
+      "source": "backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/vehicle-registry/vin",
+      "handler": "vin_lookup",
+      "source": "backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-registry/portrait",
+      "handler": "local_portrait",
+      "source": "backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vehicle-registry/photo",
+      "handler": "photo",
+      "source": "backend/api/vehicle_registry_routes.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2/ecosystem/accounts",
+      "handler": "register",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2/ecosystem/auth/login",
+      "handler": "login",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2/ecosystem/auth/logout",
+      "handler": "logout",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/ecosystem/me",
+      "handler": "me",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v2/ecosystem/me",
+      "handler": "update_me",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2/ecosystem/workspace",
+      "handler": "workspace",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/ecosystem/vehicles",
+      "handler": "vehicles",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2/ecosystem/vehicles",
+      "handler": "add_vehicle",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/ecosystem/service-centers",
+      "handler": "centers",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2/ecosystem/service-centers",
+      "handler": "create_center",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2/ecosystem/service-centers/{center_id}/invitations",
+      "handler": "invite",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/ecosystem/invitations",
+      "handler": "invitations",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2/ecosystem/invitations/{invitation_id}/accept",
+      "handler": "accept",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/ecosystem/consents",
+      "handler": "consents",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2/ecosystem/consents/{consent_id}",
+      "handler": "revoke",
+      "source": "backend/ecosystem/api.py"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/ecosystem/service-centers/{center_id}/vehicles/{profile_id}",
+      "handler": "shared_vehicle",
+      "source": "backend/ecosystem/api.py"
+    }
+  ],
+  "additional_source_commits": {
+    "ecosystem-foundation": "540e00f07b8f60c2788c8d12dea1200817669afb"
+  },
+  "local_adjustments": {
+    "backend/requirements.txt": "Add Windows IANA timezone dependency",
+    "tests/api/test_diagnostic_session_api.py": "Whitespace normalization only",
+    "vehicle/obd/adapters/usb_serial.py": "Whitespace normalization only"
+  }
+}

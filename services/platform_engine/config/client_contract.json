@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "api": {
+    "default_base_url": "https://ai-car-scaner.onrender.com",
+    "vehicle_catalog_endpoint": "/api/v1/vehicle-catalog/entries",
+    "diagnostic_analysis_endpoint": "/api/v1/analysis/{session_id}",
+    "language_query_parameter": "language"
+  },
+  "vehicle_catalog": {
+    "source_of_truth": "backend_api",
+    "fields": [
+      "make",
+      "model",
+      "chassis",
+      "year",
+      "engine",
+      "ecu"
+    ],
+    "selection_order": [
+      "make",
+      "model",
+      "chassis",
+      "year",
+      "engine",
+      "ecu"
+    ],
+    "offline_fallback_must_be_labeled": true,
+    "fitment_warning": "Catalog matches are candidates only; confirm exact fitment using VIN and ECU identification."
+  },
+  "languages": [
+    {
+      "code": "en",
+      "label": "English"
+    },
+    {
+      "code": "ru",
+      "label": "Русский"
+    },
+    {
+      "code": "hy",
+      "label": "Հայերեն"
+    }
+  ],
+  "themes": [
+    {
+      "code": "dark",
+      "label": "Dark"
+    },
+    {
+      "code": "light",
+      "label": "Light"
+    }
+  ],
+  "diagnostic_workflow": [
+    "select_vehicle",
+    "create_or_open_session",
+    "collect_symptoms_and_dtcs",
+    "analyze_evidence",
+    "review_hypotheses_and_missing_information",
+    "run_recommended_test",
+    "record_pass_fail_incomplete",
+    "reanalyze",
+    "review_activity_and_close"
+  ],
+  "test_result_statuses": [
+    "PASS",
+    "FAIL",
+    "INCOMPLETE"
+  ],
+  "safety_invariants": [
+    "Do not present a hypothesis as a confirmed component failure without supporting test evidence.",
+    "Do not label simulated telemetry as real vehicle data.",
+    "A missing or failed catalog request must not be represented as an authoritative vehicle fitment result."
+  ],
+  "obd": {
+    "logic_owner": "backend",
+    "native_role": "OS byte transport and UI only",
+    "plan_endpoint": "/api/v1/obd/plan",
+    "decode_endpoint": "/api/v1/obd/decode",
+    "protocol_registry_endpoint": "/api/v1/obd/protocols",
+    "reference_endpoint": "/api/v1/vehicle-reference",
+    "model_names_do_not_confirm_protocol": true,
+    "image_source_of_truth": "backend; bundled portraits are offline cache",
+    "session_raw_snapshots_feed_backend_telemetry": true,
+    "advanced_read_endpoints": {
+      "elm_can_uds": "/api/v1/obd/uds/elm/read",
+      "doip_uds": "/api/v1/obd/uds/doip/read",
+      "j1939_dm": "/api/v1/obd/j1939/decode",
+      "j1939_bam": "/api/v1/obd/j1939/decode-bam",
+      "j1708_j1587": "/api/v1/obd/j1708/decode"
+    },
+    "advanced_services": [
+      "UDS 22 ReadDataByIdentifier",
+      "UDS 19/02 reportDTCByStatusMask"
+    ],
+    "advanced_scope": "Explicit ECU addressing/read services or passive frame decoding; not universal OEM compatibility"
+  }
+}
