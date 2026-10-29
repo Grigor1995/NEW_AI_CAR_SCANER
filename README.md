@@ -24,8 +24,8 @@ and calls compiled C++ telemetry/PID kernels where enabled.
 
 [Full repository analysis, feature mapping, Windows startup and limitations](docs/migration/README.md).
 Companion setup: `bash scripts/build/setup_platform_engine.sh`; start it with
-`.engine-venv/Scripts/python.exe scripts/run_platform_engine.py` on Windows or
-`.engine-venv/bin/python scripts/run_platform_engine.py` on Linux, then launch the
+`.engine-venv/Scripts/python.exe scripts/run_platform_engine.py --local-database` on Windows or
+`.engine-venv/bin/python scripts/run_platform_engine.py --local-database` on Linux, then launch the
 Qt application in another terminal. Companion sessions/accounts are separate
 from the V3 native Store; provider-dependent capabilities need configuration.
 

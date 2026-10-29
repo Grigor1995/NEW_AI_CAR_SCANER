@@ -67,7 +67,7 @@ MSYS2 Python distribution, so binary dependencies can use Windows wheels.
 ```bash
 py -3 --version
 bash scripts/build/setup_platform_engine.sh
-./.engine-venv/Scripts/python.exe scripts/run_platform_engine.py
+./.engine-venv/Scripts/python.exe scripts/run_platform_engine.py --local-database
 ```
 
 Keep that terminal running. In a second UCRT64 terminal:
@@ -118,7 +118,10 @@ QT_QPA_PLATFORM=offscreen QT_QUICK_BACKEND=software \
 ```
 
 Normal companion defaults to `local/platform-engine.sqlite`. Existing DATABASE_URL
-is respected. Session/profile persistence uses that DB. Some source components,
+is respected unless `--local-database` is explicitly selected. That flag changes
+only the launched process, chooses the normal local SQLite file and never moves
+or deletes PostgreSQL data. Use it when an activated environment inherits an
+unavailable PostgreSQL URL. Session/profile persistence uses the selected DB. Some source components,
 such as the simple local knowledge store, still have source-original in-memory
 lifetimes; do not infer universal durability from SQLite session persistence.
 

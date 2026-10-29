@@ -8,7 +8,10 @@ root = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
 parser.add_argument('--port', type=int, default=8001)
 parser.add_argument('--ecosystem', action='store_true', help='Enable migrated consent/ownership APIs on a separate database')
-parser.add_argument('--ephemeral', action='store_true', help='Do not set a default SQLite database')
+database_mode = parser.add_mutually_exclusive_group()
+database_mode.add_argument('--ephemeral', action='store_true', help='Do not set a default SQLite database')
+database_mode.add_argument('--local-database', action='store_true',
+    help='Explicitly use the local SQLite file even when DATABASE_URL is inherited')
 args = parser.parse_args()
 if not 1 <= args.port <= 65535:
     parser.error('Port must be 1..65535')
@@ -17,7 +20,12 @@ local = root / 'local'
 local.mkdir(exist_ok=True)
 if not args.ephemeral:
     filename = 'platform-ecosystem.sqlite' if args.ecosystem else 'platform-engine.sqlite'
-    os.environ.setdefault('DATABASE_URL', 'sqlite:///' + (local / filename).as_posix())
+    database_url = 'sqlite:///' + (local / filename).as_posix()
+    if args.local_database:
+        os.environ['DATABASE_URL'] = database_url
+        print('Database: explicit local SQLite (this process only)', flush=True)
+    else:
+        os.environ.setdefault('DATABASE_URL', database_url)
 os.chdir(engine)
 sys.path[:0] = [str(engine), str(engine / 'backend')]
 if args.ecosystem:
